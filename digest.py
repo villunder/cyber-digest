@@ -83,7 +83,6 @@ def is_recent(entry, hours=36):
     return (now - pub_time) <= timedelta(hours=hours)
 
 def is_very_recent(entry, hours=6):
-    """Marchează articolele publicate în ultimele 6 ore ca NOI"""
     published_parsed = entry.get("published_parsed") or entry.get("updated_parsed")
     if not published_parsed:
         return False
@@ -92,7 +91,6 @@ def is_very_recent(entry, hours=6):
     return (now - pub_time) <= timedelta(hours=hours)
 
 def format_cve(text):
-    """Transformă automat codurile CVE-YYYY-NNNNN în linkuri directe către Baza Națională de Vulnerabilități (NVD)"""
     if not text:
         return ""
     cve_pattern = r'\b(CVE-\d{4}-\d{4,7})\b'
@@ -112,7 +110,7 @@ def fetch_single_feed(source):
             title = entry.get("title", "").strip()
             raw_summary = entry.get("summary", "") or entry.get("description", "")
             summary = clean_html(raw_summary)
-            summary_truncated = summary[:280] + "..." if len(summary) > 280 else summary
+            summary_truncated = summary[:320] + "..." if len(summary) > 320 else summary
 
             fetched_items.append({
                 "title": title,
@@ -194,15 +192,15 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             --bg: #080c14;
             --card-bg: #111827;
             --card-hover: #1f2937;
-            --text-main: #f9fafb;
-            --text-muted: #9ca3af;
-            --text-sub: #d1d5db;
+            --text-main: #ffffff;
+            --text-muted: #a0aec0;
+            --text-sub: #e2e8f0;
             --accent-red: #f43f5e;
             --accent-orange: #fb923c;
             --accent-blue: #38bdf8;
             --accent-green: #10b981;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(56, 189, 248, 0.35);
+            --border: rgba(255, 255, 255, 0.12);
+            --border-hover: rgba(56, 189, 248, 0.45);
         }}
         * {{ box-sizing: border-box; }}
         body {{
@@ -232,8 +230,8 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
         }}
         .header-title {{ display: flex; align-items: center; gap: 12px; }}
         .pulse-dot {{
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background-color: var(--accent-green);
             border-radius: 50%;
             box-shadow: 0 0 10px var(--accent-green);
@@ -245,7 +243,7 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             100% {{ transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }}
         }}
         h1 {{
-            font-size: 1.45rem;
+            font-size: 1.55rem;
             font-weight: 800;
             margin: 0;
             letter-spacing: -0.02em;
@@ -254,7 +252,7 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             -webkit-text-fill-color: transparent;
         }}
         .badge-time {{
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-muted);
             background: rgba(15, 23, 42, 0.8);
@@ -285,8 +283,8 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             background: var(--card-hover);
             transform: translateY(-2px);
         }}
-        .stat-val {{ font-size: 1.5rem; font-weight: 800; }}
-        .stat-lbl {{ font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }}
+        .stat-val {{ font-size: 1.6rem; font-weight: 800; }}
+        .stat-lbl {{ font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }}
         .stat-red .stat-val {{ color: var(--accent-red); }}
         .stat-orange .stat-val {{ color: var(--accent-orange); }}
         .stat-blue .stat-val {{ color: var(--accent-blue); }}
@@ -308,9 +306,9 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             background: #0f172a;
             border: 1px solid var(--border);
             color: var(--text-main);
-            padding: 12px 18px;
+            padding: 14px 18px;
             border-radius: 10px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             outline: none;
             font-family: inherit;
             transition: border-color 0.2s;
@@ -327,9 +325,9 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             background: #0f172a;
             border: 1px solid var(--border);
             color: var(--text-muted);
-            padding: 8px 16px;
+            padding: 9px 16px;
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.2s;
@@ -344,7 +342,7 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
 
         /* SECTIONS & CARDS */
         .section-title {{
-            font-size: 1.05rem;
+            font-size: 1.15rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             padding: 14px 20px;
@@ -357,62 +355,62 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             gap: 10px;
         }}
         .title-red {{
-            background: linear-gradient(90deg, rgba(244, 63, 94, 0.15) 0%, rgba(244, 63, 94, 0.02) 100%);
+            background: linear-gradient(90deg, rgba(244, 63, 94, 0.18) 0%, rgba(244, 63, 94, 0.02) 100%);
             color: #ff6b81;
             border-left: 5px solid var(--accent-red);
-            border-top: 1px solid rgba(244, 63, 94, 0.2);
+            border-top: 1px solid rgba(244, 63, 94, 0.25);
         }}
         .title-orange {{
-            background: linear-gradient(90deg, rgba(251, 146, 60, 0.15) 0%, rgba(251, 146, 60, 0.02) 100%);
+            background: linear-gradient(90deg, rgba(251, 146, 60, 0.18) 0%, rgba(251, 146, 60, 0.02) 100%);
             color: #ffaa5b;
             border-left: 5px solid var(--accent-orange);
-            border-top: 1px solid rgba(251, 146, 60, 0.2);
+            border-top: 1px solid rgba(251, 146, 60, 0.25);
         }}
         .title-blue {{
-            background: linear-gradient(90deg, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.02) 100%);
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.18) 0%, rgba(56, 189, 248, 0.02) 100%);
             color: #60a5fa;
             border-left: 5px solid var(--accent-blue);
-            border-top: 1px solid rgba(56, 189, 248, 0.2);
+            border-top: 1px solid rgba(56, 189, 248, 0.25);
         }}
         .card {{
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
-            padding: 20px 22px;
-            margin-bottom: 16px;
+            padding: 22px 24px;
+            margin-bottom: 18px;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }}
         .card:hover {{
             background: var(--card-hover);
             border-color: var(--border-hover);
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
         }}
         .card-header-meta {{
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
         }}
         .card-source {{
-            font-size: 0.75rem;
-            font-weight: 700;
+            font-size: 0.8rem;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
-            background: rgba(51, 65, 85, 0.6);
+            letter-spacing: 0.05em;
+            background: rgba(56, 189, 248, 0.15);
             color: #38bdf8;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 6px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.3);
         }}
         .badge-new {{
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 800;
             background: var(--accent-green);
             color: #080c14;
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 6px;
             letter-spacing: 0.05em;
             text-transform: uppercase;
@@ -420,11 +418,11 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
         }}
         .cve-badge {{
             display: inline-block;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             font-weight: 800;
             background: rgba(244, 63, 94, 0.2);
             color: #f43f5e;
-            padding: 2px 8px;
+            padding: 3px 10px;
             border-radius: 6px;
             border: 1px solid rgba(244, 63, 94, 0.4);
             text-decoration: none;
@@ -438,19 +436,20 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
         .card-title {{
             color: var(--text-main);
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
+            font-weight: 800;
+            font-size: 1.25rem;
             line-height: 1.4;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             transition: color 0.2s ease;
         }}
         .card-title:hover {{ color: var(--accent-blue); }}
         .card-desc {{
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: var(--text-sub);
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.65;
+            font-weight: 400;
         }}
         .ok-box {{
             background: rgba(16, 185, 129, 0.1);
@@ -458,7 +457,7 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             color: var(--accent-green);
             padding: 18px 22px;
             border-radius: 12px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -467,7 +466,7 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
         footer {{
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             margin-top: 40px;
             padding: 16px;
             border-top: 1px solid var(--border);
