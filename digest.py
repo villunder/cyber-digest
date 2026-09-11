@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Cyber Security Monitoring & Intelligence Engine (v4.1 - Ultimate Enterprise Edition)
+Cyber Security Monitoring & Intelligence Engine (v4.2 - Ultimate Enterprise Edition)
 -----------------------------------------------------------------------------------
 - Integrare completă a celor 31 de surse RSS/Atom de securitate cu priorități ponderate.
 - Securizare XML defensivă (defusedxml + expat DOCTYPE rejection).
 - Protecție SSRF robustă (validare URL, blocare IP-uri private, loopback, link-local).
-- Cache HTTP inteligent cu ETag și If-Modified-Since + Retry cu backoff exponențial.
-- Parser de date avansat cu suport extins pentru fusuri orare și abrevieri (EST, EDT, PDT, BST).
-- Extracție IOC avansată (CVE-uri și adrese IPv4) și motor de scorare multi-criterial.
+- Cache HTTP inteligent cu ETag/Last-Modified și bypass automat la rulare manuală (workflow_dispatch).
+- Parser de date avansat cu suport extins pentru fusuri orare și abrevieri.
+- Extracție IOC avansată (CVE-uri și adrese IPv4) și motor de scorare corectat pentru infrastructură.
 - Scriere atomică sigură pentru cache și dashboard HTML.
 - Notificare prin email (SMTP TLS/SSL, alternativă text+HTML).
 """
@@ -264,7 +264,7 @@ def _fetch_url_with_retry(url, headers, timeout):
 
 def fetch_single_feed(source, http_cache):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.1'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.2'
     }
     
     cache_entry = http_cache.get(source['url'], {})
@@ -378,7 +378,16 @@ def save_cache(cache_data):
 
 def fetch_and_filter():
     cache = load_cache()
-    http_cache = cache.get('http_cache', {})
+    
+    # Bypass cache HTTP la rulare manuală (workflow_dispatch) sau forțată
+    is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or 
+                     os.getenv("FORCE_REFRESH", "").lower() == "true")
+    
+    if is_manual_run:
+        print("[*] Rulare manuală detectată (workflow_dispatch): se resetează cache-ul HTTP pentru date proaspete.")
+        http_cache = {}
+    else:
+        http_cache = cache.get('http_cache', {})
     
     all_articles = []
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
@@ -469,11 +478,12 @@ def fetch_and_filter():
         art['risk_score'] = score
         art['is_targeted_infra'] = is_targeted_infra
 
-        if score >= 70:
-            categorized['critical'].append(art)
-        elif score >= 30:
+        # Logică corectată de categorisire: infrastructura vizată are prioritate maximă
+        if is_targeted_infra:
             categorized['targeted'].append(art)
-        elif has_general:
+        elif score >= 70:
+            categorized['critical'].append(art)
+        else:
             categorized['general'].append(art)
 
     for cat in categorized:
@@ -548,7 +558,7 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Intelligence v4.1 Ultimate</title>
+    <title>Cyber Security Intelligence v4.2 Ultimate</title>
     <style>
         :root {{
             --bg-dark: #0f172a;
@@ -741,13 +751,13 @@ def send_email(categorized, html_file_path):
         print(f"[!] Eroare trimitere email: {e}")
 
 if __name__ == "__main__":
-    print("[*] Rulare motor Cyber Security Intelligence v4.1 (31 surse)...")
+    print("[*] Rulare motor Cyber Security Intelligence v4.2...")
     categorized_data = fetch_and_filter()
     saved_path = build_web_dashboard(categorized_data)
     print(f"[+] Dashboard generat cu succes la: {saved_path}")
 
     now_ro = datetime.datetime.now(TZ_RO)
     force_email = os.getenv("FORCE_EMAIL", "false").lower() == "true"
-    if now_ro.hour == 8 or force_email:
+    if now_ro.hour == 8 or force_email or os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch":
         print("[*] Se inițiază trimiterea email-ului de notificare...")
         send_email(categorized_data, saved_path)
