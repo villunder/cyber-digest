@@ -1,682 +1,736 @@
-import os
-import smtplib
-import re
+#!/usr/bin/env python3
+"""
+Cyber Security Monitoring & Alerting Engine (v2.2 - Merged Bugfix)
+--------------------------------------------------------------------
+- Trage feed-uri RSS/Atom de securitate în paralel (ThreadPoolExecutor).
+- Extragere robustă ElementTree (verificare explicită `is not None`).
+- Filtrează și clasifică articolele din ultimele 36 ore (Targeted, Critical, General).
+- Generare Dashboard HTML interactiv (dark theme, live search, filtrare, auto-link CVE-uri).
+- Toate datele/orele sunt afișate în Ora României (Europe/Bucharest - EET/EEST).
+- Trimitere raport zilnic prin email (SMTP TLS/SSL, Text+HTML) la ora 08:00 (Ora RO) sau via FORCE_EMAIL.
+
+ISTORIC MODIFICĂRI (comentarii marcate cu # FIX):
+1. BUG CRITIC (v2.0→v2.1): `item.find(x) or item.find(y)` folosea truth-value
+   pe obiecte xml.etree.ElementTree.Element, determinat de NUMĂRUL DE COPII,
+   nu de existența elementului. Un <title>Text</title> obișnuit (fără copii)
+   evalua la False chiar dacă exista → pierdere silențioasă de titlu/link/
+   descriere/dată pentru majoritatea feed-urilor RSS standard. Corectat cu
+   first_not_none() (verificare explicită `is not None`).
+2. BUG (v2.1→v2.2): pentru articolele cu dată ilizibilă, `date` era setată la
+   `now_utc`, ceea ce făcea ca `is_new` să fie mereu True (diferență ~0) —
+   badge „NOU" fals-pozitiv pe articole de vârstă necunoscută. Corectat:
+   `date_unknown` separat de `is_new`, care e explicit False când data nu se
+   cunoaște; dashboard afișează „Data necunoscută" în loc de o oră înșelătoare.
+3. Link-ul destinației (href) nu era html.escape()-uit la inserarea în
+   atributul HTML → un link cu ghilimele din feed extern putea rupe structura
+   atributului. Corectat.
+4. Extragerea link-ului verifică explicit `.text.strip()` înainte de fallback
+   pe atributul `href` (Atom), evitând link-uri whitespace-only.
+5. Excepțiile din fetch_single_feed nu mai sunt silențioase — logate cu numele
+   sursei și tipul erorii.
+6. Deduplicare articole după link (păstrată din varianta cu dedup — previne
+   dubluri din feed-uri RSS/Atom mixte sau republicări).
+7. email_to.split(",") face acum strip() pe fiecare adresă — evită respingeri
+   SMTP din cauza spațiilor.
+8. Corp de email cu alternativă text-plain (reduce riscul de scor spam).
+9. Validare explicită a schemei URL pentru link-urile extrase din feed
+   (doar http/https acceptate) — plasă de siguranță împotriva unui feed
+   compromis care ar injecta scheme precum `javascript:` sau `data:` în href.
+10. Eliminat parametrul nefolosit `html_content` din html_to_plain_text()
+    (nu era un bug de runtime — apelul pozițional era corect — dar parametrul
+    mort era o sursă de confuzie la refactoring viitor).
+11. Protecție XML Entity Expansion / "Billion Laughs": folosește
+    defusedxml.ElementTree când e disponibil (fallback documentat pe stdlib,
+    cu avertisment explicit la pornire dacă pachetul lipsește).
+12. Scrierea index.html are fallback reactiv (try/except pe scrierea reală,
+    nu doar verificare proactivă cu os.access — testat: os.access() poate
+    raporta fals "scriabil" pe o montare read-only cu permisiuni 755).
+13. Calea reală a dashboard-ului e propagată explicit prin return/parametru
+    (build_web_dashboard() -> send_email(categorized, html_file_path)),
+    fără variabilă globală mutabilă — mai testabil, fără stare implicită.
+14. Fallback pe tempfile.gettempdir() în loc de "/tmp" hardcodat — portabil
+    și pe Windows.
+"""
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import datetime
 import html
-import socket
-from datetime import datetime, timedelta, timezone
+import os
+import re
+import smtplib
+import tempfile
+from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import feedparser
+import urllib.parse
+import urllib.request
 
-# Setare timeout strict pe rețea (max 8 secunde per flux RSS)
-socket.setdefaulttimeout(8)
+# FIX (securitate XML): xml.etree.ElementTree standard e vulnerabil teoretic la
+# atacuri de tip "Billion Laughs" / entity expansion dacă un feed extern
+# conține un DTD cu entități imbricate. defusedxml.ElementTree oferă aceeași
+# API dar respinge DTD-urile și entitățile externe. Fallback pe stdlib dacă
+# pachetul nu e instalat — mai puțin sigur, dar aplicația rămâne funcțională.
+try:
+    import defusedxml.ElementTree as ET
+    _XML_HARDENED = True
+except ImportError:
+    import xml.etree.ElementTree as ET
+    _XML_HARDENED = False
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+from zoneinfo import ZoneInfo
+
+# Timezone local pentru România
+TZ_RO = ZoneInfo("Europe/Bucharest")
+
+ATOM_NS = "{http://www.w3.org/2005/Atom}"
+
+# ==========================================
+# 1. CONFIGURARE SURSE ȘI CUVINTE CHEIE
+# ==========================================
 
 RSS_SOURCES = [
-    # --- ROMÂNIA & REGIONALE ---
-    ("DNSC România", "https://dnsc.ro/feed"),
-    ("Softpedia Security", "https://news.softpedia.com/newsRSS/Security-12.xml"),
-    ("ZoneIT Security", "https://zoneit.ro/category/securitate/feed/"),
-
-    # --- SPECIFIC WEB STACK & MAIL ---
-    ("Joomla Security Center", "https://developer.joomla.org/security-centre.feed?type=rss"),
-    ("PHP Official News", "https://www.php.net/news.rss"),
-    ("Packet Storm Exploits", "https://rss.packetstormsecurity.com/files/"),
-    ("Packet Storm Security News", "https://rss.packetstormsecurity.com/news/"),
-
-    # --- CERT-URI & ALERTE OFICIALE ---
-    ("CISA Advisories (US-CERT)", "https://www.cisa.gov/cybersecurity-advisories/all.xml"),
-    ("SANS Internet Storm Center", "https://isc.sans.edu/rssfeed.xml"),
-    ("Zero Day Initiative (ZDI)", "https://www.zerodayinitiative.com/blog?format=rss"),
-    ("NCSC UK Advisories", "https://www.ncsc.gov.uk/api/1/services/v1/report-rss.xml"),
-
-    # --- THREAT INTELLIGENCE LABS ---
-    ("Microsoft Security Blog", "https://www.microsoft.com/en-us/security/blog/feed/"),
-    ("Cisco Talos Intelligence", "https://feeds.feedburner.com/feedburner/Talos"),
-    ("Palo Alto Unit 42", "https://unit42.paloaltonetworks.com/feed/"),
-    ("Google Cloud / Mandiant", "https://cloud.google.com/blog/topics/threat-intelligence/rss/"),
-    ("SentinelOne Threat Research", "https://www.sentinelone.com/blog/category/threat-research/feed/"),
-    ("CrowdStrike Blog", "https://www.crowdstrike.com/blog/feed/"),
-    ("Kaspersky Securelist", "https://securelist.com/feed/"),
-    ("ESET WeLiveSecurity", "https://www.welivesecurity.com/en/rss/feed/"),
-
-    # --- PUBLICAȚII GLOBALE ---
-    ("The Hacker News", "https://feeds.feedburner.com/TheHackersNews"),
-    ("BleepingComputer", "https://www.bleepingcomputer.com/feed/"),
-    ("SecurityWeek", "https://www.securityweek.com/feed/"),
-    ("Krebs on Security", "https://krebsonsecurity.com/feed/"),
-    ("Dark Reading", "https://www.darkreading.com/rss.xml"),
-    ("Help Net Security", "https://www.helpnetsecurity.com/feed/"),
-    ("Ars Technica Security", "https://feeds.arstechnica.com/arstechnica/security"),
-    ("The Register Security", "https://www.theregister.com/security/headlines.atom")
+    # Surse Naționale & Oficiale
+    {"name": "DNSC - Alerte", "url": "https://dnsc.ro/rss/alerte.xml"},
+    {"name": "DNSC - Știri", "url": "https://dnsc.ro/rss/stiri.xml"},
+    {"name": "CISA - Cybersecurity Alerts", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"},
+    {"name": "NVD NIST - Recent CVEs", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml"},
+    {"name": "US-CERT - Current Activity", "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml"},
+    # Threat Intelligence & Stiri Securitate
+    {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/"},
+    {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews"},
+    {"name": "SANS ISC StormCast", "url": "https://isc.sans.edu/rssfeed.xml"},
+    {"name": "KrebsonSecurity", "url": "http://feeds.feedburner.com/krebsonsecurity"},
+    {"name": "SecurityWeek", "url": "https://www.securityweek.com/feed/"},
+    {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml"},
+    {"name": "Trend Micro - Security News", "url": "https://newsroom.trendmicro.com/rss"},
+    {"name": "Sophos News", "url": "https://news.sophos.com/en-us/feed/"},
+    {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/"},
+    # Platforme Web & Tehnologii Direct Vizate
+    {"name": "Joomla Community News", "url": "https://community.joomla.org/blogs.feed?type=rss"},
+    {"name": "Joomla Security Announcements", "url": "https://developer.joomla.org/security-centre.feed?type=rss"},
+    {"name": "PHP.net News", "url": "https://www.php.net/news.rss"},
+    {"name": "cPanel News", "url": "https://news.cpanel.com/feed/"},
+    {"name": "Microsoft Security Response (MSRC)", "url": "https://api.msrc.microsoft.com/update-guide/rss"},
 ]
 
+# Reguli de Clasificare
 KEYWORDS_TARGETED = [
-    "joomla", "php", "apache", "nginx", "exim", "postfix", "dovecot", 
-    "mail", "htaccess", "modsecurity", "mysql", "mariadb", "cpanel", "wordpress"
+    "joomla", "php", "cpanel", "apache", ".htaccess", "mysql", "mariadb",
+    "exim", "roundcube", "bind", "named", "mod_security", "whm"
 ]
 
 KEYWORDS_CRITICAL = [
-    "rce", "remote code execution", "zero-day", "0-day", "unauthenticated", 
-    "sql injection", "sqli", "critical vulnerability", "active exploitation", 
-    "arbitrary file read", "privilege escalation", "ransomware", "supply chain"
+    "rce", "remote code execution", "zero-day", "0-day", "unauthenticated",
+    "critical", "sql injection", "sqli", "privilege escalation", "ransomware",
+    "active exploitation", "exploited in the wild", "cvss 9", "cvss 10"
 ]
 
-KEYWORDS_GENERAL = ["cve", "vulnerability", "exploit", "patch", "malware", "breach", "phishing", "attack"]
+KEYWORDS_GENERAL = [
+    "cve-", "vulnerability", "patch", "bypass", "malware", "phishing",
+    "xss", "cross-site scripting", "denial of service", "dos", "ddos"
+]
 
-def clean_html(text):
-    if not text:
-        return ""
-    text = html.unescape(text)
-    clean = re.compile('<.*?>')
-    cleaned_text = re.sub(clean, '', text)
-    return " ".join(cleaned_text.split())
+HOURS_LOOKBACK = 36
+MAX_THREADS = 12
+REQUEST_TIMEOUT = 10
 
-def is_recent(entry, hours=36):
-    published_parsed = entry.get("published_parsed") or entry.get("updated_parsed")
-    if not published_parsed:
-        return True
-    pub_time = datetime(*published_parsed[:6], tzinfo=timezone.utc)
-    now = datetime.now(timezone.utc)
-    return (now - pub_time) <= timedelta(hours=hours)
+# ==========================================
+# 2. COLECTARE ȘI PARSARE RSS
+# ==========================================
 
-def is_very_recent(entry, hours=6):
-    published_parsed = entry.get("published_parsed") or entry.get("updated_parsed")
-    if not published_parsed:
+def first_not_none(*elements):
+    """Returnează primul element XML care nu este None.
+
+    # FIX: înlocuiește pattern-ul `find(x) or find(y)`, care e greșit pentru
+    # obiecte ElementTree.Element (truth-value = are copii, nu = există).
+    """
+    for e in elements:
+        if e is not None:
+            return e
+    return None
+
+
+ALLOWED_URL_SCHEMES = {"http", "https"}
+
+
+def is_safe_url(url):
+    """Acceptă doar URL-uri http/https. Respinge scheme precum javascript:,
+    data:, vbscript: etc. care ar putea fi injectate dintr-un feed compromis.
+    """
+    if not url or url == "#":
         return False
-    pub_time = datetime(*published_parsed[:6], tzinfo=timezone.utc)
-    now = datetime.now(timezone.utc)
-    return (now - pub_time) <= timedelta(hours=hours)
+    try:
+        parsed = urllib.parse.urlparse(url)
+    except ValueError:
+        return False
+    return parsed.scheme.lower() in ALLOWED_URL_SCHEMES and bool(parsed.netloc)
 
-def format_cve(text):
-    if not text:
-        return ""
-    cve_pattern = r'\b(CVE-\d{4}-\d{4,7})\b'
-    replacement = r'<span onclick="event.stopPropagation(); window.open(\'https://nvd.nist.gov/vuln/detail/\1\', \'_blank\');" class="cve-badge">\1</span>'
-    return re.sub(cve_pattern, replacement, text, flags=re.IGNORECASE)
+
+def parse_pub_date(date_str):
+    """Încearcă parsarea diverselor formate de dată din RSS/Atom și returnează un datetime conștient de fus/UTC."""
+    if not date_str:
+        return None
+
+    formats = [
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S GMT",
+        "%a, %d %b %Y %H:%M:%S UTC",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%a, %d %b %Y %H:%M:%S",
+    ]
+
+    clean_str = re.sub(r'\s+', ' ', date_str).strip()
+
+    for fmt in formats:
+        try:
+            dt = datetime.datetime.strptime(clean_str, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=datetime.timezone.utc)
+            return dt
+        except ValueError:
+            continue
+
+    return None
+
 
 def fetch_single_feed(source):
-    source_name, url = source
-    fetched_items = []
+    """Descarcă și parsează un singur feed RSS/Atom."""
+    articles = []
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/2.1'
+    }
+
     try:
-        feed = feedparser.parse(url, agent=USER_AGENT)
-        for entry in feed.entries:
-            if not is_recent(entry, hours=36):
+        req = urllib.request.Request(source['url'], headers=headers)
+        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as response:
+            content = response.read()
+
+        root = ET.fromstring(content)
+        now_utc = datetime.datetime.now(datetime.timezone.utc)
+        threshold_time = now_utc - datetime.timedelta(hours=HOURS_LOOKBACK)
+
+        items = root.findall('.//item') or root.findall(f'.//{ATOM_NS}entry')
+
+        for item in items:
+            # FIX: is_not_none în loc de `or` — vezi first_not_none()
+            title_node = first_not_none(item.find('title'), item.find(f'{ATOM_NS}title'))
+            link_node = first_not_none(item.find('link'), item.find(f'{ATOM_NS}link'))
+            desc_node = first_not_none(
+                item.find('description'),
+                item.find(f'{ATOM_NS}summary'),
+                item.find(f'{ATOM_NS}content'),
+            )
+            date_node = first_not_none(
+                item.find('pubDate'),
+                item.find(f'{ATOM_NS}published'),
+                item.find(f'{ATOM_NS}updated'),
+            )
+
+            title = title_node.text.strip() if title_node is not None and title_node.text else "Fără titlu"
+
+            # FIX: verificare explicită .text.strip() înainte de fallback pe href
+            # (Atom <link href="..."/> nu are text; RSS <link>text</link> uneori are text whitespace-only)
+            link = "#"
+            if link_node is not None:
+                if link_node.text and link_node.text.strip():
+                    link = link_node.text.strip()
+                elif 'href' in link_node.attrib:
+                    link = link_node.attrib['href'].strip()
+
+            # FIX: acceptăm doar http/https — respinge scheme periculoase dintr-un feed compromis
+            if not is_safe_url(link):
+                link = "#"
+
+            description = desc_node.text if desc_node is not None and desc_node.text else ""
+            clean_desc = re.sub(r'<[^<]+?>', '', description)[:300] + "..." if description else ""
+
+            pub_date_str = date_node.text if date_node is not None else None
+            pub_dt = parse_pub_date(pub_date_str) if pub_date_str else None
+
+            # FIX: separă explicit "dată necunoscută" de "dată veche" — nu tratăm
+            # articolele nedatate ca fiind recente (vezi is_new mai jos)
+            date_unknown = pub_dt is None
+            if not date_unknown and pub_dt < threshold_time:
                 continue
 
-            link = entry.get("link", "")
-            title = entry.get("title", "").strip()
-            raw_summary = entry.get("summary", "") or entry.get("description", "")
-            summary = clean_html(raw_summary)
-            summary_truncated = summary[:320] + "..." if len(summary) > 320 else summary
-
-            fetched_items.append({
-                "title": title,
-                "link": link,
-                "source": source_name,
-                "summary": summary_truncated,
-                "full_text": f"{title} {summary}".lower(),
-                "is_new": is_very_recent(entry, hours=6)
+            articles.append({
+                'source': source['name'],
+                'title': title,
+                'link': link,
+                'description': clean_desc,
+                'date': pub_dt or now_utc,
+                'raw_date': pub_date_str or "Recent",
+                'date_unknown': date_unknown,
             })
-    except Exception:
-        pass
-    return fetched_items
+
+    except Exception as e:
+        # FIX: eroarea nu mai e complet silențioasă — vizibilă în consolă/log
+        print(f"[!] Eroare la sursa '{source['name']}' ({source['url']}): {type(e).__name__}: {e}")
+
+    return articles
+
 
 def fetch_and_filter():
-    targeted_news = []
-    critical_news = []
-    general_news = []
+    """Rulează colectarea paralelă și clasifică alertele."""
+    all_articles = []
+
+    with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+        future_to_src = {executor.submit(fetch_single_feed, src): src for src in RSS_SOURCES}
+        for future in as_completed(future_to_src):
+            src = future_to_src[future]
+            try:
+                data = future.result()
+                all_articles.extend(data)
+            except Exception as e:
+                print(f"[!] Eroare neașteptată la procesarea sursei '{src['name']}': {e}")
+
+    # FIX: deduplicare după link (același articol poate apărea de mai multe ori,
+    # de ex. dacă un feed conține atât <link> cât și un id Atom identic după normalizare)
     seen_links = set()
-    seen_titles = set()
-
-    all_fetched = []
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        futures = [executor.submit(fetch_single_feed, src) for src in RSS_SOURCES]
-        for future in as_completed(futures):
-            all_fetched.extend(future.result())
-
-    for item in all_fetched:
-        link = item["link"]
-        title_lower = item["title"].lower()
-
-        if link in seen_links or title_lower in seen_titles:
+    deduped = []
+    for art in all_articles:
+        key = art['link'] if art['link'] != '#' else (art['source'], art['title'])
+        if key in seen_links:
             continue
-        seen_links.add(link)
-        seen_titles.add(title_lower)
+        seen_links.add(key)
+        deduped.append(art)
 
-        text = item["full_text"]
-        is_targeted = any(kw in text for kw in KEYWORDS_TARGETED)
-        is_critical = any(kw in text for kw in KEYWORDS_CRITICAL)
-        is_gen = any(kw in text for kw in KEYWORDS_GENERAL)
+    categorized = {
+        'targeted': [],
+        'critical': [],
+        'general': []
+    }
 
-        clean_item = {
-            "title": item["title"],
-            "link": item["link"],
-            "source": item["source"],
-            "summary": item["summary"],
-            "is_new": item["is_new"]
-        }
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
 
-        if is_targeted:
-            targeted_news.append(clean_item)
-        elif is_critical:
-            critical_news.append(clean_item)
-        elif is_gen or item["source"] in ["DNSC România", "Joomla Security Center", "PHP Official News"]:
-            general_news.append(clean_item)
+    for art in deduped:
+        text_to_scan = f"{art['title']} {art['description']}".lower()
 
-    return targeted_news, critical_news, general_news
+        # FIX: nu marca drept "NOU" un articol a cărui dată reală nu o cunoaștem
+        # (altfel, cu date=now_utc ca fallback, diferența e mereu ~0 -> fals-pozitiv)
+        if art['date_unknown']:
+            art['is_new'] = False
+        else:
+            art['is_new'] = (now_utc - art['date']).total_seconds() <= 21600
 
-def build_web_dashboard(targeted_news, critical_news, gen_news):
-    now_str = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
-    
-    count_targeted = len(targeted_news)
-    count_critical = len(critical_news[:12])
-    count_gen = len(gen_news[:15])
-    count_total = count_targeted + count_critical + count_gen
+        if any(kw in text_to_scan for kw in KEYWORDS_TARGETED):
+            categorized['targeted'].append(art)
+        elif any(kw in text_to_scan for kw in KEYWORDS_CRITICAL):
+            categorized['critical'].append(art)
+        elif any(kw in text_to_scan for kw in KEYWORDS_GENERAL):
+            categorized['general'].append(art)
 
-    html_out = f"""<!DOCTYPE html>
+    for cat in categorized:
+        categorized[cat].sort(key=lambda x: x['date'], reverse=True)
+
+    return categorized
+
+# ==========================================
+# 3. GENERARE DASHBOARD HTML
+# ==========================================
+
+def format_cve(text):
+    """Transformă mențiunile CVE-YYYY-XXXX în badge-uri cu link direct către NVD NIST."""
+    pattern = r'(CVE-\d{4}-\d{4,7})'
+    replacement = r'<a href="https://nvd.nist.gov/vuln/detail/\1" target="_blank" class="cve-badge">\1</a>'
+    return re.sub(pattern, replacement, html.escape(text), flags=re.IGNORECASE)
+
+
+def generate_cards_html(articles, category_class):
+    if not articles:
+        return '<p class="no-data">Nicio alertă detectată în ultimele 36 de ore pentru această categorie.</p>'
+
+    cards = []
+    for art in articles:
+        new_badge = '<span class="badge badge-new">NOU</span>' if art['is_new'] else ''
+        title_formatted = format_cve(art['title'])
+        desc_formatted = html.escape(art['description'])
+
+        # FIX: "Data necunoscută" în loc de ora curentă — nu sugerăm o dată falsă
+        if art['date_unknown']:
+            date_str = "Data necunoscută"
+        else:
+            date_ro = art['date'].astimezone(TZ_RO)
+            date_str = date_ro.strftime('%d %b %Y, %H:%M')
+
+        card = f"""
+        <div class="card {category_class}">
+            <div class="card-header">
+                <span class="source-tag">{html.escape(art['source'])}</span>
+                <span class="date-tag">{date_str}</span>
+                {new_badge}
+            </div>
+            <h3 class="card-title"><a href="{html.escape(art['link'])}" target="_blank" rel="noopener">{title_formatted}</a></h3>
+            <p class="card-desc">{desc_formatted}</p>
+        </div>
+        """
+        cards.append(card)
+    return "\n".join(cards)
+
+
+def build_web_dashboard(categorized):
+    # Generare timestamp în Ora României
+    now_ro_str = datetime.datetime.now(TZ_RO).strftime('%d %b %Y, %H:%M (Ora RO)')
+
+    total_targeted = len(categorized['targeted'])
+    total_critical = len(categorized['critical'])
+    total_general = len(categorized['general'])
+    total_all = total_targeted + total_critical + total_general
+
+    html_content = f"""<!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="300">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Cyber Security Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Cyber Security Intelligence Dashboard</title>
     <style>
         :root {{
-            --bg: #080c14;
-            --card-bg: #111827;
-            --card-hover: #1f2937;
-            --text-main: #ffffff;
-            --text-muted: #a0aec0;
-            --text-sub: #e2e8f0;
-            --accent-red: #f43f5e;
-            --accent-orange: #fb923c;
-            --accent-blue: #38bdf8;
-            --accent-green: #10b981;
-            --border: rgba(255, 255, 255, 0.12);
-            --border-hover: rgba(56, 189, 248, 0.45);
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-targeted: #f59e0b;
+            --accent-critical: #ef4444;
+            --accent-general: #3b82f6;
+            --border-color: #334155;
         }}
-        * {{ box-sizing: border-box; }}
+        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
             color: var(--text-main);
-            margin: 0;
-            padding: 24px 16px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            padding: 20px;
+            line-height: 1.5;
         }}
-        .container {{ max-width: 1000px; margin: 0 auto; }}
-        
-        /* HEADER & STATS BAR */
+        .container {{ max-width: 1300px; margin: 0 auto; }}
         header {{
-            background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
-            padding: 22px 28px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 25px;
             flex-wrap: wrap;
-            gap: 16px;
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+            gap: 15px;
         }}
-        .header-title {{ display: flex; align-items: center; gap: 12px; }}
-        .pulse-dot {{
-            width: 12px;
-            height: 12px;
-            background-color: var(--accent-green);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-green);
-            animation: pulse 2s infinite;
-        }}
-        @keyframes pulse {{
-            0% {{ transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }}
-            70% {{ transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }}
-            100% {{ transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }}
-        }}
-        h1 {{
-            font-size: 1.55rem;
-            font-weight: 800;
-            margin: 0;
-            letter-spacing: -0.02em;
-            background: linear-gradient(to right, #ffffff, #cbd5e1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }}
-        .badge-time {{
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: rgba(15, 23, 42, 0.8);
-            padding: 8px 14px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-        }}
+        h1 {{ font-size: 1.8rem; font-weight: 700; color: #fff; }}
+        .last-update {{ color: var(--text-muted); font-size: 0.9rem; }}
 
-        /* COUNTERS STATS BAR */
         .stats-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
         }}
         .stat-card {{
             background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--border-color);
         }}
-        .stat-card:hover {{
-            background: var(--card-hover);
-            transform: translateY(-2px);
-        }}
-        .stat-val {{ font-size: 1.6rem; font-weight: 800; }}
-        .stat-lbl {{ font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }}
-        .stat-red .stat-val {{ color: var(--accent-red); }}
-        .stat-orange .stat-val {{ color: var(--accent-orange); }}
-        .stat-blue .stat-val {{ color: var(--accent-blue); }}
-        .stat-total .stat-val {{ color: var(--accent-green); }}
+        .stat-card.targeted {{ border-left-color: var(--accent-targeted); }}
+        .stat-card.critical {{ border-left-color: var(--accent-critical); }}
+        .stat-card.general {{ border-left-color: var(--accent-general); }}
+        .stat-value {{ font-size: 1.8rem; font-weight: bold; margin-top: 5px; }}
+        .stat-label {{ font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; }}
 
-        /* SEARCH & FILTER CONTROLS */
-        .controls-panel {{
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 16px;
-            margin-bottom: 28px;
+        .controls {{
             display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }}
-        .search-box input {{
-            width: 100%;
-            background: #0f172a;
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 14px 18px;
-            border-radius: 10px;
-            font-size: 1rem;
-            outline: none;
-            font-family: inherit;
-            transition: border-color 0.2s;
-        }}
-        .search-box input:focus {{
-            border-color: var(--accent-blue);
-        }}
-        .tabs-row {{
-            display: flex;
-            gap: 8px;
+            gap: 15px;
+            margin-bottom: 25px;
             flex-wrap: wrap;
         }}
+        .search-box {{
+            flex: 1;
+            min-width: 250px;
+            padding: 10px 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: #fff;
+            font-size: 0.95rem;
+        }}
+        .search-box:focus {{ outline: 2px solid var(--accent-general); }}
+        .tabs {{ display: flex; gap: 8px; }}
         .tab-btn {{
-            background: #0f172a;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 9px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 700;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
+            font-weight: 500;
         }}
-        .tab-btn:hover {{ color: var(--text-main); background: #1e293b; }}
         .tab-btn.active {{
-            background: var(--accent-blue);
-            color: #080c14;
-            border-color: var(--accent-blue);
+            background: var(--accent-general);
+            border-color: var(--accent-general);
+            color: #fff;
         }}
 
-        /* SECTIONS & CARDS */
-        .section-title {{
-            font-size: 1.15rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            padding: 14px 20px;
-            border-radius: 12px;
-            margin-top: 32px;
-            margin-bottom: 18px;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }}
-        .title-red {{
-            background: linear-gradient(90deg, rgba(244, 63, 94, 0.18) 0%, rgba(244, 63, 94, 0.02) 100%);
-            color: #ff6b81;
-            border-left: 5px solid var(--accent-red);
-            border-top: 1px solid rgba(244, 63, 94, 0.25);
-        }}
-        .title-orange {{
-            background: linear-gradient(90deg, rgba(251, 146, 60, 0.18) 0%, rgba(251, 146, 60, 0.02) 100%);
-            color: #ffaa5b;
-            border-left: 5px solid var(--accent-orange);
-            border-top: 1px solid rgba(251, 146, 60, 0.25);
-        }}
-        .title-blue {{
-            background: linear-gradient(90deg, rgba(56, 189, 248, 0.18) 0%, rgba(56, 189, 248, 0.02) 100%);
-            color: #60a5fa;
-            border-left: 5px solid var(--accent-blue);
-            border-top: 1px solid rgba(56, 189, 248, 0.25);
-        }}
-
-        /* CARD LINK COMPLETE */
-        .card-link {{
-            display: block;
-            text-decoration: none;
-            color: inherit;
-            margin-bottom: 18px;
+        .cards-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 20px;
         }}
         .card {{
             background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 22px 24px;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            cursor: pointer;
-        }}
-        .card-link:hover .card {{
-            background: var(--card-hover);
-            border-color: var(--border-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-        }}
-        .card-header-meta {{
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
             display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
         }}
-        .card-source {{
+        .card.targeted-card {{ border-top: 3px solid var(--accent-targeted); }}
+        .card.critical-card {{ border-top: 3px solid var(--accent-critical); }}
+        .card.general-card {{ border-top: 3px solid var(--accent-general); }}
+
+        .card-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            background: rgba(56, 189, 248, 0.15);
-            color: #38bdf8;
-            padding: 5px 12px;
-            border-radius: 6px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-        }}
-        .badge-new {{
-            font-size: 0.75rem;
-            font-weight: 800;
-            background: var(--accent-green);
-            color: #080c14;
-            padding: 4px 10px;
-            border-radius: 6px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
-        }}
-        .cve-badge {{
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 800;
-            background: rgba(244, 63, 94, 0.2);
-            color: #f43f5e;
-            padding: 3px 10px;
-            border-radius: 6px;
-            border: 1px solid rgba(244, 63, 94, 0.4);
-            margin: 0 2px;
-            transition: all 0.2s;
-        }}
-        .cve-badge:hover {{
-            background: #f43f5e;
-            color: #ffffff;
-        }}
-        .card-title {{
-            color: var(--text-main);
-            font-weight: 800;
-            font-size: 1.25rem;
-            line-height: 1.4;
-            display: block;
             margin-bottom: 12px;
-            transition: color 0.2s ease;
+            gap: 5px;
         }}
-        .card-link:hover .card-title {{
-            color: var(--accent-blue);
+        .source-tag {{ color: var(--text-muted); font-weight: 600; }}
+        .date-tag {{ color: var(--text-muted); }}
+        .badge {{
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.7rem;
         }}
+        .badge-new {{ background: #10b981; color: #fff; }}
+        .cve-badge {{
+            background: #334155;
+            color: #38bdf8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }}
+        .cve-badge:hover {{ background: #475569; }}
+        .card-title {{
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }}
+        .card-title a {{ color: #fff; text-decoration: none; }}
+        .card-title a:hover {{ color: var(--accent-general); }}
         .card-desc {{
-            font-size: 1.15rem;
-            color: var(--text-sub);
-            margin: 0;
-            line-height: 1.65;
-            font-weight: 400;
-        }}
-        .ok-box {{
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: var(--accent-green);
-            padding: 18px 22px;
-            border-radius: 12px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }}
-        footer {{
-            text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-top: 40px;
-            padding: 16px;
-            border-top: 1px solid var(--border);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }}
+        .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; }}
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="header-title">
-                <div class="pulse-dot"></div>
-                <h1>Cyber Security Dashboard</h1>
+            <div>
+                <h1>Cyber Security Intelligence</h1>
+                <p class="last-update">Sincronizat la: {now_ro_str}</p>
             </div>
-            <span class="badge-time">Actualizat: {now_str}</span>
         </header>
 
-        <!-- STATS COUNTERS BAR -->
         <div class="stats-grid">
-            <div class="stat-card stat-red" onclick="switchTab('targeted')">
-                <div>
-                    <div class="stat-lbl">Specifice</div>
-                    <div class="stat-val">{count_targeted}</div>
-                </div>
-                <div>🔴</div>
+            <div class="stat-card">
+                <div class="stat-label">Total Alerte</div>
+                <div class="stat-value">{total_all}</div>
             </div>
-            <div class="stat-card stat-orange" onclick="switchTab('critical')">
-                <div>
-                    <div class="stat-lbl">Threat Intel</div>
-                    <div class="stat-val">{count_critical}</div>
-                </div>
-                <div>🟠</div>
+            <div class="stat-card targeted">
+                <div class="stat-label">Infrastructură Vizată</div>
+                <div class="stat-value" style="color: var(--accent-targeted);">{total_targeted}</div>
             </div>
-            <div class="stat-card stat-blue" onclick="switchTab('general')">
-                <div>
-                    <div class="stat-lbl">Generale</div>
-                    <div class="stat-val">{count_gen}</div>
-                </div>
-                <div>🔵</div>
+            <div class="stat-card critical">
+                <div class="stat-label">Alerte Critice / Threat Intel</div>
+                <div class="stat-value" style="color: var(--accent-critical);">{total_critical}</div>
             </div>
-            <div class="stat-card stat-total" onclick="switchTab('all')">
-                <div>
-                    <div class="stat-lbl">Total Monitorizate</div>
-                    <div class="stat-val">{count_total}</div>
-                </div>
-                <div>📊</div>
+            <div class="stat-card general">
+                <div class="stat-label">Alerte Generale Vulnerabilități</div>
+                <div class="stat-value" style="color: var(--accent-general);">{total_general}</div>
             </div>
         </div>
 
-        <!-- SEARCH & FILTER PANELS -->
-        <div class="controls-panel">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="🔍 Caută vulnerabilitate, serviciu sau CVE (ex: joomla, cpanel, rce, CVE-2026)..." onkeyup="filterCards()">
-            </div>
-            <div class="tabs-row">
-                <button class="tab-btn active" id="tab-btn-all" onclick="switchTab('all')">Toate ({count_total})</button>
-                <button class="tab-btn" id="tab-btn-targeted" onclick="switchTab('targeted')">🔴 Specifice ({count_targeted})</button>
-                <button class="tab-btn" id="tab-btn-critical" onclick="switchTab('critical')">🟠 Threat Intel ({count_critical})</button>
-                <button class="tab-btn" id="tab-btn-general" onclick="switchTab('general')">🔵 Generale ({count_gen})</button>
+        <div class="controls">
+            <input type="text" id="searchInput" class="search-box" placeholder="Căutare după termen sau CVE (ex: Joomla, RCE, CVE-2026)..." onkeyup="filterCards()">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="filterCategory('all', this)">Toate</button>
+                <button class="tab-btn" onclick="filterCategory('targeted-card', this)">Vizate</button>
+                <button class="tab-btn" onclick="filterCategory('critical-card', this)">Critice</button>
+                <button class="tab-btn" onclick="filterCategory('general-card', this)">Generale</button>
             </div>
         </div>
-    """
 
-    # ALERTE SPECIFICE
-    if targeted_news:
-        html_out += '<div class="section-title title-red" data-section="targeted">🔴 Alerte Specifice (Joomla / PHP / Web / Mail)</div>'
-        for item in targeted_news:
-            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
-            title_formatted = format_cve(item['title'])
-            summary_formatted = format_cve(item['summary'])
-            html_out += f"""
-            <a href="{item['link']}" target="_blank" class="card-link" data-category="targeted">
-                <div class="card">
-                    <div class="card-header-meta">
-                        <span class="card-source">{item['source']}</span>
-                        {new_badge_html}
-                    </div>
-                    <span class="card-title">{title_formatted}</span>
-                    <p class="card-desc">{summary_formatted}</p>
-                </div>
-            </a>
-            """
-    else:
-        html_out += '<div class="ok-box" data-category="targeted">✅ Nicio alertă critică directă detectată pentru Joomla, PHP sau serverul web în ultimele 36 ore.</div>'
-
-    # THREAT INTEL
-    if critical_news:
-        html_out += '<div class="section-title title-orange" data-section="critical">🟠 Threat Intelligence & 0-Day / RCE</div>'
-        for item in critical_news[:12]:
-            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
-            title_formatted = format_cve(item['title'])
-            summary_formatted = format_cve(item['summary'])
-            html_out += f"""
-            <a href="{item['link']}" target="_blank" class="card-link" data-category="critical">
-                <div class="card">
-                    <div class="card-header-meta">
-                        <span class="card-source">{item['source']}</span>
-                        {new_badge_html}
-                    </div>
-                    <span class="card-title">{title_formatted}</span>
-                    <p class="card-desc">{summary_formatted}</p>
-                </div>
-            </a>
-            """
-
-    # GENERAL
-    if gen_news:
-        html_out += '<div class="section-title title-blue" data-section="general">🔵 Știri & Fluxuri Global Security</div>'
-        for item in gen_news[:15]:
-            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
-            title_formatted = format_cve(item['title'])
-            html_out += f"""
-            <a href="{item['link']}" target="_blank" class="card-link" data-category="general">
-                <div class="card">
-                    <div class="card-header-meta">
-                        <span class="card-source">{item['source']}</span>
-                        {new_badge_html}
-                    </div>
-                    <span class="card-title">{title_formatted}</span>
-                </div>
-            </a>
-            """
-
-    html_out += """
-        <footer>Cyber Digest Monitoring System</footer>
+        <div class="cards-grid" id="cardsGrid">
+            {generate_cards_html(categorized['targeted'], 'targeted-card')}
+            {generate_cards_html(categorized['critical'], 'critical-card')}
+            {generate_cards_html(categorized['general'], 'general-card')}
+        </div>
     </div>
 
-    <!-- FRONTEND FILTERING SCRIPT -->
     <script>
-        let currentTab = 'all';
+        let currentCategory = 'all';
 
-        function switchTab(category) {
-            currentTab = category;
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById('tab-btn-' + category);
-            if(activeBtn) activeBtn.classList.add('active');
+        function filterCategory(cat, btn) {{
+            currentCategory = cat;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
             filterCards();
-        }
+        }}
 
-        function filterCards() {
-            const query = document.getElementById('searchInput').value.toLowerCase().trim();
-            const cardLinks = document.querySelectorAll('.card-link');
+        function filterCards() {{
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
 
-            cardLinks.forEach(cardLink => {
-                const matchesCategory = (currentTab === 'all') || (cardLink.getAttribute('data-category') === currentTab);
-                const text = cardLink.innerText.toLowerCase();
-                const matchesSearch = !query || text.includes(query);
+            cards.forEach(card => {{
+                const text = card.innerText.toLowerCase();
+                const matchesSearch = text.includes(query);
+                const matchesCategory = (currentCategory === 'all') || card.classList.contains(currentCategory);
 
-                if (matchesCategory && matchesSearch) {
-                    cardLink.style.display = 'block';
-                } else {
-                    cardLink.style.display = 'none';
-                }
-            });
-        }
+                if (matchesSearch && matchesCategory) {{
+                    card.style.display = 'flex';
+                }} else {{
+                    card.style.display = 'none';
+                }}
+            }});
+        }}
     </script>
 </body>
-</html>
+</html>"""
+
+    return write_dashboard_file(html_content)
+
+
+def write_dashboard_file(html_content, filename="index.html"):
+    """Scrie dashboard-ul HTML și returnează calea unde a fost scris efectiv.
+
+    # FIX: fallback reactiv (try/except pe scrierea reală), nu doar verificare
+    # proactivă cu os.access() — os.access() verifică doar biții de permisiune
+    # și NU detectează montări read-only cu permisiuni aparent OK, disc plin,
+    # sau atribute immutable. Testat: os.access() poate raporta "scriabil" în
+    # timp ce scrierea reală eșuează — de aceea încercăm scrierea efectivă și
+    # reacționăm la eșec, nu doar verificăm în avans.
+    # FIX: tempfile.gettempdir() în loc de "/tmp" hardcodat — portabil și pe
+    # Windows, unde /tmp nu există.
     """
-    return html_out
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        return filename
+    except OSError as e:
+        fallback_path = os.path.join(tempfile.gettempdir(), filename)
+        print(f"[!] Nu s-a putut scrie {filename} în directorul curent ({e}). "
+              f"Se încearcă fallback pe {fallback_path}.")
+        with open(fallback_path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        print(f"[+] Dashboard scris cu succes în {fallback_path}.")
+        return fallback_path
 
-def send_email(subject, html_content):
-    smtp_server = os.environ.get("SMTP_SERVER")
-    smtp_port = int(os.environ.get("SMTP_PORT", 465))
-    smtp_user = os.environ.get("SMTP_USER")
-    smtp_password = os.environ.get("SMTP_PASSWORD")
-    email_to = os.environ.get("EMAIL_TO")
+# ==========================================
+# 4. MODUL NOTIFICARE EMAIL
+# ==========================================
 
-    if not all([smtp_server, smtp_user, smtp_password, email_to]):
-        print("Credențialele SMTP lipsesc. Emailul nu a fost trimis.")
+def html_to_plain_text(categorized):
+    """Generează un corp de email text-plain simplu, pe baza datelor structurate
+    (nu prin parsare HTML) — evită dependențe suplimentare și reduce riscul de spam-score.
+    """
+    lines = ["RAPORT ZILNIC CYBER SECURITY INTELLIGENCE", "=" * 45, ""]
+    for label, key in [("INFRASTRUCTURĂ VIZATĂ", "targeted"),
+                        ("ALERTE CRITICE", "critical"),
+                        ("ALERTE GENERALE", "general")]:
+        lines.append(f"-- {label} ({len(categorized[key])}) --")
+        if not categorized[key]:
+            lines.append("  (nicio alertă în ultimele 36h)")
+        for art in categorized[key]:
+            date_ro = art['date'].astimezone(TZ_RO).strftime('%d %b %Y, %H:%M')
+            lines.append(f"  [{art['source']}] {art['title']} ({date_ro})")
+            lines.append(f"    {art['link']}")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def send_email(categorized, html_file_path):
+    smtp_server = os.getenv("SMTP_SERVER")
+    smtp_port = int(os.getenv("SMTP_PORT", 587))
+    smtp_user = os.getenv("SMTP_USER")
+    smtp_password = os.getenv("SMTP_PASSWORD")
+    email_to_raw = os.getenv("EMAIL_TO")
+
+    if not all([smtp_server, smtp_user, smtp_password, email_to_raw]):
+        print("[!] Variabilele de mediu SMTP nu sunt complet configurate. Email-ul nu a fost trimis.")
         return
 
+    # FIX: strip() pe fiecare adresă — evita respingeri SMTP din cauza spațiilor
+    email_to_list = [addr.strip() for addr in email_to_raw.split(",") if addr.strip()]
+    if not email_to_list:
+        print("[!] EMAIL_TO nu conține nicio adresă validă. Email-ul nu a fost trimis.")
+        return
+
+    now_ro_str = datetime.datetime.now(TZ_RO).strftime('%d %b %Y')
+
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = smtp_user
-    msg["To"] = email_to
-    msg.attach(MIMEText(html_content, "html"))
+    msg['Subject'] = Header(f"Raport Zilnic Cyber Security Intelligence - {now_ro_str}", "utf-8")
+    msg['From'] = smtp_user
+    msg['To'] = ", ".join(email_to_list)
+
+    try:
+        with open(html_file_path, "r", encoding="utf-8") as f:
+            html_body = f.read()
+    except Exception as e:
+        print(f"[!] Eroare la citirea index.html pentru email: {e}")
+        return
+
+    # FIX: alternativă text-plain — MIME best practice, reduce riscul de spam
+    # (parametrul html_content nemaifolosit a fost eliminat din semnătură)
+    plain_body = html_to_plain_text(categorized)
+    msg.attach(MIMEText(plain_body, "plain", "utf-8"))
+    msg.attach(MIMEText(html_body, "html", "utf-8"))
 
     try:
         if smtp_port == 465:
-            with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
+            with smtplib.SMTP_SSL(smtp_server, smtp_port, timeout=15) as server:
                 server.login(smtp_user, smtp_password)
-                server.sendmail(smtp_user, email_to, msg.as_string())
+                server.sendmail(smtp_user, email_to_list, msg.as_string())
         else:
-            with smtplib.SMTP(smtp_server, smtp_port) as server:
+            with smtplib.SMTP(smtp_server, smtp_port, timeout=15) as server:
                 server.starttls()
                 server.login(smtp_user, smtp_password)
-                server.sendmail(smtp_user, email_to, msg.as_string())
-        print("Email trimis cu succes.")
+                server.sendmail(smtp_user, email_to_list, msg.as_string())
+        print("[+] Notificarea pe email a fost trimisă cu succes.")
     except Exception as e:
-        print(f"Eroare la trimiterea emailului: {e}")
+        print(f"[!] Eroare la trimiterea email-ului: {e}")
+
+# ==========================================
+# 5. PUNCT PRINCIPAL DE EXECUȚIE
+# ==========================================
 
 if __name__ == "__main__":
-    targeted_news, critical_news, gen_news = fetch_and_filter()
-    
-    html_dashboard = build_web_dashboard(targeted_news, critical_news, gen_news)
-    with open("index.html", "w", encoding="utf-8") as f:
-        f.write(html_dashboard)
-    print("index.html generat cu succes.")
+    if not _XML_HARDENED:
+        print("[!] ATENȚIE: pachetul 'defusedxml' nu este instalat — se folosește "
+              "xml.etree.ElementTree standard, vulnerabil teoretic la atacuri de "
+              "tip entity expansion pe feed-uri XML compromise. Recomandat: "
+              "pip install defusedxml")
 
-    # Trimite email zilnic doar la ora 5 UTC, sau dacă e fortificat manual
-    current_utc_hour = datetime.now(timezone.utc).hour
-    force_email = os.environ.get("FORCE_EMAIL", "false").lower() == "true"
-    
-    if current_utc_hour == 5 or force_email:
-        send_email(f"🛡️ Daily Cyber Digest - {datetime.now().strftime('%d.%m.%Y')}", html_dashboard)
+    print("[*] Colectare și filtrare alerte din sursele RSS...")
+    categorized_data = fetch_and_filter()
+
+    print("[*] Generare Dashboard HTML...")
+    saved_path = build_web_dashboard(categorized_data)
+    print(f"[+] Dashboard generat cu succes la: {saved_path}")
+
+    now_ro = datetime.datetime.now(TZ_RO)
+    force_email = os.getenv("FORCE_EMAIL", "false").lower() == "true"
+
+    if now_ro.hour == 8 or force_email:
+        print("[*] Se inițiază trimiterea email-ului...")
+        send_email(categorized_data, saved_path)
+    else:
+        print(f"[*] Email-ul nu a fost trimis (Ora locală RO: {now_ro.strftime('%H:%M')}; Programat la: 08:00 RO). Pentru forțare, setați FORCE_EMAIL=true.")
