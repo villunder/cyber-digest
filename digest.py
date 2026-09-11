@@ -9,7 +9,7 @@ from email.mime.text import MIMEText
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import feedparser
 
-# Setare timeout strict la nivel de rețea (max 8 secunde per server RSS)
+# Setare timeout strict pe rețea (max 8 secunde per flux RSS)
 socket.setdefaulttimeout(8)
 
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
@@ -115,7 +115,6 @@ def fetch_and_filter():
     seen_links = set()
     seen_titles = set()
 
-    # Rulare descărcări în paralel (12 fire simultane)
     all_fetched = []
     with ThreadPoolExecutor(max_workers=12) as executor:
         futures = [executor.submit(fetch_single_feed, src) for src in RSS_SOURCES]
@@ -160,99 +159,194 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
     <meta name="mobile-web-app-capable" content="yes">
     <title>Cyber Security Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-red: #ef4444;
-            --accent-orange: #f97316;
+            --bg: #080c14;
+            --card-bg: #111827;
+            --card-hover: #1f2937;
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --text-sub: #d1d5db;
+            --accent-red: #f43f5e;
+            --accent-orange: #fb923c;
             --accent-blue: #38bdf8;
-            --accent-green: #22c55e;
-            --border: #334155;
+            --accent-green: #10b981;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.35);
         }}
+        * {{ box-sizing: border-box; }}
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
             margin: 0;
-            padding: 12px;
-            line-height: 1.5;
+            padding: 24px 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }}
-        .container {{ max-width: 900px; margin: 0 auto; }}
+        .container {{ max-width: 1000px; margin: 0 auto; }}
         header {{
-            background: var(--card-bg);
-            padding: 16px 20px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+            padding: 22px 28px;
+            border-radius: 16px;
             border: 1px solid var(--border);
-            margin-bottom: 20px;
+            margin-bottom: 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 16px;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }}
+        .header-title {{ display: flex; align-items: center; gap: 12px; }}
+        .pulse-dot {{
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+            animation: pulse 2s infinite;
+        }}
+        @keyframes pulse {{
+            0% {{ transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }}
+            70% {{ transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }}
+            100% {{ transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }}
+        }}
+        h1 {{
+            font-size: 1.45rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }}
+        .badge-time {{
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: rgba(15, 23, 42, 0.8);
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }}
+        .section-title {{
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 14px 20px;
+            border-radius: 12px;
+            margin-top: 32px;
+            margin-bottom: 18px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }}
-        h1 {{ font-size: 1.25rem; margin: 0; }}
-        .badge-time {{ font-size: 0.75rem; color: var(--text-muted); background: #0f172a; padding: 4px 8px; border-radius: 6px; }}
-        .section-title {{
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 10px 14px;
-            border-radius: 8px;
-            margin-top: 24px;
-            margin-bottom: 14px;
-            font-weight: 700;
+        .title-red {{
+            background: linear-gradient(90deg, rgba(244, 63, 94, 0.15) 0%, rgba(244, 63, 94, 0.02) 100%);
+            color: #ff6b81;
+            border-left: 5px solid var(--accent-red);
+            border-top: 1px solid rgba(244, 63, 94, 0.2);
+            border-right: 1px solid rgba(244, 63, 94, 0.1);
+            border-bottom: 1px solid rgba(244, 63, 94, 0.1);
         }}
-        .title-red {{ background: rgba(239, 68, 68, 0.15); color: var(--accent-red); border-left: 4px solid var(--accent-red); }}
-        .title-orange {{ background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); border-left: 4px solid var(--accent-orange); }}
-        .title-blue {{ background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border-left: 4px solid var(--accent-blue); }}
+        .title-orange {{
+            background: linear-gradient(90deg, rgba(251, 146, 60, 0.15) 0%, rgba(251, 146, 60, 0.02) 100%);
+            color: #ffaa5b;
+            border-left: 5px solid var(--accent-orange);
+            border-top: 1px solid rgba(251, 146, 60, 0.2);
+            border-right: 1px solid rgba(251, 146, 60, 0.1);
+            border-bottom: 1px solid rgba(251, 146, 60, 0.1);
+        }}
+        .title-blue {{
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.02) 100%);
+            color: #60a5fa;
+            border-left: 5px solid var(--accent-blue);
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+            border-right: 1px solid rgba(56, 189, 248, 0.1);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+        }}
         .card {{
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-bottom: 16px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }}
+        .card:hover {{
+            background: var(--card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }}
         .card-source {{
             display: inline-block;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            background: #334155;
-            color: #cbd5e1;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-bottom: 6px;
+            letter-spacing: 0.04em;
+            background: rgba(51, 65, 85, 0.6);
+            color: #38bdf8;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }}
         .card-title {{
             color: var(--text-main);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1.15rem;
+            line-height: 1.4;
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
         }}
         .card-title:hover {{ color: var(--accent-blue); }}
-        .card-desc {{ font-size: 0.85rem; color: var(--text-muted); margin: 0; }}
-        .ok-box {{
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: var(--accent-green);
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
+        .card-desc {{
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin: 0;
+            line-height: 1.6;
         }}
-        footer {{ text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-top: 30px; padding: 10px; }}
+        .ok-box {{
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent-green);
+            padding: 18px 22px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }}
+        footer {{
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding: 16px;
+            border-top: 1px solid var(--border);
+        }}
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🛡️ Cyber Security Dashboard</h1>
+            <div class="header-title">
+                <div class="pulse-dot"></div>
+                <h1>Cyber Security Dashboard</h1>
+            </div>
             <span class="badge-time">Actualizat: {now_str}</span>
         </header>
     """
@@ -336,7 +430,7 @@ if __name__ == "__main__":
     html_dashboard = build_web_dashboard(targeted_news, critical_news, gen_news)
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_dashboard)
-    print("index.html generat în timp record.")
+    print("index.html generat cu succes.")
 
     current_utc_hour = datetime.now(timezone.utc).hour
     force_email = os.environ.get("FORCE_EMAIL", "false").lower() == "true"
