@@ -82,6 +82,23 @@ def is_recent(entry, hours=36):
     now = datetime.now(timezone.utc)
     return (now - pub_time) <= timedelta(hours=hours)
 
+def is_very_recent(entry, hours=6):
+    """Marchează articolele publicate în ultimele 6 ore ca NOI"""
+    published_parsed = entry.get("published_parsed") or entry.get("updated_parsed")
+    if not published_parsed:
+        return False
+    pub_time = datetime(*published_parsed[:6], tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    return (now - pub_time) <= timedelta(hours=hours)
+
+def format_cve(text):
+    """Transformă automat codurile CVE-YYYY-NNNNN în linkuri directe către Baza Națională de Vulnerabilități (NVD)"""
+    if not text:
+        return ""
+    cve_pattern = r'\b(CVE-\d{4}-\d{4,7})\b'
+    replacement = r'<a href="https://nvd.nist.gov/vuln/detail/\1" target="_blank" class="cve-badge">\1</a>'
+    return re.sub(cve_pattern, replacement, text, flags=re.IGNORECASE)
+
 def fetch_single_feed(source):
     source_name, url = source
     fetched_items = []
@@ -102,7 +119,8 @@ def fetch_single_feed(source):
                 "link": link,
                 "source": source_name,
                 "summary": summary_truncated,
-                "full_text": f"{title} {summary}".lower()
+                "full_text": f"{title} {summary}".lower(),
+                "is_new": is_very_recent(entry, hours=6)
             })
     except Exception:
         pass
@@ -139,7 +157,8 @@ def fetch_and_filter():
             "title": item["title"],
             "link": item["link"],
             "source": item["source"],
-            "summary": item["summary"]
+            "summary": item["summary"],
+            "is_new": item["is_new"]
         }
 
         if is_targeted:
@@ -154,6 +173,11 @@ def fetch_and_filter():
 def build_web_dashboard(targeted_news, critical_news, gen_news):
     now_str = datetime.now(timezone.utc).strftime("%d.%m.%Y %H:%M UTC")
     
+    count_targeted = len(targeted_news)
+    count_critical = len(critical_news[:12])
+    count_gen = len(gen_news[:15])
+    count_total = count_targeted + count_critical + count_gen
+
     html_out = f"""<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -191,12 +215,14 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             -webkit-font-smoothing: antialiased;
         }}
         .container {{ max-width: 1000px; margin: 0 auto; }}
+        
+        /* HEADER & STATS BAR */
         header {{
             background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
             padding: 22px 28px;
             border-radius: 16px;
             border: 1px solid var(--border);
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -236,6 +262,87 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             border-radius: 10px;
             border: 1px solid var(--border);
         }}
+
+        /* COUNTERS STATS BAR */
+        .stats-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }}
+        .stat-card {{
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }}
+        .stat-card:hover {{
+            background: var(--card-hover);
+            transform: translateY(-2px);
+        }}
+        .stat-val {{ font-size: 1.5rem; font-weight: 800; }}
+        .stat-lbl {{ font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }}
+        .stat-red .stat-val {{ color: var(--accent-red); }}
+        .stat-orange .stat-val {{ color: var(--accent-orange); }}
+        .stat-blue .stat-val {{ color: var(--accent-blue); }}
+        .stat-total .stat-val {{ color: var(--accent-green); }}
+
+        /* SEARCH & FILTER CONTROLS */
+        .controls-panel {{
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }}
+        .search-box input {{
+            width: 100%;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            outline: none;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }}
+        .search-box input:focus {{
+            border-color: var(--accent-blue);
+        }}
+        .tabs-row {{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }}
+        .tab-btn {{
+            background: #0f172a;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }}
+        .tab-btn:hover {{ color: var(--text-main); background: #1e293b; }}
+        .tab-btn.active {{
+            background: var(--accent-blue);
+            color: #080c14;
+            border-color: var(--accent-blue);
+        }}
+
+        /* SECTIONS & CARDS */
         .section-title {{
             font-size: 1.05rem;
             text-transform: uppercase;
@@ -254,24 +361,18 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             color: #ff6b81;
             border-left: 5px solid var(--accent-red);
             border-top: 1px solid rgba(244, 63, 94, 0.2);
-            border-right: 1px solid rgba(244, 63, 94, 0.1);
-            border-bottom: 1px solid rgba(244, 63, 94, 0.1);
         }}
         .title-orange {{
             background: linear-gradient(90deg, rgba(251, 146, 60, 0.15) 0%, rgba(251, 146, 60, 0.02) 100%);
             color: #ffaa5b;
             border-left: 5px solid var(--accent-orange);
             border-top: 1px solid rgba(251, 146, 60, 0.2);
-            border-right: 1px solid rgba(251, 146, 60, 0.1);
-            border-bottom: 1px solid rgba(251, 146, 60, 0.1);
         }}
         .title-blue {{
             background: linear-gradient(90deg, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.02) 100%);
             color: #60a5fa;
             border-left: 5px solid var(--accent-blue);
             border-top: 1px solid rgba(56, 189, 248, 0.2);
-            border-right: 1px solid rgba(56, 189, 248, 0.1);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
         }}
         .card {{
             background: var(--card-bg);
@@ -288,8 +389,14 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             transform: translateY(-3px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }}
+        .card-header-meta {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }}
         .card-source {{
-            display: inline-block;
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -298,8 +405,35 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             color: #38bdf8;
             padding: 4px 10px;
             border-radius: 6px;
-            margin-bottom: 10px;
             border: 1px solid rgba(56, 189, 248, 0.2);
+        }}
+        .badge-new {{
+            font-size: 0.7rem;
+            font-weight: 800;
+            background: var(--accent-green);
+            color: #080c14;
+            padding: 3px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+        }}
+        .cve-badge {{
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            background: rgba(244, 63, 94, 0.2);
+            color: #f43f5e;
+            padding: 2px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(244, 63, 94, 0.4);
+            text-decoration: none;
+            margin: 0 2px;
+            transition: all 0.2s;
+        }}
+        .cve-badge:hover {{
+            background: #f43f5e;
+            color: #ffffff;
         }}
         .card-title {{
             color: var(--text-main);
@@ -349,45 +483,140 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             </div>
             <span class="badge-time">Actualizat: {now_str}</span>
         </header>
+
+        <!-- STATS COUNTERS BAR -->
+        <div class="stats-grid">
+            <div class="stat-card stat-red" onclick="switchTab('targeted')">
+                <div>
+                    <div class="stat-lbl">Specifice</div>
+                    <div class="stat-val">{count_targeted}</div>
+                </div>
+                <div>🔴</div>
+            </div>
+            <div class="stat-card stat-orange" onclick="switchTab('critical')">
+                <div>
+                    <div class="stat-lbl">Threat Intel</div>
+                    <div class="stat-val">{count_critical}</div>
+                </div>
+                <div>🟠</div>
+            </div>
+            <div class="stat-card stat-blue" onclick="switchTab('general')">
+                <div>
+                    <div class="stat-lbl">Generale</div>
+                    <div class="stat-val">{count_gen}</div>
+                </div>
+                <div>🔵</div>
+            </div>
+            <div class="stat-card stat-total" onclick="switchTab('all')">
+                <div>
+                    <div class="stat-lbl">Total Monitorizate</div>
+                    <div class="stat-val">{count_total}</div>
+                </div>
+                <div>📊</div>
+            </div>
+        </div>
+
+        <!-- SEARCH & FILTER PANELS -->
+        <div class="controls-panel">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Caută vulnerabilitate, serviciu sau CVE (ex: joomla, cpanel, rce, CVE-2026)..." onkeyup="filterCards()">
+            </div>
+            <div class="tabs-row">
+                <button class="tab-btn active" id="tab-btn-all" onclick="switchTab('all')">Toate ({count_total})</button>
+                <button class="tab-btn" id="tab-btn-targeted" onclick="switchTab('targeted')">🔴 Specifice ({count_targeted})</button>
+                <button class="tab-btn" id="tab-btn-critical" onclick="switchTab('critical')">🟠 Threat Intel ({count_critical})</button>
+                <button class="tab-btn" id="tab-btn-general" onclick="switchTab('general')">🔵 Generale ({count_gen})</button>
+            </div>
+        </div>
     """
 
+    # ALERTE SPECIFICE
     if targeted_news:
-        html_out += '<div class="section-title title-red">🔴 Alerte Specifice (Joomla / PHP / Web / Mail)</div>'
+        html_out += '<div class="section-title title-red" data-section="targeted">🔴 Alerte Specifice (Joomla / PHP / Web / Mail)</div>'
         for item in targeted_news:
+            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
+            title_formatted = format_cve(item['title'])
+            summary_formatted = format_cve(item['summary'])
             html_out += f"""
-            <div class="card">
-                <span class="card-source">{item['source']}</span>
-                <a class="card-title" href="{item['link']}" target="_blank">{item['title']}</a>
-                <p class="card-desc">{item['summary']}</p>
+            <div class="card" data-category="targeted">
+                <div class="card-header-meta">
+                    <span class="card-source">{item['source']}</span>
+                    {new_badge_html}
+                </div>
+                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
+                <p class="card-desc">{summary_formatted}</p>
             </div>
             """
     else:
-        html_out += '<div class="ok-box">✅ Nicio alertă critică directă detectată pentru Joomla, PHP sau serverul web în ultimele 36 ore.</div>'
+        html_out += '<div class="ok-box" data-category="targeted">✅ Nicio alertă critică directă detectată pentru Joomla, PHP sau serverul web în ultimele 36 ore.</div>'
 
+    # THREAT INTEL
     if critical_news:
-        html_out += '<div class="section-title title-orange">🟠 Threat Intelligence & 0-Day / RCE</div>'
+        html_out += '<div class="section-title title-orange" data-section="critical">🟠 Threat Intelligence & 0-Day / RCE</div>'
         for item in critical_news[:12]:
+            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
+            title_formatted = format_cve(item['title'])
+            summary_formatted = format_cve(item['summary'])
             html_out += f"""
-            <div class="card">
-                <span class="card-source">{item['source']}</span>
-                <a class="card-title" href="{item['link']}" target="_blank">{item['title']}</a>
-                <p class="card-desc">{item['summary']}</p>
+            <div class="card" data-category="critical">
+                <div class="card-header-meta">
+                    <span class="card-source">{item['source']}</span>
+                    {new_badge_html}
+                </div>
+                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
+                <p class="card-desc">{summary_formatted}</p>
             </div>
             """
 
+    # GENERAL
     if gen_news:
-        html_out += '<div class="section-title title-blue">🔵 Știri & Fluxuri Global Security</div>'
+        html_out += '<div class="section-title title-blue" data-section="general">🔵 Știri & Fluxuri Global Security</div>'
         for item in gen_news[:15]:
+            new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
+            title_formatted = format_cve(item['title'])
             html_out += f"""
-            <div class="card">
-                <span class="card-source">{item['source']}</span>
-                <a class="card-title" href="{item['link']}" target="_blank">{item['title']}</a>
+            <div class="card" data-category="general">
+                <div class="card-header-meta">
+                    <span class="card-source">{item['source']}</span>
+                    {new_badge_html}
+                </div>
+                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
             </div>
             """
 
     html_out += """
         <footer>Cyber Digest Monitoring System</footer>
     </div>
+
+    <!-- FRONTEND FILTERING SCRIPT -->
+    <script>
+        let currentTab = 'all';
+
+        function switchTab(category) {
+            currentTab = category;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('tab-btn-' + category);
+            if(activeBtn) activeBtn.classList.add('active');
+            filterCards();
+        }
+
+        function filterCards() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const matchesCategory = (currentTab === 'all') || (card.getAttribute('data-category') === currentTab);
+                const text = card.innerText.toLowerCase();
+                const matchesSearch = !query || text.includes(query);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
     """
