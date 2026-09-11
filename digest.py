@@ -94,7 +94,7 @@ def format_cve(text):
     if not text:
         return ""
     cve_pattern = r'\b(CVE-\d{4}-\d{4,7})\b'
-    replacement = r'<a href="https://nvd.nist.gov/vuln/detail/\1" target="_blank" class="cve-badge">\1</a>'
+    replacement = r'<span onclick="event.stopPropagation(); window.open(\'https://nvd.nist.gov/vuln/detail/\1\', \'_blank\');" class="cve-badge">\1</span>'
     return re.sub(cve_pattern, replacement, text, flags=re.IGNORECASE)
 
 def fetch_single_feed(source):
@@ -372,16 +372,24 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             border-left: 5px solid var(--accent-blue);
             border-top: 1px solid rgba(56, 189, 248, 0.25);
         }}
+
+        /* CARD LINK COMPLETE */
+        .card-link {{
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 18px;
+        }}
         .card {{
             background: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 14px;
             padding: 22px 24px;
-            margin-bottom: 18px;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            cursor: pointer;
         }}
-        .card:hover {{
+        .card-link:hover .card {{
             background: var(--card-hover);
             border-color: var(--border-hover);
             transform: translateY(-3px);
@@ -425,7 +433,6 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             padding: 3px 10px;
             border-radius: 6px;
             border: 1px solid rgba(244, 63, 94, 0.4);
-            text-decoration: none;
             margin: 0 2px;
             transition: all 0.2s;
         }}
@@ -435,7 +442,6 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
         }}
         .card-title {{
             color: var(--text-main);
-            text-decoration: none;
             font-weight: 800;
             font-size: 1.25rem;
             line-height: 1.4;
@@ -443,7 +449,9 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             margin-bottom: 12px;
             transition: color 0.2s ease;
         }}
-        .card-title:hover {{ color: var(--accent-blue); }}
+        .card-link:hover .card-title {{
+            color: var(--accent-blue);
+        }}
         .card-desc {{
             font-size: 1.15rem;
             color: var(--text-sub);
@@ -537,14 +545,16 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             title_formatted = format_cve(item['title'])
             summary_formatted = format_cve(item['summary'])
             html_out += f"""
-            <div class="card" data-category="targeted">
-                <div class="card-header-meta">
-                    <span class="card-source">{item['source']}</span>
-                    {new_badge_html}
+            <a href="{item['link']}" target="_blank" class="card-link" data-category="targeted">
+                <div class="card">
+                    <div class="card-header-meta">
+                        <span class="card-source">{item['source']}</span>
+                        {new_badge_html}
+                    </div>
+                    <span class="card-title">{title_formatted}</span>
+                    <p class="card-desc">{summary_formatted}</p>
                 </div>
-                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
-                <p class="card-desc">{summary_formatted}</p>
-            </div>
+            </a>
             """
     else:
         html_out += '<div class="ok-box" data-category="targeted">✅ Nicio alertă critică directă detectată pentru Joomla, PHP sau serverul web în ultimele 36 ore.</div>'
@@ -557,14 +567,16 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             title_formatted = format_cve(item['title'])
             summary_formatted = format_cve(item['summary'])
             html_out += f"""
-            <div class="card" data-category="critical">
-                <div class="card-header-meta">
-                    <span class="card-source">{item['source']}</span>
-                    {new_badge_html}
+            <a href="{item['link']}" target="_blank" class="card-link" data-category="critical">
+                <div class="card">
+                    <div class="card-header-meta">
+                        <span class="card-source">{item['source']}</span>
+                        {new_badge_html}
+                    </div>
+                    <span class="card-title">{title_formatted}</span>
+                    <p class="card-desc">{summary_formatted}</p>
                 </div>
-                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
-                <p class="card-desc">{summary_formatted}</p>
-            </div>
+            </a>
             """
 
     # GENERAL
@@ -574,13 +586,15 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
             new_badge_html = '<span class="badge-new">NOU</span>' if item["is_new"] else ''
             title_formatted = format_cve(item['title'])
             html_out += f"""
-            <div class="card" data-category="general">
-                <div class="card-header-meta">
-                    <span class="card-source">{item['source']}</span>
-                    {new_badge_html}
+            <a href="{item['link']}" target="_blank" class="card-link" data-category="general">
+                <div class="card">
+                    <div class="card-header-meta">
+                        <span class="card-source">{item['source']}</span>
+                        {new_badge_html}
+                    </div>
+                    <span class="card-title">{title_formatted}</span>
                 </div>
-                <a class="card-title" href="{item['link']}" target="_blank">{title_formatted}</a>
-            </div>
+            </a>
             """
 
     html_out += """
@@ -601,17 +615,17 @@ def build_web_dashboard(targeted_news, critical_news, gen_news):
 
         function filterCards() {
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
-            const cards = document.querySelectorAll('.card');
+            const cardLinks = document.querySelectorAll('.card-link');
 
-            cards.forEach(card => {
-                const matchesCategory = (currentTab === 'all') || (card.getAttribute('data-category') === currentTab);
-                const text = card.innerText.toLowerCase();
+            cardLinks.forEach(cardLink => {
+                const matchesCategory = (currentTab === 'all') || (cardLink.getAttribute('data-category') === currentTab);
+                const text = cardLink.innerText.toLowerCase();
                 const matchesSearch = !query || text.includes(query);
 
                 if (matchesCategory && matchesSearch) {
-                    card.style.display = 'block';
+                    cardLink.style.display = 'block';
                 } else {
-                    card.style.display = 'none';
+                    cardLink.style.display = 'none';
                 }
             });
         }
