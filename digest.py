@@ -674,6 +674,7 @@ if __name__ == "__main__":
         f.write(html_dashboard)
     print("index.html generat cu succes.")
 
+    # Trimite email zilnic doar la ora 5 UTC, sau dacă e fortificat manual
     current_utc_hour = datetime.now(timezone.utc).hour
     force_email = os.environ.get("FORCE_EMAIL", "false").lower() == "true"
     
