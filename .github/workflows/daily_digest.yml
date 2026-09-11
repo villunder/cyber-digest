@@ -1,13 +1,24 @@
-name: Daily Cyber Security Digest
+name: Cyber Security Dashboard & Digest
 
 on:
   schedule:
-    # Rulează zilnic la ora 05:00 UTC (ora 07:00 / 08:00 în România)
-    - cron: '0 5 * * *'
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  build-and-send:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -22,11 +33,21 @@ jobs:
         run: |
           pip install feedparser
 
-      - name: Run digest script
+      - name: Run script & Generate Dashboard
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          FORCE_EMAIL: "true"
         run: python digest.py
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
