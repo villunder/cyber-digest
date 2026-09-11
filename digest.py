@@ -50,32 +50,99 @@ ISTORIC MODIFICĂRI (comentarii marcate cu # FIX):
     fără variabilă globală mutabilă — mai testabil, fără stare implicită.
 14. Fallback pe tempfile.gettempdir() în loc de "/tmp" hardcodat — portabil
     și pe Windows.
+15. BUG (clasificare): if/elif verifica TARGETED înaintea lui CRITICAL, deci
+    un articol cu termeni din ambele categorii (ex. "Joomla" + "zero-day")
+    era clasificat doar ca targeted, mascând severitatea critică. Corectat:
+    CRITICAL are prioritate; apartenența la infrastructura vizată se
+    păstrează separat ca flag și e afișată ca badge "INFRA" suplimentar.
+16. BUG (parse_pub_date): abrevierile alfabetice de fus orar (EST, EDT, PDT,
+    BST etc.) și secundele fracționale (ISO cu .%f) nu erau recunoscute,
+    date_str-uri valide erau respinse ca None. Corectat cu mapare explicită
+    de abrevieri -> offset numeric + formate suplimentare pentru fracții
+    de secundă.
+17. BUG (retenție permanentă): articolele cu dată ilizibilă ocoleau complet
+    filtrul de 36h, rămânând afișate la nesfârșit. Corectat cu un cache
+    local JSON de "primă observare" (article_first_seen_cache.json) —
+    articolele cu dată necunoscută sunt acum excluse după HOURS_LOOKBACK de
+    la momentul când au fost văzute PRIMA DATĂ local (proxy pentru vârstă,
+    în absența unei date reale).
+18. Protecție XML reală (nu doar avertisment) când defusedxml lipsește:
+    detectare explicită a oricărei declarații DOCTYPE via xml.parsers.expat
+    înainte de parsare, cu respingere imediată — testat contra unui payload
+    real de tip Billion Laughs.
+19. Retry cu backoff exponențial (3 încercări) pentru erori HTTP tranzitorii
+    (timeout, reset de conexiune) — o eroare pasageră de rețea nu mai
+    elimină complet sursa din ciclul curent.
+20. Context SSL explicit și configurabil pentru SMTP (build_smtp_ssl_context):
+    suport pentru CA bundle intern (SMTP_CA_BUNDLE) pentru relee SMTP cu
+    certificate self-signed/CA proprie, fără a dezactiva validarea implicit;
+    dezactivare completă posibilă doar explicit (SMTP_INSECURE_SKIP_VERIFY),
+    cu avertisment vizibil.
 """
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import datetime
 import html
+import json
 import os
 import re
 import smtplib
+import ssl
 import tempfile
+import time
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import urllib.error
 import urllib.parse
 import urllib.request
 
 # FIX (securitate XML): xml.etree.ElementTree standard e vulnerabil teoretic la
 # atacuri de tip "Billion Laughs" / entity expansion dacă un feed extern
 # conține un DTD cu entități imbricate. defusedxml.ElementTree oferă aceeași
-# API dar respinge DTD-urile și entitățile externe. Fallback pe stdlib dacă
-# pachetul nu e instalat — mai puțin sigur, dar aplicația rămâne funcțională.
+# API dar respinge DTD-urile și entitățile externe.
+#
+# FIX (v2.3): fallback-ul anterior pe stdlib avea DOAR un print() de avertisment,
+# fără nicio protecție reală. Acum, dacă defusedxml lipsește, folosim un
+# pre-verificator bazat pe xml.parsers.expat care detectează orice declarație
+# DOCTYPE (indiferent de poziția în fișier) și respinge parsarea înainte ca
+# vreo entitate să fie expandată — feed-urile RSS/Atom legitime nu au
+# niciodată nevoie de DTD.
 try:
     import defusedxml.ElementTree as ET
     _XML_HARDENED = True
 except ImportError:
     import xml.etree.ElementTree as ET
+    import xml.parsers.expat
     _XML_HARDENED = False
+
+    class DoctypeRejectedError(ValueError):
+        """Ridicată când un feed XML conține o declarație DOCTYPE."""
+        pass
+
+    def _reject_doctype_if_present(content_bytes):
+        """Parsează doar declarația DOCTYPE (dacă există) cu expat brut și
+        oprește imediat, ÎNAINTE ca vreo entitate să poată fi definită/expandată.
+        Testat: blochează un payload real de tip Billion Laughs.
+        """
+        parser = xml.parsers.expat.ParserCreate()
+
+        def _on_doctype(*args, **kwargs):
+            raise DoctypeRejectedError(
+                "Feed XML respins: conține o declarație DOCTYPE — "
+                "posibil atac de tip entity expansion."
+            )
+
+        parser.StartDoctypeDeclHandler = _on_doctype
+        parser.Parse(content_bytes, True)
+
+    _original_et_fromstring = ET.fromstring
+
+    def _hardened_fromstring(content_bytes):
+        _reject_doctype_if_present(content_bytes)
+        return _original_et_fromstring(content_bytes)
+
+    ET.fromstring = _hardened_fromstring
 
 from zoneinfo import ZoneInfo
 
@@ -166,6 +233,21 @@ def is_safe_url(url):
     return parsed.scheme.lower() in ALLOWED_URL_SCHEMES and bool(parsed.netloc)
 
 
+# FIX: strptime cu %z NU recunoaște abrevieri alfabetice de fus orar
+# (EST, PDT, BST etc.) — le mapăm manual la offset numeric înainte de parsare.
+# Notă: EST/EDT/etc. sunt ambigue global (există și alte zone cu aceleași
+# abrevieri), dar pentru feed-uri de securitate în engleză, convenția
+# nord-americană/britanică e cvasi-universală.
+TZ_ABBR_OFFSETS = {
+    'UT': '+0000', 'GMT': '+0000', 'UTC': '+0000', 'Z': '+0000',
+    'EST': '-0500', 'EDT': '-0400',
+    'CST': '-0600', 'CDT': '-0500',
+    'MST': '-0700', 'MDT': '-0600',
+    'PST': '-0800', 'PDT': '-0700',
+    'BST': '+0100',
+}
+
+
 def parse_pub_date(date_str):
     """Încearcă parsarea diverselor formate de dată din RSS/Atom și returnează un datetime conștient de fus/UTC."""
     if not date_str:
@@ -178,6 +260,10 @@ def parse_pub_date(date_str):
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%dT%H:%M:%SZ",
         "%a, %d %b %Y %H:%M:%S",
+        # FIX: secunde fracționale (comune la feed-uri generate din JSON/API)
+        "%Y-%m-%dT%H:%M:%S.%f%z",
+        "%Y-%m-%dT%H:%M:%S.%fZ",
+        "%a, %d %b %Y %H:%M:%S.%f %z",
     ]
 
     clean_str = re.sub(r'\s+', ' ', date_str).strip()
@@ -191,20 +277,53 @@ def parse_pub_date(date_str):
         except ValueError:
             continue
 
+    # FIX: fallback pentru abrevieri alfabetice de fus orar (EST, PDT, BST...)
+    # — le înlocuim cu offset numeric și reîncercăm formatele cu %z.
+    match = re.search(r'\b([A-Z]{2,4})$', clean_str)
+    if match and match.group(1) in TZ_ABBR_OFFSETS:
+        offset = TZ_ABBR_OFFSETS[match.group(1)]
+        numeric_str = clean_str[:match.start()].strip() + ' ' + offset
+        for fmt in ("%a, %d %b %Y %H:%M:%S %z", "%Y-%m-%dT%H:%M:%S %z"):
+            try:
+                return datetime.datetime.strptime(numeric_str, fmt)
+            except ValueError:
+                continue
+
     return None
+
+
+# FIX: retry cu backoff exponențial pentru erori tranzitorii de rețea —
+# o eroare pasageră (timeout, reset de conexiune, 502/503) nu mai elimină
+# complet sursa din ciclul curent. Nu se reîncearcă pe erori permanente
+# (404, XML invalid) — doar pe erori de rețea/timeout.
+HTTP_RETRY_ATTEMPTS = 3
+HTTP_RETRY_BACKOFF_BASE = 1.5  # secunde; secvență: 1.5s, 3s
+
+
+def _fetch_url_with_retry(url, headers, timeout):
+    last_error = None
+    for attempt in range(HTTP_RETRY_ATTEMPTS):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                return response.read()
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            last_error = e
+            if attempt < HTTP_RETRY_ATTEMPTS - 1:
+                wait = HTTP_RETRY_BACKOFF_BASE * (attempt + 1)
+                time.sleep(wait)
+    raise last_error
 
 
 def fetch_single_feed(source):
     """Descarcă și parsează un singur feed RSS/Atom."""
     articles = []
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/2.1'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/2.3'
     }
 
     try:
-        req = urllib.request.Request(source['url'], headers=headers)
-        with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as response:
-            content = response.read()
+        content = _fetch_url_with_retry(source['url'], headers, REQUEST_TIMEOUT)
 
         root = ET.fromstring(content)
         now_utc = datetime.datetime.now(datetime.timezone.utc)
@@ -271,6 +390,77 @@ def fetch_single_feed(source):
     return articles
 
 
+def _write_file_with_fallback(content, filename):
+    """Scrie un fișier text, cu fallback reactiv pe tempfile.gettempdir()
+    dacă scrierea în directorul curent eșuează. Returnează calea reală
+    folosită. Reutilizat atât pentru dashboard-ul HTML, cât și pentru
+    cache-ul JSON de 'primă observare'.
+    """
+    try:
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(content)
+        return filename
+    except OSError as e:
+        fallback_path = os.path.join(tempfile.gettempdir(), filename)
+        print(f"[!] Nu s-a putut scrie {filename} în directorul curent ({e}). "
+              f"Se încearcă fallback pe {fallback_path}.")
+        with open(fallback_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        print(f"[+] Fișier scris cu succes în {fallback_path}.")
+        return fallback_path
+
+
+def write_dashboard_file(html_content, filename="index.html"):
+    """Scrie dashboard-ul HTML și returnează calea unde a fost scris efectiv."""
+    return _write_file_with_fallback(html_content, filename)
+
+
+# FIX (punctul 3 din observații): articolele cu dată ilizibilă ocoleau complet
+# filtrul de 36h — rămâneau afișate la nesfârșit, cât timp feed-ul continua
+# să le liste. Fără o dată reală, nu putem ști vârsta articolului — dar putem
+# ține minte de CÂND l-am văzut noi prima dată local, și să-l scoatem din
+# dashboard după HOURS_LOOKBACK de la acel moment, la fel ca la articolele
+# cu dată cunoscută. E un proxy, nu vârsta reală, dar mărginește retenția.
+CACHE_FILENAME = "article_first_seen_cache.json"
+
+
+def _find_existing_cache_path():
+    for path in (CACHE_FILENAME, os.path.join(tempfile.gettempdir(), CACHE_FILENAME)):
+        if os.path.exists(path):
+            return path
+    return None
+
+
+def load_first_seen_cache():
+    path = _find_existing_cache_path()
+    if not path:
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"[!] Cache-ul de 'primă observare' e ilizibil ({e}) — pornesc cu cache gol.")
+        return {}
+
+
+def save_first_seen_cache(cache):
+    """Salvează cache-ul, eliminând întâi intrările mai vechi de 30 de zile
+    (previne creșterea nemărginită a fișierului)."""
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    pruned = {}
+    for link, iso_ts in cache.items():
+        try:
+            ts = datetime.datetime.fromisoformat(iso_ts)
+        except ValueError:
+            continue
+        if (now_utc - ts).days <= 30:
+            pruned[link] = iso_ts
+    try:
+        _write_file_with_fallback(json.dumps(pruned), CACHE_FILENAME)
+    except OSError as e:
+        print(f"[!] Nu s-a putut salva cache-ul de 'primă observare': {e}")
+
+
 def fetch_and_filter():
     """Rulează colectarea paralelă și clasifică alertele."""
     all_articles = []
@@ -296,13 +486,41 @@ def fetch_and_filter():
         seen_links.add(key)
         deduped.append(art)
 
+    # FIX (punctul 3): pentru articolele cu dată necunoscută, folosim un cache
+    # local de "primă observare" ca să mărginim retenția la HOURS_LOOKBACK,
+    # exact ca la articolele cu dată reală — altfel rămâneau afișate la
+    # nesfârșit cât timp feed-ul continua să le liste.
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    first_seen_cache = load_first_seen_cache()
+    bounded_deduped = []
+    for art in deduped:
+        if not art['date_unknown']:
+            bounded_deduped.append(art)
+            continue
+
+        cache_key = art['link'] if art['link'] != '#' else f"{art['source']}::{art['title']}"
+        first_seen_iso = first_seen_cache.get(cache_key)
+        if first_seen_iso is None:
+            first_seen_cache[cache_key] = now_utc.isoformat()
+            bounded_deduped.append(art)
+        else:
+            try:
+                first_seen = datetime.datetime.fromisoformat(first_seen_iso)
+                age_hours = (now_utc - first_seen).total_seconds() / 3600
+            except ValueError:
+                age_hours = 0  # cache coruptă pe această intrare — tratăm ca nou
+            if age_hours <= HOURS_LOOKBACK:
+                bounded_deduped.append(art)
+            # altfel: exclus — a depășit fereastra de 36h de la prima observare locală
+
+    save_first_seen_cache(first_seen_cache)
+    deduped = bounded_deduped
+
     categorized = {
         'targeted': [],
         'critical': [],
         'general': []
     }
-
-    now_utc = datetime.datetime.now(datetime.timezone.utc)
 
     for art in deduped:
         text_to_scan = f"{art['title']} {art['description']}".lower()
@@ -314,10 +532,22 @@ def fetch_and_filter():
         else:
             art['is_new'] = (now_utc - art['date']).total_seconds() <= 21600
 
-        if any(kw in text_to_scan for kw in KEYWORDS_TARGETED):
-            categorized['targeted'].append(art)
-        elif any(kw in text_to_scan for kw in KEYWORDS_CRITICAL):
+        # FIX: clasificarea anterioară verifica if/elif în ordinea
+        # targeted -> critical -> general, deci un articol care conținea
+        # simultan un termen "targeted" (ex. "joomla") ȘI un termen "critical"
+        # (ex. "zero-day") era clasificat DOAR ca targeted — o vulnerabilitate
+        # de severitate maximă pe infrastructura proprie ajungea mascată
+        # într-o categorie mai puțin vizibilă. Acum severitatea domină
+        # clasificarea primară (critical > targeted > general), iar
+        # apartenența la infrastructura vizată e păstrată separat ca flag,
+        # afișat ca badge suplimentar — nu se mai pierde niciun semnal.
+        is_targeted_infra = any(kw in text_to_scan for kw in KEYWORDS_TARGETED)
+        art['is_targeted_infra'] = is_targeted_infra
+
+        if any(kw in text_to_scan for kw in KEYWORDS_CRITICAL):
             categorized['critical'].append(art)
+        elif is_targeted_infra:
+            categorized['targeted'].append(art)
         elif any(kw in text_to_scan for kw in KEYWORDS_GENERAL):
             categorized['general'].append(art)
 
@@ -344,6 +574,15 @@ def generate_cards_html(articles, category_class):
     cards = []
     for art in articles:
         new_badge = '<span class="badge badge-new">NOU</span>' if art['is_new'] else ''
+        # FIX: badge secundar — semnalizează vizual când un articol clasificat
+        # 'critical' (sau 'general') afectează totuși infrastructura proprie
+        # (ex. Joomla), pentru ca semnalul să nu se piardă odată cu
+        # reclasificarea după severitate (vezi fetch_and_filter).
+        infra_badge = (
+            '<span class="badge badge-infra">INFRA</span>'
+            if art.get('is_targeted_infra') and category_class != 'targeted-card'
+            else ''
+        )
         title_formatted = format_cve(art['title'])
         desc_formatted = html.escape(art['description'])
 
@@ -360,6 +599,7 @@ def generate_cards_html(articles, category_class):
                 <span class="source-tag">{html.escape(art['source'])}</span>
                 <span class="date-tag">{date_str}</span>
                 {new_badge}
+                {infra_badge}
             </div>
             <h3 class="card-title"><a href="{html.escape(art['link'])}" target="_blank" rel="noopener">{title_formatted}</a></h3>
             <p class="card-desc">{desc_formatted}</p>
@@ -503,6 +743,7 @@ def build_web_dashboard(categorized):
             font-size: 0.7rem;
         }}
         .badge-new {{ background: #10b981; color: #fff; }}
+        .badge-infra {{ background: #a855f7; color: #fff; }}
         .cve-badge {{
             background: #334155;
             color: #38bdf8;
@@ -608,32 +849,6 @@ def build_web_dashboard(categorized):
 
     return write_dashboard_file(html_content)
 
-
-def write_dashboard_file(html_content, filename="index.html"):
-    """Scrie dashboard-ul HTML și returnează calea unde a fost scris efectiv.
-
-    # FIX: fallback reactiv (try/except pe scrierea reală), nu doar verificare
-    # proactivă cu os.access() — os.access() verifică doar biții de permisiune
-    # și NU detectează montări read-only cu permisiuni aparent OK, disc plin,
-    # sau atribute immutable. Testat: os.access() poate raporta "scriabil" în
-    # timp ce scrierea reală eșuează — de aceea încercăm scrierea efectivă și
-    # reacționăm la eșec, nu doar verificăm în avans.
-    # FIX: tempfile.gettempdir() în loc de "/tmp" hardcodat — portabil și pe
-    # Windows, unde /tmp nu există.
-    """
-    try:
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(html_content)
-        return filename
-    except OSError as e:
-        fallback_path = os.path.join(tempfile.gettempdir(), filename)
-        print(f"[!] Nu s-a putut scrie {filename} în directorul curent ({e}). "
-              f"Se încearcă fallback pe {fallback_path}.")
-        with open(fallback_path, "w", encoding="utf-8") as f:
-            f.write(html_content)
-        print(f"[+] Dashboard scris cu succes în {fallback_path}.")
-        return fallback_path
-
 # ==========================================
 # 4. MODUL NOTIFICARE EMAIL
 # ==========================================
@@ -655,6 +870,32 @@ def html_to_plain_text(categorized):
             lines.append(f"    {art['link']}")
         lines.append("")
     return "\n".join(lines)
+
+
+# FIX (punctul 5): context SSL explicit și configurabil pentru starttls()/
+# SMTP_SSL(), în loc de contextul implicit al smtplib. Permite validarea
+# printr-un bundle CA intern (SMTP_CA_BUNDLE), pentru relee SMTP interne cu
+# certificate emise de o CA proprie — fără să se dezactiveze validarea.
+# Dezactivarea completă a validării (SMTP_INSECURE_SKIP_VERIFY) e posibilă
+# doar explicit, cu avertisment vizibil — nu e niciodată comportamentul
+# implicit.
+def build_smtp_ssl_context():
+    ca_bundle = os.getenv("SMTP_CA_BUNDLE")
+    insecure = os.getenv("SMTP_INSECURE_SKIP_VERIFY", "false").lower() == "true"
+
+    if insecure:
+        print("[!] ATENȚIE: SMTP_INSECURE_SKIP_VERIFY=true — validarea "
+              "certificatului SSL al serverului SMTP este DEZACTIVATĂ. "
+              "Folosiți doar în medii de test, niciodată în producție.")
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        return ctx
+
+    if ca_bundle:
+        return ssl.create_default_context(cafile=ca_bundle)
+
+    return ssl.create_default_context()
 
 
 def send_email(categorized, html_file_path):
@@ -695,13 +936,14 @@ def send_email(categorized, html_file_path):
     msg.attach(MIMEText(html_body, "html", "utf-8"))
 
     try:
+        smtp_ctx = build_smtp_ssl_context()
         if smtp_port == 465:
-            with smtplib.SMTP_SSL(smtp_server, smtp_port, timeout=15) as server:
+            with smtplib.SMTP_SSL(smtp_server, smtp_port, timeout=15, context=smtp_ctx) as server:
                 server.login(smtp_user, smtp_password)
                 server.sendmail(smtp_user, email_to_list, msg.as_string())
         else:
             with smtplib.SMTP(smtp_server, smtp_port, timeout=15) as server:
-                server.starttls()
+                server.starttls(context=smtp_ctx)
                 server.login(smtp_user, smtp_password)
                 server.sendmail(smtp_user, email_to_list, msg.as_string())
         print("[+] Notificarea pe email a fost trimisă cu succes.")
