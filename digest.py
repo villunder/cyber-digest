@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Cyber Security Monitoring & Intelligence Engine (v4.2 - Ultimate Enterprise Edition)
------------------------------------------------------------------------------------
+Cyber Security Monitoring & Intelligence Engine (v4.6 - Mobile-Bulletproof Enterprise Edition)
+-----------------------------------------------------------------------------------------
 - Integrare completă a celor 31 de surse RSS/Atom de securitate cu priorități ponderate.
 - Securizare XML defensivă (defusedxml + expat DOCTYPE rejection).
 - Protecție SSRF robustă (validare URL, blocare IP-uri private, loopback, link-local).
@@ -9,7 +9,13 @@ Cyber Security Monitoring & Intelligence Engine (v4.2 - Ultimate Enterprise Edit
 - Parser de date avansat cu suport extins pentru fusuri orare și abrevieri.
 - Extracție IOC avansată (CVE-uri și adrese IPv4) și motor de scorare corectat pentru infrastructură.
 - Scriere atomică sigură pentru cache și dashboard HTML.
-- Notificare prin email (SMTP TLS/SSL, alternativă text+HTML).
+- DOUĂ ieșiri HTML separate și independente:
+    1) build_web_dashboard()   -> index.html, servit pe GitHub Pages (CSS Grid/Flexbox/var(), OK pt. browser)
+    2) build_mobile_email_html() -> corp de email dedicat, layout single-column stivuit,
+       fără CSS Grid/Flexbox/variabile CSS (nesuportate de clienții de mail), fără colspan.
+  Motivul separării: trimiterea DIRECTĂ a index.html ca și corp de email (cum se întâmpla în
+  v4.2) produce randare stricată pe mobil, pentru că Gmail/Outlook nu suportă var(), grid sau
+  flex — proprietățile cad silențios și layout-ul se prăbușește la comportamentul default block/inline.
 """
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -182,7 +188,7 @@ def normalize_url(url):
         parsed = urllib.parse.urlparse(url)
         query_params = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
         filtered_params = [
-            (k, v) for k, v in query_params 
+            (k, v) for k, v in query_params
             if not k.lower().startswith(('utm_', 'fbclid', 'gclid', 'ref', 'source'))
         ]
         normalized_query = urllib.parse.urlencode(filtered_params)
@@ -205,7 +211,7 @@ def parse_pub_date(date_str):
         if clean_str.endswith(f' {abbr}'):
             clean_str = clean_str[:-len(abbr)] + offset
             break
-            
+
     formats = [
         "%a, %d %b %Y %H:%M:%S %z",
         "%a, %d %b %Y %H:%M:%S.%f %z",
@@ -264,9 +270,9 @@ def _fetch_url_with_retry(url, headers, timeout):
 
 def fetch_single_feed(source, http_cache):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.2'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.6'
     }
-    
+
     cache_entry = http_cache.get(source['url'], {})
     if cache_entry.get('etag'):
         headers['If-None-Match'] = cache_entry['etag']
@@ -329,7 +335,7 @@ def fetch_single_feed(source, http_cache):
                 'date_unknown': date_unknown,
                 'iocs': iocs
             })
-        
+
         serializable_articles = []
         for art in articles:
             art_copy = art.copy()
@@ -378,17 +384,17 @@ def save_cache(cache_data):
 
 def fetch_and_filter():
     cache = load_cache()
-    
+
     # Bypass cache HTTP la rulare manuală (workflow_dispatch) sau forțată
-    is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or 
+    is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or
                      os.getenv("FORCE_REFRESH", "").lower() == "true")
-    
+
     if is_manual_run:
         print("[*] Rulare manuală detectată (workflow_dispatch): se resetează cache-ul HTTP pentru date proaspete.")
         http_cache = {}
     else:
         http_cache = cache.get('http_cache', {})
-    
+
     all_articles = []
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         future_to_src = {executor.submit(fetch_single_feed, src, http_cache): src for src in RSS_SOURCES}
@@ -456,11 +462,11 @@ def fetch_and_filter():
         has_general = contains_keyword(text_to_scan, KEYWORDS_GENERAL)
 
         score = 0
-        if is_targeted_infra: 
+        if is_targeted_infra:
             score += 30
-        if has_general: 
+        if has_general:
             score += 10
-        if has_critical: 
+        if has_critical:
             score += 70
 
         cvss_match = re.search(r'(?:cvss(?:\s*v?3\.[01])?|base\s+score)[:\s_v]*([0-9.]+)', text_to_scan, re.IGNORECASE)
@@ -478,7 +484,7 @@ def fetch_and_filter():
         art['risk_score'] = score
         art['is_targeted_infra'] = is_targeted_infra
 
-        # Logică corectată de categorisire: infrastructura vizată are prioritate maximă
+        # Logică de categorisire: infrastructura vizată are prioritate maximă
         if is_targeted_infra:
             categorized['targeted'].append(art)
         elif score >= 70:
@@ -496,7 +502,7 @@ def fetch_and_filter():
     return categorized
 
 # ==========================================
-# DASHBOARD HTML & NOTIFICĂRI EMAIL
+# 1) GENERATOR DASHBOARD WEB (GitHub Pages, browser modern — CSS Grid/Flexbox/var() OK aici)
 # ==========================================
 
 def format_cve(text):
@@ -513,7 +519,7 @@ def generate_cards_html(articles, category_class):
         new_badge = '<span class="badge badge-new">NOU</span>' if art['is_new'] else ''
         infra_badge = '<span class="badge badge-infra">INFRA</span>' if art.get('is_targeted_infra') and category_class != 'targeted-card' else ''
         score_badge = f'<span class="badge badge-score">SCORE: {art.get("risk_score", 0)}</span>'
-        
+
         ioc_html = ""
         if art['iocs']['cves'] or art['iocs']['ips']:
             cve_spans = "".join([f'<span class="ioc-pill">CVE: {c}</span>' for c in art['iocs']['cves'][:3]])
@@ -522,7 +528,7 @@ def generate_cards_html(articles, category_class):
 
         title_formatted = format_cve(art['title'])
         desc_formatted = html.escape(art['description'])
-        
+
         art_date = art.get('date')
         if isinstance(art_date, datetime.datetime):
             date_str = art_date.astimezone(TZ_RO).strftime('%d %b %Y, %H:%M')
@@ -558,7 +564,7 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Intelligence v4.2 Ultimate</title>
+    <title>Cyber Security Intelligence v4.6 Ultimate</title>
     <style>
         :root {{
             --bg-dark: #0f172a;
@@ -593,7 +599,7 @@ def build_web_dashboard(categorized):
         .card.targeted-card {{ border-top: 3px solid var(--accent-targeted); }}
         .card.critical-card {{ border-top: 3px solid var(--accent-critical); }}
         .card.general-card {{ border-top: 3px solid var(--accent-general); }}
-        .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; margin-bottom: 12px; gap: 5px; }}
+        .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; margin-bottom: 12px; gap: 5px; flex-wrap: wrap; }}
         .source-tag {{ color: var(--text-muted); font-weight: 600; }}
         .date-tag {{ color: var(--text-muted); }}
         .badge {{ padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 0.7rem; }}
@@ -684,6 +690,265 @@ def build_web_dashboard(categorized):
             f.write(html_content)
         return fallback
 
+# ==========================================
+# 2) GENERATOR EMAIL MOBILE-BULLETPROOF (INDEPENDENT de index.html)
+# ==========================================
+#
+# De ce e separat de build_web_dashboard():
+# În v4.2, send_email() citea și trimitea DIRECT fișierul index.html ca și corp de mail.
+# Acel HTML se bazează pe CSS Grid, Flexbox și variabile CSS (var(--...)) — toate nesuportate
+# de motoarele de randare ale clienților de email (Gmail web/app, Outlook, etc). Rezultatul:
+# proprietățile cad silențios, iar layout-ul se prăbușește la comportamentul default
+# block/inline, exact tiparul de randare stricat observat pe mobil.
+#
+# Regulile de construcție de mai jos, aplicate consecvent:
+#   1. Fără CSS Grid, Flexbox sau var() — doar tabele HTML + stiluri inline cu valori fixe.
+#   2. Fără colspan combinat cu alte <td> pe același rând (Gmail Android calculează lățimile
+#      coloanelor din primul rând și le fixează pentru tot tabelul).
+#   3. Tabel exterior width="100%" + max-width:600px (nu width fix), pentru ecrane ~360-380px.
+#   4. bgcolor="#..." redundant lângă background-color (unii clienți strip-uiesc CSS de fundal).
+#   5. word-break/overflow-wrap pe titluri, descrieri, CVE-uri lungi fără spații.
+#   6. <meta name="color-scheme"> ca să nu las auto-dark-mode să inverseze designul.
+#   7. Linkuri cu culoare + text-decoration explicite direct pe <a>.
+#   8. role="presentation" + reset MSO pentru Outlook desktop (motor Word).
+#   9. Preheader ascuns pentru preview-ul din inbox.
+#  10. Badge-uri cu white-space:nowrap, fiecare pe rândul lor propriu.
+#
+
+def build_mobile_email_html(categorized):
+    now_ro_str = datetime.datetime.now(TZ_RO).strftime('%d %b %Y, %H:%M')
+    total_targeted = len(categorized['targeted'])
+    total_critical = len(categorized['critical'])
+    total_general = len(categorized['general'])
+    total_all = total_targeted + total_critical + total_general
+
+    top_alert_title = None
+    for key in ('targeted', 'critical', 'general'):
+        if categorized[key]:
+            top_alert_title = categorized[key][0]['title']
+            break
+    preheader_text = (
+        f"{total_all} alerte noi \u2022 {total_targeted} vizate \u2022 {total_critical} critice"
+        + (f" \u2014 {top_alert_title}" if top_alert_title else "")
+    )
+
+    def render_badges_row(art):
+        badges = []
+        badges.append(
+            f'<span style="display:inline-block; white-space:nowrap; background-color:#334155; '
+            f'color:#38bdf8; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:bold; '
+            f'margin:0 6px 4px 0;">SCORE: {art.get("risk_score", 0)}</span>'
+        )
+        if art['is_new']:
+            badges.append(
+                '<span style="display:inline-block; white-space:nowrap; background-color:#10b981; '
+                'color:#ffffff; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:bold; '
+                'margin:0 6px 4px 0;">NOU</span>'
+            )
+        if art.get('is_targeted_infra'):
+            badges.append(
+                '<span style="display:inline-block; white-space:nowrap; background-color:#a855f7; '
+                'color:#ffffff; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:bold; '
+                'margin:0 6px 4px 0;">INFRA</span>'
+            )
+        return "".join(badges)
+
+    def render_card(art, accent_color):
+        art_date = art.get('date')
+        if isinstance(art_date, datetime.datetime):
+            date_str = art_date.astimezone(TZ_RO).strftime('%d %b, %H:%M')
+        else:
+            date_str = str(art_date)
+
+        badges_html = render_badges_row(art)
+
+        iocs_row = ""
+        if art['iocs']['cves'] or art['iocs']['ips']:
+            cve_txt = "".join([
+                f'<span style="display:inline-block; white-space:nowrap; background-color:#0f172a; '
+                f'color:#f43f5e; padding:2px 6px; border-radius:3px; font-family:monospace; '
+                f'font-size:11px; border:1px solid #334155; margin:0 4px 4px 0;">{html.escape(c)}</span>'
+                for c in art['iocs']['cves'][:3]
+            ])
+            iocs_row = f"""
+            <tr>
+                <td style="padding-top:6px; word-break:break-word; overflow-wrap:break-word;">
+                    {cve_txt}
+                </td>
+            </tr>
+            """
+
+        link_safe = html.escape(art['link'])
+        title_safe = html.escape(art['title'])
+        desc_safe = html.escape(art['description'])
+        source_safe = html.escape(art['source'])
+
+        return f"""
+        <tr>
+            <td bgcolor="#1e293b" style="background-color:#1e293b; border:1px solid #334155; border-left:4px solid {accent_color}; border-radius:6px; padding:14px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed; width:100%;">
+                    <tr>
+                        <td style="font-size:12px; color:#94a3b8; padding-bottom:8px; word-break:break-word;">
+                            <strong style="color:#cbd5e1;">{source_safe}</strong> &bull; {date_str}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-bottom:8px; line-height:1.6;">
+                            {badges_html}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:16px; font-weight:bold; padding-bottom:8px; line-height:1.4; word-break:break-word; overflow-wrap:break-word;">
+                            <a href="{link_safe}" target="_blank" style="color:#ffffff; text-decoration:none; word-break:break-word;">{title_safe}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size:14px; color:#94a3b8; line-height:1.5; word-break:break-word; overflow-wrap:break-word;">
+                            {desc_safe}
+                        </td>
+                    </tr>
+                    {iocs_row}
+                </table>
+            </td>
+        </tr>
+        <tr><td height="10" style="line-height:10px; font-size:10px;">&nbsp;</td></tr>
+        """
+
+    def render_section_rows(articles, accent_color, section_title):
+        if not articles:
+            return f"""
+            <tr>
+                <td bgcolor="#1e293b" style="padding:12px 16px; background-color:#1e293b; color:#94a3b8; font-size:14px; border-radius:6px;">
+                    <strong>{html.escape(section_title)} (0):</strong> Nicio alertă în intervalul analizat.
+                </td>
+            </tr>
+            <tr><td height="12" style="line-height:12px; font-size:12px;">&nbsp;</td></tr>
+            """
+
+        rows = [f"""
+        <tr>
+            <td style="padding-top:10px; padding-bottom:6px;">
+                <span style="font-size:15px; font-weight:bold; color:{accent_color}; text-transform:uppercase;">
+                    {html.escape(section_title)} ({len(articles)})
+                </span>
+            </td>
+        </tr>
+        """]
+
+        for art in articles:
+            rows.append(render_card(art, accent_color))
+
+        return "\n".join(rows)
+
+    email_html = f"""<!DOCTYPE html>
+<html lang="ro" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="dark light">
+    <meta name="supported-color-schemes" content="dark light">
+    <title>Cyber Security Intelligence</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <style>
+        table {{ border-collapse: collapse; }}
+        td, a, span {{ font-family: Arial, Helvetica, sans-serif !important; }}
+    </style>
+    <![endif]-->
+    <style>
+        body, table, td, a {{ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }}
+        table, td {{ mso-table-lspace: 0pt; mso-table-rspace: 0pt; }}
+        img {{ -ms-interpolation-mode: bicubic; border: 0; }}
+        body {{ margin: 0; padding: 0; width: 100% !important; height: 100% !important; }}
+        a {{ text-decoration: none; }}
+        @media only screen and (max-width: 600px) {{
+            .email-container {{ width: 100% !important; max-width: 100% !important; }}
+            .fluid-padding {{ padding-left: 14px !important; padding-right: 14px !important; }}
+        }}
+    </style>
+</head>
+<body style="margin:0; padding:0; background-color:#0f172a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#f8fafc;">
+    <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#0f172a; opacity:0;">
+        {html.escape(preheader_text)}
+    </div>
+    <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+    </div>
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0f172a" style="background-color:#0f172a;">
+        <tr>
+            <td align="center" style="padding:20px 0;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="email-container" style="max-width:600px; width:100%;">
+
+                    <tr>
+                        <td bgcolor="#1e293b" class="fluid-padding" style="padding:20px; background-color:#1e293b; border-radius:8px 8px 0 0; border-bottom:1px solid #334155;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="font-size:20px; font-weight:bold; color:#ffffff;">
+                                        Cyber Security Intelligence
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:13px; color:#94a3b8; padding-top:4px;">
+                                        Sincronizat la: {now_ro_str} &bull; 31 Surse Active
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td bgcolor="#1e293b" class="fluid-padding" style="background-color:#1e293b; padding:15px 20px; border-bottom:1px solid #334155;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td width="25%" align="center" style="font-size:12px; color:#94a3b8; text-transform:uppercase; padding:4px;">
+                                        Total<br><span style="font-size:18px; font-weight:bold; color:#ffffff;">{total_all}</span>
+                                    </td>
+                                    <td width="25%" align="center" style="font-size:12px; color:#94a3b8; text-transform:uppercase; padding:4px;">
+                                        Vizate<br><span style="font-size:18px; font-weight:bold; color:#f59e0b;">{total_targeted}</span>
+                                    </td>
+                                    <td width="25%" align="center" style="font-size:12px; color:#94a3b8; text-transform:uppercase; padding:4px;">
+                                        Critice<br><span style="font-size:18px; font-weight:bold; color:#ef4444;">{total_critical}</span>
+                                    </td>
+                                    <td width="25%" align="center" style="font-size:12px; color:#94a3b8; text-transform:uppercase; padding:4px;">
+                                        Generale<br><span style="font-size:18px; font-weight:bold; color:#3b82f6;">{total_general}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td bgcolor="#0f172a" class="fluid-padding" style="padding:20px; background-color:#0f172a;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                {render_section_rows(categorized['targeted'], '#f59e0b', 'Infrastructură Vizată')}
+                                {render_section_rows(categorized['critical'], '#ef4444', 'Alerte Critice / Threat Intel')}
+                                {render_section_rows(categorized['general'], '#3b82f6', 'Alerte Generale Vulnerabilități')}
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td bgcolor="#0f172a" align="center" style="padding:20px; text-align:center; font-size:12px; color:#64748b; background-color:#0f172a; border-top:1px solid #1e293b;">
+                            Generat automat de motorul Cyber Security Intelligence v4.6 &bull; Toate drepturile rezervate.
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>"""
+    return email_html
+
 def html_to_plain_text(categorized):
     lines = ["RAPORT ZILNIC CYBER SECURITY INTELLIGENCE (31 SURSE)", "=" * 55, ""]
     for label, key in [("INFRASTRUCTURĂ VIZATĂ", "targeted"),
@@ -703,7 +968,12 @@ def html_to_plain_text(categorized):
         lines.append("")
     return "\n".join(lines)
 
-def send_email(categorized, html_file_path):
+def send_email(categorized):
+    """
+    NOTĂ: nu mai primește/citește html_file_path (index.html). Corpul de email e generat
+    independent de build_mobile_email_html(), tocmai ca să nu se mai trimită dashboard-ul
+    web (CSS Grid/Flexbox/var()) direct ca și corp de mail.
+    """
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = int(os.getenv("SMTP_PORT", 587))
     smtp_user = os.getenv("SMTP_USER")
@@ -724,16 +994,11 @@ def send_email(categorized, html_file_path):
     msg['From'] = smtp_user
     msg['To'] = ", ".join(email_to_list)
 
-    try:
-        with open(html_file_path, "r", encoding="utf-8") as f:
-            html_body = f.read()
-    except Exception as e:
-        print(f"[!] Eroare citire HTML pentru email: {e}")
-        return
-
+    email_html_body = build_mobile_email_html(categorized)
     plain_body = html_to_plain_text(categorized)
+
     msg.attach(MIMEText(plain_body, "plain", "utf-8"))
-    msg.attach(MIMEText(html_body, "html", "utf-8"))
+    msg.attach(MIMEText(email_html_body, "html", "utf-8"))
 
     try:
         context = ssl.create_default_context()
@@ -746,18 +1011,18 @@ def send_email(categorized, html_file_path):
                 server.starttls(context=context)
                 server.login(smtp_user, smtp_password)
                 server.sendmail(smtp_user, email_to_list, msg.as_string())
-        print("[+] Notificarea pe email a fost trimisă cu succes.")
+        print("[+] Notificarea pe email optimizată pentru mobil a fost trimisă cu succes.")
     except Exception as e:
         print(f"[!] Eroare trimitere email: {e}")
 
 if __name__ == "__main__":
-    print("[*] Rulare motor Cyber Security Intelligence v4.2...")
+    print("[*] Rulare motor Cyber Security Intelligence v4.6...")
     categorized_data = fetch_and_filter()
     saved_path = build_web_dashboard(categorized_data)
-    print(f"[+] Dashboard generat cu succes la: {saved_path}")
+    print(f"[+] Dashboard web generat cu succes la: {saved_path}")
 
     now_ro = datetime.datetime.now(TZ_RO)
     force_email = os.getenv("FORCE_EMAIL", "false").lower() == "true"
     if now_ro.hour == 8 or force_email or os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch":
-        print("[*] Se inițiază trimiterea email-ului de notificare...")
-        send_email(categorized_data, saved_path)
+        print("[*] Se inițiază trimiterea email-ului de notificare (corp dedicat, independent de index.html)...")
+        send_email(categorized_data)
