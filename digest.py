@@ -78,8 +78,8 @@ RSS_SOURCES = [
     {"name": "NVD NIST - Recent CVEs", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml", "priority": 95},
     {"name": "ENISA - News & Press", "url": "https://www.enisa.europa.eu/media/news-items/news-rss", "priority": 85},
     {"name": "CERT-EU - Publications", "url": "https://www.cert.europa.eu/publications/feed/", "priority": 90},
-    {"name": "NCSC UK - News & Threats", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "priority": 90}, # ADĂUGAT
-    {"name": "ACS CISA Australia - Advisories", "url": "https://www.cyber.gov.au/rss.xml", "priority": 85}, # ADĂUGAT
+    {"name": "NCSC UK - News & Threats", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "priority": 90},
+    {"name": "ACS CISA Australia - Advisories", "url": "https://www.cyber.gov.au/rss.xml", "priority": 85},
 
     # Threat Intelligence & Știri Securitate Enterprise
     {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "priority": 75},
@@ -94,10 +94,10 @@ RSS_SOURCES = [
     {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/", "priority": 80},
     {"name": "Malwarebytes Labs", "url": "https://www.malwarebytes.com/blog/feed/index.xml", "priority": 75},
     {"name": "Schneier on Security", "url": "https://www.schneier.com/feed/atom/", "priority": 75},
-    {"name": "The Register - Security", "url": "https://www.theregister.com/security/headlines.atom", "priority": 70}, # ADĂUGAT
-    {"name": "CSO Online", "url": "https://www.csoonline.com/feed/", "priority": 65}, # ADĂUGAT
-    {"name": "Help Net Security", "url": "https://www.helpnetsecurity.com/feed/", "priority": 70}, # ADĂUGAT
-    {"name": "HackRead", "url": "https://www.hackread.com/feed/", "priority": 65}, # ADĂUGAT
+    {"name": "The Register - Security", "url": "https://www.theregister.com/security/headlines.atom", "priority": 70},
+    {"name": "CSO Online", "url": "https://www.csoonline.com/feed/", "priority": 65},
+    {"name": "Help Net Security", "url": "https://www.helpnetsecurity.com/feed/", "priority": 70},
+    {"name": "HackRead", "url": "https://www.hackread.com/feed/", "priority": 65},
 
     # Windows și Ecosistemul Microsoft
     {"name": "Microsoft Security Response (MSRC)", "url": "https://api.msrc.microsoft.com/update-guide/rss", "priority": 95},
@@ -114,39 +114,39 @@ RSS_SOURCES = [
     {"name": "ESET WeLiveSecurity", "url": "https://www.welivesecurity.com/feed/", "priority": 75},
     {"name": "Rapid7 Blog", "url": "https://blog.rapid7.com/rss/", "priority": 80},
     {"name": "Qualys Security Blog", "url": "https://blog.qualys.com/feed", "priority": 80},
-    {"name": "SentinelOne Blog", "url": "https://www.sentinelone.com/feed/", "priority": 80}, # ADĂUGAT
-    {"name": "Symantec Threat Intelligence", "url": "https://symantec-enterprise-blogs.security.com/blogs/feed/threat-intelligence", "priority": 80}, # ADĂUGAT
-    {"name": "Zscaler ThreatLabz", "url": "https://www.zscaler.com/blogs/rss/threatlabz", "priority": 80}, # ADĂUGAT
-    {"name": "Red Canary Blog", "url": "https://redcanary.com/feed/", "priority": 80}, # ADĂUGAT
-    {"name": "Securin Vulnerability Lab", "url": "https://www.securin.io/feed/", "priority": 75}, # ADĂUGAT
-    {"name": "Censys Research", "url": "https://censys.com/feed/", "priority": 75}, # ADĂUGAT
-    {"name": "Shodan Blog", "url": "https://article.shodan.io/rss/", "priority": 75}, # ADĂUGAT
+    {"name": "SentinelOne Blog", "url": "https://www.sentinelone.com/feed/", "priority": 80},
+    {"name": "Symantec Threat Intelligence", "url": "https://symantec-enterprise-blogs.security.com/blogs/feed/threat-intelligence", "priority": 80},
+    {"name": "Zscaler ThreatLabz", "url": "https://www.zscaler.com/blogs/rss/threatlabz", "priority": 80},
+    {"name": "Red Canary Blog", "url": "https://redcanary.com/feed/", "priority": 80},
+    {"name": "Securin Vulnerability Lab", "url": "https://www.securin.io/feed/", "priority": 75},
+    {"name": "Censys Research", "url": "https://censys.com/feed/", "priority": 75},
+    {"name": "Shodan Blog", "url": "https://article.shodan.io/rss/", "priority": 75},
 
     # Android și Securitate Mobilă
     {"name": "Google Online Security Blog", "url": "https://security.googleblog.com/feeds/posts/default", "priority": 85},
     {"name": "Android Police - News", "url": "https://www.androidpolice.com/feed/", "priority": 60},
     {"name": "Android Authority", "url": "https://www.androidauthority.com/feed/", "priority": 60},
-    {"name": "9to5Google - Security", "url": "https://9to5google.com/category/security/feed/", "priority": 65}, # ADĂUGAT
+    {"name": "9to5Google - Security", "url": "https://9to5google.com/category/security/feed/", "priority": 65},
 
     # Hardware Hacks și Securitate Low-Level / Embedded
     {"name": "Hackaday", "url": "https://hackaday.com/feed/", "priority": 65},
     {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "priority": 60},
     {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/rss/fulltext", "priority": 65},
     {"name": "Phoronix", "url": "https://www.phoronix.com/rss.php", "priority": 60},
-    {"name": "PicoVM / Low Level Security", "url": "https://lowlevel.com/feed.xml", "priority": 65}, # ADĂUGAT
+    {"name": "PicoVM / Low Level Security", "url": "https://lowlevel.com/feed.xml", "priority": 65},
 
     # Platforme Web, Cloud & Tehnologii Direct Vizate
     {"name": "Joomla Community News", "url": "https://community.joomla.org/blogs.feed?type=rss", "priority": 90},
     {"name": "Joomla Security Announcements", "url": "https://developer.joomla.org/security-centre.feed?type=rss", "priority": 95},
     {"name": "PHP.net News", "url": "https://www.php.net/news.rss", "priority": 90},
     {"name": "cPanel News", "url": "https://news.cpanel.com/feed/", "priority": 90},
-    {"name": "Cloudflare Blog - Security", "url": "https://blog.cloudflare.com/tag/security/rss/", "priority": 85}, # ADĂUGAT
-    {"name": "AWS Security Bulletin", "url": "https://aws.amazon.com/security/security-bulletins/rss/", "priority": 90}, # ADĂUGAT
-    {"name": "GitHub Security Advisories", "url": "https://github.blog/category/security/feed/", "priority": 85}, # ADĂUGAT
-    {"name": "Project Zero (Google)", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 95}, # ADĂUGAT
-    {"name": "PortSwigger Web Security", "url": "https://portswigger.net/research/rss", "priority": 90}, # ADĂUGAT
-    {"name": "Offensive Security (OffSec)", "url": "https://www.offsec.com/feed/", "priority": 80}, # ADĂUGAT
-    {"name": "Wordfence Security Blog", "url": "https://www.wordfence.com/feed/", "priority": 85}, # ADĂUGAT
+    {"name": "Cloudflare Blog - Security", "url": "https://blog.cloudflare.com/tag/security/rss/", "priority": 85},
+    {"name": "AWS Security Bulletin", "url": "https://aws.amazon.com/security/security-bulletins/rss/", "priority": 90},
+    {"name": "GitHub Security Advisories", "url": "https://github.blog/category/security/feed/", "priority": 85},
+    {"name": "Project Zero (Google)", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 95},
+    {"name": "PortSwigger Web Security", "url": "https://portswigger.net/research/rss", "priority": 90},
+    {"name": "Offensive Security (OffSec)", "url": "https://www.offsec.com/feed/", "priority": 80},
+    {"name": "Wordfence Security Blog", "url": "https://www.wordfence.com/feed/", "priority": 85},
 ]
 
 SOURCE_PRIORITY_MAP = {src['name']: src['priority'] for src in RSS_SOURCES}
@@ -416,7 +416,6 @@ def save_cache(cache_data):
 def fetch_and_filter():
     cache = load_cache()
 
-    # Bypass cache HTTP la rulare manuală (workflow_dispatch) sau forțată
     is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or
                      os.getenv("FORCE_REFRESH", "").lower() == "true")
 
