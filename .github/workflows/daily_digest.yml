@@ -1,21 +1,18 @@
-name: Cyber Security Dashboard & Digest
+name: Daily Security Digest
 
 on:
   schedule:
-    # Rulează automat din 30 în 30 de minute
     - cron: '*/30 * * * *'
-  workflow_dispatch: # Permite declanșarea manuală din interfața GitHub Actions
+  workflow_dispatch:
 
-# Permisiuni minimale necesare pentru securitate și publicare pe GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Previne rulările paralele simultane dacă o execuție durează mai mult
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -23,31 +20,40 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Check out repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Set up Python Environment
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install Python Dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install feedparser
+          pip install requests defusedxml jinja2
 
-      - name: Run Digest Script & Generate HTML
+      - name: Run Security Digest Engine
         env:
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          EMAIL_TO: ${{ secrets.EMAIL_TO }}
-        run: python digest.py
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python digest.py
 
-      - name: Upload Artifacts to GitHub Pages
+      - name: Persist Cache to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add security_engine_cache.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update security engine cache [skip ci]" && git push)
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
