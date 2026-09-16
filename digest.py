@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Cyber Security Monitoring & Intelligence Engine (v4.7 - Mobile-Bulletproof Enterprise Edition)
+Cyber Security Monitoring & Intelligence Engine (v4.8 - Mobile-Bulletproof Enterprise Edition)
 -----------------------------------------------------------------------------------------
-- Extindere la 40+ surse RSS/Atom de securitate cu priorități ponderate.
+- Extindere la 61+ surse RSS/Atom de securitate cu priorități ponderate.
 - Securizare XML defensivă (defusedxml + expat DOCTYPE rejection).
 - Protecție SSRF robustă (validare URL, blocare IP-uri private, loopback, link-local).
 - Cache HTTP inteligent cu ETag/Last-Modified și bypass automat la rulare manuală (workflow_dispatch).
@@ -65,7 +65,7 @@ TZ_RO = ZoneInfo("Europe/Bucharest")
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 
 # ==========================================
-# CONFIGURARE CELE 41+ SURSE ȘI PRIORITĂȚI
+# CONFIGURARE CELE 61+ SURSE ȘI PRIORITĂȚI
 # ==========================================
 
 RSS_SOURCES = [
@@ -78,6 +78,8 @@ RSS_SOURCES = [
     {"name": "NVD NIST - Recent CVEs", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml", "priority": 95},
     {"name": "ENISA - News & Press", "url": "https://www.enisa.europa.eu/media/news-items/news-rss", "priority": 85},
     {"name": "CERT-EU - Publications", "url": "https://www.cert.europa.eu/publications/feed/", "priority": 90},
+    {"name": "NCSC UK - News & Threats", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "priority": 90}, # ADĂUGAT
+    {"name": "ACS CISA Australia - Advisories", "url": "https://www.cyber.gov.au/rss.xml", "priority": 85}, # ADĂUGAT
 
     # Threat Intelligence & Știri Securitate Enterprise
     {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "priority": 75},
@@ -92,6 +94,10 @@ RSS_SOURCES = [
     {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/", "priority": 80},
     {"name": "Malwarebytes Labs", "url": "https://www.malwarebytes.com/blog/feed/index.xml", "priority": 75},
     {"name": "Schneier on Security", "url": "https://www.schneier.com/feed/atom/", "priority": 75},
+    {"name": "The Register - Security", "url": "https://www.theregister.com/security/headlines.atom", "priority": 70}, # ADĂUGAT
+    {"name": "CSO Online", "url": "https://www.csoonline.com/feed/", "priority": 65}, # ADĂUGAT
+    {"name": "Help Net Security", "url": "https://www.helpnetsecurity.com/feed/", "priority": 70}, # ADĂUGAT
+    {"name": "HackRead", "url": "https://www.hackread.com/feed/", "priority": 65}, # ADĂUGAT
 
     # Windows și Ecosistemul Microsoft
     {"name": "Microsoft Security Response (MSRC)", "url": "https://api.msrc.microsoft.com/update-guide/rss", "priority": 95},
@@ -108,23 +114,39 @@ RSS_SOURCES = [
     {"name": "ESET WeLiveSecurity", "url": "https://www.welivesecurity.com/feed/", "priority": 75},
     {"name": "Rapid7 Blog", "url": "https://blog.rapid7.com/rss/", "priority": 80},
     {"name": "Qualys Security Blog", "url": "https://blog.qualys.com/feed", "priority": 80},
+    {"name": "SentinelOne Blog", "url": "https://www.sentinelone.com/feed/", "priority": 80}, # ADĂUGAT
+    {"name": "Symantec Threat Intelligence", "url": "https://symantec-enterprise-blogs.security.com/blogs/feed/threat-intelligence", "priority": 80}, # ADĂUGAT
+    {"name": "Zscaler ThreatLabz", "url": "https://www.zscaler.com/blogs/rss/threatlabz", "priority": 80}, # ADĂUGAT
+    {"name": "Red Canary Blog", "url": "https://redcanary.com/feed/", "priority": 80}, # ADĂUGAT
+    {"name": "Securin Vulnerability Lab", "url": "https://www.securin.io/feed/", "priority": 75}, # ADĂUGAT
+    {"name": "Censys Research", "url": "https://censys.com/feed/", "priority": 75}, # ADĂUGAT
+    {"name": "Shodan Blog", "url": "https://article.shodan.io/rss/", "priority": 75}, # ADĂUGAT
 
     # Android și Securitate Mobilă
     {"name": "Google Online Security Blog", "url": "https://security.googleblog.com/feeds/posts/default", "priority": 85},
     {"name": "Android Police - News", "url": "https://www.androidpolice.com/feed/", "priority": 60},
     {"name": "Android Authority", "url": "https://www.androidauthority.com/feed/", "priority": 60},
+    {"name": "9to5Google - Security", "url": "https://9to5google.com/category/security/feed/", "priority": 65}, # ADĂUGAT
 
     # Hardware Hacks și Securitate Low-Level / Embedded
     {"name": "Hackaday", "url": "https://hackaday.com/feed/", "priority": 65},
     {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "priority": 60},
     {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/rss/fulltext", "priority": 65},
     {"name": "Phoronix", "url": "https://www.phoronix.com/rss.php", "priority": 60},
+    {"name": "PicoVM / Low Level Security", "url": "https://lowlevel.com/feed.xml", "priority": 65}, # ADĂUGAT
 
-    # Platforme Web & Tehnologii Direct Vizate
+    # Platforme Web, Cloud & Tehnologii Direct Vizate
     {"name": "Joomla Community News", "url": "https://community.joomla.org/blogs.feed?type=rss", "priority": 90},
     {"name": "Joomla Security Announcements", "url": "https://developer.joomla.org/security-centre.feed?type=rss", "priority": 95},
     {"name": "PHP.net News", "url": "https://www.php.net/news.rss", "priority": 90},
     {"name": "cPanel News", "url": "https://news.cpanel.com/feed/", "priority": 90},
+    {"name": "Cloudflare Blog - Security", "url": "https://blog.cloudflare.com/tag/security/rss/", "priority": 85}, # ADĂUGAT
+    {"name": "AWS Security Bulletin", "url": "https://aws.amazon.com/security/security-bulletins/rss/", "priority": 90}, # ADĂUGAT
+    {"name": "GitHub Security Advisories", "url": "https://github.blog/category/security/feed/", "priority": 85}, # ADĂUGAT
+    {"name": "Project Zero (Google)", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 95}, # ADĂUGAT
+    {"name": "PortSwigger Web Security", "url": "https://portswigger.net/research/rss", "priority": 90}, # ADĂUGAT
+    {"name": "Offensive Security (OffSec)", "url": "https://www.offsec.com/feed/", "priority": 80}, # ADĂUGAT
+    {"name": "Wordfence Security Blog", "url": "https://www.wordfence.com/feed/", "priority": 85}, # ADĂUGAT
 ]
 
 SOURCE_PRIORITY_MAP = {src['name']: src['priority'] for src in RSS_SOURCES}
@@ -279,7 +301,7 @@ def _fetch_url_with_retry(url, headers, timeout):
 
 def fetch_single_feed(source, http_cache):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 CyberSecurityMonitor/4.7'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 CyberSecurityMonitor/4.8'
     }
 
     cache_entry = http_cache.get(source['url'], {})
@@ -493,7 +515,6 @@ def fetch_and_filter():
         art['risk_score'] = score
         art['is_targeted_infra'] = is_targeted_infra
 
-        # Logică de categorisire: infrastructura vizată are prioritate maximă
         if is_targeted_infra:
             categorized['targeted'].append(art)
         elif score >= 70:
@@ -511,7 +532,7 @@ def fetch_and_filter():
     return categorized
 
 # ==========================================
-# 1) GENERATOR DASHBOARD WEB (GitHub Pages, browser modern — CSS Grid/Flexbox/var() OK aici)
+# 1) GENERATOR DASHBOARD WEB (GitHub Pages)
 # ==========================================
 
 RE_CVE = re.compile(r"CVE-\d{4}-\d{4,7}", re.IGNORECASE)
@@ -579,7 +600,7 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Intelligence v4.7 Enterprise</title>
+    <title>Cyber Security Intelligence v4.8 Enterprise Hub</title>
     <style>
         :root {{
             --bg-dark: #0f172a;
@@ -635,7 +656,7 @@ def build_web_dashboard(categorized):
     <div class="container">
         <header>
             <div>
-                <h1>Cyber Security Intelligence (41 Surse)</h1>
+                <h1>Cyber Security Intelligence Hub (61+ Surse Active)</h1>
                 <p class="last-update">Sincronizat la: {now_ro_str}</p>
             </div>
         </header>
@@ -706,7 +727,7 @@ def build_web_dashboard(categorized):
         return fallback
 
 # ==========================================
-# 2) GENERATOR EMAIL MOBILE-BULLETPROOF (INDEPENDENT de index.html)
+# 2) GENERATOR EMAIL MOBILE-BULLETPROOF
 # ==========================================
 
 def build_mobile_email_html(categorized):
@@ -891,7 +912,7 @@ def build_mobile_email_html(categorized):
                                 </tr>
                                 <tr>
                                     <td style="font-size:13px; color:#94a3b8; padding-top:4px;">
-                                        Sincronizat la: {now_ro_str} &bull; 41 Surse Active
+                                        Sincronizat la: {now_ro_str} &bull; 61+ Surse Active
                                     </td>
                                 </tr>
                             </table>
@@ -931,7 +952,7 @@ def build_mobile_email_html(categorized):
 
                     <tr>
                         <td bgcolor="#0f172a" align="center" style="padding:20px; text-align:center; font-size:12px; color:#64748b; background-color:#0f172a; border-top:1px solid #1e293b;">
-                            Generat automat de motorul Cyber Security Intelligence v4.7 &bull; Toate drepturile rezervate.
+                            Generat automat de motorul Cyber Security Intelligence v4.8 &bull; Toate drepturile rezervate.
                         </td>
                     </tr>
 
@@ -944,7 +965,7 @@ def build_mobile_email_html(categorized):
     return email_html
 
 def html_to_plain_text(categorized):
-    lines = ["RAPORT ZILNIC CYBER SECURITY INTELLIGENCE (41 SURSE)", "=" * 55, ""]
+    lines = ["RAPORT ZILNIC CYBER SECURITY INTELLIGENCE (61+ SURSE)", "=" * 55, ""]
     for label, key in [("INFRASTRUCTURĂ VIZATĂ", "targeted"),
                         ("ALERTE CRITICE", "critical"),
                         ("ALERTE GENERALE", "general")]:
@@ -1005,7 +1026,7 @@ def send_email(categorized):
         print(f"[!] Eroare trimitere email: {e}")
 
 if __name__ == "__main__":
-    print("[*] Rulare motor Cyber Security Intelligence v4.7 Enterprise...")
+    print("[*] Rulare motor Cyber Security Intelligence v4.8 Enterprise Hub...")
     categorized_data = fetch_and_filter()
     saved_path = build_web_dashboard(categorized_data)
     print(f"[+] Dashboard web generat cu succes la: {saved_path}")
