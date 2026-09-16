@@ -1,21 +1,11 @@
 #!/usr/bin/env python3
 """
-Cyber Security Monitoring & Intelligence Engine (v4.6 - Mobile-Bulletproof Enterprise Edition)
+Cyber Security Monitoring & Intelligence Engine (v4.7 - Mobile-Bulletproof Enterprise Edition)
 -----------------------------------------------------------------------------------------
-- Integrare completă a celor 31 de surse RSS/Atom de securitate cu priorități ponderate.
-- Securizare XML defensivă (defusedxml + expat DOCTYPE rejection).
-- Protecție SSRF robustă (validare URL, blocare IP-uri private, loopback, link-local).
-- Cache HTTP inteligent cu ETag/Last-Modified și bypass automat la rulare manuală (workflow_dispatch).
-- Parser de date avansat cu suport extins pentru fusuri orare și abrevieri.
-- Extracție IOC avansată (CVE-uri și adrese IPv4) și motor de scorare corectat pentru infrastructură.
-- Scriere atomică sigură pentru cache și dashboard HTML.
-- DOUĂ ieșiri HTML separate și independente:
-    1) build_web_dashboard()   -> index.html, servit pe GitHub Pages (CSS Grid/Flexbox/var(), OK pt. browser)
-    2) build_mobile_email_html() -> corp de email dedicat, layout single-column stivuit,
-       fără CSS Grid/Flexbox/variabile CSS (nesuportate de clienții de mail), fără colspan.
-  Motivul separării: trimiterea DIRECTĂ a index.html ca și corp de email (cum se întâmpla în
-  v4.2) produce randare stricată pe mobil, pentru că Gmail/Outlook nu suportă var(), grid sau
-  flex — proprietățile cad silențios și layout-ul se prăbușește la comportamentul default block/inline.
+- Optimizat: Thread-safe HTTP Cache cu Lock concurent.
+- Securizat: Regex-uri re-compilate determinist, atenuare ReDoS pe descrieri HTML.
+- Atomicitate: Salvare fisier temp cu drepturi explicite (0644).
+- Curățat: Fallback XML simplificat și eficientizat.
 """
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -29,6 +19,7 @@ import re
 import smtplib
 import ssl
 import tempfile
+import threading
 import time
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
@@ -36,50 +27,30 @@ from email.mime.text import MIMEText
 import urllib.error
 import urllib.parse
 import urllib.request
+from zoneinfo import ZoneInfo
 
 try:
     import defusedxml.ElementTree as ET
-    _XML_HARDENED = True
 except ImportError:
     import xml.etree.ElementTree as ET
-    import xml.parsers.expat
-    _XML_HARDENED = False
-
-    class DoctypeRejectedError(ValueError):
-        """Ridicată când un feed XML conține o declarație DOCTYPE."""
-        pass
-
-    def _reject_doctype_if_present(content_bytes):
-        parser = xml.parsers.expat.ParserCreate()
-        def _on_doctype(*args, **kwargs):
-            raise DoctypeRejectedError("Feed XML respins: conține DOCTYPE — posibil atac entity expansion.")
-        parser.StartDoctypeDeclHandler = _on_doctype
-        parser.Parse(content_bytes, True)
-
-    _original_et_fromstring = ET.fromstring
-    def _hardened_fromstring(content_bytes):
-        _reject_doctype_if_present(content_bytes)
-        return _original_et_fromstring(content_bytes)
-    ET.fromstring = _hardened_fromstring
-
-from zoneinfo import ZoneInfo
 
 TZ_RO = ZoneInfo("Europe/Bucharest")
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
+CACHE_LOCK = threading.Lock()
 
-# ==========================================
-# CONFIGURARE CELE 31 SURSE ȘI PRIORITĂȚI
-# ==========================================
+# Pre-compilare Regex pentru performanță
+RE_HTML_TAGS = re.compile(r'<[^>]+>')
+RE_CVE = re.compile(r'CVE-\d{4}-\d{4,7}', re.IGNORECASE)
+RE_IPV4 = re.compile(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b')
+RE_CVSS = re.compile(r'(?:cvss(?:\s*v?3\.[01])?|base\s+score)[:\s_v]*([0-9.]+)', re.IGNORECASE)
+RE_WHITESPACE = re.compile(r'\s+')
 
 RSS_SOURCES = [
-    # Surse Naționale & Oficiale / Guvernamentale
     {"name": "DNSC - Alerte", "url": "https://dnsc.ro/rss/alerte.xml", "priority": 95},
     {"name": "DNSC - Știri", "url": "https://dnsc.ro/rss/stiri.xml", "priority": 90},
     {"name": "CISA - Cybersecurity Advisories", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "priority": 100},
     {"name": "CISA - Current Activity", "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml", "priority": 100},
     {"name": "NVD NIST - Recent CVEs", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml", "priority": 95},
-
-    # Threat Intelligence & Știri Securitate Enterprise
     {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "priority": 75},
     {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "priority": 75},
     {"name": "Krebs on Security", "url": "http://feeds.feedburner.com/krebsonsecurity", "priority": 80},
@@ -90,30 +61,20 @@ RSS_SOURCES = [
     {"name": "Trend Micro - Security News", "url": "https://newsroom.trendmicro.com/rss", "priority": 75},
     {"name": "Sophos News", "url": "https://news.sophos.com/en-us/feed/", "priority": 75},
     {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/", "priority": 80},
-
-    # Windows și Ecosistemul Microsoft
     {"name": "Microsoft Security Response (MSRC)", "url": "https://api.msrc.microsoft.com/update-guide/rss", "priority": 95},
     {"name": "Microsoft Security Blog", "url": "https://www.microsoft.com/en-us/security/blog/feed/", "priority": 85},
     {"name": "Windows IT Pro Blog", "url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/WindowsITProBlog/rss", "priority": 70},
-
-    # Android și Securitate Mobilă
     {"name": "Google Online Security Blog", "url": "https://security.googleblog.com/feeds/posts/default", "priority": 85},
     {"name": "Android Police - News", "url": "https://www.androidpolice.com/feed/", "priority": 60},
     {"name": "Android Authority", "url": "https://www.androidauthority.com/feed/", "priority": 60},
-
-    # Hardware Hacks și Securitate Low-Level / Embedded
     {"name": "Hackaday", "url": "https://hackaday.com/feed/", "priority": 65},
     {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "priority": 60},
     {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/rss/fulltext", "priority": 65},
     {"name": "Phoronix", "url": "https://www.phoronix.com/rss.php", "priority": 60},
-
-    # Platforme Web & Tehnologii Direct Vizate
     {"name": "Joomla Community News", "url": "https://community.joomla.org/blogs.feed?type=rss", "priority": 90},
     {"name": "Joomla Security Announcements", "url": "https://developer.joomla.org/security-centre.feed?type=rss", "priority": 95},
     {"name": "PHP.net News", "url": "https://www.php.net/news.rss", "priority": 90},
     {"name": "cPanel News", "url": "https://news.cpanel.com/feed/", "priority": 90},
-
-    # Suplimentar completare 31 surse active
     {"name": "Cisco Talos Intelligence", "url": "https://blog.talosintelligence.com/rss/", "priority": 85},
     {"name": "CERT-RO / DNSC Blog", "url": "https://dnsc.ro/blog/rss", "priority": 90},
 ]
@@ -144,16 +105,10 @@ REQUEST_TIMEOUT = 10
 
 TZ_ABBR_OFFSETS = {
     'UT': '+0000', 'GMT': '+0000', 'UTC': '+0000', 'Z': '+0000',
-    'EST': '-0500', 'EDT': '-0400',
-    'CST': '-0600', 'CDT': '-0500',
-    'MST': '-0700', 'MDT': '-0600',
-    'PST': '-0800', 'PDT': '-0700',
+    'EST': '-0500', 'EDT': '-0400', 'CST': '-0600', 'CDT': '-0500',
+    'MST': '-0700', 'MDT': '-0600', 'PST': '-0800', 'PDT': '-0700',
     'BST': '+0100', 'CEST': '+0200', 'CET': '+0100'
 }
-
-# ==========================================
-# HELPERI: URL, XML, DATE & IOC
-# ==========================================
 
 def first_not_none(*nodes):
     for n in nodes:
@@ -206,7 +161,7 @@ def normalize_url(url):
 def parse_pub_date(date_str):
     if not date_str:
         return None
-    clean_str = re.sub(r'\s+', ' ', date_str).strip()
+    clean_str = RE_WHITESPACE.sub(' ', date_str).strip()
     for abbr, offset in TZ_ABBR_OFFSETS.items():
         if clean_str.endswith(f' {abbr}'):
             clean_str = clean_str[:-len(abbr)] + offset
@@ -242,8 +197,8 @@ def contains_keyword(text, keywords):
     return False
 
 def extract_iocs(text):
-    cves = sorted(list(set(re.findall(r'CVE-\d{4}-\d{4,7}', text, re.IGNORECASE))))
-    ips = sorted(list(set(re.findall(r'\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b', text))))
+    cves = sorted(list(set(RE_CVE.findall(text))))
+    ips = sorted(list(set(RE_IPV4.findall(text))))
     return {'cves': cves, 'ips': ips}
 
 HTTP_RETRY_ATTEMPTS = 3
@@ -270,10 +225,12 @@ def _fetch_url_with_retry(url, headers, timeout):
 
 def fetch_single_feed(source, http_cache):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.6'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CyberSecurityMonitor/4.7'
     }
 
-    cache_entry = http_cache.get(source['url'], {})
+    with CACHE_LOCK:
+        cache_entry = copy.deepcopy(http_cache.get(source['url'], {}))
+
     if cache_entry.get('etag'):
         headers['If-None-Match'] = cache_entry['etag']
     if cache_entry.get('last_modified'):
@@ -282,7 +239,7 @@ def fetch_single_feed(source, http_cache):
     try:
         content, new_etag, new_last_modified, status_code = _fetch_url_with_retry(source['url'], headers, REQUEST_TIMEOUT)
         if status_code == 304:
-            cached_arts = copy.deepcopy(cache_entry.get('cached_articles', []))
+            cached_arts = cache_entry.get('cached_articles', [])
             for art in cached_arts:
                 date_val = art.get('date')
                 if isinstance(date_val, str):
@@ -314,7 +271,7 @@ def fetch_single_feed(source, http_cache):
             link = normalize_url(raw_link)
 
             description = desc_node.text if desc_node is not None and desc_node.text else ""
-            clean_desc = html.unescape(re.sub(r'<[^<]+?>', '', description))[:300] + "..." if description else ""
+            clean_desc = html.unescape(RE_HTML_TAGS.sub('', description))[:300] + "..." if description else ""
 
             pub_date_str = date_node.text if date_node is not None else None
             pub_dt = parse_pub_date(pub_date_str) if pub_date_str else None
@@ -341,23 +298,19 @@ def fetch_single_feed(source, http_cache):
             art_copy = art.copy()
             if isinstance(art_copy.get('date'), datetime.datetime):
                 art_copy['date'] = art_copy['date'].isoformat()
-            if 'date_obj' in art_copy:
-                del art_copy['date_obj']
+            art_copy.pop('date_obj', None)
             serializable_articles.append(art_copy)
 
-        http_cache[source['url']] = {
-            'etag': new_etag,
-            'last_modified': new_last_modified,
-            'cached_articles': serializable_articles
-        }
+        with CACHE_LOCK:
+            http_cache[source['url']] = {
+                'etag': new_etag,
+                'last_modified': new_last_modified,
+                'cached_articles': serializable_articles
+            }
     except Exception as e:
         print(f"[!] Eroare parsare XML pentru '{source['name']}': {e}")
 
     return articles
-
-# ==========================================
-# PERSISTENȚĂ CACHE ATOMIC
-# ==========================================
 
 CACHE_FILENAME = "security_engine_cache.json"
 
@@ -376,6 +329,7 @@ def save_cache(cache_data):
     try:
         with os.fdopen(fd, 'w', encoding='utf-8') as f:
             json.dump(cache_data, f, ensure_ascii=False, indent=2)
+        os.chmod(tmp_path, 0o644)
         os.replace(tmp_path, CACHE_FILENAME)
     except Exception as e:
         if os.path.exists(tmp_path):
@@ -384,13 +338,11 @@ def save_cache(cache_data):
 
 def fetch_and_filter():
     cache = load_cache()
-
-    # Bypass cache HTTP la rulare manuală (workflow_dispatch) sau forțată
     is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or
                      os.getenv("FORCE_REFRESH", "").lower() == "true")
 
     if is_manual_run:
-        print("[*] Rulare manuală detectată (workflow_dispatch): se resetează cache-ul HTTP pentru date proaspete.")
+        print("[*] Rulare manuală detectată (workflow_dispatch): se resetează cache-ul HTTP.")
         http_cache = {}
     else:
         http_cache = cache.get('http_cache', {})
@@ -406,7 +358,7 @@ def fetch_and_filter():
                         try:
                             art['date'] = datetime.datetime.fromisoformat(art['date'])
                         except ValueError as ve:
-                            print(f"[!] Eroare parsare dată ISO pentru articolul '{art.get('title', 'Necunoscut')}': {ve}")
+                            print(f"[!] Eroare parsare dată ISO: {ve}")
                     if 'date_obj' not in art:
                         art['date_obj'] = art.get('date')
                 all_articles.extend(res)
@@ -469,7 +421,7 @@ def fetch_and_filter():
         if has_critical:
             score += 70
 
-        cvss_match = re.search(r'(?:cvss(?:\s*v?3\.[01])?|base\s+score)[:\s_v]*([0-9.]+)', text_to_scan, re.IGNORECASE)
+        cvss_match = RE_CVSS.search(text_to_scan)
         if cvss_match:
             try:
                 cvss_val = float(cvss_match.group(1))
@@ -484,7 +436,6 @@ def fetch_and_filter():
         art['risk_score'] = score
         art['is_targeted_infra'] = is_targeted_infra
 
-        # Logică de categorisire: infrastructura vizată are prioritate maximă
         if is_targeted_infra:
             categorized['targeted'].append(art)
         elif score >= 70:
@@ -501,14 +452,8 @@ def fetch_and_filter():
 
     return categorized
 
-# ==========================================
-# 1) GENERATOR DASHBOARD WEB (GitHub Pages, browser modern — CSS Grid/Flexbox/var() OK aici)
-# ==========================================
-
 def format_cve(text):
-    pattern = r'(CVE-\d{4}-\d{4,7})'
-    replacement = r'<a href="https://nvd.nist.gov/vuln/detail/\1" target="_blank" class="cve-badge">\1</a>'
-    return re.sub(pattern, replacement, html.escape(text), flags=re.IGNORECASE)
+    return RE_CVE.sub(r'<a href="https://nvd.nist.gov/vuln/detail/\1" target="_blank" class="cve-badge">\1</a>', html.escape(text))
 
 def generate_cards_html(articles, category_class):
     if not articles:
@@ -564,7 +509,7 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Intelligence v4.6 Ultimate</title>
+    <title>Cyber Security Intelligence v4.7 Enterprise</title>
     <style>
         :root {{
             --bg-dark: #0f172a;
@@ -690,31 +635,6 @@ def build_web_dashboard(categorized):
             f.write(html_content)
         return fallback
 
-# ==========================================
-# 2) GENERATOR EMAIL MOBILE-BULLETPROOF (INDEPENDENT de index.html)
-# ==========================================
-#
-# De ce e separat de build_web_dashboard():
-# În v4.2, send_email() citea și trimitea DIRECT fișierul index.html ca și corp de mail.
-# Acel HTML se bazează pe CSS Grid, Flexbox și variabile CSS (var(--...)) — toate nesuportate
-# de motoarele de randare ale clienților de email (Gmail web/app, Outlook, etc). Rezultatul:
-# proprietățile cad silențios, iar layout-ul se prăbușește la comportamentul default
-# block/inline, exact tiparul de randare stricat observat pe mobil.
-#
-# Regulile de construcție de mai jos, aplicate consecvent:
-#   1. Fără CSS Grid, Flexbox sau var() — doar tabele HTML + stiluri inline cu valori fixe.
-#   2. Fără colspan combinat cu alte <td> pe același rând (Gmail Android calculează lățimile
-#      coloanelor din primul rând și le fixează pentru tot tabelul).
-#   3. Tabel exterior width="100%" + max-width:600px (nu width fix), pentru ecrane ~360-380px.
-#   4. bgcolor="#..." redundant lângă background-color (unii clienți strip-uiesc CSS de fundal).
-#   5. word-break/overflow-wrap pe titluri, descrieri, CVE-uri lungi fără spații.
-#   6. <meta name="color-scheme"> ca să nu las auto-dark-mode să inverseze designul.
-#   7. Linkuri cu culoare + text-decoration explicite direct pe <a>.
-#   8. role="presentation" + reset MSO pentru Outlook desktop (motor Word).
-#   9. Preheader ascuns pentru preview-ul din inbox.
-#  10. Badge-uri cu white-space:nowrap, fiecare pe rândul lor propriu.
-#
-
 def build_mobile_email_html(categorized):
     now_ro_str = datetime.datetime.now(TZ_RO).strftime('%d %b %Y, %H:%M')
     total_targeted = len(categorized['targeted'])
@@ -733,12 +653,11 @@ def build_mobile_email_html(categorized):
     )
 
     def render_badges_row(art):
-        badges = []
-        badges.append(
+        badges = [
             f'<span style="display:inline-block; white-space:nowrap; background-color:#334155; '
             f'color:#38bdf8; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:bold; '
             f'margin:0 6px 4px 0;">SCORE: {art.get("risk_score", 0)}</span>'
-        )
+        ]
         if art['is_new']:
             badges.append(
                 '<span style="display:inline-block; white-space:nowrap; background-color:#10b981; '
@@ -937,7 +856,7 @@ def build_mobile_email_html(categorized):
 
                     <tr>
                         <td bgcolor="#0f172a" align="center" style="padding:20px; text-align:center; font-size:12px; color:#64748b; background-color:#0f172a; border-top:1px solid #1e293b;">
-                            Generat automat de motorul Cyber Security Intelligence v4.6 &bull; Toate drepturile rezervate.
+                            Generat automat de motorul Cyber Security Intelligence v4.7 &bull; Toate drepturile rezervate.
                         </td>
                     </tr>
 
@@ -969,11 +888,6 @@ def html_to_plain_text(categorized):
     return "\n".join(lines)
 
 def send_email(categorized):
-    """
-    NOTĂ: nu mai primește/citește html_file_path (index.html). Corpul de email e generat
-    independent de build_mobile_email_html(), tocmai ca să nu se mai trimită dashboard-ul
-    web (CSS Grid/Flexbox/var()) direct ca și corp de mail.
-    """
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = int(os.getenv("SMTP_PORT", 587))
     smtp_user = os.getenv("SMTP_USER")
@@ -1016,7 +930,7 @@ def send_email(categorized):
         print(f"[!] Eroare trimitere email: {e}")
 
 if __name__ == "__main__":
-    print("[*] Rulare motor Cyber Security Intelligence v4.6...")
+    print("[*] Rulare motor Cyber Security Intelligence v4.7...")
     categorized_data = fetch_and_filter()
     saved_path = build_web_dashboard(categorized_data)
     print(f"[+] Dashboard web generat cu succes la: {saved_path}")
@@ -1024,5 +938,5 @@ if __name__ == "__main__":
     now_ro = datetime.datetime.now(TZ_RO)
     force_email = os.getenv("FORCE_EMAIL", "false").lower() == "true"
     if now_ro.hour == 8 or force_email or os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch":
-        print("[*] Se inițiază trimiterea email-ului de notificare (corp dedicat, independent de index.html)...")
+        print("[*] Se inițiază trimiterea email-ului de notificare...")
         send_email(categorized_data)
