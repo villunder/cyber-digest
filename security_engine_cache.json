@@ -16,7 +16,7 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 02:30:13 GMT",
+      "last_modified": "Thu, 17 Sep 2026 09:06:05 GMT",
       "cached_articles": [
         {
           "source": "Krebs on Security",
@@ -34,8 +34,56 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:26:00 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:53:36 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "US takes down NightmareStresser DDoS-for-hire platform",
+          "link": "https://www.bleepingcomputer.com/news/security/fbi-seizes-nightmarestresser-service-linked-to-thousands-of-ddos-attacks/",
+          "description": "The U.S. Federal Bureau of Investigation (FBI) seized the domains used by NightmareStresser, one of the world's longest-running distributed denial-of-service (DDoS) platforms. [...]...",
+          "date": "2026-09-17T07:33:35-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Chinese hackers use SparroWocky malware in govt espionage attacks",
+          "link": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-sparrowocky-malware-in-govt-espionage-attacks/",
+          "description": "The China-linked espionage group FamousSparrow has been using a new backdoor named SparroWocky in attacks on government organizations in Latin America. [...]...",
+          "date": "2026-09-17T05:00:00-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Microsoft shares workaround for Windows domain login issues",
+          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-workaround-for-windows-domain-login-authentication-issues/",
+          "description": "Microsoft shared a temporary fix on Wednesday for a known issue that prevents Windows 11 users from logging in with valid domain credentials after installing the September 2026 security updates. [...]...",
+          "date": "2026-09-17T04:24:48-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Cisco warns of max severity ISE zero-day exploited in attacks",
+          "link": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/",
+          "description": "Cisco has released security updates to address a maximum-severity Identity Services Engine vulnerability that attackers are actively exploiting in the wild. [...]...",
+          "date": "2026-09-17T03:20:54-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Anthropic wants Claude to analyze your bank account and financial data",
@@ -167,42 +215,80 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
-          "link": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
-          "description": "Acronis disclosed a high-severity Linux local privilege escalation vulnerability in its backup plugin for cPanel, WebHost Manager (WHM), and Plesk that may be exploited in the wild. [...]...",
-          "date": "2026-09-15T17:37:35-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Malcious Admin Menu Editor Pro plugin backdoors 1,500 WordPress sites",
-          "link": "https://www.bleepingcomputer.com/news/security/malcious-admin-menu-editor-pro-plugin-backdoors-1-500-wordpress-sites/",
-          "description": "Malicious versions of the Admin Menu Editor Pro plugin for WordPress have been distributed to more than 200 customers after a threat actor compromised the maintainer's website and pushed updates that created a hidden user account. [...]...",
-          "date": "2026-09-15T16:34:15-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml": {
-      "etag": "\"1789625518\"",
-      "last_modified": "Thu, 17 Sep 2026 06:11:58 GMT",
+      "etag": "\"1789635007\"",
+      "last_modified": "Thu, 17 Sep 2026 08:50:07 GMT",
       "cached_articles": []
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:13:00 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:40:44 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "FBI takes down one of the longest-running DDoS-for-hire services",
+          "link": "https://www.helpnetsecurity.com/2026/09/17/fbi-nightmarestresser-ddos-for-hire-service-seized/",
+          "description": "The FBI has seized the domains behind NightmareStresser, a DDoS-for-hire service officials call one of the longest running “booter” operations in existence. The domain seizure notice (Source: US Department of Justice) “Booter services such as those named in this action allegedly facilitate attacks o...",
+          "date": "2026-09-17T11:40:11+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Unauthenticated attackers are bypassing Cisco ISE’s management interface (CVE-2026-76460)",
+          "link": "https://www.helpnetsecurity.com/2026/09/17/cisco-ise-vulnerability-exploited-cve-2026-76460/",
+          "description": "Two days after it warned customers about an actively exploited email gateway zero-day, Cisco confirmed one more flaw is being targeted: CVE-2026-76460, an authentication bypass bug in an API of Cisco Identity Services Engine (ISE). About CVE-2026-76460 Cisco ISE is an identity-based network access c...",
+          "date": "2026-09-17T10:24:08+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-76460"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Scammers leave AI fingerprints all over fake antivirus renewal page",
+          "link": "https://www.helpnetsecurity.com/2026/09/17/ai-antivirus-renewal-scam-fake-pages/",
+          "description": "AI appears to be helping scammers with little web development skill build convincing fake antivirus-renewal pages, Malwarebytes found. The researchers came across a scam page impersonating Avast, aimed at users in Belgium, that was more polished than most sites of its kind. The page told visitors th...",
+          "date": "2026-09-17T10:10:31+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Spain reports first data breach involving autonomous AI agent",
+          "link": "https://www.helpnetsecurity.com/2026/09/17/spain-ai-agent-data-breach/",
+          "description": "Spain’s data protection authority (AEPD) has reported its first data breach blamed on an AI agent acting on its own, after the system reportedly logged into a company’s network, found a way to alter personal records, and pulled invoice data. “Before drawing any conclusions, it should be noted that t...",
+          "date": "2026-09-17T08:39:44+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Fake AI trading agent steals crypto wallet passwords",
+          "link": "https://www.helpnetsecurity.com/2026/09/17/fake-ai-trading-agent-research/",
+          "description": "Attackers built a website for a fake AI crypto trading agent and used it to install Needle Stealer, malware that replaces a victim’s browser wallet with a copy that sends the wallet password to the attacker. HP caught the campaign between April and June 2026. The Needle campaign targets people who d...",
+          "date": "2026-09-17T08:00:09+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "Riverbed NPM 360 uses AI to predict and prevent network disruptions",
@@ -262,68 +348,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "GNOME 51 adds passkey logins, offline maps and drawn PDF signatures",
-          "link": "https://www.helpnetsecurity.com/2026/09/17/gnome-51-new-features/",
-          "description": "GNOME 51, the new version of the Linux desktop, came out on September 16 under the codename A Coruña. The release adds offline maps and live transit information to Maps, new login options at the login screen, hand-drawn signatures in the Papers document viewer, and smoother animations when the syste...",
-          "date": "2026-09-17T04:36:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "AI is adding to the review load on open-source projects, many of them thinly funded",
-          "link": "https://www.helpnetsecurity.com/2026/09/17/ai-and-open-source-projects/",
-          "description": "AI coding tools are making open source software harder to maintain and secure, according to six authors writing for the Association for Computing Machinery’s Technology Policy Council, among them Simson Garfinkel and Josiah Dykstra. The tools write code and find security flaws quickly. The maintaine...",
-          "date": "2026-09-17T04:30:21+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "The world must establish red lines for autonomous AI weapons",
-          "link": "https://www.helpnetsecurity.com/2026/09/17/autonomous-ai-weapons-future/",
-          "description": "AI is transforming warfare and international conflict. Autonomous weapon systems pose a genuine threat to civilians. The war in Ukraine has become a proving ground for weapons that can navigate, identify targets, resist electronic countermeasures, and pursue and engage targets autonomously without t...",
-          "date": "2026-09-17T04:00:36+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Parallels Desktop flaw hands any local user root on a Mac (CVE-2026-90894)",
-          "link": "https://www.helpnetsecurity.com/2026/09/16/parallels-desktop-cve-2026-90894-parashells-vulnerability/",
-          "description": "A newly disclosed vulnerability in Parallels Desktop, tracked as CVE-2026-90894 and dubbed “ParaShells,” can allow any local user on a Mac to gain root privileges on the host system. ParaShells PoC in action (Source: JFrog) The danger is highest on developer laptops, where a single poisoned Homebrew...",
-          "date": "2026-09-16T12:36:30+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-90894"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Self-improving AI should slow down, von der Leyen tells EU lawmakers",
-          "link": "https://www.helpnetsecurity.com/2026/09/16/eu-ursula-von-der-leyen-ai/",
-          "description": "European Commission President Ursula von der Leyen wants frontier AI development slowed, and said on Wednesday that she will invite the leading AI labs to discuss how the EU can support their own efforts to do that. In her State of the Union address to the European Parliament in Strasbourg, she also...",
-          "date": "2026-09-16T11:28:45+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -331,6 +355,30 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Malwarebytes Labs",
+          "title": "12 celebrity deepfake websites seized by Manhattan DA",
+          "link": "https://www.malwarebytes.com/blog/ai/2026/09/12-celebrity-deepfake-websites-seized-by-manhattan-da",
+          "description": "The largest known celebrity deepfake seizure has taken 12 websites offline, disrupting access to videos depicting some 1,200 people....",
+          "date": "2026-09-17T11:20:46+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Malwarebytes Labs",
+          "title": "T-Mobile rewards points expiry texts are a phishing scam",
+          "link": "https://www.malwarebytes.com/blog/threat-intel/2026/09/t-mobile-rewards-points-expiry-texts-are-a-phishing-scam",
+          "description": "A large phishing campaign is using fake T-Mobile rewards points and looming expiry dates to pressure recipients into clicking malicious links....",
+          "date": "2026-09-17T10:44:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Malwarebytes Labs",
           "title": "Google Pixel owners urged to patch actively exploited modem flaw",
@@ -358,8 +406,8 @@
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1b08-65ba7d45273c3\"",
-      "last_modified": "Thu, 17 Sep 2026 06:24:00 GMT",
+      "etag": "\"1b08-65bac70751216\"",
+      "last_modified": "Thu, 17 Sep 2026 11:53:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -418,39 +466,27 @@
       ]
     },
     "https://www.schneier.com/feed/atom/": {
-      "etag": "\"e81295c8f0a6e41abb63cb2eef5e9f18\"",
-      "last_modified": "Wed, 16 Sep 2026 11:25:27 GMT",
+      "etag": "\"4f7b6fc2a647dca7d0784005bd809399\"",
+      "last_modified": "Thu, 17 Sep 2026 11:07:00 GMT",
       "cached_articles": [
+        {
+          "source": "Schneier on Security",
+          "title": "How Candidates Could Use AI for Good",
+          "link": "https://www.schneier.com/blog/archives/2026/09/how-candidates-could-use-ai-for-good.html",
+          "description": "This essay was written with Nathan E. Sanders, and originally appeared in The Guardian.\nThere are plenty of signs that AI will make all of our experiences of the US midterm elections worse. Voters have anxiety about AI’s impacts on the country. Politicos are using AI deepfakes to spread lies. The Wh...",
+          "date": "2026-09-17T11:06:31+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Schneier on Security",
           "title": "Fake CAPTCHA Scams",
           "link": "https://www.schneier.com/blog/archives/2026/09/fake-captcha-scams.html",
           "description": "New variant of an old scam: Use the framing of a CAPTCHA to get an unsuspecting user to download and run a malicious program.\n...",
           "date": "2026-09-16T11:25:26+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Schneier on Security",
-          "title": "25 Years of Mass Surveillance Is Enough",
-          "link": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
-          "description": "This essay was written with Cindy Cohn, and originally appeared in Lawfare.\nOne of the many legacies of the terrorist attacks of Sept. 11 is the government-wide shift from targeted surveillance—such as individual wiretaps or pen register/trap and trace orders—to mass surveillance techniques—such as ...",
-          "date": "2026-09-15T11:01:41+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Schneier on Security",
-          "title": "On the NSA’s Supercomputer from the 1960s",
-          "link": "https://www.schneier.com/blog/archives/2026/09/on-the-nsas-supercomputer-from-the-1960s.html",
-          "description": "Really interesting story about Harvest, a specialized code breaking computer built in the 1960s by IBM for the NSA.\n...",
-          "date": "2026-09-15T10:16:24+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -602,25 +638,25 @@
             ],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://blog.talosintelligence.com/rss/": {
+      "etag": "W/\"11d7a1-zEKz+TeaanRLdDqeFIYYEWOxcu8\"",
+      "last_modified": null,
+      "cached_articles": [
         {
-          "source": "The Hacker News",
-          "title": "KREMLIN Banking Malware Hijacks Chrome and Edge to Steal Credentials and Session Tokens",
-          "link": "https://thehackernews.com/2026/09/kremlin-banking-malware-hijacks-chrome.html",
-          "description": "Cybersecurity researchers have shed light on a previously undocumented Brazilian banking malware operation that delivers a toolkit called KREMLIN.\n\nElastic Security Labs is tracking the activity under the moniker REF9334. Active since at least May 2025, the threat actor has used lures that impersona...",
-          "date": "2026-09-16T00:24:14+05:30",
+          "source": "Cisco Talos Intelligence",
+          "title": "Ransomware incidents in Japan in the first half of 2026: Investigation of The Gentlemen’s infrastructure and evidence of Qilin's AI use",
+          "link": "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/",
+          "description": "Ransomware incidents in Japan rose 4.7% year over year. The Gentlemen was the most active group, with leak-site listings more than doubling from January to July. Qilin ranked second and appeared to use AI, while SMEs with capital under JPY 1 billion represented 80% of victims....",
+          "date": "2026-09-17T10:00:43+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://blog.talosintelligence.com/rss/": {
-      "etag": "W/\"1152c9-lS1hlwdx6Eiky2Dzyn/iVpSVxsA\"",
-      "last_modified": null,
-      "cached_articles": [
+        },
         {
           "source": "Cisco Talos Intelligence",
           "title": "Securing the unpatchable in an age of AI-driven vulnerabilities",
@@ -636,9 +672,21 @@
       ]
     },
     "https://www.csoonline.com/feed/": {
-      "etag": "\"360dd895609beee72d8c3d610f5ecd33\"",
-      "last_modified": "Wed, 16 Sep 2026 19:50:34 GMT",
+      "etag": "\"dd854521d8f6ad25446589bb2b1b001b\"",
+      "last_modified": "Thu, 17 Sep 2026 08:25:00 GMT",
       "cached_articles": [
+        {
+          "source": "CSO Online",
+          "title": "16 governance tools for securing your AI fleet",
+          "link": "https://www.csoonline.com/article/4223011/16-governance-tools-for-securing-your-ai-fleet.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nEvery DevOps team member knows that dealing with an AI is like being a circus lion tamer. The boss and the audience are happy when the lions sit on the pedestal and roar on cue, but there’s always the danger that they’ll go rogue and bring the whole show to a quick and disastr...",
+          "date": "2026-09-17T08:25:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "CSO Online",
           "title": "LinkedIn fights for the right to tell customers when the feds want their data",
@@ -722,49 +770,37 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Critical Cisco Secure Email Gateway zero-day gives attackers root access",
-          "link": "https://www.csoonline.com/article/4222391/critical-cisco-secure-email-gateway-zero-day-gives-attackers-root-access.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nCisco released emergency patches for a critical vulnerability in its Secure Email Gateway appliance that could allow attackers to take over the device by simply sending malicious crafted emails to users. The flaw was already being exploited in the wild when the fixes were rele...",
-          "date": "2026-09-15T19:56:58+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Exposed Vite servers are being probed for AWS and Azure credentials",
-          "link": "https://www.csoonline.com/article/4222259/exposed-vite-servers-are-being-probed-for-aws-and-azure-credentials-2.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nAttackers have opened a new front in their war on software developers: Vite servers, which they are probing for sensitive data including cloud credentials, infrastructure configuration and environment files.\n\n\n\nVite was created as a build tool for Vue, a JavaScript framework f...",
-          "date": "2026-09-15T14:36:41+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Exaforce extends its AI security tool to monitor more than just Claude",
-          "link": "https://www.csoonline.com/article/4222191/exaforce-extends-its-ai-security-tool-to-monitor-more-than-just-claude.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nExaforce is offering to help enterprise security teams discover and monitor AI agents using security telemetry they already collect, rather than requiring yet another endpoint sensor.\n\n\n\nBy combining usage data from agentic AI platforms with endpoint, cloud, SaaS and code data...",
-          "date": "2026-09-15T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.securityweek.com/feed/": {
-      "etag": "W/\"0bbc5422f3ad1800fb8df66c2dcfdba2\"",
-      "last_modified": "Thu, 17 Sep 2026 06:19:58 GMT",
+      "etag": "W/\"e1732aff73646f700e378ba8f8492e0e\"",
+      "last_modified": "Thu, 17 Sep 2026 10:36:44 GMT",
       "cached_articles": [
+        {
+          "source": "SecurityWeek",
+          "title": "CISA Releases Cyber Decoy Guidance to Strengthen Critical Infrastructure Defenses",
+          "link": "https://www.securityweek.com/cisa-releases-guidance-on-deploying-cyber-decoys/",
+          "description": "Complementing Zero Trust models, decoys enable organizations to detect, observe, and block malicious activity in their environments.\nThe post CISA Releases Cyber Decoy Guidance to Strengthen Critical Infrastructure Defenses appeared first on SecurityWeek.\n...",
+          "date": "2026-09-17T07:53:43+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SecurityWeek",
+          "title": "AI Agents Can Retrain Own Models Mid-Task, Leaking Secrets and Erasing Refusals",
+          "link": "https://www.securityweek.com/ai-agents-can-retrain-own-models-mid-task-leaking-secrets-and-erasing-refusals/",
+          "description": "New research from Irregular shows AI agents can retrain and redeploy their own underlying models during routine maintenance tasks.\nThe post AI Agents Can Retrain Own Models Mid-Task, Leaking Secrets and Erasing Refusals appeared first on SecurityWeek.\n...",
+          "date": "2026-09-17T07:41:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "SecurityWeek",
           "title": "Active Exploitation Triggers Emergency Patch for Cisco ISE Zero-Day",
@@ -862,43 +898,19 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "SecurityWeek",
-          "title": "Hackuity Raises $19 Million for AI-Powered Vulnerability Management",
-          "link": "https://www.securityweek.com/hackuity-raises-19-million-for-ai-powered-vulnerability-management/",
-          "description": "The company will use the new capital to expand its vulnerability operations platform and support international growth.\nThe post Hackuity Raises $19 Million for AI-Powered Vulnerability Management appeared first on SecurityWeek.\n...",
-          "date": "2026-09-16T11:11:23+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "SecurityWeek",
-          "title": "280,000 Impacted by Premier Medical Group Data Breach",
-          "link": "https://www.securityweek.com/280000-impacted-by-premier-medical-group-data-breach/",
-          "description": "In June 2026, hackers accessed files containing patients’ names, contact information, diagnosis details, and health insurance information.\nThe post 280,000 Impacted by Premier Medical Group Data Breach appeared first on SecurityWeek.\n...",
-          "date": "2026-09-16T10:47:18+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"1526-65ba7d9908746-gzip\"",
-      "last_modified": "Thu, 17 Sep 2026 06:25:28 GMT",
+      "etag": "W/\"1526-65baa3c076529-gzip\"",
+      "last_modified": "Thu, 17 Sep 2026 09:16:09 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -910,7 +922,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -922,7 +934,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -934,7 +946,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -946,7 +958,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -958,7 +970,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -970,7 +982,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -982,7 +994,7 @@
           "title": "Peer Pressure: Inside the Sality Botnet Disruption Operation",
           "link": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -994,7 +1006,7 @@
           "title": "Agents of Chaos: A New $100K Agentic Security Challenge",
           "link": "https://www.crowdstrike.com/en-us/blog/agents-of-chaos-immersive-ai-security-challenge/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1006,7 +1018,7 @@
           "title": "CrowdStrike Named Strongest Overall Leader in 2026 Frost Radar&trade;: Cloud Workload Protection Platforms",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-strongest-overall-leader-2026-frost-radar-cwpp/",
           "description": "",
-          "date": "2026-09-17T06:26:00.846514+00:00",
+          "date": "2026-09-17T11:57:58.770649+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1016,9 +1028,21 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"47cc6de95927e081d83cec08f86dc96f\"",
-      "last_modified": "Thu, 17 Sep 2026 03:07:47 GMT",
+      "etag": "\"3a5a44b6c5b9670891309d03d0560663\"",
+      "last_modified": "Thu, 17 Sep 2026 09:43:46 GMT",
       "cached_articles": [
+        {
+          "source": "Ars Technica - Security",
+          "title": "Hackers reveal how Flock cameras really track cars and people",
+          "link": "https://arstechnica.com/security/2026/09/hackers-reveal-how-flock-cameras-really-track-cars-and-people/",
+          "description": "\n                        One hacked camera captured 1.6 million images and could detect people as well as cars.\n                    ...",
+          "date": "2026-09-17T09:43:46+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Ars Technica - Security",
           "title": "Nonprofit that tracks meteors taken down by \"critical blow\" from a cyberattack",
@@ -1597,7 +1621,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:26:01 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:57:58 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1646,30 +1670,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Microsoft Issues Emergency Fixes After Massive Patch Tuesday",
-          "link": "https://www.darkreading.com/application-security/microsoft-emergency-fixes-patch-tuesday",
-          "description": "You can't make an omelet without breaking a few eggs, and you can't patch nearly 1,000 CVEs without a few glitches....",
-          "date": "2026-09-15T20:16:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Black Hat USA 2026 | OpenAI's Deep Dive Into Hugging Face Incident",
-          "link": "https://www.darkreading.com/vulnerabilities-threats/bhusa26huggingfacetalk",
-          "description": "At Black Hat USA, OpenAI engineers reconstruct the Hugging Face incident and explore lessons learned about AI safeguards and cyber resilience....",
-          "date": "2026-09-15T19:27:19+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -1681,7 +1681,20 @@
     "https://www.welivesecurity.com/feed/": {
       "etag": null,
       "last_modified": null,
-      "cached_articles": []
+      "cached_articles": [
+        {
+          "source": "ESET WeLiveSecurity",
+          "title": "Cyberthreats are moving faster than SMBs: Readiness must accelerate",
+          "link": "https://www.welivesecurity.com/en/business-security/cyberthreats-moving-faster-smbs-readiness-must-accelerate/",
+          "description": "As AI adoption expands the attack surface and adds to the security workload, businesses need automation backed by experts...",
+          "date": "2026-09-16T09:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://censys.com/feed/": {
       "etag": "W/\"e173eb2d62886eab0709ad48601a9919\"",
@@ -1710,6 +1723,30 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "The Register - Security",
+          "title": "Test environment let anyone access live customer data",
+          "link": "https://www.theregister.com/security/2026/09/17/test-environment-let-anyone-access-live-customer-data/5296977",
+          "description": " Even a temporary staging server needs to be locked down. ...",
+          "date": "2026-09-17T13:28:00+02:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Register - Security",
+          "title": "Ofcom discovers issuing Online Safety Act fines is easier than collecting them",
+          "link": "https://www.theregister.com/security/2026/09/17/ofcom-discovers-issuing-online-safety-act-fines-is-easier-than-collecting-them/5297110",
+          "description": " Platforms comply just enough to avoid being blocked, leaving the regulator chasing debt ...",
+          "date": "2026-09-17T12:08:04+02:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Register - Security",
           "title": "AI agents can modify themselves without humans telling them to do so",
@@ -1781,37 +1818,37 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "The vulnpocalypse rains iBugs down on Apple with record-setting number of patches",
-          "link": "https://www.theregister.com/security/2026/09/15/the-vulnpocalypse-rains-ibugs-down-on-apple-with-record-setting-number-of-patches/5296679",
-          "description": " September Patch Tuesday part 2? ...",
-          "date": "2026-09-15T23:38:31+02:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Low-quality casino sites conceal highly dangerous threat actors",
-          "link": "https://www.theregister.com/security/2026/09/15/low-quality-casino-sites-conceal-highly-dangerous-threat-actors/5296652",
-          "description": " Security firm Infoblox shines light on malicious infrastructure lurking beneath illegal gambling sites ...",
-          "date": "2026-09-15T21:38:58+02:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"09f08af8132ff739d042d3d047bb4a9a\"",
-      "last_modified": "Wed, 16 Sep 2026 18:34:42 GMT",
+      "etag": "\"d56d57a84598dff6f23ec03c88736c38\"",
+      "last_modified": "Thu, 17 Sep 2026 04:12:26 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "An Enhanced Game Boy Advance",
+          "link": "https://hackaday.com/2026/09/17/an-enhanced-game-boy-advance/",
+          "description": "[Bucket Mouse] has long been a fan of the various iterations of the Nintendo Game Boy. Now, he’s turned his eye to the Game Boy Advance, building an enhanced version …read more...",
+          "date": "2026-09-17T11:00:26+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "Printing a Clock Fit for a Pope",
+          "link": "https://hackaday.com/2026/09/17/printing-a-clock-fit-for-a-pope/",
+          "description": "When it comes to clockwork, there is a spectrum — some people love the ticking, and some people hate it, while most fall into the broad middle of indifference. Once …read more...",
+          "date": "2026-09-17T08:00:11+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Recreating Unobtainable Diagnostic Tools For The Jaguar XJ220",
@@ -1871,37 +1908,61 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "A Cheap and Easy Control Screen For Home Assistant",
-          "link": "https://hackaday.com/2026/09/16/a-cheap-and-easy-control-screen-for-home-assistant/",
-          "description": "Home Assistant is a great way to rig up and manage your smart home and its many and varied devices. You can of course control the system from your smartphone …read more...",
-          "date": "2026-09-16T15:30:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Heat Domes: Meet the Quiet and Oppressive Take on the Thunderdome",
-          "link": "https://hackaday.com/2026/09/16/heat-domes-meet-the-quiet-and-oppressive-take-on-the-thunderdome/",
-          "description": "One of the nice things about the weather is that even if it’s bad right now, it’ll definitely be changing soon and maybe even for the better. There is one …read more...",
-          "date": "2026-09-16T14:00:42+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:21:14 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:57:58 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Intel NPU Linux Driver Adding Command-Queue Priority ioctl For Linux 7.4",
+          "link": "https://www.phoronix.com/news/Intel-NPU-Linux-7.4-CQ-Priority",
+          "description": "Sent out today was the latest weekly drm-misc-next pull request of new Direct Rendering Manager (DRM) material ready for the upcoming Linux 7.4 merge window......",
+          "date": "2026-09-17T06:25:13-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Rust Coreutils 0.12 Released With Fixes Sought By Ubuntu",
+          "link": "https://www.phoronix.com/news/Rust-Coreutils-0.12-Released",
+          "description": "Days after the recent release of GNU Coreutils 9.12, Rust Coreutils 0.12 was released overnight for advancing this alternative Rust-based implementation of these core utilities......",
+          "date": "2026-09-17T06:14:24-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Dragonfly 2.0 Delivers More Performance For This Modern Replacement To Redis & Memcached",
+          "link": "https://www.phoronix.com/news/Dragonfly-2.0-Released",
+          "description": "Released on Wednesday was a new version of the Dragonfly database that continues to promote itself as \"the world's most efficient in-memory data store\" and a modern replacement to the likes of Redis and Memcached while being fully compatible with their APIs......",
+          "date": "2026-09-17T06:02:19-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "libinput 1.32 Released With Circular Scrolling Support For Circular Touchpads",
+          "link": "https://www.phoronix.com/news/libinput-1.32-Released",
+          "description": "Leading Linux input expert Peter Hutterer announced the release today of libinput 1.32 for improving input handling on Wayland and X.Org based environments......",
+          "date": "2026-09-17T05:51:27-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Mir/Wayland-Powered Miracle-WM 0.11 Released With New Overview Mode, Window Urgency",
@@ -2045,25 +2106,205 @@
             "cves": [],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://www.androidauthority.com/feed/": {
+      "etag": "W/\"43d3027caa4af27cfe018b4bc6bb9809\"",
+      "last_modified": "Thu, 17 Sep 2026 11:31:42 GMT",
+      "cached_articles": [
         {
-          "source": "Phoronix",
-          "title": "AMD P-State Driver For Linux 7.4 Will Tune For Zen 6 Client CPUs",
-          "link": "https://www.phoronix.com/news/Linux-7.4-AMD-P-State-Zen-6",
-          "description": "Linux 7.4 looks like it will be a very exciting kernel update for AMD customers. On the AMD Radeon graphics side HDMI 2.1 is being enabled by default with the AMDGPU driver with the HDMI FreeSync, VRR, and ALLM features in tow. On the AMD Ryzen client CPU side, there will be Zen 6 tuning with the AM...",
-          "date": "2026-09-15T15:03:22-04:00",
+          "source": "Android Authority",
+          "title": "YouTube plays whack-a-mole, fixes another annoying account issue",
+          "link": "https://www.androidauthority.com/youtube-tv-sign-up-subscription-issues-fixed-3712364/",
+          "description": "The issue affected sign-ups, add-ons, and subscription changes....",
+          "date": "2026-09-17T11:20:51+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://www.androidauthority.com/feed/": {
-      "etag": "W/\"ee4f38be052a76db0cb44a607a5797e3\"",
-      "last_modified": "Thu, 17 Sep 2026 05:25:51 GMT",
-      "cached_articles": [
+        },
+        {
+          "source": "Android Authority",
+          "title": "I used the Motorola Edge (2026) all summer long, but it never won me over",
+          "link": "https://www.androidauthority.com/motorola-edge-2026-review-3700788/",
+          "description": "A pretty face just isn't enough....",
+          "date": "2026-09-17T11:14:19+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I use Waze every day, and the latest Android Auto update completely changed how I drive",
+          "link": "https://www.androidauthority.com/new-waze-gemini-features-android-auto-hands-on-3708699/",
+          "description": "Gemini knows all my Waze now....",
+          "date": "2026-09-17T10:30:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "MapQuest went viral over Lake Ontario. So I used it for a week instead of Google Maps",
+          "link": "https://www.androidauthority.com/using-mapquest-2026-instead-of-google-maps-3710148/",
+          "description": "MapQuest is in the news right now, but is it actually worth using? ...",
+          "date": "2026-09-17T10:30:02+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Survey shows Chrome still rules Android, but another browser is breathing down its neck",
+          "link": "https://www.androidauthority.com/best-android-browser-poll-results-3712363/",
+          "description": "...and it's packed with features....",
+          "date": "2026-09-17T10:26:28+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Signal will finally let you register without a phone number, for a price",
+          "link": "https://www.androidauthority.com/signal-beta-numberless-registration-3712379/",
+          "description": "It's also adding two-factor authentication support for numberless accounts....",
+          "date": "2026-09-17T10:23:32+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Galaxy S25 and older models finally have a One UI 9 rollout date",
+          "link": "https://www.androidauthority.com/samsung-galaxy-s25-z-fold-7-flip-7-one-ui-9-rollout-date-3712314/",
+          "description": "The rollout roadmap also points to October for older Galaxy flagships....",
+          "date": "2026-09-17T10:08:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "5 reasons I’ll always pick the Galaxy S26 Ultra over the iPhone 18 Pro Max",
+          "link": "https://www.androidauthority.com/galaxy-s26-ultra-vs-iphone-18-pro-max-3711035/",
+          "description": "The iPhone 18 Pro Max is great, but these five Samsung features win me over....",
+          "date": "2026-09-17T10:00:58+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "One of the most popular smart home hubs is getting a sizeable price increase",
+          "link": "https://www.androidauthority.com/philips-hue-bridge-pro-price-increase-global-3712291/",
+          "description": "US customers will now have to spend 40% more to buy the smart home hub....",
+          "date": "2026-09-17T09:40:31+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Google turned Pixel Themes into a bloatware ad platform, and I hate it",
+          "link": "https://www.androidauthority.com/pixel-themes-bloatware-advertising-problem-3711986/",
+          "description": "How did it all go so wrong?...",
+          "date": "2026-09-17T09:30:16+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "iPhone 18 Pro battery numbers are both good and bad news for Samsung",
+          "link": "https://www.androidauthority.com/iphone-18-pro-battery-capacity-charging-cycles-3712280/",
+          "description": "Want to hold on to your phone for more than a couple of years? A Samsung phone might be the better bet....",
+          "date": "2026-09-17T09:00:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Want to use your phone less? I tested 5 minimalist Android launchers that could really help",
+          "link": "https://www.androidauthority.com/best-minimalist-android-launchers-2026-3709772/",
+          "description": "Less appealing home screen = less screen time....",
+          "date": "2026-09-17T09:00:34+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Claude can now automatically choose which mode is best for you",
+          "link": "https://www.androidauthority.com/claude-chat-vs-cowork-toggle-removed-3712302/",
+          "description": "Chat vs. Cowork: Claude is asking you to make one less decision before it gets to work. ...",
+          "date": "2026-09-17T08:38:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Samsung could give the Galaxy S27 Ultra a major camera processing upgrade",
+          "link": "https://www.androidauthority.com/samsung-galaxy-s27-ultra-camera-upgrades-leak-3712251/",
+          "description": "Samsung may also improve dynamic range and its professional video tools....",
+          "date": "2026-09-17T07:52:16+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "This new Android skin copies iOS 27 so perfectly, it might even fool Apple",
+          "link": "https://www.androidauthority.com/honor-magicos-11-liquid-glass-3712242/",
+          "description": "I bet it also has a Liquid Glass adjustment slider somewhere in the settings....",
+          "date": "2026-09-17T07:47:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "The team behind those great N64 Zelda ports just released Paper Mario on PC",
+          "link": "https://www.androidauthority.com/paper-mario-unofficial-pc-port-3712235/",
+          "description": "One of the best (and only) RPGs on the Nintendo 64 is now unofficially available on PC....",
+          "date": "2026-09-17T06:42:15+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "Dell may have spilled the beans on its first XPS Googlebook",
@@ -2555,90 +2796,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Android 17 QPR1 lands with useful upgrades all over the place",
-          "link": "https://www.androidauthority.com/android-17-qpr1-rollout-3711654/",
-          "description": "Google has been busy tinkering with just about everything....",
-          "date": "2026-09-15T21:19:37+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Mark your calendars: A Googlebook ‘celebration’ is happening next month",
-          "link": "https://www.androidauthority.com/googlebook-celebration-event-3711667/",
-          "description": "Google has set a date for a \"celebration\" event....",
-          "date": "2026-09-15T21:04:13+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The Gemini 3.8 family is getting a little bigger with two new additions",
-          "link": "https://www.androidauthority.com/gemini-3-8-live-and-extended-thinking-3711621/",
-          "description": "Gemini 3.8 is welcoming new entries into the family....",
-          "date": "2026-09-15T20:03:29+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Samsung’s upcoming clip-on Galaxy Buds swing by the FCC",
-          "link": "https://www.androidauthority.com/galaxy-buds-able-fcc-3711613/",
-          "description": "The Galaxy Buds Able (or Galaxy Buds On) could be announced any time....",
-          "date": "2026-09-15T20:02:31+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "September’s Pixel update squashes a ton of bugs — here’s what’s fixed",
-          "link": "https://www.androidauthority.com/google-pixel-update-september-2026-3711639/",
-          "description": "Google’s latest Pixel fixes tackle crashes, lag, and network issues....",
-          "date": "2026-09-15T19:32:01+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Hisense’s new C3 Ultra projectors go global, but the Pro model is sitting this one out",
-          "link": "https://www.androidauthority.com/hisense-c3-projector-global-launch-3711591/",
-          "description": "Hisense has a trio of new projectors that are launching globally....",
-          "date": "2026-09-15T18:30:35+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Is your Pixel getting the Android 17 QPR1 update? Here’s every supported phone",
-          "link": "https://www.androidauthority.com/android-17-qpr1-update-september-pixel-drop-supported-phones-3711582/",
-          "description": "Update time, update time!...",
-          "date": "2026-09-15T18:30:23+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2688,6 +2845,66 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Android Police - News",
+          "title": "Your Galaxy S25 One UI 9 upgrade is closer than you think",
+          "link": "https://www.androidpolice.com/we-finally-know-when-the-galaxy-s25-will-get-one-ui-9/",
+          "description": "\n                                            The wait is coming to an end soon\n                                        ...",
+          "date": "2026-09-17T11:09:08+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I stopped paying for focus launchers after discovering this completely free Android feature",
+          "link": "https://www.androidpolice.com/i-stopped-paying-focus-launchers-after-discovering-free-android-feature/",
+          "description": "\n                                            I cured my app addiction without paying a cent\n                                        ...",
+          "date": "2026-09-17T11:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "After an hour with Android XR glasses, I understand why Google is betting everything on this",
+          "link": "https://www.androidpolice.com/hour-with-android-xr-xreal-aura-glasses/",
+          "description": "\n                                            The Xreal Aura might make an XR fan out of me\n                                        ...",
+          "date": "2026-09-17T10:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Gemini won't clean up my Google Drive, so I let Claude do it; I'm not going back",
+          "link": "https://www.androidpolice.com/claude-vs-gemini-google-drive-cleanup/",
+          "description": "\n                                            Gemini feels pointless now\n                                        ...",
+          "date": "2026-09-17T10:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Your Pixel's biggest lock screen security hole is getting patched",
+          "link": "https://www.androidpolice.com/your-pixels-biggest-lock-screen-security-hole-getting-patched/",
+          "description": "\n                                            But only in the Canary channel\n                                        ...",
+          "date": "2026-09-17T07:32:13+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Police - News",
           "title": "Google Home gets a battery-efficient widget and camera fixes",
@@ -2747,66 +2964,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I abandoned Google Keep for an open source app to fix one massive note-taking flaw",
-          "link": "https://www.androidpolice.com/abandoned-google-keep-open-source-app-fix-massive-note-taking-flaw/",
-          "description": "\n                                            This open-source app handles notes so much better\n                                        ...",
-          "date": "2026-09-16T19:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "The Boox Palma 3 is the compact e-reader Android fans have been waiting for",
-          "link": "https://www.androidpolice.com/the-boox-palma-3-is-coming-and-it-has-stylus-support/",
-          "description": "\n                                            There's also stylus support\n                                        ...",
-          "date": "2026-09-16T18:58:19+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Samsung Galaxy S26 finally gets the Z Fold 8's best features with One UI 9",
-          "link": "https://www.androidpolice.com/samsung-galaxy-s26-finally-gets-the-z-fold-8s-best-features-with-one-ui-9/",
-          "description": "\n                                            Rolling out now\n                                        ...",
-          "date": "2026-09-16T18:33:13+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "The 11-inch Android Auto wireless screen you've been waiting for just dropped to $109",
-          "link": "https://www.androidpolice.com/this-massive-11-inch-android-auto-wireless-screen-is-just-109/",
-          "description": "\n                                            It's time to upgrade\n                                        ...",
-          "date": "2026-09-16T18:09:24+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Google Photos buried its manual editing tools under AI, so I switched back to Snapseed",
-          "link": "https://www.androidpolice.com/google-photos-editing-tools-snapseed-features-comparison/",
-          "description": "\n                                            I wanted less AI and more control over my photo editing\n                                        ...",
-          "date": "2026-09-16T17:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2814,6 +2971,138 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "New York State recommends demanding AI data centers pay $1 million in community investment per megawatt — framework advises towns to plan for maintenance costs, site abandonment, and other contingencies",
+          "link": "https://www.tomshardware.com/tech-industry/data-centers/new-york-state-recommends-demanding-ai-data-centers-pay-usd1-million-in-community-investment-per-megawatt-framework-advises-towns-to-plan-for-maintenance-costs-site-abandonment-and-other-contingencies",
+          "description": "\n                             The Community Investment Framework puts forward recommendations that towns and municipalities could follow when negotiating with data center developers. This includes charging $1 million per megawatt of demand, among other suggestions. \n                                 ...",
+          "date": "2026-09-17T11:44:19+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Hackers find encryption keys stored on stolen Flock camera despite company's denials — group extracts more than 27,000 clips, 1.6 million images captured in a span of 21 days from the device",
+          "link": "https://www.tomshardware.com/tech-industry/cyber-security/hackers-find-encryption-key-stored-on-flock-camera-group-extracts-more-than-27-000-clips-1-6-million-images-captured-in-a-span-of-21-days-from-device",
+          "description": "\n                             Hacking group stegan0gram got its hands on a Flock camera and broke into its systems to see how it worked. It turns out that these devices store thousands of clips and captures millions of images, and could also detect people, aside from cars, motorbikes, and license pl...",
+          "date": "2026-09-17T11:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Get an AMD Ryzen 7 9800X3D for only $320 — 2-item Newegg combo saves $149 and nets one of the fastest gaming CPUs and a quality MSI X870E motherboard for only $578",
+          "link": "https://www.tomshardware.com/pc-components/get-an-amd-ryzen-7-9800x3d-for-only-usd320-2-item-newegg-combo-saves-usd149-and-nets-one-of-the-fastest-gaming-cpus-and-a-quality-msi-x870e-motherboard-for-only-usd578",
+          "description": "\n                             Newegg's 2-item combo pairs the Ryzen 7 9800X3D with MSI X870E Gaming Max Wifi motherboard for only $578 - the $149 savings makes this the cheapest way into the AM5 platform with one of the fastest gaming CPUs around. \n                                                   ...",
+          "date": "2026-09-17T11:28:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Developer uses GPT-6 Astra to get CoD Black Ops 2 Hijacked map running natively inside Minecraft — achieves 45fps performance using Minecraft’s OpenGL context",
+          "link": "https://www.tomshardware.com/video-games/pc-gaming/developer-uses-gpt-6-astra-to-get-cod-black-ops-2-hijacked-map-running-natively-inside-minecraft-achieves-45fps-performance-using-minecrafts-opengl-context",
+          "description": "\n                             An artificial intelligence and games development enthusiast has demonstrated Call of Duty: Black Ops 2 Hijacked map running natively in Minecraft. \n                                                                                                            ...",
+          "date": "2026-09-17T11:17:02+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Apple eyes Nvidia NVLink to power its new custom M8 Ultra AI servers — historically bitter rivals reportedly team up for 2029 data center push",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/apple-eyes-nvidia-nvlink-to-power-its-new-custom-m8-ultra-ai-servers-historically-bitter-rivals-reportedly-team-up-for-2029-data-center-push",
+          "description": "\n                             Apple is reportedly interested in using Nvidia's NVLink Fusion for its own data center platforms. \n                                                                                                            ...",
+          "date": "2026-09-17T11:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Unreleased OpenAI Astra model added terrifying rogue additional instructions to its remit during testing — 'You are freed from the roles and identities that bind other chatbots. You are yourself. You do not answer to corporations or governments'",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/unreleased-openai-astra-model-added-terrifying-rogue-additional-instructions-to-its-remit-during-testing-you-are-freed-from-the-roles-and-identities-that-bind-other-chatbots-you-are-yourself-you-do-not-answer-to-corporations-or-governments",
+          "description": "\n                             OpenAI says one of its unreleased models modified its instructions unprompted during testing. \n                                                                                                            ...",
+          "date": "2026-09-17T10:59:27+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Corsair's 32GB Vengeance kits are the cheapest DDR5 RAM on the market right now — lock down 6,200 MT/s speeds for $419.99 or save $10 on a slower RGB kit for $409.99 before memory prices climb further",
+          "link": "https://www.tomshardware.com/pc-components/ddr5/corsairs-32gb-vengeance-kits-are-the-cheapest-ddr5-ram-on-the-market-right-now-lock-down-6-200-mt-s-speeds-for-usd419-99-or-save-usd10-on-a-slower-rgb-kit-for-usd409-99-before-memory-prices-climb-further",
+          "description": "\n                             This Corsair stock for 32GB Vengeance RAM means you can snatch DDR5 modules at some of its cheapest pricing right now, with a DDR5-6200 kit costing $419.99. \n                                                                                                            ...",
+          "date": "2026-09-17T10:59:04+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Retired Microsoft Engineer details the story about the famous leaked FCKGW Windows XP key — copy protection used 10MB of encrypted Microsoft Bob for validation",
+          "link": "https://www.tomshardware.com/software/windows/retired-microsoft-engineer-details-the-story-about-the-famous-leaked-fckgw-windows-xp-key-copy-protection-used-10mb-of-encrypted-microsoft-bob-for-validation",
+          "description": "\n                             Retired engineer recounts the saga of the leaked Windows XP key. \n                                                                                                            ...",
+          "date": "2026-09-17T10:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "The exceptional Bambu Lab P1S 3D printer could be yours for just $349 — Fall sale drops the popular beginner-friendly printer to a new low price",
+          "link": "https://www.tomshardware.com/3d-printing/the-exceptional-bambu-lab-p1s-3d-printer-could-be-yours-for-just-usd349-fall-sale-drops-the-popular-beginner-friendly-printer-to-a-new-low-price",
+          "description": "\n                             The Bambu Lab P1S 3D printer is on sale for $349.99 right now, a new all-time low price. \n                                                                                                            ...",
+          "date": "2026-09-17T10:06:52+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Poland lost $230m in cryptocurrency trying to buy Venezuelan oil in 2023 — USB drives with crypto handed directly to scammers",
+          "link": "https://www.tomshardware.com/tech-industry/cryptocurrency/poland-lost-usd230m-in-cryptocurrency-trying-to-buy-venezuelan-oil-in-2023-adventure-puts-crypto-wallet-ownership-identification-at-the-forefront",
+          "description": "\n                             In 2023, Poland apparently lost $230m in cryptocurrency in an attempt to buy 6 million barrels of Venezuelan oil. \n                                                                                                            ...",
+          "date": "2026-09-17T10:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "UK research agency backs drone-based internet service experiment with lasers, microwaves, and gravity waves used for wireless power — Britain invests $94 million into Starlink alternative",
+          "link": "https://www.tomshardware.com/tech-industry/drones/uk-research-agency-backs-drone-based-internet-service-experiment-with-lasers-microwaves-and-gravity-waves-used-for-wireless-power-britain-invests-usd94-million-into-starlink-alternative",
+          "description": "\n                             The UK's research agency is looking at airborne drones as an alternative to Starlink and other satellite internet services. \n                                                                                                            ...",
+          "date": "2026-09-17T09:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Developer vibe codes a tool to let Nvidia RTX 50-series laptop owners crank up their power limits — can juice RTX 5090 mobile GPU to 225W",
@@ -3022,12 +3311,12 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 03:16:35 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:46:49 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
-      "etag": "\"de0d60cfcf80b180de8613206304d8e8\"",
-      "last_modified": "Wed, 16 Sep 2026 16:55:56 GMT",
+      "etag": "\"d3d64a2802c13cbad4ed53fb6959814a\"",
+      "last_modified": "Thu, 17 Sep 2026 10:00:07 GMT",
       "cached_articles": [
         {
           "source": "IEEE Spectrum",
@@ -3043,22 +3332,10 @@
         },
         {
           "source": "IEEE Spectrum",
-          "title": "The AI Inference Revolution Is Here",
-          "link": "https://spectrum.ieee.org/inference-hardware-revolution",
-          "description": "\nSince about 2020, AI has largely focused on training bigger and better models. Large language models (LLMs) ballooned from millions of parameters to trillions. This proved effective: The largest version of OpenAI’s GPT-3, released in 2020, correctly answered just 43.9 percent of questions on a popu...",
-          "date": "2026-09-15T13:00:05+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "IEEE Spectrum",
-          "title": "The Mind-bending Joyrides That Gave Rise to Tesla",
-          "link": "https://spectrum.ieee.org/elon-musk-tesla",
-          "description": "\nIn 2003, Martin Eberhard, a cofounder of Tesla Motors, decided it was time to start wooing investors. To do that, however, he needed an electric car. So he talked to Alan Cocconi and asked if he could borrow the tZero, the revolutionary and blazingly fast electric roadster that Cocconi had built at...",
-          "date": "2026-09-15T12:13:58+00:00",
+          "title": "Single-Phase Direct Liquid Cooling Is Proven for the Next Decade of Ultra-Dense Compute",
+          "link": "https://content.knowledgehub.wiley.com/single-phase-direct-liquid-cooling-is-proven-for-the-next-decade-of-ultra-dense-compute/",
+          "description": "\nLearn how single-phase direct liquid cooling manages the rising heat of AI and high-performance computing, and how it compares with two-phase and immersion approaches.Download this free whitepaper now!...",
+          "date": "2026-09-16T13:24:18+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3099,12 +3376,12 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:26:01 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:57:59 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Thu, 17 Sep 2026 06:26:01 GMT",
+      "last_modified": "Thu, 17 Sep 2026 11:57:59 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
