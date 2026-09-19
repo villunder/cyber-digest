@@ -19,12 +19,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 12:39:46 GMT",
+      "last_modified": "Sat, 19 Sep 2026 20:02:41 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:39:36 GMT",
+      "last_modified": "Sat, 19 Sep 2026 19:59:41 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -152,18 +152,6 @@
           "link": "https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root/",
           "description": "Check Point Software has released security updates to address a critical vulnerability that can let attackers execute code with root privileges on management systems. [...]...",
           "date": "2026-09-18T05:34:33-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Microsoft fixes broken copy and paste for Excel 2016 users",
-          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-copy-and-paste-for-excel-2016-users/",
-          "description": "Microsoft has fixed a known issue that causes copy-and-paste failures for some Excel users after installing the September 2026 KB5002914 security update. [...]...",
-          "date": "2026-09-18T03:35:31-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -330,24 +318,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "Fake parcel delivery messages steal your card and bank details",
-          "link": "https://www.malwarebytes.com/blog/scams/2026/09/fake-parcel-delivery-messages-steal-your-card-and-bank-details",
-          "description": "Parcel delivery phishing messages impersonate familiar couriers and use small fees or promised refunds to steal personal and financial information....",
-          "date": "2026-09-18T07:44:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c60-65bd98fdbf0a5\"",
-      "last_modified": "Sat, 19 Sep 2026 17:43:59 GMT",
+      "etag": "\"1c60-65bdb72aebec0\"",
+      "last_modified": "Sat, 19 Sep 2026 19:59:00 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -437,8 +413,20 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 16:13:01 GMT",
+      "last_modified": "Sat, 19 Sep 2026 19:43:05 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+          "link": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
+          "description": "Three researchers at the security firm Hacktron used Anthropic's Claude Opus 5 to chain two flaws and take over the ChatGPT and Codex accounts of several OpenAI employees, then reach an internal OpenAI code repository.\n\nThe chain began with a bug in the software that runs OpenAI's public help forum ...",
+          "date": "2026-09-20T00:06:53+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
@@ -457,18 +445,6 @@
           "link": "https://thehackernews.com/2026/09/identity-visibility-in-2026-foundation.html",
           "description": "Identity visibility is a starting point for modern identity security, because stolen and misused credentials are among the most frequently reported initial access vectors in breach research, including Verizon's annual Data Breach Investigations Report. This article explains what identity visibility ...",
           "date": "2026-09-19T18:58:41+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
-          "link": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
-          "description": "Three researchers at the security firm Hacktron used Anthropic's Claude Opus 5 to chain two flaws and take over the ChatGPT and Codex accounts of several OpenAI employees, then reach an internal OpenAI code repository.\n\nThe chain began with a bug in the software that runs OpenAI's public help forum ...",
-          "date": "2026-09-19T18:58:35+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -633,18 +609,6 @@
           "link": "https://thehackernews.com/2026/09/claimed-bug-bounty-hunter-likely-used.html",
           "description": "A financially motivated threat actor has been linked to the development and distribution of a JavaScript (JS)-based information stealer known as PhantomRaven via the npm package registry.\n\n\"The developer likely wrote the malware using a large language model (LLM), an assessment made with high confid...",
           "date": "2026-09-18T14:48:03+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall",
-          "link": "https://thehackernews.com/2026/09/rathat-android-malware-abuses-adb-to.html",
-          "description": "Cybersecurity researchers have flagged a new Android malware called RatHat that's assessed to be operated by China-based threat actors and features an artificial intelligence (AI)-powered system to navigate and control compromised devices.\n\n\n\"Distributed primarily via targeted smishing (SMS/text phi...",
-          "date": "2026-09-18T11:47:25+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -926,15 +890,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"158a-65bd041b7200f-gzip\"",
-      "last_modified": "Sat, 19 Sep 2026 06:37:54 GMT",
+      "etag": "W/\"158a-65bd160e5f077-gzip\"",
+      "last_modified": "Sat, 19 Sep 2026 07:58:12 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -946,7 +910,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -958,7 +922,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -970,7 +934,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -982,7 +946,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -994,7 +958,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1006,7 +970,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1018,7 +982,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1030,7 +994,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1042,7 +1006,7 @@
           "title": "Peer Pressure: Inside the Sality Botnet Disruption Operation",
           "link": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
           "description": "",
-          "date": "2026-09-19T17:47:01.402440+00:00",
+          "date": "2026-09-19T20:04:04.520032+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2708,7 +2672,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:47:01 GMT",
+      "last_modified": "Sat, 19 Sep 2026 20:04:04 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -2762,22 +2726,10 @@
         },
         {
           "source": "Dark Reading",
-          "title": "AI Agent Breaches Spanish Organization, Modifies Personal Data",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agent-breaches-spanish-organization-personal-data",
-          "description": "AI-driven cyberattacks used to be exotic. Soon, it'll be odd if threat actors aren't using agents to do all of their bidding....",
-          "date": "2026-09-18T07:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-19T17:47:01.386492+00:00",
+          "date": "2026-09-19T20:04:04.636494+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2887,9 +2839,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"74315d141f2a281781377bf7b2ea2851\"",
-      "last_modified": "Sat, 19 Sep 2026 08:05:05 GMT",
+      "etag": "\"6f78a2775f99406c753c7cdd5b3f1126\"",
+      "last_modified": "Sat, 19 Sep 2026 14:46:17 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Coreboot Hikes the Bay Trail to DRAM Initialization",
+          "link": "https://hackaday.com/2026/09/19/coreboot-hikes-the-bay-trail-to-dram-initialization/",
+          "description": "This article is written on an open-source operating system, but not an open-source machine — the BIOS isn’t open-source, and even if it were supported by the coreboot project (formerly …read more...",
+          "date": "2026-09-19T20:00:06+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Teaching a Robot Hand to Walk",
@@ -2961,24 +2925,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Sony’s First Computer",
-          "link": "https://hackaday.com/2026/09/18/sonys-first-computer/",
-          "description": "In 1982, desktop computers were coming into their own, and no clear leaders had emerged. But everyone knew they wanted a piece of the action. This led to, among other …read more...",
-          "date": "2026-09-18T23:00:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:44:28 GMT",
+      "last_modified": "Sat, 19 Sep 2026 19:59:29 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
@@ -3756,6 +3708,30 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I customized these hidden Gboard layout settings and fixed (most) of my autocorrect flubs immediately",
+          "link": "https://www.androidpolice.com/gboard-layout-fix-solved-my-autocorrect-problem/",
+          "description": "\n                                            Turns out my thumbs were the real autocorrect problem\n                                        ...",
+          "date": "2026-09-19T20:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I disabled these smartphone features; now my Android Auto setup is miles better",
+          "link": "https://www.androidpolice.com/disabled-these-smartphone-features-now-my-android-auto-setup-miles-better/",
+          "description": "\n                                            Less phone clutter, better drives\n                                        ...",
+          "date": "2026-09-19T19:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "Google is quietly giving away this $120 freebie with every Pixel 11 Pro purchase",
           "link": "https://www.androidpolice.com/make-sure-you-get-pixel-11-pro-freebie/",
           "description": "\n                                            Don't miss this $119 Pixel 11 Pro perk\n                                        ...",
@@ -3849,30 +3825,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Gmail's Gemini integration was cluttering my inbox, but I turned it off with a single toggle",
-          "link": "https://www.androidpolice.com/gmail-gemini-integration-cluttering-inbox-turned-off-single-toggle/",
-          "description": "\n                                            Google forced Gemini into Gmail by default, but you don't have to live with the clutter. Here is how to safely turn it off\n                                        ...",
-          "date": "2026-09-19T12:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "6 disabled Kindle features that every owner should enable first",
-          "link": "https://www.androidpolice.com/disabled-kindle-features-that-every-owner-should-enable-first/",
-          "description": "\n                                            The settings I change on every new Kindle\n                                        ...",
-          "date": "2026-09-19T12:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -3880,6 +3832,18 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Acer Predator QD-OLED monitor now 36% off — 500 Hz refresh rate and True Black 500 certification slashed to $509.99",
+          "link": "https://www.tomshardware.com/monitors/gaming-monitors/acer-predator-qd-oled-monitor-now-36-percent-off-500-hz-refresh-rate-and-true-black-500-certification-slashed-to-usd509-99",
+          "description": "\n                             Acer Predator X27U F5 QD-OLED monitor has 500 Hz refresh rate and True Black 500 certification for $509.99 \n                                                                                                            ...",
+          "date": "2026-09-19T18:26:39+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "ChatGPT-6 Astra cracks 108-year-old unsolved WWI German code for the first time — radio message sharing enemy movement intelligence had evaded decoding, 1918 Crimean fleet warning verified against HMS Canterbury logs",
@@ -4220,7 +4184,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:46:26 GMT",
+      "last_modified": "Sat, 19 Sep 2026 19:48:41 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -4248,17 +4212,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:47:01 GMT",
+      "last_modified": "Sat, 19 Sep 2026 20:04:05 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 19 Sep 2026 17:47:02 GMT",
+      "last_modified": "Sat, 19 Sep 2026 20:04:05 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3e937-65bd982aae99b\"",
-      "last_modified": "Sat, 19 Sep 2026 17:40:18 GMT",
+      "etag": "\"3e937-65bb8d24004fd\"",
+      "last_modified": "Fri, 18 Sep 2026 02:40:19 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -4312,8 +4276,8 @@
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"8e26947e73663049ec2816998835df9f\"",
-      "last_modified": "Fri, 18 Sep 2026 23:57:24 GMT",
+      "etag": "\"d51c7318c498c0e604e7f054258f90d5\"",
+      "last_modified": "Sat, 19 Sep 2026 18:27:18 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
