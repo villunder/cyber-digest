@@ -19,13 +19,25 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 07:09:17 GMT",
+      "last_modified": "Sun, 20 Sep 2026 14:07:29 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 14:02:05 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:32:12 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Malicious npm packages evade install-script defenses at runtime",
+          "link": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
+          "description": "An ongoing npm malware campaign involving the 'indexed-btree' package shows how threat actors bypass supply chain defenses by hiding malicious code in a package's normal runtime behavior rather than in installation scripts. [...]...",
+          "date": "2026-09-20T10:11:21-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Researchers escape OpenAI Codex sandbox to run commands on host",
@@ -117,22 +129,9 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c60-65bea8939d1bf\"",
-      "last_modified": "Sun, 20 Sep 2026 13:59:03 GMT",
-      "cached_articles": [
-        {
-          "source": "SANS ISC StormCast",
-          "title": "HTTP QUERY Method: The Grey Zone Between GET And POST., (Fri, Sep 18th)",
-          "link": "https://isc.sans.edu/diary/rss/33352",
-          "description": " In June 2026 the IETF published RFC 10008[1], defining a new HTTP method: \"QUERY\". The HTTP protocol faced already by changes (HTTP/2, HTTP/3) but it's the first new standard HTTP verb since \"PATCH\" in 2010!\r...",
-          "date": "2026-09-19T04:51:46+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        }
-      ]
+      "etag": "\"1c60-65bed780d9928\"",
+      "last_modified": "Sun, 20 Sep 2026 17:28:59 GMT",
+      "cached_articles": []
     },
     "https://unit42.paloaltonetworks.com/feed/": {
       "etag": "\"a00ce7aa23c91a931cf402611c1d8fbf-gzip\"",
@@ -208,7 +207,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 13:19:02 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:24:33 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -587,15 +586,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"158a-65be4ee95804f-gzip\"",
-      "last_modified": "Sun, 20 Sep 2026 07:17:53 GMT",
+      "etag": "W/\"158a-65bebb268fe5e-gzip\"",
+      "last_modified": "Sun, 20 Sep 2026 15:22:08 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -607,7 +606,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -619,7 +618,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -631,7 +630,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -643,7 +642,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -655,7 +654,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -667,7 +666,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -679,7 +678,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -691,7 +690,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -703,7 +702,7 @@
           "title": "Peer Pressure: Inside the Sality Botnet Disruption Operation",
           "link": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
           "description": "",
-          "date": "2026-09-20T14:03:06.882828+00:00",
+          "date": "2026-09-20T17:33:54.629518+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2369,14 +2368,14 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 14:03:06 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:33:54 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-20T14:03:07.009565+00:00",
+          "date": "2026-09-20T17:33:54.825763+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2437,9 +2436,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"83d1cd590fd66b0fa703d8d0a7a8eff6\"",
-      "last_modified": "Sun, 20 Sep 2026 02:11:22 GMT",
+      "etag": "\"5b1880ae51e3f2015fb158ae6fede93a\"",
+      "last_modified": "Sun, 20 Sep 2026 07:53:52 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "World War I Coded Message Appears Cracked, Finally",
+          "link": "https://hackaday.com/2026/09/20/world-war-i-coded-message-appears-cracked-finally/",
+          "description": "When you think of wartime cryptography, you probably think of World War II and Enigma, although there were other famous codes used during that war. But in fact, there have …read more...",
+          "date": "2026-09-20T17:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Reverse Engineering A Sony Car Stereo LCD",
@@ -2511,30 +2522,30 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Coreboot Hikes the Bay Trail to DRAM Initialization",
-          "link": "https://hackaday.com/2026/09/19/coreboot-hikes-the-bay-trail-to-dram-initialization/",
-          "description": "This article is written on an open-source operating system, but not an open-source machine — the BIOS isn’t open-source, and even if it were supported by the coreboot project (formerly …read more...",
-          "date": "2026-09-19T20:00:06+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 13:59:46 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:29:49 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Gzip 1.15 Released With Many Bug Fixes For Issues Present Since Its Inception",
+          "link": "https://www.phoronix.com/news/Gzip-1.15-Released",
+          "description": "Gzip 1.15 is out today for succeeding the Gzip 1.14 release from April 2025. With this release comes a number of fixes for bugs present since the beginning of Gzip......",
+          "date": "2026-09-20T10:32:12-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "KDE To Focus On Next-Gen Styling, Better Documentation & KDE For Enterprise",
           "link": "https://www.phoronix.com/news/KDE-Goals-To-2028",
-          "description": "At the KDE Akademy 2026 conference going on right now in Graze, Austria the three KDE goals for the next two years were unveiled......",
+          "description": "At the KDE Akademy 2026 conference going on right now in Graz, Austria the three KDE goals for the next two years were unveiled......",
           "date": "2026-09-20T08:32:29-04:00",
           "date_unknown": false,
           "iocs": {
@@ -2838,6 +2849,102 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I turned Gmail into my personal command center by pairing it with Calendar and Tasks",
+          "link": "https://www.androidpolice.com/gmail-personal-command-center-by-pairing-it-with-calendar-and-tasks/",
+          "description": "\n                                            I'll never handle emails the same way again\n                                        ...",
+          "date": "2026-09-20T17:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Forget Google Keep and OneNote: Gemini Notebooks changed how I collect and use information",
+          "link": "https://www.androidpolice.com/forget-google-keep-onenote-gemini-notebooks-changed-how-i-collect-use-information/",
+          "description": "\n                                            From messy notes to useful knowledge\n                                        ...",
+          "date": "2026-09-20T17:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Google needs to admit something. [Video]",
+          "link": "https://www.androidpolice.com/video/google-needs-to-admit-something-video/",
+          "description": "\n                                            The Pixel Watch 5 is the latest example.\n                                        ...",
+          "date": "2026-09-20T16:37:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I stopped feeling sick on my bus commute after finding this Android 17 accessibility feature",
+          "link": "https://www.androidpolice.com/motion-assist-fixed-my-bus-commute/",
+          "description": "\n                                            My bus commute stopped making me sick\n                                        ...",
+          "date": "2026-09-20T16:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Chrome's new features are a quiet win for power users",
+          "link": "https://www.androidpolice.com/chromes-vertical-tabs-quiet-win-for-power-users/",
+          "description": "\n                                            Vertical tabs in Chrome solved my biggest multitasking problem\n                                        ...",
+          "date": "2026-09-20T15:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "The Pixel 11 Pro's best notification feature isn't HiLight; it's already on your camera",
+          "link": "https://www.androidpolice.com/i-ditched-hilight-for-my-pixels-camera-flash-and-its-the-better-notification-system/",
+          "description": "\n                                            Why the Pixel 11 Pro's camera flash beats its fancy new HiLight notification LED\n                                        ...",
+          "date": "2026-09-20T15:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I skipped upgrading to the Pixel Watch because Google still hasn't fixed this terrible hardware quirk",
+          "link": "https://www.androidpolice.com/i-skipped-upgrading-pixel-watch-because-google-hasnt-fixed-terrible-hardware-problem/",
+          "description": "\n                                            Google desperately needs to bring the Pixel Watch Ultra\n                                        ...",
+          "date": "2026-09-20T15:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I found a malicious app disguised as a PDF reader that Google Play Protect didn't catch",
+          "link": "https://www.androidpolice.com/found-malicious-app-pdf-reader-google-play-protect-didnt-catch/",
+          "description": "\n                                            Apps are getting smarter to hide its nefarious intentions\n                                        ...",
+          "date": "2026-09-20T14:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "I turned an old phone into a hi-fi control system; now it gets more use than my actual cell",
           "link": "https://www.androidpolice.com/i-turned-an-old-phone-into-a-hi-fi-control-system/",
           "description": "\n                                            I ditched Spotify and let a spare phone do the work\n                                        ...",
@@ -2859,102 +2966,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "These 5 Samsung-exclusive features have rekindled my love for Android",
-          "link": "https://www.androidpolice.com/these-samsung-exclusive-features-have-rekindled-my-love-for-android/",
-          "description": "\n                                            My Galaxy S24 Ultra made me curious about Android again\n                                        ...",
-          "date": "2026-09-20T12:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "The Galaxy Z Fold 8 cured my battery anxiety in ways the Pixel 10 Pro never could",
-          "link": "https://www.androidpolice.com/the-z-fold-8-beats-my-pixel-10-pro-in-this-one-very-important-area/",
-          "description": "\n                                            Samsung's latest foldable has surprisingly good battery life\n                                        ...",
-          "date": "2026-09-20T12:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Claude can send emails without asking; Google still won't let Gemini press send on its own",
-          "link": "https://www.androidpolice.com/claude-gmail-autosend-gemini-cant/",
-          "description": "\n                                            Google's keeping Gemini on a tighter leash\n                                        ...",
-          "date": "2026-09-20T11:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I stopped sending boring emojis after discovering this hidden Gboard feature",
-          "link": "https://www.androidpolice.com/i-stopped-sending-boring-emojis-after-discovering-this-hidden-gboard-feature/",
-          "description": "\n                                            My chats have never been the same\n                                        ...",
-          "date": "2026-09-20T10:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I customized these hidden Gboard layout settings and fixed (most) of my autocorrect flubs immediately",
-          "link": "https://www.androidpolice.com/gboard-layout-fix-solved-my-autocorrect-problem/",
-          "description": "\n                                            Turns out my thumbs were the real autocorrect problem\n                                        ...",
-          "date": "2026-09-19T20:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I disabled these smartphone features; now my Android Auto setup is miles better",
-          "link": "https://www.androidpolice.com/disabled-these-smartphone-features-now-my-android-auto-setup-miles-better/",
-          "description": "\n                                            Less phone clutter, better drives\n                                        ...",
-          "date": "2026-09-19T19:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Google is quietly giving away this $120 freebie with every Pixel 11 Pro purchase",
-          "link": "https://www.androidpolice.com/make-sure-you-get-pixel-11-pro-freebie/",
-          "description": "\n                                            Don't miss this $119 Pixel 11 Pro perk\n                                        ...",
-          "date": "2026-09-19T17:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I tweaked my Android Auto connection settings, turning a glitchy $30 wireless adapter into a seamless dashboard hub",
-          "link": "https://www.androidpolice.com/i-tweaked-android-auto-connection-turning-glitchy-ottocast-wireless-adapter-seamless-hub/",
-          "description": "\n                                            Simple tricks to fix a glitchy Wi-Fi adapter fast\n                                        ...",
-          "date": "2026-09-19T17:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2962,6 +2973,42 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Dell Pro 7 Webcam 4K Review: Sounds surprisingly great",
+          "link": "https://www.tomshardware.com/peripherals/webcams/dell-pro-7-webcam-4k-review",
+          "description": "\n                             The Dell Pro 7 is a 4K / 60 fps webcam with surprisingly high-quality built-in mics, a built-in physical privacy shutter, and Windows Hello compatibility. \n                                                                                                            ...",
+          "date": "2026-09-20T15:11:14+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Anthropic, OpenAI, SpaceXAI, and Google face antitrust lawsuit for agreeing to slow AI development — plaintiffs say plan has been in motion for months before, calls agreement ‘self-serving’",
+          "link": "https://www.tomshardware.com/tech-industry/big-tech/anthropic-openai-spacexai-and-google-face-antitrust-lawsuit-for-agreeing-to-slow-ai-development-plaintiffs-say-plan-has-been-in-motion-for-months-before-calls-agreement-self-serving",
+          "description": "\n                             A proposed class action lawsuit has been lodged against the four big AI tech companies after they agreed to slow AI development for safety reasons. The lead counsel on the lawsuit says that 'AI will quickly spin out of control and could kill us all if we allow AI safety...",
+          "date": "2026-09-20T14:48:57+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "The PC gaming ray tracing obsession began with the first RTX 20 graphics cards released on this day in 2018 — the GeForce RTX 2080 and 2080 Ti led the charge, but games were thin on the ground",
+          "link": "https://www.tomshardware.com/pc-components/gpus/the-pc-gaming-ray-tracing-obsession-began-with-the-first-rtx-20-graphics-cards-released-on-this-day-in-2018-the-geforce-rtx-2080-and-2080-ti-led-the-charge-but-games-were-thin-on-the-ground",
+          "description": "\n                             Nvidia’s Turing GPU became available to enthusiasts for the first time on this day eight years ago. \n                                                                                                            ...",
+          "date": "2026-09-20T14:05:31+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Researchers build a drone that navigates with physical whiskers to operate in dark, dusty or smoky places where cameras or GPS can fail — sub-100 gram drones run 34KB software to enable sub-millimeter precision",
@@ -3060,7 +3107,7 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Autonomous strike drone uses Nvidia Jetson Orin Nano to independently pick and bomb targets — Swedish startup's attack drones run small AI model, require no human input and zero external comms",
+          "title": "Autonomous NATO strike drone uses Nvidia Jetson Orin Nano to independently pick and bomb targets — Swedish startup's attack drones run small AI model, require no human input and zero external comms",
           "link": "https://www.tomshardware.com/tech-industry/drones/autonomous-strike-drone-uses-nvidia-jetson-orin-nano-to-independently-pick-and-bomb-targets-swedish-startups-attack-drones-run-small-ai-model-require-no-human-input-and-zero-external-comms",
           "description": "\n                             Drones built with small, non-frontier computer-vision models autonomously identified and attacked targets in a recent demo. \n                                                                                                            ...",
           "date": "2026-09-20T11:20:00+00:00",
@@ -3242,7 +3289,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 13:48:00 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:18:00 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -3270,12 +3317,12 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 14:03:07 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:33:55 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 20 Sep 2026 14:03:07 GMT",
+      "last_modified": "Sun, 20 Sep 2026 17:33:55 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
