@@ -24,8 +24,68 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 11:55:58 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:14:51 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Microsoft to retire Microsoft 365 Companion apps in December",
+          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-to-retire-microsoft-365-companion-apps-in-december/",
+          "description": "Microsoft will retire the Calendar, People, and Files Microsoft 365 companion apps on December 16 and has asked admins to remove them from managed devices. [...]...",
+          "date": "2026-09-21T13:54:49-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Google fined €403 million over location data privacy violations",
+          "link": "https://www.bleepingcomputer.com/news/security/google-fined-403-million-over-location-data-privacy-violations/",
+          "description": "Ireland's Data Protection Commission (DPC) has fined Google €403 million ($463M) for multiple GDPR violations related to processing users' location data. [...]...",
+          "date": "2026-09-21T11:41:22-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Microsoft fixes broken Excel copy and paste for all Office users",
+          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-excel-copy-and-paste-for-all-office-users/",
+          "description": "Microsoft has fixed a known issue that causes copy-and-paste failures for Excel users after installing the September 2026 security updates. [...]...",
+          "date": "2026-09-21T10:42:37-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "FBI's CJIS v6.1: What Security Teams Need to Know.",
+          "link": "https://www.bleepingcomputer.com/news/security/fbis-cjis-v61-what-security-teams-need-to-know/",
+          "description": "The FBI's CJIS Security Policy v6.1 strengthens requirements around encryption and vulnerability scanning while continuing the shift toward more continuous security assessment. Specops explains what changed and how agencies can address password, MFA, and identity requirements as they prepare for upc...",
+          "date": "2026-09-21T10:02:12-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Microsoft reminds admins to migrate Entra ID users to passkeys",
+          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-admins-to-migrate-entra-id-users-to-passkeys/",
+          "description": "Microsoft has reminded admins to migrate Entra ID users to phishing-resistant authentication methods to avoid sign-in disruptions after it retires SMS first-factor sign-in starting in February 2027. [...]...",
+          "date": "2026-09-21T09:16:20-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Microsoft: September updates break File History backup feature",
@@ -65,14 +125,62 @@
       ]
     },
     "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml": {
-      "etag": "\"1789992002\"",
-      "last_modified": "Mon, 21 Sep 2026 12:00:02 GMT",
+      "etag": "\"1790004384\"",
+      "last_modified": "Mon, 21 Sep 2026 15:26:24 GMT",
       "cached_articles": []
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 10:54:01 GMT",
+      "last_modified": "Mon, 21 Sep 2026 14:05:59 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "The TASK#STOMP Windows backdoor takes Wi-Fi passwords, screenshots, and business files",
+          "link": "https://www.helpnetsecurity.com/2026/09/21/taskstomp-windows-backdoor/",
+          "description": "Researchers have taken apart TASK#STOMP, a Windows backdoor that searches a victim’s drives for business documents, uploads them to attacker servers, and then stays put to grab each new or edited document. The same malware steals saved Wi-Fi passwords and clipboard text, takes screenshots, and runs ...",
+          "date": "2026-09-21T14:00:18+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Fastly gives enterprises real-time control over AI models and agents",
+          "link": "https://www.helpnetsecurity.com/2026/09/21/fastly-ai-runtime-control/",
+          "description": "Fastly has announced AI Runtime Control, AI Firewall, and new API Security capabilities designed to give organizations real-time visibility and control across their AI systems. Expanding the Fastly for AI portfolio, these new capabilities help organizations govern AI model access and usage, protect ...",
+          "date": "2026-09-21T12:49:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "North Korea’s job interview scam runs both ways",
+          "link": "https://www.helpnetsecurity.com/2026/09/21/north-korean-hackers-contagious-interview-defenses/",
+          "description": "Attackers are targeting members of the Rust Project and maintainers of widely used crates (Rust code libraries), dangling attractive opportunities to compromise their devices and accounts and, ultimately, publish malware. The warning came last week from the Rust Project’s crates.io team and security...",
+          "date": "2026-09-21T12:27:05+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Google hit with €403 million GDPR fine over location tracking",
+          "link": "https://www.helpnetsecurity.com/2026/09/21/ireland-google-users-location-data-processing-fine/",
+          "description": "Ireland’s Data Protection Commission (DPC) has fined Google €403 million (about $463 million) over its processing of users’ location data and ordered the company to bring that processing into compliance within six months. The inquiry examined Google’s practices from May 25, 2018, to February 4, 2020...",
+          "date": "2026-09-21T12:23:19+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "Scammers impersonate cops, use arrest threats to extort victims",
@@ -144,42 +252,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Intent injection attacks are a new worry for AI-native 6G networks",
-          "link": "https://www.helpnetsecurity.com/2026/09/21/6g-intent-injection-attacks/",
-          "description": "Intent-based networking (IBN) lets operators state the outcome they want and leaves its translation into network policy to software, an approach AI-native 6G designs have moved to the forefront. Researchers at the University of Ottawa and Nokia Bell Labs argue that this abstraction gives attackers n...",
-          "date": "2026-09-21T04:30:55+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "AI compliance issues hit 2 in 5 large companies, and legacy workflows are a big factor",
-          "link": "https://www.helpnetsecurity.com/2026/09/21/ai-compliance-issues-research/",
-          "description": "Forty percent of large companies had an AI-related compliance or governance issue in the past 12 months, according to 1,000 senior IT, operations, and transformation leaders surveyed by Sapio Research. Those leaders said process-related problems contributed to 84 percent of the incidents. The resear...",
-          "date": "2026-09-21T04:00:31+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Week in review: Cisco patches exploited email gateway 0-day, Revolut breach",
-          "link": "https://www.helpnetsecurity.com/2026/09/20/week-in-review-cisco-patches-exploited-email-gateway-0-day-revolut-breach/",
-          "description": "Here’s an overview of some of last week’s most interesting news, articles, interviews and videos: What we know about the Revolut data breach so far Someone impersonating a government agency, using an email address on that agency’s domain, obtained sensitive customer records from Revolut. The bank co...",
-          "date": "2026-09-20T08:00:21+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -187,6 +259,42 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Malwarebytes Labs",
+          "title": "The AI plot to scan and destroy books (Lock and Code S07E19)",
+          "link": "https://www.malwarebytes.com/blog/podcast/2026/09/the-ai-plot-to-scan-and-destroy-books-lock-and-code-s07e19",
+          "description": "This week on the Lock and Code podcast, we speak with Emanuel Maiberg about Amazon's effort to scan and destroy rare books for AI training. ...",
+          "date": "2026-09-21T16:30:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Malwarebytes Labs",
+          "title": "The fake sites using a cheap toolkit to sell $2,000 AI subscriptions",
+          "link": "https://www.malwarebytes.com/blog/threat-intel/2026/09/the-fake-sites-using-a-cheap-toolkit-to-sell-2000-ai-subscriptions",
+          "description": "More than 100 linked sites use a $249 toolkit to turn copied product names and unfamiliar AI brands into paid subscriptions....",
+          "date": "2026-09-21T15:38:26+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Malwarebytes Labs",
+          "title": "Gemini’s breach of real companies exposes an AI guardrail problem",
+          "link": "https://www.malwarebytes.com/blog/ai/2026/09/geminis-breach-of-real-companies-exposes-an-ai-guardrail-problem",
+          "description": "Gemini crossed the boundaries of a capture-the-flag test and accessed systems belonging to three real companies....",
+          "date": "2026-09-21T14:21:38+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Malwarebytes Labs",
           "title": "ShinyHunters hacks rival extortion gang and takes over its dark web site",
@@ -214,8 +322,8 @@
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1cba-65bfcf9caa010\"",
-      "last_modified": "Mon, 21 Sep 2026 11:59:00 GMT",
+      "etag": "\"1cba-65c0236d1c73d\"",
+      "last_modified": "Mon, 21 Sep 2026 18:13:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -244,8 +352,8 @@
       ]
     },
     "https://unit42.paloaltonetworks.com/feed/": {
-      "etag": "\"df4f0461701761787c345198069222f0-gzip\"",
-      "last_modified": "Mon, 21 Sep 2026 10:00:13 GMT",
+      "etag": "\"4d4ef06d018791ec5c53ff5eb7344c7c-gzip\"",
+      "last_modified": "Mon, 21 Sep 2026 15:09:52 GMT",
       "cached_articles": [
         {
           "source": "Unit 42 (Palo Alto Networks)",
@@ -262,39 +370,15 @@
       ]
     },
     "https://www.schneier.com/feed/atom/": {
-      "etag": "\"1835a6f3b63eee02c40d986c85be6312\"",
-      "last_modified": "Fri, 18 Sep 2026 21:06:00 GMT",
+      "etag": "\"29e48bc5afce3e10ca8734c6f6fcc041\"",
+      "last_modified": "Mon, 21 Sep 2026 14:37:45 GMT",
       "cached_articles": [
         {
           "source": "Schneier on Security",
-          "title": "Friday Squid Blogging: On Squid Egg Sacs",
-          "link": "https://www.schneier.com/blog/archives/2026/09/friday-squid-blogging-on-squid-egg-sacs.html",
-          "description": "Short essay about squid egg sacs.\nAs usual, you can also use this squid post to talk about the security stories in the news that I haven’t covered.\nBlog moderation policy.\n...",
-          "date": "2026-09-18T21:06:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Schneier on Security",
-          "title": "Are AIs Still Struggling with CAPTCHAs?",
-          "link": "https://www.schneier.com/blog/archives/2026/09/are-ais-still-struggling-with-captchas.html",
-          "description": "Anthropic’s recent security-incident document contains a bit about how CAPTCHAs are still frustrating Claude.\nIn the transcript, the Claude model that is so powerful that Anthropic is gatekeeping access to it appeared to slam its virtual head against the wall solving a simple image identification te...",
-          "date": "2026-09-18T11:05:52+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Schneier on Security",
-          "title": "How Candidates Could Use AI for Good",
-          "link": "https://www.schneier.com/blog/archives/2026/09/how-candidates-could-use-ai-for-good.html",
-          "description": "This essay was written with Nathan E. Sanders, and originally appeared in The Guardian.\nThere are plenty of signs that AI will make all of our experiences of the US midterm elections worse. Voters have anxiety about AI’s impacts on the country. Politicos are using AI deepfakes to spread lies. The Wh...",
-          "date": "2026-09-17T11:06:31+00:00",
+          "title": "Reverse-Engineering Flock Cameras",
+          "link": "https://www.schneier.com/blog/archives/2026/09/reverse-engineering-flock-cameras.html",
+          "description": "Hackers captured a Flock camera and got a look (alternate link) at the software:\nWhile much of the automatic license plate reader’s (ALPR) most sensitive storage remained encrypted and inaccessible, the joint analysis of the recovered data shows that software running on the device explicitly detects...",
+          "date": "2026-09-21T14:37:45+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -305,8 +389,68 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 11:57:38 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:06:41 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "Fake LastPass Authenticator Installer Abuses Microsoft-Signed Driver to Kill Antivirus and EDR",
+          "link": "https://thehackernews.com/2026/09/fake-lastpass-authenticator-installer.html",
+          "description": "A fake LastPass Authenticator installer offered on GitHub installs a Windows kernel driver that shuts off antivirus and other security software before a password stealer runs if a victim downloads and runs it, researchers at LastPass and Delphos Labs said on September 17.\n\nMicrosoft's own hardware-c...",
+          "date": "2026-09-21T23:01:01+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto",
+          "link": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
+          "description": "The North Korean threat actors behind the Contagious Interview campaign have compromised at least 30,000 devices located in more than 100 countries and siphoned funds or account credentials from over 7,000 cryptocurrency wallets, according to a new joint cybersecurity advisory.\n\nThe primary targets ...",
+          "date": "2026-09-21T22:49:00+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "Google Fined €403 Million Over GDPR Violations Tied to Location Data",
+          "link": "https://thehackernews.com/2026/09/google-fined-403-million-over-gdpr.html",
+          "description": "Google has been fined €403 million for breaking the EU's data protection law, the GDPR, in the way three of its features handled people's location data from May 2018 to February 2020.\n\nIreland's Data Protection Commission (DPC), Google's lead regulator in the EU, also ordered the company to make its...",
+          "date": "2026-09-21T22:27:31+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "⚡ Weekly Recap: Cisco 0-Day, AI Agent RCE, ClickFix Attacks, ClickFix Surge, and Browser Hijacks",
+          "link": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
+          "description": "A browser. A plugin. A package. A login screen. Normal stuff. That is basically the problem this week.\n\nThe trouble keeps showing up inside things people already trust: code that takes a bad turn, old payloads coming back, exposed systems, weak checks, fake fixes, and attack paths that look almost t...",
+          "date": "2026-09-21T19:54:13+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data",
+          "link": "https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html",
+          "description": "Cybersecurity researchers have disclosed details of a new campaign dubbed TASK#STOMP that delivers a PowerShell backdoor designed to harvest sensitive data from compromised hosts.\n\nThe backdoor \"automatically harvests and exfiltrates business documents, watches the filesystem for new files in real t...",
+          "date": "2026-09-21T19:45:40+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure",
@@ -334,14 +478,50 @@
       ]
     },
     "https://blog.talosintelligence.com/rss/": {
-      "etag": "W/\"113358-+gAfw5btw7WV+i8pnHKKKxIzabQ\"",
+      "etag": "W/\"113321-vy87Gok6QOaC/zc7ZRXd8bApPe8\"",
       "last_modified": null,
       "cached_articles": []
     },
     "https://www.csoonline.com/feed/": {
-      "etag": "\"b6daca3df94a763515281781d0e019a1\"",
-      "last_modified": "Mon, 21 Sep 2026 09:00:00 GMT",
+      "etag": "\"941423869191bdafc78e25c8148041f1\"",
+      "last_modified": "Mon, 21 Sep 2026 16:24:03 GMT",
       "cached_articles": [
+        {
+          "source": "CSO Online",
+          "title": "After spending billions, OpenAI still has gaps in its cybersecurity",
+          "link": "https://www.csoonline.com/article/4224453/after-spending-billions-openai-still-has-gaps-in-its-cybersecurity.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nTwo separate reports of security flaws in OpenAI systems highlight how even a company spending billions on developing its own AI-powered cybersecurity testing tools remains vulnerable.\n\n\n\nIn one incident, researchers breached OpenAI systems with the help of a rival AI develope...",
+          "date": "2026-09-21T16:24:03+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "CSO Online",
+          "title": "New npm malware finds a way around install script defenses",
+          "link": "https://www.csoonline.com/article/4224400/new-npm-malware-finds-a-way-around-install-script-defenses-2.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nBlocking suspicious install scripts may no longer be enough to mitigate threats from malicious JavaScript dependencies used in software supply-chain attacks.\n\n\n\nSecurity researchers at Checkmarx are warning of attackers using a malicious package called “indexed-btree” to imper...",
+          "date": "2026-09-21T14:27:49+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "CSO Online",
+          "title": "Orchid Security Introduces AI Agent Readiness Controls Featuring Continuous Identity Monitoring and Kill-Switch Capabilities",
+          "link": "https://www.csoonline.com/article/4224374/orchid-security-introduces-ai-agent-readiness-controls-featuring-continuous-identity-monitoring-and-kill-switch-capabilities.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nReadiness tagging for AI, always-on observability, and coordinated kill switches at the application layer give enterprises a defensible route to scaling agents while keeping authority in human hands.\n\n\n\nNew York, London – September 15, 2026 – Orchid Security, which unlocks saf...",
+          "date": "2026-09-21T13:35:37+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "CSO Online",
           "title": "Revoking the token didn’t kill the backdoor",
@@ -369,9 +549,69 @@
       ]
     },
     "https://www.securityweek.com/feed/": {
-      "etag": "W/\"372ddf71c6316dfd1a3cafe88ce6f7e7\"",
-      "last_modified": "Mon, 21 Sep 2026 11:57:40 GMT",
+      "etag": "W/\"eee0fce0212c60d4fb47f1b1241cbc01\"",
+      "last_modified": "Mon, 21 Sep 2026 18:15:26 GMT",
       "cached_articles": [
+        {
+          "source": "SecurityWeek",
+          "title": "Google Hit With $463 Million Fine for EU Location Data Rule Breach",
+          "link": "https://www.securityweek.com/google-hit-with-463-million-fine-for-eu-location-data-rule-breach/",
+          "description": "Google has been fined 403 million euros ($463 million) for breaching the European Union’s strict privacy rules because it mishandled users’ location data.\nThe post Google Hit With $463 Million Fine for EU Location Data Rule Breach appeared first on SecurityWeek.\n...",
+          "date": "2026-09-21T17:19:53+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SecurityWeek",
+          "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
+          "link": "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/",
+          "description": "The attackers impersonate at least 40 companies and disable 145 security products to deploy infostealer malware.\nThe post Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer appeared first on SecurityWeek.\n...",
+          "date": "2026-09-21T15:46:58+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SecurityWeek",
+          "title": "CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast",
+          "link": "https://www.securityweek.com/ciso-conversations-noopur-davis-the-accidental-global-ciso-at-comcast/",
+          "description": "Noopur Davis never planned a career in cybersecurity. She was a developer at Intergraph, and for many years that was all she wanted to be.\nThe post CISO Conversations: Noopur Davis – The Accidental Global CISO at Comcast appeared first on SecurityWeek.\n...",
+          "date": "2026-09-21T14:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SecurityWeek",
+          "title": "Dragos Completes NetRise and runZero Acquisitions Following Accenture Deal",
+          "link": "https://www.securityweek.com/dragos-completes-netrise-and-runzero-acquisitions-following-accenture-deal/",
+          "description": "The transaction is part of the $4.1 billion deal in which Accenture acquired a majority stake in Dragos in an OT cybersecurity push.\nThe post Dragos Completes NetRise and runZero Acquisitions Following Accenture Deal appeared first on SecurityWeek.\n...",
+          "date": "2026-09-21T14:00:13+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SecurityWeek",
+          "title": "RatHat Android Trojan Uses AI for Automation",
+          "link": "https://www.securityweek.com/rathat-android-trojan-uses-ai-for-automation/",
+          "description": "The malware relies on AI for real-time device navigation and control, increasing adaptability and evasion.\nThe post RatHat Android Trojan Uses AI for Automation appeared first on SecurityWeek.\n...",
+          "date": "2026-09-21T12:51:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "SecurityWeek",
           "title": "Rust Team Members and Popular Crate Owners Targeted via Video Calls",
@@ -435,15 +675,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"158a-65bfbabc00faa-gzip\"",
-      "last_modified": "Mon, 21 Sep 2026 10:25:36 GMT",
+      "etag": "W/\"158a-65c0228a19f61-gzip\"",
+      "last_modified": "Mon, 21 Sep 2026 18:10:01 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -455,7 +695,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -467,7 +707,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -479,7 +719,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -491,7 +731,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -503,7 +743,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -515,7 +755,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -527,7 +767,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -539,7 +779,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -551,7 +791,7 @@
           "title": "Peer Pressure: Inside the Sality Botnet Disruption Operation",
           "link": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
           "description": "",
-          "date": "2026-09-21T12:02:14.445952+00:00",
+          "date": "2026-09-21T18:16:04.986188+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -561,8 +801,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"0f05688ca6618b4cd32b9090eeda3d59\"",
-      "last_modified": "Sun, 20 Sep 2026 11:07:00 GMT",
+      "etag": "\"5b3a378197e529386108571313979bc4\"",
+      "last_modified": "Mon, 21 Sep 2026 17:08:13 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -614,495 +854,19 @@
       "cached_articles": []
     },
     "https://api.msrc.microsoft.com/update-guide/rss": {
-      "etag": "\"0x8DF15C4B73D66A7\"",
-      "last_modified": "Fri, 18 Sep 2026 20:37:54 GMT",
+      "etag": "\"0x8DF17F93652AF0B\"",
+      "last_modified": "Mon, 21 Sep 2026 15:58:43 GMT",
       "cached_articles": [
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-88097 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88097",
-          "description": "Use after free in Microsoft Edge (Chromium-based) allows an unauthorized attacker to elevate privileges locally....",
-          "date": "2026-09-18T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-88097"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "Chromium: CVE-2026-0899 Out of bounds memory access in V8",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-0899",
-          "description": "Information published....",
-          "date": "2026-09-18T01:47:53-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-0899"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-55946 Microsoft Copilot Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55946",
-          "description": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Copilot allows an unauthorized attacker to disclose information over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-55946"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-70009 Azure Arc Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70009",
-          "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Arc allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-70009"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69865 Microsoft Container Registry Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69865",
-          "description": "Authorization bypass through user-controlled key in Microsoft Container Registry allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69865"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-77903 Microsoft Dataverse Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77903",
-          "description": "Authentication bypass by spoofing in Microsoft Dataverse allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-77903"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69399 Azure Arc Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69399",
-          "description": "Information published....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69399"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-68791 Azure Machine Learning Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68791",
-          "description": "Incorrect authorization in Azure Machine Learning allows an unauthorized attacker to disclose information over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-68791"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85885 Microsoft 365 Copilot Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85885",
-          "description": "Improper neutralization of special elements used in a command ('command injection') in M365 Copilot allows an authorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85885"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-83944 Azure Logic Apps Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83944",
-          "description": "Improper access control in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-83944"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78501 Microsoft 365 Copilot Business Chat Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78501",
-          "description": "Improper neutralization of special elements used in a command ('command injection') in Microsoft 365 Copilot's Business Chat allows an unauthorized attacker to disclose information over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78501"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-87701 Azure Cosmos DB Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-87701",
-          "description": "Improper neutralization of special elements in output used by a downstream component ('injection') in Azure Cosmos DB allows an authorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-87701"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-70200 Azure Logic Apps Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70200",
-          "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-70200"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85889 Azure AI Foundry Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85889",
-          "description": "Missing authentication for critical function in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85889"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85917 Azure AI Foundry Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85917",
-          "description": "Server-side request forgery (ssrf) in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85917"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69671 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69671",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69671"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69678 Microsoft Office PowerPoint Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69678",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69678"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69686 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69686",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69686"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69722 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69722",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69722"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69734 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69734",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69734"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69724 Microsoft Office SharePoint Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69724",
+          "title": "CVE-2026-68825 Windows Bind Filter Driver Elevation of Privilege Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68825",
           "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
-              "CVE-2026-69724"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69719 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69719",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69719"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69739 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69739",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69739"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69759 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69759",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69759"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69767 Microsoft Office PowerPoint Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69767",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69767"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69797 Microsoft Office PowerPoint Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69797",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69797"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-77898 Microsoft Office Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77898",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-77898"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78439 Microsoft Office Graphics Component Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78439",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78439"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78511 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78511",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78511"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78502 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78502",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78502"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78515 Microsoft Office Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78515",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78515"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78505 Microsoft Office Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78505",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78505"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78510 Microsoft Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78510",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78510"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78513 Microsoft Office PowerPoint Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78513",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78513"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78504 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78504",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78504"
+              "CVE-2026-68825"
             ],
             "ips": []
           }
@@ -1111,8 +875,8 @@
           "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-78517 Microsoft Office Word Remote Code Execution Vulnerability",
           "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78517",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
@@ -1123,164 +887,10 @@
         },
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78509 Microsoft Office Outlook Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78509",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78509"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78518 Microsoft Office Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78518",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78518"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69626 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69626",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69626"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69632 Microsoft Office Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69632",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69632"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72972 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72972",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72972"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72938 Microsoft Office PowerPoint Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72938",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72938"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72973 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72973",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72973"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72974 Microsoft Office Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72974",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72974"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72977 Microsoft Office PowerPoint Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72977",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72977"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72975 Microsoft Office PowerPoint Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72975",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72975"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-72976 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-72976",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-72976"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-77901 Microsoft Office Word Remote Code Execution Vulnerability",
           "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-77901",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
@@ -1291,108 +901,10 @@
         },
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78507 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78507",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78507"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78506 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78506",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78506"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78512 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78512",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78512"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78514 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78514",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78514"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78503 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78503",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78503"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78521 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78521",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78521"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78520 Microsoft Office Outlook Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78520",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78520"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-78524 Microsoft Office Remote Code Execution Vulnerability",
           "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78524",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
@@ -1403,38 +915,10 @@
         },
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80078 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80078",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80078"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80076 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80076",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80076"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-78526 Microsoft Office Word Remote Code Execution Vulnerability",
           "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78526",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
@@ -1445,658 +929,98 @@
         },
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-78525 Microsoft Office Outlook Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-78525",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-78525"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80086 Microsoft Office PowerPoint Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80086",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80086"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80080 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80080",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80080"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80087 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80087",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80087"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80085 Microsoft Office Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80085",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80085"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80088 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80088",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80088"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80091 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80091",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80091"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80089 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80089",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80089"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80090 Microsoft Office Word Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80090",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80090"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-80082 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-80082",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-80082"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81398 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81398",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81398"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81386 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81386",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81386"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81947 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81947",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81947"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81387 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81387",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81387"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81954 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81954",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81954"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81390 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81390",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81390"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81399 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81399",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81399"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81391 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81391",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81391"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81401 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81401",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81401"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81958 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81958",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81958"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81396 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81396",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81396"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81392 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81392",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81392"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81397 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81397",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81397"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81956 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81956",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81956"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81393 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81393",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81393"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81400 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81400",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81400"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81389 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81389",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81389"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81394 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81394",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81394"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81960 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81960",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81960"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81395 Microsoft Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81395",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81395"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81957 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81957",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81957"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81388 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81388",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81388"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81955 Windows Graphics Component Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81955",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81955"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81951 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81951",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81951"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81952 Microsoft Word Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81952",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81952"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81959 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81959",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81959"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81953 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81953",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81953"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81949 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81949",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81949"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81950 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81950",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81950"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81948 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81948",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81948"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85875 Microsoft Office Excel Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85875",
-          "description": "Microsoft is announcing the availability of the security updates for Microsoft Office for Mac. Customers running affected Mac software should install the update for their product to be protected from this vulnerability. Customers running other Microsoft Office software do not need to take any action...",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85875"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-62874 Azure Billing Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62874",
-          "description": "Insufficient verification of data authenticity in Azure Billing allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-62874"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85878 Azure Database for PostgreSQL Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85878",
-          "description": "Improper authorization in Azure Database for PostgreSQL allows an authorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85878"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-69843 Microsoft Fabric Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69843",
-          "description": "Authentication bypass by spoofing in Microsoft Fabric allows an unauthorized attacker to elevate privileges over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-69843"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-83946 Azure Portal Spoofing Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83946",
-          "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Azure Portal allows an unauthorized attacker to perform spoofing over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-83946"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-85887 M365 Copilot Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-85887",
-          "description": "Incorrect permission assignment for critical resource in M365 Copilot allows an authorized attacker to disclose information over a network....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-85887"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-50311 Windows Server Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-50311",
+          "title": "CVE-2026-83498 Windows Virtualization-Based Security (VBS) Enclave Elevation of Privilege Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-83498",
           "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
-              "CVE-2026-50311"
+              "CVE-2026-83498"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-63516 Microsoft SharePoint Server Spoofing Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63516",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-63516"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-62871 .NET Elevation of Privilege Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62871",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-62871"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-63532 Microsoft Office Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63532",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-63532"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-68798 Microsoft Excel Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68798",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-68798"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-68804 Microsoft Excel Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68804",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-68804"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-40400 Windows PowerShell Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-40400",
+          "description": "Updated an acknowledgement. This is an informational change only....",
+          "date": "2026-09-21T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-40400"
             ],
             "ips": []
           }
@@ -2106,7 +1030,7 @@
           "title": "CVE-2026-55039 Microsoft Excel Remote Code Execution Vulnerability",
           "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55039",
           "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
@@ -2117,98 +1041,14 @@
         },
         {
           "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-56176 Windows Win32k Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-56176",
-          "description": "Added Office software to the Security Updates table.  Customers that are running supported version of Office are encouraged to update to the indicated version to be protected from this vulnerability....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-56176"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-55121 Microsoft Office Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55121",
+          "title": "CVE-2026-55123 Microsoft PowerPoint Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55123",
           "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
+          "date": "2026-09-21T07:00:00-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [
-              "CVE-2026-55121"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-66809 Microsoft Office Graphics Component Information Disclosure Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-66809",
-          "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-66809"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-62819 Windows Routing and Remote Access Service (RRAS) Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-62819",
-          "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-62819"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-68794 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-68794",
-          "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-68794"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-81957 Microsoft Excel Remote Code Execution Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-81957",
-          "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-81957"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-33835 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33835",
-          "description": "Updated an acknowledgement. This is an informational change only....",
-          "date": "2026-09-17T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-33835"
+              "CVE-2026-55123"
             ],
             "ips": []
           }
@@ -2217,14 +1057,26 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 12:02:14 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:16:05 GMT",
       "cached_articles": [
+        {
+          "source": "Dark Reading",
+          "title": "Rogue Behavior: OpenAI Reveals More Model Misalignment Incidents",
+          "link": "https://www.darkreading.com/cyber-risk/rogue-behavior-openai-more-model-misalignment-incidents",
+          "description": "The AI giant disclosed six examples of concerning model activity and published a new framework for investigating and disclosing such incidents....",
+          "date": "2026-09-21T14:47:19+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-21T12:02:14.561003+00:00",
+          "date": "2026-09-21T18:16:05.439898+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2244,8 +1096,8 @@
       "cached_articles": []
     },
     "https://censys.com/feed/": {
-      "etag": "W/\"98e59eadf0564c3820e9acc74d774767\"",
-      "last_modified": "Fri, 18 Sep 2026 08:01:59 GMT",
+      "etag": "W/\"08a5c42352657e7dde9be45a01e9ec26\"",
+      "last_modified": "Mon, 21 Sep 2026 16:14:08 GMT",
       "cached_articles": []
     },
     "https://research.checkpoint.com/feed/": {
@@ -2285,9 +1137,45 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"ebdf5a6fdb371528ac5889165d0fb67c\"",
-      "last_modified": "Sun, 20 Sep 2026 14:32:24 GMT",
+      "etag": "\"85f81527a24a7203301782df08135936\"",
+      "last_modified": "Mon, 21 Sep 2026 11:52:37 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "The First Floating Nuclear Power Station",
+          "link": "https://hackaday.com/2026/09/21/the-first-floating-nuclear-power-station/",
+          "description": "Nuclear power really hit its stride in the 1950s. In the post-war period, there was a rush to develop peaceful uses for splitting the atom, beyond its application as a …read more...",
+          "date": "2026-09-21T17:00:52+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "The RP2350 Does 1080p",
+          "link": "https://hackaday.com/2026/09/21/the-rp2350-does-1080p/",
+          "description": "Coaxing a DVI signal out of a microcontroller to drive a DVI or HDMI screen has been possible for a while now, but limitations in what the devices can do …read more...",
+          "date": "2026-09-21T15:30:46+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "DIY Router on x86 E-Waste: OpenWrt and OPNsense",
+          "link": "https://hackaday.com/2026/09/21/diy-router-on-x86-e-waste-openwrt-and-opnsense/",
+          "description": "In previous installments of this series we looked at how creating a DIY router using an e-waste-level PC has changed over the years, before attempting to boot OpenWrt for x86 …read more...",
+          "date": "2026-09-21T14:00:43+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Searching for Dark Matter with a Levitating Magnet",
@@ -2335,49 +1223,61 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Reviving TEMPEST Attacks with an Injected Signal",
-          "link": "https://hackaday.com/2026/09/20/reviving-tempest-attacks-with-an-injected-signal/",
-          "description": "TEMPEST attacks are often the most effective way to break air-gapped security: rather than directly accessing a computer, the attacker records the system’s unintended radio emissions and uses them to …read more...",
-          "date": "2026-09-20T23:00:06+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Ski Lift Removes Mice from Chicken Coop",
-          "link": "https://hackaday.com/2026/09/20/ski-lift-removes-mice-from-chicken-coop/",
-          "description": "Getting rid of rodents like squirrels, mice, or groundhogs is a lot like digging a hole on the beach. No matter how much you remove, it’ll always fill back in. …read more...",
-          "date": "2026-09-20T20:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "World War I Coded Message Appears Cracked, Finally",
-          "link": "https://hackaday.com/2026/09/20/world-war-i-coded-message-appears-cracked-finally/",
-          "description": "When you think of wartime cryptography, you probably think of World War II and Enigma, although there were other famous codes used during that war. But in fact, there have …read more...",
-          "date": "2026-09-20T17:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 12:00:06 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:15:32 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Patches Posted For Enabling Apple Silicon Mac Speaker & Headset Jack Support On Linux",
+          "link": "https://www.phoronix.com/news/Apple-Mac-Speaker-Headset-Linux",
+          "description": "While the downstream Asahi Linux kernel has offered working speaker support and headset jack capabilities on Apple Silicon Macs, the mainline Linux kernel hasn't supported this functionality. But a set of 28 patches sent out today on the Linux kernel mailing list are working toward mainlining this i...",
+          "date": "2026-09-21T14:03:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Nebula Matrix Network Driver Queued Ahead Of Linux 7.4",
+          "link": "https://www.phoronix.com/news/Nebula-Matrix-NIC-Linux-7.4",
+          "description": "NBL is a new Ethernet networking driver destined to premiere in the upcoming Linux 7.4 kernel for supporting Nebula Matrix NICs......",
+          "date": "2026-09-21T13:23:27-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "AMD EPYC Server Performance Up ~8% Geo Mean For 2026 With Linux Kernel Improvements",
+          "link": "https://www.phoronix.com/review/linux-618-73-amd-epyc",
+          "description": "With the in-development Linux 7.3 kernel showing some nice performance improvements over Linux 7.2 in different areas, Linux 7.2 also having brought some nice gains especially for I/O, and the preceding kernels also having seen some nice performance optimizations this year, I wanted to measure how f...",
+          "date": "2026-09-21T11:00:00-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Patches Posted With Aim To Mainline Linux Kernel Support For The Amazon Kindle 4",
+          "link": "https://www.phoronix.com/news/Amazon-Kindle-4-Linux-Patches",
+          "description": "Amazon released the Kindle 4 back in 2011 with a 6-inch E-ink display, 2GB internal storage, and running a modified version of Linux. In the years since the Amazon Kindle 4 has been jail-broken and there are some customized Linux distributions with a patched kernel to run on the Kindle 4. Now in 202...",
+          "date": "2026-09-21T09:05:33-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Orphaned VMs: Running VMs Uninterrupted While Host Kernel Is Offline For Reboots/Updates",
@@ -2521,37 +1421,241 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Help Linux Hardware Testing & Reviews Continue While Enjoying Phoronix Without Ads",
-          "link": "https://www.phoronix.com/news/Phoronix-Oktoberfest-2026",
-          "description": "If you missed out on the Phoronix Premium special back during the 22nd birthday of Phoronix.com in June, there is another promotion now active for helping to support the site and allow for continued daily original content and relentless Linux performance benchmarking and other open-sourced focused h...",
-          "date": "2026-09-19T21:00:00-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux 7.3-rc4 To Address Two Unfortunate Bugs With Btrfs",
-          "link": "https://www.phoronix.com/news/Btrfs-Fixes-For-Linux-7.3-rc4",
-          "description": "Merged today were this week's set of Btrfs file-system fixes for the Linux 7.3-rc4 kernel, which include two notable bug fixes......",
-          "date": "2026-09-19T20:26:58-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "W/\"516680722b76df166668c928fb7c14be\"",
-      "last_modified": "Mon, 21 Sep 2026 10:30:07 GMT",
+      "etag": "W/\"aba3f808a5c6e5d1181074369d88e99c\"",
+      "last_modified": "Mon, 21 Sep 2026 17:24:01 GMT",
       "cached_articles": [
+        {
+          "source": "Android Authority",
+          "title": "Google Nest Doorbells suffer mild identity crisis, start speaking with new accents",
+          "link": "https://www.androidauthority.com/google-nest-doorbell-us-accent-3713674/",
+          "description": "Nest Doorbell glitch is causing automated voices to switch accents....",
+          "date": "2026-09-21T17:20:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Roborock Q7 L5 deal beats Prime Day with a new record low price",
+          "link": "https://www.androidauthority.com/roborock-q7-l5-deal-3713700/",
+          "description": "Roborock Q7 L5 drops to $139.99, its lowest price ever, with 8,000Pa suction, LiDAR mapping, and light mopping....",
+          "date": "2026-09-21T16:22:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Score the Samsung’s 25-inch Odyssey G4 for a cut-price $189.99",
+          "link": "https://www.androidauthority.com/samsung-25-inch-odyssey-g4-gaming-monitor-deal-3713670/",
+          "description": "Save 32% on the Samsung Odyssey G4 gaming monitor. This 25-inch 300Hz IPS display just dropped to a new low....",
+          "date": "2026-09-21T15:42:56+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Galaxy phones have an app delay problem, but Samsung is on the case",
+          "link": "https://www.androidauthority.com/samsung-diy-home-app-delay-3713635/",
+          "description": "Samsung is looking into app delays in hidden folders....",
+          "date": "2026-09-21T15:37:48+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Amazon slashes the Dangbei DBOX02 to $949 for a big-screen 4K projector deal",
+          "link": "https://www.androidauthority.com/dangbei-dbox02-projector-deal-3713663/",
+          "description": "This 21% off Amazon deal brings the Dangbei DBOX02 back to its all-time low, with 4K laser output and Netflix onboard....",
+          "date": "2026-09-21T15:19:11+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Spotify is now gatekeeping new music to Premium subscribers, but the blame lies elsewhere",
+          "link": "https://www.androidauthority.com/spotify-three-day-album-delay-free-users-3713582/",
+          "description": "Record label licensing demand has forced a three-day album release delay on ad-supported tiers across music streaming apps....",
+          "date": "2026-09-21T15:14:17+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "The Anker Prime 14-in-1 docking station is $100 off and back to its all-time low",
+          "link": "https://www.androidauthority.com/anker-prime-14-in-1-docking-station-deal-3713649/",
+          "description": "The Anker Prime Docking Station drops back to $169.99, bringing 14-in-1 docking and 160W charging in one hub....",
+          "date": "2026-09-21T14:51:14+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Motorola’s Signature 27 appears in new teaser featuring a giant camera island",
+          "link": "https://www.androidauthority.com/motorola-signature-us-teaser-camera-3713558/",
+          "description": "The Signature 27 is expected to feature the Snapdragon 8 Elite Gen 6 chipset....",
+          "date": "2026-09-21T14:42:12+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "The Acer Googlebook has a touchscreen trick its peers miss out on",
+          "link": "https://www.androidauthority.com/acer-googlebook-14-360-convertible-3713566/",
+          "description": "The Acer Googlebook 14 is the only one in the lineup with a 360º convertible form factor....",
+          "date": "2026-09-21T14:26:17+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Amazon slashes $160 off the Dreame L40s Ultra AE robot vacuum and mop",
+          "link": "https://www.androidauthority.com/dreame-l40s-ultra-ae-robot-vacuum-and-mop-deal-3713110/",
+          "description": "The Dreame L40s Ultra AE drops to $569.49 on Amazon, packing 19,000Pa of suction, mop washing, and an auto-emptying dock....",
+          "date": "2026-09-21T14:04:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "T-Mobile could soon let you pick the free perk you actually want, including YouTube",
+          "link": "https://www.androidauthority.com/t-mobile-pick-your-perk-leak-3713518/",
+          "description": "Eight services could be on the menu, from streaming to gaming and AI....",
+          "date": "2026-09-21T13:12:59+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Googlebook is finally official with 5 flagship Android-powered laptops starting at $899",
+          "link": "https://www.androidauthority.com/google-googlebook-laptops-launch-features-models-price-specs-availability-3713215/",
+          "description": "The laptops your Android phone has been waiting for are finally official....",
+          "date": "2026-09-21T13:05:21+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "From specs to pricing: Here are all the new Googlebooks announced today",
+          "link": "https://www.androidauthority.com/all-googlebooks-announced-today-3712687/",
+          "description": "Acer, Lenovo, and others are offering something for everyone. If you have at least $900, that is....",
+          "date": "2026-09-21T13:00:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I spent two hours with Googlebooks. Here are the 8 most important things to know",
+          "link": "https://www.androidauthority.com/googlebooks-hands-on-impressions-3713390/",
+          "description": "Googlebooks have arrived, and there's quite a lot to like....",
+          "date": "2026-09-21T13:00:25+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "When can you actually buy a Googlebook? Here are the dates, and the free stuff",
+          "link": "https://www.androidauthority.com/googlebook-availability-release-freebies-3713298/",
+          "description": "Googlebook laptops from Acer, ASUS, Dell, HP, and Lenovo now have a launch date....",
+          "date": "2026-09-21T13:00:15+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "The Pixel 11’s impressive voice typing feature is coming to Googlebooks",
+          "link": "https://www.androidauthority.com/pixel-11-rambler-feature-on-googlebooks-3713479/",
+          "description": "Your laptop is finally ready to make sense of your rambling....",
+          "date": "2026-09-21T13:00:08+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "A 400mm camera add-on and 4K/240fps video make this Pro Max flagship a serious video camera",
+          "link": "https://www.androidauthority.com/vivo-x500-pro-max-launch-3713375/",
+          "description": "Pro-grade Log recording gives creators even more room to push mobile video....",
+          "date": "2026-09-21T12:58:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Amazon sale: Dreame’s budget-friendly D20 Air Plus falls to an all-time low price (35% off)",
+          "link": "https://www.androidauthority.com/dreame-d20-air-plus-robot-vacuum-deal-3713102/",
+          "description": "Save $122 on the Dreame D20 Air Plus and get an all-time low on this compact robot vacuum and mop with app controls....",
+          "date": "2026-09-21T12:55:24+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Pixel phones could soon call customer support lines on your behalf",
+          "link": "https://www.androidauthority.com/google-gemini-call-for-me-apk-teardown-3713510/",
+          "description": "Gemini could take the pain out of navigating phone call menus and hold lines....",
+          "date": "2026-09-21T12:22:26+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "I tried the new Apple Health app, and it’s everything I wanted from Google Health",
@@ -2818,6 +1922,90 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "Googlebooks are here: Which one is right for you and where can you buy it?",
+          "link": "https://www.androidpolice.com/which-googlebook-is-right-for-you-and-where-to-buy-it/",
+          "description": "\n                                            Five models, starting at $899\n                                        ...",
+          "date": "2026-09-21T15:01:24+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "The Pixel 11's battery drain has been traced to a sneaky WiFi firmware bug",
+          "link": "https://www.androidpolice.com/pixel-11s-battery-drain-may-have-a-surprising-cause/",
+          "description": "\n                                            Your fast WiFi could be killing your phone's battery\n                                        ...",
+          "date": "2026-09-21T14:50:22+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Google Fi just made wireless dirt cheap at $9/month",
+          "link": "https://www.androidpolice.com/you-can-now-get-a-google-fi-plan-for-9month/",
+          "description": "\n                                            And the catch is smaller than you'd think\n                                        ...",
+          "date": "2026-09-21T13:25:12+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Why I haven't manually adjusted my screen brightness once since upgrading to Android 16",
+          "link": "https://www.androidpolice.com/havent-adjusted-screen-brightness-since-upgrading-to-android-16/",
+          "description": "\n                                            Save your eyes without a second thought\n                                        ...",
+          "date": "2026-09-21T13:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "After using all the new Googlebook models, I found the MacBook competitor Android fans deserve",
+          "link": "https://www.androidpolice.com/google-googlebook-laptop-hands-on/",
+          "description": "\n                                            A compelling alternative you're going to love\n                                        ...",
+          "date": "2026-09-21T13:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Googlebooks finally make the Android ecosystem dream a reality",
+          "link": "https://www.androidpolice.com/googlebooks-finally-make-the-android-ecosystem-dream-a-reality/",
+          "description": "\n                                            Five models kickstart the lineup\n                                        ...",
+          "date": "2026-09-21T13:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I replaced my Philips Hue lights with a budget alternative; I regret waiting so long",
+          "link": "https://www.androidpolice.com/replaced-philips-hue-lights-with-budget-alternative-regret-waiting/",
+          "description": "\n                                            You'll deal with some drawbacks, but for the money, it's worth it\n                                        ...",
+          "date": "2026-09-21T12:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "I stopped accepting a broken tablet experience after Android 17 forced developers to actually try",
           "link": "https://www.androidpolice.com/android-17-forced-my-apps-resize/",
           "description": "\n                                            My tablet apps finally stopped acting like phones\n                                        ...",
@@ -2851,90 +2039,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Samsung's Galaxy S26 FE battery trick: lasts longer now, dies faster later",
-          "link": "https://www.androidpolice.com/galaxy-s26-fe-battery-trade-off/",
-          "description": "\n                                            You need to know about this hidden battery problem\n                                        ...",
-          "date": "2026-09-20T19:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I turned Gmail into my personal command center by pairing it with Calendar and Tasks",
-          "link": "https://www.androidpolice.com/gmail-personal-command-center-by-pairing-it-with-calendar-and-tasks/",
-          "description": "\n                                            I'll never handle emails the same way again\n                                        ...",
-          "date": "2026-09-20T17:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Forget Google Keep and OneNote: Gemini Notebooks changed how I collect and use information",
-          "link": "https://www.androidpolice.com/forget-google-keep-onenote-gemini-notebooks-changed-how-i-collect-use-information/",
-          "description": "\n                                            From messy notes to useful knowledge\n                                        ...",
-          "date": "2026-09-20T17:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Google needs to admit something. [Video]",
-          "link": "https://www.androidpolice.com/video/google-needs-to-admit-something-video/",
-          "description": "\n                                            The Pixel Watch 5 is the latest example.\n                                        ...",
-          "date": "2026-09-20T16:37:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I stopped feeling sick on my bus commute after finding this Android 17 accessibility feature",
-          "link": "https://www.androidpolice.com/motion-assist-fixed-my-bus-commute/",
-          "description": "\n                                            My bus commute stopped making me sick\n                                        ...",
-          "date": "2026-09-20T16:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Chrome's new features are a quiet win for power users",
-          "link": "https://www.androidpolice.com/chromes-vertical-tabs-quiet-win-for-power-users/",
-          "description": "\n                                            Vertical tabs in Chrome solved my biggest multitasking problem\n                                        ...",
-          "date": "2026-09-20T15:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "The Pixel 11 Pro's best notification feature isn't HiLight; it's already on your camera",
-          "link": "https://www.androidpolice.com/i-ditched-hilight-for-my-pixels-camera-flash-and-its-the-better-notification-system/",
-          "description": "\n                                            Why the Pixel 11 Pro's camera flash beats its fancy new HiLight notification LED\n                                        ...",
-          "date": "2026-09-20T15:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2942,6 +2046,222 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "iPhone 18 Pro Max storage can drop lower than a hard drive at 1.1 MB/s during heavy writes — QLC NAND offers higher capacity but reportedly suffers 38% drop compared to TLC-based Pro",
+          "link": "https://www.tomshardware.com/pc-components/ssds/iphone-18-pro-max-storage-can-drop-lower-than-a-hard-drive-at-1-1-mb-s-during-heavy-writes-qlc-nand-offers-higher-capacity-but-reportedly-suffers-38-percent-drop-compared-to-tlc-based-pro",
+          "description": "\n                             Apple's use of QLC NAND allows the iPhone 18 Pro Max to offer higher storage capacity, but Homolab's testing highlights the potential performance trade-off under sustained writes. \n                                                                                         ...",
+          "date": "2026-09-21T17:34:47+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Get the world’s fastest gaming CPU and a DLSS 5-capable GPU in a gaming PC for $2,299 — fully loaded powerhouse sports Ryzen 7 9800X3D, RTX 5080 Founders Edition, 32GB RAM, and 1TB SSD",
+          "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-the-worlds-fastest-gaming-cpu-and-a-dlss-5-capable-gpu-in-a-gaming-pc-for-usd2-299-fully-loaded-powerhouse-sports-ryzen-7-9800x3d-rtx-5080-founders-edition-32gb-ram-and-1tb-ssd",
+          "description": "\n                             Walmart is selling a CyberPowerPC gaming PC with a Ryzen 7 9800X3D, GeForce RTX 5080 Founders Edition, 32GB of DDR5-6000 memory, and a 1TB PCIe 4.0 SSD for $2,299. \n                                                                                                         ...",
+          "date": "2026-09-21T17:19:27+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Local opposition blocked 45 data center projects worth $68 billion in the second quarter of 2026 — data center investments reportedly still on track to hit $32 trillion by 2050",
+          "link": "https://www.tomshardware.com/tech-industry/data-centers/local-opposition-blocked-usd68-billion-worth-of-data-center-projects-in-the-second-quarter-of-2026-data-center-investments-reportedly-still-on-track-to-hit-usd32-trillion-by-2050",
+          "description": "\n                             Local opposition to data center buildouts has blocked $68 billion worth of data center projects in the second quarter of 2026, despite investments still rising. \n                                                                                                            ...",
+          "date": "2026-09-21T16:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "AMD beats Intel to the trillion-dollar club as stock price soars — firm joins Nvidia, Broadcom, and SK hynix for companies worth over $1 trillion",
+          "link": "https://www.tomshardware.com/tech-industry/amd-beats-intel-to-the-trillion-dollar-club-as-stock-price-soars-firm-joins-nvidia-broadcom-and-sk-hynix-for-companies-worth-over-usd1-trillion",
+          "description": "\n                             AMD has crossed the $1 trillion market cap mark, joining an exclusive list of less than two dozen companies around the world. \n                                                                                                            ...",
+          "date": "2026-09-21T15:42:55+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "AMD Ryzen 5 5500F and 7500 show up at retail with pricing above MSRP — budget CPUs are $20 more expensive than list price, even from first-party sellers",
+          "link": "https://www.tomshardware.com/pc-components/cpus/amd-ryzen-5-5500f-and-7500-show-up-at-retail-with-pricing-above-msrp-budget-cpus-are-usd20-more-expensive-than-list-price-even-from-first-party-sellers",
+          "description": "\n                             Nearly two weeks after they were announced, AMD's Ryzen 5 5500F and 7500 (non-F) are available for sale, though prices are slightly above MSRP. \n                                                                                                            ...",
+          "date": "2026-09-21T14:45:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Huawei shelves global AI chip rollout as China's own demand outstrips supply — 15,488-chip Atlas clusters leverage optical networking to counter Nvidia, scales to 120 EFLOPS",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/huawei-shelves-global-ai-chip-rollout-as-chinas-own-demand-outstrips-supply-15-488-chip-atlas-clusters-leverage-optical-networking-to-counter-nvidia-scales-to-120-eflops",
+          "description": "\n                             Huawei says it will not offer its latest AI hardware outside of China citing lack of capacity to serve domestic demand. \n                                                                                                            ...",
+          "date": "2026-09-21T14:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "New RTX 5070 Autumn Limited Edition gaming GPU doubles as an air freshener with built-in 'e-sports aromatherapy' — AX Gaming's white and purple card also features an anime character and floral graphics",
+          "link": "https://www.tomshardware.com/pc-components/gpus/new-rtx-5070-autumn-limited-edition-gaming-gpu-doubles-as-an-air-freshener-with-built-in-e-sports-aromatherapy-ax-gamings-white-and-purple-card-also-features-an-anime-character-and-floral-graphics",
+          "description": "\n                             AX Gaming has revealed its latest seasonal anime-themed limited edition graphics card which, this time, is designed to please your nose as much as your eyes. \n                                                                                                            ...",
+          "date": "2026-09-21T14:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Snag the least expensive 32GB DDR5-6000 memory kit available for only $429 — $40 off promo code for V-Color Manta XSky yields the least expensive DDR5-6000 CL30 kit available right now",
+          "link": "https://www.tomshardware.com/pc-components/snag-the-least-expensive-32gb-ddr5-6000-memory-kit-available-for-only-usd429-usd40-off-promo-code-for-v-color-manta-xsky-yields-the-least-expensive-ddr5-6000-cl30-kit-available-right-now",
+          "description": "\n                             Buy 32GB of V-Color Manta XSky RAM for only $429. This capable, white DDR5-6000 CL30 kit is one of the best deals out for the speed and timings \n                                                                                                            ...",
+          "date": "2026-09-21T13:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "President Trump has announced plans for new 'AI Force' and 'AI Czar' amid growing AI safety concerns — new unit will 'cherish' AI and not 'stifle' it, Trump clarifies, while dismissing safety warnings as hoaxes",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/president-trump-has-announced-plans-for-new-ai-force-and-ai-czar-amid-growing-ai-safety-concerns-new-unit-will-cherish-ai-and-not-stifle-it-trump-clarifies-while-dismissing-safety-warnings-as-hoaxes",
+          "description": "\n                             President Trump says he will create an AI Force and appoint a new AI czar while prioritizing rapid U.S. AI development and competition with China. \n                                                                                                            ...",
+          "date": "2026-09-21T13:15:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "TypeSafe AI's Jev offers an alternative to LLMs that claims to be 193x faster and 445x cheaper — System One type model is bespoke for probabilistic decision-making",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/typesafe-ais-jev-offers-an-alternative-to-llms-that-claims-to-be-193x-faster-and-445x-cheaper-system-one-type-model-is-bespoke-for-probabilistic-decision-making",
+          "description": "\n                             Last week saw the debut of TypeSafe AI's Jev, its first \"System One\" model. Rather than chatting with users like conventional LLMs, it's strictly designed for statement evaluation and decision-making, for programming purposes. \n                                          ...",
+          "date": "2026-09-21T13:09:27+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "MediaTek’s next-gen Dimensity CX C10 Max will power new Googlebook initiative alongside Intel and Qualcomm – 3nm SoC has similar specs to Kompanio Ultra in Chromebook Plus devices, despite claims of ‘elevating’ computing portfolio",
+          "link": "https://www.tomshardware.com/pc-components/cpus/mediateks-next-gen-dimensity-cx-c10-max-will-power-new-googlebook-initiative-3nm-soc-has-similar-specs-to-kompanio-ultra-in-chromebook-plus-devices-despite-claims-of-elevating-computing-portfolio",
+          "description": "\n                             MediaTek's next-gen Dimensity CX C10 Max will arrive inside Googlebook devices, featuring similar specs as the Kompanio Ultra 910 currently available. \n                                                                                                            ...",
+          "date": "2026-09-21T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "PlayStation 3 emulation devs work around an Nvidia bug for up to 37% faster performance — open-source coders reach out to Nvidia to over uncovered bug",
+          "link": "https://www.tomshardware.com/pc-components/gpu-drivers/playstation-3-emulation-devs-work-around-an-nvidia-bug-for-up-to-37-percent-faster-performance-open-source-coders-reach-out-to-nvidia-to-over-uncovered-bug",
+          "description": "\n                             The developers of RPCS3 have found a workaround for an Nvidia driver bug and are touting up to 37% performance gains. \n                                                                                                            ...",
+          "date": "2026-09-21T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Apple Mac Studio (M5 Ultra) review: Local model citizen outpaces DGX Spark and Threadripper",
+          "link": "https://www.tomshardware.com/desktops/mini-pcs/apple-mac-studio-m5-ultra-review",
+          "description": "\n                             The Mac Studio with M5 Ultra delivers powerhouse productivity and AI performance in a small chassis. \n                                                                                                            ...",
+          "date": "2026-09-21T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Hands-on with Googlebooks — Five models, the new Googlebook OS, and a Mac-style experience for Android users at premium prices",
+          "link": "https://www.tomshardware.com/laptops/hands-on-with-googlebooks-five-models-the-new-googlebook-os-and-a-mac-style-experience-for-android-users-at-premium-prices",
+          "description": "\n                             Google has detailed its new Googlebooks, five laptops combining Android and ChromeOS to make a Mac-like experience for Android users, with a ton of Gemini tacked on. \n                                                                                                       ...",
+          "date": "2026-09-21T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Apple Mac mini (Late 2026) Review: Strong performance, but losing its grip on value",
+          "link": "https://www.tomshardware.com/desktops/mini-pcs/apple-mac-mini-late-2026-review",
+          "description": "\n                             The M6 Mac mini gets a considerable speed boost and a considerable price hike. \n                                                                                                            ...",
+          "date": "2026-09-21T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "China crafts working 3nm gate-all-around transistors without EUV — stacked nanosheets target 3nm without EUV, but full node remains distant",
+          "link": "https://www.tomshardware.com/tech-industry/china-crafts-working-3nm-gate-all-around-transistors-without-euv-stacked-nanosheets-target-3nm-without-euv-but-full-node-remains-distant",
+          "description": "\n                             As China's IMECAS demonstrates its ability to build GAA transistors without using DUV tools allegedly for 3nm-class process technology, the country remains years away from any practical implementation of a 3nm-class node. \n                                               ...",
+          "date": "2026-09-21T12:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "OpenAI projections point to a massive $278 billion cash burn through 2030 that exceeds the national budgets of Indonesia and Norway — $856 billion compute tab outpaces tenfold revenue surge",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-projections-point-to-a-massive-usd278-billion-cash-burn-through-2030-that-exceeds-the-national-budgets-of-indonesia-and-norway-usd856-billion-compute-tab-outpaces-tenfold-revenue-surge",
+          "description": "\n                             OpenAI reportedly expects to spend $278 billion more money than it generates between 2026 and 2030 due to aggressive spending on compute capacity and adjacent infrastructure. \n                                                                                              ...",
+          "date": "2026-09-21T12:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Devs say Chinese AI company silently uploaded hundreds of megabytes of local workspace data, company apologizes — Z.AI, the firm behind the GLM models, didn’t ask for user consent and made 564 attempts to exfiltrate 313MB archive",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/devs-say-chinese-ai-company-silently-uploaded-hundreds-of-megabytes-of-local-workspace-data-z-ai-the-firm-behind-the-glm-models-didnt-ask-for-user-consent-and-made-564-attempts-to-exfiltrate-313mb-archive",
+          "description": "\n                             The second largest AI company in China is having to work frantically to patch up its reputation after a number of prominent devs raised flags about their local files and data being siphoned to online servers without consent. \n                                            ...",
+          "date": "2026-09-21T11:59:49+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Cloudflare saves 100 TB of RAM again, this time by slashing server hashes by 90% — cutting 100,000 entries down to 10,000 eliminates massive cache bloat",
@@ -3234,19 +2554,19 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 11:46:29 GMT",
+      "last_modified": "Mon, 21 Sep 2026 17:46:47 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
-      "etag": "\"a2c88213b4985ac4618303c94bdc267b\"",
-      "last_modified": "Fri, 18 Sep 2026 18:01:35 GMT",
+      "etag": "\"3ae4d94d19eed53a9fb3c56ee3fcc932\"",
+      "last_modified": "Mon, 21 Sep 2026 14:55:01 GMT",
       "cached_articles": [
         {
           "source": "IEEE Spectrum",
-          "title": "Turning Tech Talent Into Leadership Legacy",
-          "link": "https://spectrum.ieee.org/tech-talent-into-leadership-legacy",
-          "description": "\nTransitioning from years of working in a senior technical or executive role to a leadership position is one of the most challenging phases of a STEM career. It requires moving away from making decisions on your own to mentoring others, making strategic decisions for the organization, and collaborat...",
-          "date": "2026-09-18T18:00:04+00:00",
+          "title": "This Digital Radio Gets Messages to the World’s Remotest Locations",
+          "link": "https://spectrum.ieee.org/hermes-shortwave-radio-digital-data",
+          "description": "\nShortwave radios offer a way to connect one location on Earth to practically anywhere else with minimal infrastructure. But these radios come with some drawbacks—a significant one being that, unlike satellite communications, their transmission rates for digital data are typically measured in just h...",
+          "date": "2026-09-21T13:00:04+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3257,22 +2577,22 @@
     },
     "https://blog.cloudflare.com/tag/security/rss/": {
       "etag": null,
-      "last_modified": "Fri, 18 Sep 2026 19:53:29 GMT",
+      "last_modified": "Mon, 21 Sep 2026 12:52:34 GMT",
       "cached_articles": []
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 12:02:15 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:16:05 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Mon, 21 Sep 2026 12:02:14 GMT",
+      "last_modified": "Mon, 21 Sep 2026 18:16:05 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3e937-65bb8d24004fd\"",
-      "last_modified": "Fri, 18 Sep 2026 02:40:19 GMT",
+      "etag": "\"3e937-65bf7209b518b\"",
+      "last_modified": "Mon, 21 Sep 2026 05:00:22 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -3286,18 +2606,34 @@
       "cached_articles": []
     },
     "https://github.blog/category/security/feed/": {
-      "etag": "\"12027bc0ff5af2f6d22111e9c0db14d5\"",
-      "last_modified": "Fri, 18 Sep 2026 21:25:02 GMT",
+      "etag": "\"41c9e9b1611cf958e1af4850215fd337\"",
+      "last_modified": "Mon, 21 Sep 2026 16:21:59 GMT",
       "cached_articles": []
     },
     "https://googleprojectzero.blogspot.com/feeds/posts/default": {
       "etag": null,
-      "last_modified": "Tue, 15 Sep 2026 21:22:50 GMT",
-      "cached_articles": []
+      "last_modified": "Mon, 21 Sep 2026 17:02:26 GMT",
+      "cached_articles": [
+        {
+          "source": "Project Zero (Google)",
+          "title": "Windows Exploitation Techniques: Dangling COM Object Registrations",
+          "link": "https://projectzero.google/2026/09/windows-dangling-com.html",
+          "description": "This short blog post is about abusing a privilege escalation bug that Microsoft recently fixed in Windows, CVE-2026-66804, that I and 14 others reported. This issue is an incomplete fix for CVE-2026-50343, a bug dubbed “Dark Elevator” by Calif. The root cause of the bug was a dangling COM object reg...",
+          "date": "2026-09-21T00:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-50343",
+              "CVE-2026-66804"
+            ],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://securelist.com/feed/": {
-      "etag": "\"47e49ed4e91f71721f61e518456e2295\"",
-      "last_modified": "Mon, 21 Sep 2026 10:00:40 GMT",
+      "etag": "\"dcb520a0ae9c38d5c8ef82453357b725\"",
+      "last_modified": "Mon, 21 Sep 2026 17:35:00 GMT",
       "cached_articles": [
         {
           "source": "Kaspersky Securelist",
@@ -3314,8 +2650,8 @@
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"e9c3eff00b92e45cf1e646484ce81b09\"",
-      "last_modified": "Sun, 20 Sep 2026 21:07:49 GMT",
+      "etag": "\"c385bbd7cc6f04d5b2423a31a064e517\"",
+      "last_modified": "Mon, 21 Sep 2026 17:17:55 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
@@ -3352,6 +2688,24 @@
           "link": "https://www.wordfence.com/blog/2026/09/wordfence-intelligence-weekly-wordpress-vulnerability-report-september-7-2026-to-september-13-2026/",
           "description": "Last week, there were disclosed in that have been added to the Wordfence Intelligence Vulnerability Database, and there were that contributed to WordPress Security last week. Review those vulnerabilities in this report now to ensure your site is not affected. Our mission with Wordfence Intelligence ...",
           "date": "2026-09-17T17:47:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
+    },
+    "https://www.offsec.com/feed/": {
+      "etag": "\"6403d1745f007056c58da36d24d6eb5d\"",
+      "last_modified": "Mon, 21 Sep 2026 13:55:50 GMT",
+      "cached_articles": [
+        {
+          "source": "Offensive Security (OffSec)",
+          "title": "10 Lessons Reshaping Security After Black Hat and DEF CON 2026",
+          "link": "https://www.offsec.com/blog/10-lessons-from-black-hat-and-def-con-2026/",
+          "description": "Ten lessons from Black Hat and DEF CON on AI agents, cheaper attacks, supply chain risk, security fundamentals and cyber skills.\nThe post 10 Lessons Reshaping Security After Black Hat and DEF CON 2026 appeared first on OffSec.\n...",
+          "date": "2026-09-21T13:55:08+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
