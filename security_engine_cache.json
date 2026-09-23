@@ -24,8 +24,32 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 21:03:55 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:46:02 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Placeholder domain used in dev docs now serves ClickFix attacks",
+          "link": "https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/",
+          "description": "The \"third-party.com\" domain, commonly used as a placeholder in developer documentation and code examples, is serving a fake Cloudflare verification page that attempts to trick Windows users into executing PowerShell commands. [...]...",
+          "date": "2026-09-23T18:46:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "New RemControl Android banking malware targets users in Europe and Canada",
+          "link": "https://www.bleepingcomputer.com/news/security/new-remcontrol-android-banking-malware-targets-users-in-europe-and-canada/",
+          "description": "A new Android malware-as-a-service (MaaS) platform called RemControl is targeting users through malvertising campaigns that impersonate the TVTap IPTV application. [...]...",
+          "date": "2026-09-23T17:25:13-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Check Point warns of hackers exploiting Security Gateway VPN RCE flaw",
@@ -185,30 +209,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "New ClosedQuorum Windows malware uses AI for attack decisions",
-          "link": "https://www.bleepingcomputer.com/news/security/new-closedquorum-windows-malware-uses-ai-for-attack-decisions/",
-          "description": "A new Windows malware named ClosedQuorum uses Google Gemini, DeepSeek, Qwen, and Mistral AI models to autonomously determine the actions to take during post-compromise stages of an attack. [...]...",
-          "date": "2026-09-22T14:04:39-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Reducing shadow IT visibility gaps with Wazuh",
-          "link": "https://www.bleepingcomputer.com/news/security/reducing-shadow-it-visibility-gaps-with-wazuh/",
-          "description": "Shadow IT can leave security teams unaware of unmanaged endpoints, unauthorized software, and other assets that fall outside existing monitoring. Wazuh explains how endpoint inventory, agentless monitoring, and centralized analysis can help organizations identify and reduce these visibility gaps. [....",
-          "date": "2026-09-22T13:17:41-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -219,8 +219,20 @@
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 14:01:17 GMT",
+      "last_modified": "Wed, 23 Sep 2026 22:15:08 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "Americans’ views on data centers have turned more negative",
+          "link": "https://www.helpnetsecurity.com/2026/09/24/americans-views-on-data-centers/",
+          "description": "American attitudes toward data centers have turned noticeably more negative over the course of 2026, according to a new Pew Research Center survey. 54% of U.S. adults now say data centers are mostly bad for the environment, up from 39% in January. Half say they hurt home energy costs (up from 38%), ...",
+          "date": "2026-09-23T22:15:08+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "Cofense measures employee readiness against real-world phishing threats",
@@ -331,18 +343,6 @@
             ],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "GPT-6 Sol and Luna arrive with 50% lower API prices",
-          "link": "https://www.helpnetsecurity.com/2026/09/23/gpt-6-sol-luna-lower-api-prices/",
-          "description": "OpenAI has expanded GPT-6 with the GPT-6 Sol and GPT-6 Luna models. Both are available in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise, and Edu users. Free and Go users can access GPT-6 Luna in the desktop app. The models are not yet available in Chat. OpenAI API users can access them ...",
-          "date": "2026-09-23T10:08:26+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -397,36 +397,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "Meta’s Muse AI assistant has a zero-day that can turn it into a Mac backdoor",
-          "link": "https://www.malwarebytes.com/blog/bugs/2026/09/metas-muse-ai-assistant-has-a-zero-day-that-can-turn-it-into-a-mac-backdoor",
-          "description": "A simple terminal command can hijack Muse and use its extensive permissions to spy on Mac users and control their connected accounts....",
-          "date": "2026-09-22T10:53:06+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "Researchers used Claude to hack OpenAI",
-          "link": "https://www.malwarebytes.com/blog/news/2026/09/researchers-used-claude-to-hack-openai",
-          "description": "Claude helped researchers break into OpenAI in under 72 hours, and exposed how quickly AI is lowering the bar for sophisticated hacking....",
-          "date": "2026-09-22T09:51:02+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c3b-65c2cd274cf7c\"",
-      "last_modified": "Wed, 23 Sep 2026 21:03:59 GMT",
+      "etag": "\"1c3b-65c2f208de0f9\"",
+      "last_modified": "Wed, 23 Sep 2026 23:48:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -528,7 +504,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 19:50:00 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:12:43 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -795,58 +771,6 @@
             ],
             "ips": []
           }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "DORA Year Two: Can Your SOC Actually See the Attack?",
-          "link": "https://thehackernews.com/2026/09/dora-year-two-can-your-soc-actually-see.html",
-          "description": "When the Digital Operational Resilience Act (DORA) became enforceable across the European Union in January 2025, it triggered an administrative sprint. Financial entities spent the first year establishing risk governance, assessing third-party service providers, updating contract clauses, and docume...",
-          "date": "2026-09-22T17:15:00+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "New Linux Kernel Flaw Gives ARM64 KVM Guests Read-Write Access to Host Memory",
-          "link": "https://thehackernews.com/2026/09/new-linux-kernel-flaw-gives-arm64-kvm.html",
-          "description": "A new flaw in the Linux kernel's KVM virtualization code for ARM64 processors can leave a freed piece of host memory exposed to a guest virtual machine on hosts with nested virtualization enabled.\n\nThe bug, tracked as CVE-2026-89775, allows a guest to read and write host kernel memory, and the resea...",
-          "date": "2026-09-22T17:08:40+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-89775"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "SharePoint Flaw Initially Listed as Spoofing by Microsoft Enables Authenticated RCE",
-          "link": "https://thehackernews.com/2026/09/sharepoint-flaw-initially-listed-as.html",
-          "description": "A SharePoint Server vulnerability that Microsoft initially classified as a spoofing flaw with a CVSS score of 6.5 actually enables authenticated remote code execution, according to full technical details published today by Viettel Cyber Security researcher Dinh Ho Anh Khoa.\n\nThe flaw, CVE-2026-65660...",
-          "date": "2026-09-22T16:47:41+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-65660"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Malicious npm Package indexed-btree Hid Its Loader in Runtime Code Before Removal",
-          "link": "https://thehackernews.com/2026/09/malicious-npm-package-indexed-btree-hid.html",
-          "description": "A malicious npm package named \"indexed-btree\" has been observed hiding its malicious behavior within application code rather than using lifecycle scripts, indicating that threat actors are likely shifting tactics in response to recent security controls.\n\n\"Indexed-btree is a malicious npm package mim...",
-          "date": "2026-09-22T15:08:18+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -881,8 +805,8 @@
       ]
     },
     "https://www.csoonline.com/feed/": {
-      "etag": "\"3a587a2af7f4e4c09679ce8b65784679\"",
-      "last_modified": "Wed, 23 Sep 2026 20:44:25 GMT",
+      "etag": "\"e44c7879d9ed82dbd4a6934f661cf949\"",
+      "last_modified": "Wed, 23 Sep 2026 23:00:13 GMT",
       "cached_articles": [
         {
           "source": "CSO Online",
@@ -1097,15 +1021,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"158a-65c2ca2699fbf-gzip\"",
-      "last_modified": "Wed, 23 Sep 2026 20:50:33 GMT",
+      "etag": "W/\"158a-65c2a1b718626-gzip\"",
+      "last_modified": "Wed, 23 Sep 2026 17:49:39 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1117,7 +1041,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1129,7 +1053,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1141,7 +1065,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1153,7 +1077,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1165,7 +1089,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1177,7 +1101,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1189,7 +1113,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1201,7 +1125,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1213,7 +1137,7 @@
           "title": "Peer Pressure: Inside the Sality Botnet Disruption Operation",
           "link": "https://www.crowdstrike.com/en-us/blog/inside-sality-botnet-disruption-operation/",
           "description": "",
-          "date": "2026-09-23T21:05:59.656392+00:00",
+          "date": "2026-09-23T23:51:22.011468+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1223,9 +1147,21 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"7d350873cfbddfcf9ba1dc87aed5753b\"",
-      "last_modified": "Wed, 23 Sep 2026 21:02:31 GMT",
+      "etag": "\"16c7b272a22af41dbf2897fe5fd69a85\"",
+      "last_modified": "Wed, 23 Sep 2026 22:17:50 GMT",
       "cached_articles": [
+        {
+          "source": "Ars Technica - Security",
+          "title": "FBI rushes to investigate if ShinyHunters hack of thousands of employees is real",
+          "link": "https://arstechnica.com/tech-policy/2026/09/fbi-rushes-to-investigate-if-shinyhunters-hack-of-thousands-of-employees-is-real/",
+          "description": "\n                        It's unclear what will happen if FBI misses ShinyHunters' deadline.\n                    ...",
+          "date": "2026-09-23T21:46:36+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Ars Technica - Security",
           "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
@@ -1276,8 +1212,8 @@
       "cached_articles": []
     },
     "https://api.msrc.microsoft.com/update-guide/rss": {
-      "etag": "\"0x8DF199D9E4EE232\"",
-      "last_modified": "Wed, 23 Sep 2026 18:08:06 GMT",
+      "etag": "\"0x8DF19C2707CB303\"",
+      "last_modified": "Wed, 23 Sep 2026 22:31:41 GMT",
       "cached_articles": [
         {
           "source": "Microsoft Security Response (MSRC)",
@@ -1373,6 +1309,20 @@
           "iocs": {
             "cves": [
               "CVE-2026-87587"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-70125 Microsoft Outlook Remote Code Execution Vulnerability",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70125",
+          "description": "Information published. This CVE was addressed by updates that were released in September 2026, but the CVE was inadvertently omitted from the September 2026 Security Updates. This is an informational change only. Customers who have already installed the September 2026 updates do not need to take any...",
+          "date": "2026-09-23T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-70125"
             ],
             "ips": []
           }
@@ -1493,8 +1443,20 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 21:05:59 GMT",
+      "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Dark Reading",
+          "title": "EDR Evasion Stack Helps Process Injection Slip Past Defenses",
+          "link": "https://www.darkreading.com/endpoint-security/edr-evasion-stack-helps-process-injection-slip-past-defenses",
+          "description": "A process parameter-poisoning technique evades EDR by injecting code into process initialization structures without using the Windows APIs that EDR tools typically watch out for....",
+          "date": "2026-09-23T21:03:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Dark Reading",
           "title": "GitLab Email Addresses Can Be Weaponized for Supply Chain Attacks",
@@ -1605,22 +1567,10 @@
         },
         {
           "source": "Dark Reading",
-          "title": "Shai-Hulud Attack Nips Cyber-Firm CrowdSec's GitHub Data",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/shai-hulud-attack-cyber-firm-crowdsec-github-data",
-          "description": "Threat actors stole the contents of 170 private repositories using an OAuth token stolen from a former employee's computer through the TanStack npm supply chain attack....",
-          "date": "2026-09-22T10:22:37+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-23T21:05:59.764001+00:00",
+          "date": "2026-09-23T23:51:22.139600+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1801,9 +1751,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"26999af88483142781ce86f219de1747\"",
-      "last_modified": "Wed, 23 Sep 2026 21:04:58 GMT",
+      "etag": "\"49299e4c6239cf97c2a3fd7d107a4b6a\"",
+      "last_modified": "Wed, 23 Sep 2026 21:04:11 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Modern USB Controllers On Win98 (and up)",
+          "link": "https://hackaday.com/2026/09/23/modern-usb-controllers-on-win98-and-up/",
+          "description": "[Yeo Kheng Meng] has a problem: he likes Windows 98, but he also likes his 2020 ThinkPad, which only has an xHCI USB controller– you know, the kind needed for …read more...",
+          "date": "2026-09-23T23:00:56+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Smelting Bog Ore As It Should Be Done",
@@ -1875,25 +1837,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Myst on the Atari 2600",
-          "link": "https://hackaday.com/2026/09/22/myst-on-the-atari-2600/",
-          "description": "Although the Atari 2600 was a hugely popular game console in the late 70s, its hardware specs were limited, to say the least. For a dedicated game console of the …read more...",
-          "date": "2026-09-23T05:00:15+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 21:01:19 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:51:21 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Debian Inference Portal Launches To Provide Free AI/LLM Inferencing To Debian Developers",
+          "link": "https://www.phoronix.com/news/Debian-Inference-Portal",
+          "description": "With Debian voting to allow the responsible use of generative AI, there is now a new initiative funded by Scaleway to make it easier for Debian contributors to leverage AI: the Debian Inference Portal......",
+          "date": "2026-09-23T17:08:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Qualcomm Talks Up Linux On Snapdragon X2 Laptops",
@@ -2109,49 +2071,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Cache Aware Scheduling Fixes Queued For Submission To Linux 7.3, Backporting To 7.2",
-          "link": "https://www.phoronix.com/news/Linux-7.3-CAS-Fixes-Coming",
-          "description": "Later this week it looks like the latest round of Cache Aware Scheduling fixes will be merged for enhancing this kernel scheduler functionality  for grouping related tasks together on CPU cores that share the same last level cache (LLC). Cache Aware Scheduling can lead to better cache locality and l...",
-          "date": "2026-09-22T06:32:45-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux Adding New Interface For Reporting AMD SEV Status",
-          "link": "https://www.phoronix.com/news/Linux-sysfs-AMD-SEV-Status",
-          "description": "A convenient addition that surprisingly hasn't been added to the Linux kernel until now is /sys/devices/system/cpu/sev/sev_status as a new sysfs interface for reporting the AMD Secure Encrypted Virtualization (SEV) status......",
-          "date": "2026-09-22T06:21:43-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "ZLUDA Now Implements Some NVIDIA cuFFT APIs With hipFFT",
-          "link": "https://www.phoronix.com/news/ZLUDA-cuFFT-APIs-hipFFT",
-          "description": "ZLUDA as the open-source project working on CUDA for non-NVIDIA GPUs like AMD Radeon graphics cards now has implemented support for some of NVIDIA's core cuFFT APIs......",
-          "date": "2026-09-22T06:03:38-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "W/\"e7ea234b80f7a8bedc4252639287b013\"",
-      "last_modified": "Wed, 23 Sep 2026 21:05:20 GMT",
+      "etag": "W/\"8b07d47dc53d6d82deb03302cdb597b1\"",
+      "last_modified": "Wed, 23 Sep 2026 22:52:10 GMT",
       "cached_articles": [
+        {
+          "source": "Android Authority",
+          "title": "Qualcomm is solving Snapdragon X’s Linux problem",
+          "link": "https://www.androidauthority.com/snapdragon-laptop-linux-3714807/",
+          "description": "Bringing this powerful operating system to the very latest in mobile computing hardware....",
+          "date": "2026-09-23T21:39:50+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "Apple’s iPhone Duo could help fix one of Android’s biggest foldable problems",
@@ -2458,30 +2396,6 @@
           "link": "https://www.androidauthority.com/ive-used-razr-20-years-motorola-secret-weapon-3711624/",
           "description": "Motorola understands who buys its phones. ...",
           "date": "2026-09-23T10:00:36+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The iPhone Duo’s under-display camera is a bad idea — these 5 photos prove why",
-          "link": "https://www.androidauthority.com/iphone-duo-under-display-camera-bad-idea-photo-test-3710889/",
-          "description": "The iPhone Duo has an under-display camera, but our testing shows why this tech isn't a good idea....",
-          "date": "2026-09-23T09:30:57+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Spotify could soon fix a major storage issue that users have complained about for years",
-          "link": "https://www.androidauthority.com/spotify-cache-limit-apk-teardown-3714432/",
-          "description": "Users may soon be able to set a cache limit to stop filling up their phone's storage with too many temporary files....",
-          "date": "2026-09-23T09:22:04+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2943,102 +2857,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Authority",
-          "title": "This dual 200MP flagship is telling Samsung how to build the Galaxy S27 Ultra better",
-          "link": "https://www.androidauthority.com/xiaomi-18-pro-dual-200mp-camera-specs-3713969/",
-          "description": "Xiaomi's upcoming 18 Pro and Pro Max already seem to have an edge over the Galaxy S27 Ultra. ...",
-          "date": "2026-09-22T11:27:24+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google Messages is preparing its biggest search overhaul yet",
-          "link": "https://www.androidauthority.com/google-messages-search-redesign-apk-teardown-3713882/",
-          "description": "A sweeping redesign puts conversations, shared media, and results within easier reach....",
-          "date": "2026-09-22T11:07:46+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "After trying this Walmart tablet, I’ll never buy an Android tablet from any other brand",
-          "link": "https://www.androidauthority.com/walmart-onn-better-than-other-android-tablets-why-3710154/",
-          "description": "Onn isn't for everyone, but it might just be for you!...",
-          "date": "2026-09-22T10:30:16+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "10 Good Lock modules I can’t live without on my Samsung Galaxy phone",
-          "link": "https://www.androidauthority.com/best-samsung-good-lock-modules-2026-3712342/",
-          "description": "Samsung built these, then buried them....",
-          "date": "2026-09-22T10:00:58+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Move over, Claude and ChatGPT: This Android brand’s open-source AI model builds 3D games on demand",
-          "link": "https://www.androidauthority.com/xiaomi-open-source-ai-model-3d-game-blender-model-3713895/",
-          "description": "Fancy a Prince of Persia clone? Xiaomi's MiMo-V2.6 Pro can conjure it up in a few minutes....",
-          "date": "2026-09-22T09:56:05+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "I just got Google’s spammy Google Messages texts. Here’s how to turn them off",
-          "link": "https://www.androidauthority.com/google-messages-business-chat-spam-how-turn-off-3713576/",
-          "description": "No thank you, Google....",
-          "date": "2026-09-22T09:30:36+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "New Galaxy S27 leak is great news for performance, bad news for your wallet",
-          "link": "https://www.androidauthority.com/samsung-galaxy-s27-memory-storage-configurations-leak-3713926/",
-          "description": "The Galaxy S27 series seems set to make no compromises on specs or price....",
-          "date": "2026-09-22T09:30:15+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Forgot your phone PIN? Google could look to the past to save you from a factory reset",
-          "link": "https://www.androidauthority.com/android-unlock-with-google-account-apk-teardown-3713919/",
-          "description": "You could soon use your Google account credentials to recover your locked device, just like you could back in the day....",
-          "date": "2026-09-22T09:19:20+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -3068,6 +2886,18 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Android Police - News",
+          "title": "YouTube's biggest creator upgrade yet brings a way to A/B test video cuts",
+          "link": "https://www.androidpolice.com/youtube-ab-testing-for-video-content/",
+          "description": "\n                                            Test three different cuts to see what actually works\n                                        ...",
+          "date": "2026-09-23T22:48:42+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Police - News",
           "title": "YouTube's Custom Feeds finally let you tell the algorithm what to show you",
@@ -3170,18 +3000,6 @@
           "link": "https://www.androidpolice.com/this-5-port-160w-charger-aims-to-replace-all-the-current-ones-you-have/",
           "description": "\n                                            It's an impressive piece of hardware\n                                        ...",
           "date": "2026-09-23T15:38:18+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I just discovered one surprisingly big feature Samsung phones still don't have",
-          "link": "https://www.androidpolice.com/samsung-phones-dont-have-user-profiles/",
-          "description": "\n                                            Samsung is missing a basic Android feature\n                                        ...",
-          "date": "2026-09-23T15:15:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3433,96 +3251,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Gaming PC with RTX 5060, 32GB of RAM, and 1TB of storage gets $500 discount",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/gaming-pc-with-rtx-5060-32gb-of-ram-and-1tb-of-storage-gets-usd500-discount-neweggs-capable-abs-cyclone-aqua-prebuilt-is-usd1-199-with-code",
-          "description": "\n                             Newegg's ABS Cyclone Aqua prebuilt combines Intel's 20-core Core i7-14700F with Nvidia's RTX 5060 8GB, and 32GB of DDR4 memory for less than the cost of building a comparable system \n                                                                                       ...",
-          "date": "2026-09-22T11:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Memory chips are now more expensive than compute chips on a per-area basis",
-          "link": "https://www.tomshardware.com/pc-components/dram/dram-is-now-more-expensive-than-compute-chips-on-per-area-basis-ai-demand-drives-memory-die-value-past-leading-edge-silicon",
-          "description": "\n                             DRAM makers may potentially get more money for their wafers than TSMC gets for its N3 wafers. \n                                                                                                            ...",
-          "date": "2026-09-22T11:12:35+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Raspberry Pi locks boards to factory RAM capacities in firmware",
-          "link": "https://www.tomshardware.com/raspberry-pi/raspberry-pi-locks-boards-to-factory-ram-capacities-in-firmware-engineer-tells-diy-modders-dont-waste-your-time-trying-repairs-or-upgrades-company-cites-shady-reseller-scams",
-          "description": "\n                             Raspberry Pi users are being firmware blocked from swapping the RAM chips on their SBCs for repairs or upgrades. \n                                                                                                            ...",
-          "date": "2026-09-22T11:07:17+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "This $299 2TB MSI SSD is one of the least expensive PCIe 4.0 SSDs you can buy right now",
-          "link": "https://www.tomshardware.com/pc-components/this-usd299-2tb-msi-ssd-is-one-of-the-least-expensive-pcie-4-0-ssds-you-can-buy-right-now-just-10-cents-per-gb-yields-a-speedy-upgrade-for-your-internal-storage",
-          "description": "\n                             Get a solid deal on the 2TB MSI Spatium M461 SSD. Just $299 after promo code nets one of the least expensive Gen 4x4 SSDs available today. \n                                                                                                            ...",
-          "date": "2026-09-22T10:48:20+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "New DapuStor SSD pairs high-capacity QLC with a permanent pSLC region",
-          "link": "https://www.tomshardware.com/pc-components/ssds/dapustor-splits-qlc-ssd-to-create-a-fast-pslc-region-in-dual-mode-drive-trades-6-percent-to-20-percent-of-its-qlc-capacity-for-more-than-7x-faster-random-writes",
-          "description": "\n                             DapuStor’s dual-mode J5060 QLC SSD runs part of its NAND as pSLC, trading 4TB of a 30.72TB drive for 800GB of fast flash. \n                                                                                                            ...",
-          "date": "2026-09-22T10:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "China's CXMT hits 12nm-class DRAM milestone",
-          "link": "https://www.tomshardware.com/pc-components/dram/chinas-cxmt-hits-12nm-class-dram-milestone-new-5th-gen-dram-tech-uses-quadruple-patterning-to-boost-die-capacity-by-50-percent",
-          "description": "\n                             China's DRAM champion CXMT has begun mass production using its 5th Geb DRAM process technology \n                                                                                                            ...",
-          "date": "2026-09-22T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "OpenAI and Anthropic scramble for smaller data centers as massive gigawatt projects lag",
-          "link": "https://www.tomshardware.com/tech-industry/data-centers/openai-and-anthropic-are-reportedly-seeking-out-smaller-data-center-deals-to-meet-current-demand-20-30-mw-facilities-to-provide-capacity-as-mega-structures-undergo-construction",
-          "description": "\n                             OpenAI and Anthropic are seeking to secure immediate capacity, through smaller data center deals, to meet current demand, despite spending billions on massive deals elsewhere. \n                                                                                             ...",
-          "date": "2026-09-22T09:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 20:16:20 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:46:18 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -3613,22 +3347,22 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 21:06:00 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:51:22 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Wed, 23 Sep 2026 21:06:00 GMT",
+      "last_modified": "Wed, 23 Sep 2026 23:51:22 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3e937-65bff174bd452\"",
-      "last_modified": "Mon, 21 Sep 2026 14:30:25 GMT",
+      "etag": "\"3e937-65c2e4ebcb6de\"",
+      "last_modified": "Wed, 23 Sep 2026 22:50:19 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
       "etag": null,
-      "last_modified": "Tue, 22 Sep 2026 21:17:49 GMT",
+      "last_modified": "Wed, 23 Sep 2026 22:11:24 GMT",
       "cached_articles": []
     },
     "https://portswigger.net/research/rss": {
@@ -3650,8 +3384,8 @@
       ]
     },
     "https://github.blog/category/security/feed/": {
-      "etag": "\"f652af51a4527664dc4366892eff0323\"",
-      "last_modified": "Wed, 23 Sep 2026 18:29:49 GMT",
+      "etag": "\"290f46244a078d25a7ac8119a76fb99b\"",
+      "last_modified": "Wed, 23 Sep 2026 21:38:46 GMT",
       "cached_articles": []
     },
     "https://googleprojectzero.blogspot.com/feeds/posts/default": {
