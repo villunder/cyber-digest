@@ -38,8 +38,22 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 18:57:04 GMT",
+      "last_modified": "Sat, 26 Sep 2026 21:58:57 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
+          "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
+          "description": "The ShinyHunters extortion gang is using a URL-encoding trick to bypass web application firewall rules that mitigate the Oracle PeopleSoft CVE-2026-35273 flaw, allowing the threat actors to resume widespread exploitation of a flaw on vulnerable servers. [...]...",
+          "date": "2026-09-26T15:03:34-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-35273"
+            ],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Claude Opus 5.5 uses 95% fewer em dashes, but its answers are getting longer",
@@ -204,18 +218,6 @@
           "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-recent-windows-updates-cause-desktop-loading-issues/",
           "description": "Microsoft has confirmed that some users may experience desktop loading issues, including black screens, after installing the August 2026 preview updates and subsequent updates. [...]...",
           "date": "2026-09-25T06:30:38-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Hackers steal $351.6 million in Bitget crypto exchange hack",
-          "link": "https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/",
-          "description": "​Cryptocurrency exchange Bitget disclosed today that suspected North Korean hackers have stolen $351.6 million from its hot and warm wallets. [...]...",
-          "date": "2026-09-25T04:33:44-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -394,24 +396,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "That shipping rebate offer may come with a monthly charge",
-          "link": "https://www.malwarebytes.com/blog/threat-intel/2026/09/that-shipping-rebate-offer-may-come-with-a-monthly-charge",
-          "description": "Customers say they signed up for shipping rebates, then found recurring charges they didn’t expect....",
-          "date": "2026-09-25T09:51:26+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c68-65c676cefebfa\"",
-      "last_modified": "Sat, 26 Sep 2026 18:58:59 GMT",
+      "etag": "\"1c68-65c69f0d1a2a8\"",
+      "last_modified": "Sat, 26 Sep 2026 21:59:01 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -489,7 +479,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 18:59:58 GMT",
+      "last_modified": "Sat, 26 Sep 2026 19:45:40 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -876,15 +866,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"1591-65c5becdfa7c0-gzip\"",
-      "last_modified": "Sat, 26 Sep 2026 05:15:46 GMT",
+      "etag": "W/\"1591-65c5ec3ffbd7c-gzip\"",
+      "last_modified": "Sat, 26 Sep 2026 08:39:05 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -896,7 +886,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -908,7 +898,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -920,7 +910,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -932,7 +922,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -944,7 +934,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -956,7 +946,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -968,7 +958,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -980,7 +970,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -992,7 +982,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-26T19:00:28.182055+00:00",
+          "date": "2026-09-26T22:04:28.261248+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -3105,7 +3095,7 @@
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-26T19:00:28.155952+00:00",
+          "date": "2026-09-26T22:04:29.088696+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -3122,20 +3112,7 @@
     "https://www.welivesecurity.com/feed/": {
       "etag": null,
       "last_modified": null,
-      "cached_articles": [
-        {
-          "source": "ESET WeLiveSecurity",
-          "title": "Is that vibe coded app safe? 5 checks before you download",
-          "link": "https://www.welivesecurity.com/en/mobile-security/is-new-vibe-coded-app-safe-5-questions-ask-first/",
-          "description": "As AI lets anyone build software, here’s how to vet that shiny new app before it exposes your data...",
-          "date": "2026-09-25T09:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        }
-      ]
+      "cached_articles": []
     },
     "https://censys.com/feed/": {
       "etag": "W/\"499a2b527d29e631e18e5e4030b3eedb\"",
@@ -3227,9 +3204,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"d52368ce020ff3a1868066435073ca3a\"",
-      "last_modified": "Sat, 26 Sep 2026 05:26:01 GMT",
+      "etag": "\"498ba92654562cbc8c87e62818221ff8\"",
+      "last_modified": "Sat, 26 Sep 2026 07:20:17 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Self-Repairing Conductive Material from Liquid Metal",
+          "link": "https://hackaday.com/2026/09/26/self-repairing-conductive-material-from-liquid-metal/",
+          "description": "PCB circuits are cool, but you know what is cooler? Terminator circuits that’s what! And what if the same material that makes Terminator circuits could also be used for smart …read more...",
+          "date": "2026-09-26T20:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "A Pocket-Sized Digital Fish Tank",
@@ -3301,24 +3290,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Reviving the PoE++ Feature on a Ubiquiti Switch",
-          "link": "https://hackaday.com/2026/09/25/reviving-the-poe-feature-on-a-ubiquiti-switch/",
-          "description": "Recently [The Parallel Port] was asked to take a look at repairing the PoE++ feature on a Ubiquiti switch that otherwise worked fine. This is a pretty nice 24-port rackmounted …read more...",
-          "date": "2026-09-25T23:00:20+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 18:57:57 GMT",
+      "last_modified": "Sat, 26 Sep 2026 22:03:00 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
@@ -3470,30 +3447,6 @@
           "link": "https://www.phoronix.com/news/AMDGPU-HDMI-2.1-Reliability",
           "description": "Linux 7.4 is going to be the big kernel release where the AMD graphics driver will finally expose HDMI 2.1 by default and comes with features including HDMI FreeSync, VRR, and ALLM. Ahead of that milestone there have been various other last minute tweaks and improvements to its HDMI 2.1 support. Sen...",
           "date": "2026-09-25T06:12:09-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Go's Improving SIMD Support, Platform-Independent SIMD Interface",
-          "link": "https://www.phoronix.com/news/Go-SIMD-2026",
-          "description": "A new blog post published on Thursday covers the experimental support for SIMD with the Go programming language. This expanding Go SIMD support also includes a platform-independent API for  making use of SIMD with modern processors......",
-          "date": "2026-09-25T05:50:22-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Samba 4.25 Released With Experimental SMB3 Persistent Handles",
-          "link": "https://www.phoronix.com/news/Samba-4.25-Released",
-          "description": "Samba 4.25 is out as the newest stable release for this open-source software enabling file and print services sharing between Linux servers and Windows systems......",
-          "date": "2026-09-25T05:38:43-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -4016,6 +3969,18 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I've been using the Galaxy Z Fold 8 Ultra, but Samsung's wider phone ruined it for me",
+          "link": "https://www.androidpolice.com/the-samsung-galaxy-z-fold-8-has-ruined-the-ultra/",
+          "description": "\n                                            The future is clear\n                                        ...",
+          "date": "2026-09-26T20:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "Android Auto is now my default Android launcher, even outside my car",
           "link": "https://www.androidpolice.com/android-auto-is-now-my-default-android-launcher-even-outside-my-car/",
           "description": "\n                                            It makes my phone distraction-free but not minus the fun\n                                        ...",
@@ -4121,18 +4086,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I built a tiny retro console for my TV for just $109",
-          "link": "https://www.androidpolice.com/i-built-a-tiny-retro-console-for-my-tv-for-just-109/",
-          "description": "\n                                            Raspberry Pi is way more beginner-friendly than I had imagined\n                                        ...",
-          "date": "2026-09-26T13:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -4190,9 +4143,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
-          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
-          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
+          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
+          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
+          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -4202,9 +4155,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
-          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
+          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
+          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
+          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -4451,24 +4404,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Google's orbital AI data center test packs four TPUs and 1,000W of solar power",
-          "link": "https://www.tomshardware.com/tech-industry/data-centers/google-is-blasting-an-experimental-ai-data-center-into-orbit-first-satellite-will-feature-just-four-tensor-processing-units",
-          "description": "\n                             Google will launch an experimental satellite into orbit on October 1, taking four tensor processing units with it. \n                                                                                                            ...",
-          "date": "2026-09-25T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 18:50:45 GMT",
+      "last_modified": "Sat, 26 Sep 2026 21:48:20 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -4570,17 +4511,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 19:00:28 GMT",
+      "last_modified": "Sat, 26 Sep 2026 22:04:28 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 19:00:28 GMT",
+      "last_modified": "Sat, 26 Sep 2026 22:04:28 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c674e08e506\"",
-      "last_modified": "Sat, 26 Sep 2026 18:50:20 GMT",
+      "etag": "\"3ee15-65c52c52ad326\"",
+      "last_modified": "Fri, 25 Sep 2026 18:20:25 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -4688,9 +4629,21 @@
       ]
     },
     "https://www.hackread.com/feed/": {
-      "etag": "W/\"8a70a79181e4a62488a8d66cb27da4ea\"",
-      "last_modified": "Sat, 26 Sep 2026 13:36:13 GMT",
+      "etag": "W/\"42ea6a7a33264eb773b8bdd7083dd9f2\"",
+      "last_modified": "Sat, 26 Sep 2026 19:02:55 GMT",
       "cached_articles": [
+        {
+          "source": "HackRead",
+          "title": "Placeholder Domains Used by 349 AI Agent Skills Found Redirecting to Scams",
+          "link": "https://hackread.com/placeholder-domains-ai-agent-skills-redirect-scams/",
+          "description": "Manifold Security found placeholder domains cited in 359,000 GitHub files and 349 AI agent skills serving cloaked scam…...",
+          "date": "2026-09-26T19:02:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "HackRead",
           "title": "ShinyHunters Bypass WAF Rules to Resume Oracle PeopleSoft Attacks",
