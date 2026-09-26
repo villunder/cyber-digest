@@ -20,12 +20,25 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Fri, 25 Sep 2026 19:43:22 GMT",
-      "cached_articles": []
+      "last_modified": "Sat, 26 Sep 2026 01:54:57 GMT",
+      "cached_articles": [
+        {
+          "source": "Krebs on Security",
+          "title": "U.S. Soldier Gets 70 Months in Prison for AT&T, Verizon Extortions",
+          "link": "https://krebsonsecurity.com/2026/09/u-s-soldier-gets-70-months-in-prison-for-att-verizon-extortions/",
+          "description": "A U.S. Army soldier who pleaded guilty to hacking into multiple telecommunications companies and stealing mobile call and text metadata for more than 100 million AT&T customers in 2024 was sentenced to 70 months in federal prison today and ordered to pay nearly $300,000 in restitution to victims....",
+          "date": "2026-09-25T21:44:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 01:11:13 GMT",
+      "last_modified": "Sat, 26 Sep 2026 06:21:21 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -179,30 +192,6 @@
           "link": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
           "description": "A new botnet malware called Carbonato is targeting insecure hosts running Docker daemons to install the Hermes Agent AI framework and take control. [...]...",
           "date": "2026-09-24T16:10:48-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Exposed GitLab project email addresses let attackers push code",
-          "link": "https://www.bleepingcomputer.com/news/security/exposed-gitlab-project-email-addresses-let-attackers-push-code/",
-          "description": "Private GitLab email addresses that allow developers to push issues or tasks to a project are being deliberately exposed in READMEs, contributing guides, and support pages used to collect bug reports. [...]...",
-          "date": "2026-09-24T13:47:44-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "FedRAMP VDR & VER: Daily Scans Are Only the Beginning",
-          "link": "https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/",
-          "description": "FedRAMP's new VDR and VER requirements make vulnerability management more continuous, with faster scanning, tighter remediation deadlines, and stronger evidence requirements. Anecdotes explains why the December 7 deadline is just the beginning of a broader shift toward continuous, automated complian...",
-          "date": "2026-09-24T10:02:12-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -393,24 +382,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "OpenAI agent breached Australian government site, took months to report it",
-          "link": "https://www.malwarebytes.com/blog/ai/2026/09/openai-agent-breached-medicare-statistics-portal-then-took-months-to-report-it",
-          "description": "The agent was looking for public spending data. It found a way into non-public files instead. What do we need to change to stop this from happening?...",
-          "date": "2026-09-24T13:22:49+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c68-65c587a566e74\"",
-      "last_modified": "Sat, 26 Sep 2026 01:08:59 GMT",
+      "etag": "\"1c68-65c5ccef0005b\"",
+      "last_modified": "Sat, 26 Sep 2026 06:18:58 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -582,54 +559,6 @@
           "link": "https://thehackernews.com/2026/09/wso2-and-adobe-commerce-flaws-exploited.html",
           "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on Thursday, added two critical security flaws impacting WSO2 and Adobe Commerce and Magento to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation.\n\nThe vulnerabilities are listed below -\n\n\n  C...",
           "date": "2026-09-25T10:16:34+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions",
-          "link": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
-          "description": "A OnePlus 15 running the latest OxygenOS can be rooted by a malicious app the owner installs, one that asks for no special permissions. A researcher, Rasmus Moorats, chained two flaws in OnePlus's own software to gain root access, the highest level of control over an Android phone.\n\nOnePlus told him...",
-          "date": "2026-09-24T23:40:18+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "ThreatsDay: AI Search Poisoning, AI Coding Tool Leaking Repos, One-Click Code Execution and 13 More Stories",
-          "link": "https://thehackernews.com/2026/09/threatsday-ai-search-poisoning-ai.html",
-          "description": "This week, the dangerous stuff keeps arriving dressed as something boring. An update. A login box. A search answer. A coding tool. A link you have clicked a hundred times before.\n\nThat is the thread running through the pile. Trusted paths get poisoned. Old bugs find new jobs. AI tools leak more than...",
-          "date": "2026-09-24T23:22:43+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Placeholder third-party[.]com Referenced Across 1,700+ Repositories Now Serves Malicious Content",
-          "link": "https://thehackernews.com/2026/09/placeholder-third-partycom-referenced.html",
-          "description": "The \"third-party[.]com\" domain, commonly used as a documentation placeholder, has been observed serving a ClickFix lure to Windows browsers while displaying a harmless decoy to other users.\n\n\"third-party[.]com has been a generic documentation placeholder for years, the same role example.com plays,\" ...",
-          "date": "2026-09-24T20:57:32+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
-          "link": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
-          "description": "An active ClickFix campaign has been observed compromising legitimate Ukrainian business websites to inject bogus Cloudflare verification pages and trick victims into downloading a previously undocumented information stealer called Psychedelic.\n\n\"When a visitor interacts with the page, the lure copi...",
-          "date": "2026-09-24T19:59:06+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -899,15 +828,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"1591-65c52f15bc934-gzip\"",
-      "last_modified": "Fri, 25 Sep 2026 18:32:46 GMT",
+      "etag": "W/\"1591-65c5bc29c826a-gzip\"",
+      "last_modified": "Sat, 26 Sep 2026 05:03:57 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -919,7 +848,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -931,7 +860,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -943,7 +872,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -955,7 +884,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -967,7 +896,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -979,7 +908,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -991,7 +920,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1003,7 +932,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1015,7 +944,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-26T01:11:35.327075+00:00",
+          "date": "2026-09-26T06:24:55.100323+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1025,8 +954,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"cfe2155f6b6b9aa51a21c5ac5e2e9e9f\"",
-      "last_modified": "Sat, 26 Sep 2026 00:01:52 GMT",
+      "etag": "\"25d90242c7ed0d548c7a39eb143f4f82\"",
+      "last_modified": "Sat, 26 Sep 2026 05:22:49 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -3161,46 +3090,10 @@
         },
         {
           "source": "Dark Reading",
-          "title": "3 Cyber Threats That Defined the Summer of 2026",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/3-cyber-threats-defined-summer-2026",
-          "description": "This installment of the Reporters' Notebook video series discusses the impact of AI agents breaching Hugging Face, Fairlife's ransomware attack, and Iranian-linked threat actors compromising a dozen US water systems. It was a busy summer....",
-          "date": "2026-09-24T14:44:12+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "How to Build a SASE Framework for Modern Cybersecurity",
-          "link": "https://www.darkreading.com/cloud-security/how-to-build-sase-framework",
-          "description": "Securing edge computing requires organizations to fundamentally rethink security governance. This step-by-step guide to building a SASE framework provides the path forward. (Third in a three-part series.)...",
-          "date": "2026-09-24T14:02:43+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Ghost Service Accounts Enable M365 Data Theft in Chile",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/ghost-service-accounts-m365-data-theft-chile",
-          "description": "Even if the organization locks down employee accounts, forgotten and lost service accounts can still undo the organization's entire M365 environment....",
-          "date": "2026-09-24T13:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-26T01:11:35.434297+00:00",
+          "date": "2026-09-26T06:24:55.153523+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -3217,7 +3110,20 @@
     "https://www.welivesecurity.com/feed/": {
       "etag": null,
       "last_modified": null,
-      "cached_articles": []
+      "cached_articles": [
+        {
+          "source": "ESET WeLiveSecurity",
+          "title": "Is that vibe coded app safe? 5 checks before you download",
+          "link": "https://www.welivesecurity.com/en/mobile-security/is-new-vibe-coded-app-safe-5-questions-ask-first/",
+          "description": "As AI lets anyone build software, here’s how to vet that shiny new app before it exposes your data...",
+          "date": "2026-09-25T09:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://censys.com/feed/": {
       "etag": "W/\"499a2b527d29e631e18e5e4030b3eedb\"",
@@ -3329,49 +3235,37 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Decades-old file security flaws found in Android, Linux, macOS, and Windows",
-          "link": "https://www.theregister.com/security/2026/09/24/decades-old-file-security-flaws-found-in-android-linux-macos-and-windows/5298672",
-          "description": " Security researchers report that Microsoft considers the side-channel leak of file events to be by design ...",
-          "date": "2026-09-24T19:00:00+02:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "CVE flood pushes Ubuntu onto weekly kernel release cycle",
-          "link": "https://www.theregister.com/os-platforms/2026/09/24/cve-flood-pushes-ubuntu-onto-weekly-kernel-release-cycle/5298912",
-          "description": " AI-assisted bug hunting is helping pile up vulnerabilities faster than defenders can patch them, so Canonical is picking up the pace ...",
-          "date": "2026-09-24T18:33:00+02:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Someone went shopping in ASUS's eShop – for customer data",
-          "link": "https://www.theregister.com/security/2026/09/24/someone-went-shopping-in-asuss-eshop-for-customer-data/5298860",
-          "description": " Contact details and order records accessed, but PC maker is keeping schtum on how many customers are affected ...",
-          "date": "2026-09-24T17:13:00+02:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"bfca650fd9ab5adff71a65cc91d92482\"",
-      "last_modified": "Fri, 25 Sep 2026 17:52:59 GMT",
+      "etag": "\"00fc675db403ba071f7937e14b230a92\"",
+      "last_modified": "Fri, 25 Sep 2026 17:59:32 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Abusing SQL to Play DOOM",
+          "link": "https://hackaday.com/2026/09/25/abusing-sql-to-play-doom/",
+          "description": "Most laypeople who encounter SQL think of it purely as a tool for managing large datasets. While that is certainly what it was designed for, SQL is still a programming …read more...",
+          "date": "2026-09-26T05:00:05+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "The Low-Level Waste Dumps in The Atlantic Have Become Ecosystems",
+          "link": "https://hackaday.com/2026/09/25/the-low-level-waste-dumps-in-the-atlantic-have-become-ecosystems/",
+          "description": "Recently French and international researchers took a look at the state of the thousands of barrels of radioactive waste that were dumped into the Atlantic Ocean between 1950 and 1990, …read more...",
+          "date": "2026-09-26T02:00:15+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Reviving the PoE++ Feature on a Ubiquiti Switch",
@@ -3431,36 +3325,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "This Week in Security: FBI Gets Hacked, Muse Vulnerable to ClickFix, Popular Rust Developers at Risk, and New Attacks Against RSA",
-          "link": "https://hackaday.com/2026/09/25/this-week-in-security-fbi-gets-hacked-muse-vulnerable-to-clickfix-popular-rust-developers-at-risk-and-new-attacks-against-rsa/",
-          "description": "The prolific ShinyHunters group has announced it used a zero-day vulnerability in Oracle PeopleSoft to exploit the FBI jobs website and gain access to the AWS GovCloud instances and dump …read more...",
-          "date": "2026-09-25T14:00:53+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "What Should Pine64 Build With Microcontrollers?",
-          "link": "https://hackaday.com/2026/09/25/what-should-pine64-build-with-microcontrollers/",
-          "description": "Pine64 is an open-source-community-centered project of mostly-open hardware, known for such hits as the PinePhone, the Pinecil soldering iron, and the PineTime. Now, the Pine64 project wants to know what …read more...",
-          "date": "2026-09-25T11:00:18+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 01:07:41 GMT",
+      "last_modified": "Sat, 26 Sep 2026 06:22:46 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
@@ -3612,54 +3482,6 @@
           "link": "https://www.phoronix.com/review/ubuntu-2610-panther-lake",
           "description": "For those with a Framework Laptop 13 Pro or another Intel Core Ultra Series 3 \"Panther Lake\" laptop, the upcoming Ubuntu 26.10 release is delivering some nice out-of-the-box improvements over Ubuntu 26.04 LTS....",
           "date": "2026-09-24T14:46:13-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "COSMIC Epoch 1.9 Brings New Image Viewer & On-Screen Keyboard",
-          "link": "https://www.phoronix.com/news/COSMIC-Epoch-1.9-Released",
-          "description": "COSMIC Epoch 1.9 was released last night as the newest version of the System76-sponsored, Rust-based desktop environment. COSMIC Epoch 1.9 release notes only became available today and it's a big one with new apps and improvements to existing offerings......",
-          "date": "2026-09-24T13:11:51-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "AMD Posts GCC Compiler Patches For AVX10V1AUX ISA Support",
-          "link": "https://www.phoronix.com/news/GCC-Patches-AVX10V1AUX",
-          "description": "Following their recent AVX10_V2_AUX support for GCC as part of the bring-up for the AI Compute Extensions \"ACE\" in GCC 17, AMD compiler engineers this week posted the initial patches for enabling the AVX10V1AUX ISA support......",
-          "date": "2026-09-24T12:12:57-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Fedora Discussion Raises The Idea Of Replacing LibreOffice With Collabora Office",
-          "link": "https://www.phoronix.com/news/Fedora-Discuss-Collabora-Office",
-          "description": "One of the livelist Fedora Discourse community discussions in recent days -- or even in quite a period of time for that matter -- comes down to a user having suggested that Fedora replace LibreOffice by default with the downstream Collabora Office......",
-          "date": "2026-09-24T09:39:00-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "KDE Plasma 6.8 Beta 2 Released With Union Theming Engine Maturing",
-          "link": "https://www.phoronix.com/news/KDE-Plasma-6.8-Beta-2",
-          "description": "Following the KDE Plasma 6.8 Beta from earlier this month, the second and last beta of the upcoming Plasma 6.8 desktop is now available for testing......",
-          "date": "2026-09-24T09:27:33-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -4701,72 +4523,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Sony patent could turn PlayStation controllers into tap-to-pay credit card terminals",
-          "link": "https://www.tomshardware.com/video-games/console-gaming/sony-patent-could-turn-playstation-controllers-into-tap-to-pay-credit-card-terminals-nfc-and-bluetooth-also-support-phones-and-gift-cards-for-instant-purchases",
-          "description": "\n                             A new patent application details the potential for a future PlayStation controller to accept payments via credit cards and gift cards. \n                                                                                                            ...",
-          "date": "2026-09-24T17:09:31+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Nvidia CEO says 'we have to shut the labs down' if AI experiments are unsafe",
-          "link": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-ceo-says-we-have-to-shut-the-labs-down-if-ai-experiments-are-unsafe-jensen-huang-says-frontier-ai-lab-fears-are-a-distraction-not-a-call-for-regulation",
-          "description": "\n                             In a recent interview, Nvidia CEO Jensen Huang said that if frontier labs have unsafe models, they should shut the labs down, calling the current calls for regulation a \"distraction.\" \n                                                                                     ...",
-          "date": "2026-09-24T15:24:49+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Japanese used bookstores see 5x sales surge as books are being bought by the ton, one 50-ton order sent to the US for AI scanning and destruction",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/japanese-used-bookstores-see-5x-sales-surge-as-books-are-being-bought-by-the-ton-one-50-ton-order-sent-to-the-us-for-ai-scanning-and-destruction-multitude-of-suspicious-bulk-buys-thought-to-end-up-in-foreign-ai-scan-and-shred-facilities",
-          "description": "\n                             Investigators reckon Japan's used bookstore boom is likely due to the written-word harvesting of foreign AI giants. \n                                                                                                            ...",
-          "date": "2026-09-24T14:35:12+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Logitech refreshes legendary Blue Yeti microphone with 3D voice tracking and AI denoising",
-          "link": "https://www.tomshardware.com/peripherals/microphones/logitech-refreshes-legendary-blue-yeti-microphone-with-3d-voice-tracking-and-ai-denoising-usd160-blue-yeti-2-sequel-features-real-time-auto-gain-and-color-mascot-screen",
-          "description": "\n                             After years without a major successor, Logitech’s Yeti 2 arrives with new features designed to simplify microphone setup and audio adjustments. \n                                                                                                            ...",
-          "date": "2026-09-24T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "The three-pronged future of custom PC building — from repurposing forgotten parts to ultra-premium works of gaming art",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/the-three-pronged-future-of-custom-pc-building-from-repurposing-forgotten-parts-to-ultra-premium-works-of-gaming-art",
-          "description": "\n                             This is probably the worst time ever for PC building. Here’s how and why I think the hobby (and the market) still have a future to look forward to. \n                                                                                                            ...",
-          "date": "2026-09-24T13:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 00:47:53 GMT",
+      "last_modified": "Sat, 26 Sep 2026 03:18:25 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -4868,17 +4630,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 01:11:35 GMT",
+      "last_modified": "Sat, 26 Sep 2026 06:24:55 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 26 Sep 2026 01:11:36 GMT",
+      "last_modified": "Sat, 26 Sep 2026 06:24:55 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c3abdfb9e7a\"",
-      "last_modified": "Thu, 24 Sep 2026 13:40:25 GMT",
+      "etag": "\"3ee15-65c4f2372e149\"",
+      "last_modified": "Fri, 25 Sep 2026 14:00:27 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -4933,8 +4695,8 @@
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"aea8fb139eedffe0df9d4f615f206f3f\"",
-      "last_modified": "Fri, 25 Sep 2026 21:41:33 GMT",
+      "etag": "\"be6e428add2edb3efe324a5a308cbfac\"",
+      "last_modified": "Fri, 25 Sep 2026 16:09:48 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
