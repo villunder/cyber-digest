@@ -25,17 +25,20 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 17:02:40 GMT",
+      "last_modified": "Sun, 27 Sep 2026 20:10:59 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
-          "title": "Citrix admins warned to shut down NetScalers over 2 exploited zero-days",
+          "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
           "link": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
-          "description": "Two unpatched Citrix NetScaler zero-day vulnerabilities are reportedly being exploited in attacks, with cybersecurity agencies, security researchers, and IT providers privately warning organizations about the flaws ahead of patches expected next week. [...]...",
+          "description": "Citrix has confirmed that two critical NetScaler remote code execution vulnerabilities, tracked as CVE-2026-88771 and CVE-2026-88772, are being exploited in attacks and that it has released security updates to fix the flaws. [...]...",
           "date": "2026-09-27T12:02:37-04:00",
           "date_unknown": false,
           "iocs": {
-            "cves": [],
+            "cves": [
+              "CVE-2026-88771",
+              "CVE-2026-88772"
+            ],
             "ips": []
           }
         },
@@ -156,8 +159,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"19e2-65c79ef866bbe\"",
-      "last_modified": "Sun, 27 Sep 2026 17:03:59 GMT",
+      "etag": "\"19e2-65c7c96fa9080\"",
+      "last_modified": "Sun, 27 Sep 2026 20:13:58 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -235,7 +238,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 17:01:13 GMT",
+      "last_modified": "Sun, 27 Sep 2026 18:54:42 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -305,18 +308,6 @@
           "link": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
           "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation.\n\nThe vulnerabilities in question are as follows -\n\n\n ...",
           "date": "2026-09-26T14:19:53+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack",
-          "link": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
-          "description": "Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it received threat intelligence about an imminent cyber attack.\n\n\"Kiteworks received credible threat intelligence from federal intelligence authorities indic...",
-          "date": "2026-09-26T13:18:33+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2694,7 +2685,7 @@
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-27T17:08:24.749221+00:00",
+          "date": "2026-09-27T20:17:18.313155+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2742,9 +2733,21 @@
       "cached_articles": []
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"0053aadc9bc39a2cd8086bf3197c7d81\"",
-      "last_modified": "Sun, 27 Sep 2026 06:09:22 GMT",
+      "etag": "\"10597c7d20bed4816fdb42f809dc97d1\"",
+      "last_modified": "Sun, 27 Sep 2026 06:11:26 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Defeating Satellite Spoofing with Galileo’s Encryption",
+          "link": "https://hackaday.com/2026/09/27/defeating-satellite-spoofing-with-galileos-encryption/",
+          "description": "Considering how important it is for everything from navigation to keeping clocks in sync, satellite navigation systems are surprisingly vulnerable to a variety of attacks, ranging from simple jamming to …read more...",
+          "date": "2026-09-27T20:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Ways To Empirically Identify a Magnet’s Polarity",
@@ -2816,25 +2819,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Cheap Yellow Display Dreams of PDA",
-          "link": "https://hackaday.com/2026/09/26/cheap-yellow-display-dreams-of-pda/",
-          "description": "Everybody loves the Cheap Yellow Display (CYD) ESP32 dev boards, so why not treat yours to a little PDA? That’s right: turn it into a Portable Digital Assistant and relive …read more...",
-          "date": "2026-09-26T23:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 17:04:08 GMT",
+      "last_modified": "Sun, 27 Sep 2026 20:14:11 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Budgie 10.10.3 Released With Favorites In Budgie Menu, Labwc Bridge Improvements",
+          "link": "https://www.phoronix.com/news/Budgie-10.10.3-Released",
+          "description": "Budgie 10.10.3 is out today as the newest point release to this open-source desktop......",
+          "date": "2026-09-27T13:37:07-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Linux Kernel's LZ4 Compression Code Being Resynced For Better Performance & Cleanliness",
@@ -3135,6 +3138,42 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "My Galaxy Z Fold 8 is now a one-handed device thanks to this free app",
+          "link": "https://www.androidpolice.com/this-app-made-using-a-big-phone-so-much-easier/",
+          "description": "\n                                            No more struggling to reach both sides of my phone\n                                        ...",
+          "date": "2026-09-27T20:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I ditched YouTube's bloated app for Brave, but I'm keeping my Premium subscription anyway",
+          "link": "https://www.androidpolice.com/brave-youtube-android-premium-ads-free-settings/",
+          "description": "\n                                            Its customization is unreal\n                                        ...",
+          "date": "2026-09-27T19:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Google Keep solved my group chat chaos problem",
+          "link": "https://www.androidpolice.com/google-keep-solved-my-group-chat-chaos-problem/",
+          "description": "\n                                            Google Keep makes Google Messages the perfect multitasking tool\n                                        ...",
+          "date": "2026-09-27T17:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "Google Health's home screen widget is bare-bones, so I replaced it with these better widgets",
           "link": "https://www.androidpolice.com/google-healths-home-screen-widget-bare-bones-replaced-with-better-widgets/",
           "description": "\n                                            Trends, sleep stages, and vitals Google's widget leaves out\n                                        ...",
@@ -3211,42 +3250,6 @@
           "link": "https://www.androidpolice.com/started-using-pixel-watch-to-control-tv/",
           "description": "\n                                            My Pixel Watch became my backup TV remote\n                                        ...",
           "date": "2026-09-27T13:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Samsung's SmartTag still hasn't fixed what's broken about finding my lost stuff",
-          "link": "https://www.androidpolice.com/samsung-smarttag-problem/",
-          "description": "\n                                            The real issue is the software walls\n                                        ...",
-          "date": "2026-09-27T12:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "iPhone 18 Pro's variable aperture sounds radical. Here's how it compares to the Galaxy S26 Ultra",
-          "link": "https://www.androidpolice.com/iphone-18-pros-variable-aperture-sounds-radical-heres-how-it-compares-to-the-galaxy-s26-ultra/",
-          "description": "\n                                            Does the depth of field look that different?\n                                        ...",
-          "date": "2026-09-27T12:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I ditched Google Keep for a self-hosted app that finally gave me control of my notes",
-          "link": "https://www.androidpolice.com/i-ditched-google-keep-for-a-self-hosted-app-that-finally-gave-me-control-of-my-notes/",
-          "description": "\n                                            Kept gives me everything I loved about Google Keep, minus Google\n                                        ...",
-          "date": "2026-09-27T12:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3441,9 +3444,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
-          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
+          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
+          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
+          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -3453,9 +3456,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
-          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
-          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
+          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
+          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
+          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -3539,7 +3542,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 16:46:34 GMT",
+      "last_modified": "Sun, 27 Sep 2026 19:46:24 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -3592,7 +3595,7 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 17:08:25 GMT",
+      "last_modified": "Sun, 27 Sep 2026 20:17:18 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
@@ -3601,8 +3604,8 @@
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c727b22522e\"",
-      "last_modified": "Sun, 27 Sep 2026 08:10:22 GMT",
+      "etag": "\"3ee15-65c7c8a0197e1\"",
+      "last_modified": "Sun, 27 Sep 2026 20:10:21 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -3657,8 +3660,8 @@
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"f022d7a0e2d12dfac592cf1acf95e30b\"",
-      "last_modified": "Sun, 27 Sep 2026 16:40:36 GMT",
+      "etag": "\"089df3d5bf537f88999f5208d8489d2f\"",
+      "last_modified": "Sat, 26 Sep 2026 05:41:54 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
@@ -3710,9 +3713,21 @@
       ]
     },
     "https://www.hackread.com/feed/": {
-      "etag": "W/\"42ea6a7a33264eb773b8bdd7083dd9f2\"",
-      "last_modified": "Sat, 26 Sep 2026 19:02:55 GMT",
+      "etag": "W/\"03091f06c7cd7f501121885b2df1f3e4\"",
+      "last_modified": "Sun, 27 Sep 2026 19:02:17 GMT",
       "cached_articles": [
+        {
+          "source": "HackRead",
+          "title": "Best Security Awareness Platforms for Personalized Employee Training",
+          "link": "https://hackread.com/security-awareness-platforms-employee-training/",
+          "description": "Comparing five leading security awareness platforms, based on the level of personalization they offer....",
+          "date": "2026-09-27T19:02:14+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "HackRead",
           "title": "Placeholder Domains Used by 349 AI Agent Skills Found Redirecting to Scams",
@@ -3736,54 +3751,6 @@
             "cves": [
               "CVE-2026-35273"
             ],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "5G-Shark Lures Phones to Rogue 5G Cells Without Network Jamming",
-          "link": "https://hackread.com/5g-shark-phones-rogue-cells-jamming-mobile-networks/",
-          "description": "Researchers have developed 5G-Shark to lure phones onto rogue base stations, collect subscriber IDs, force network downgrades and…...",
-          "date": "2026-09-25T20:03:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "Only 26% of Detected CISA Known Exploited Vulnerabilities Were Fully Remediated",
-          "link": "https://hackread.com/26-detected-cisa-known-exploited-vulnerabilities-remediated/",
-          "description": "A recent Verizon study found that vulnerability exploitation became the most common initial access vector, appearing in 31%…...",
-          "date": "2026-09-25T12:44:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "Salmon Introduces Execution Verification Infrastructure (EVI) for Securing AI Agents and Autonomous Systems",
-          "link": "https://hackread.com/salmon-introduces-execution-verification-infrastructure-evi-for-securing-ai-agents-and-autonomous-systems/",
-          "description": "San Francisco, USA, 25th September 2026, CyberNewswire...",
-          "date": "2026-09-25T12:00:05+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "SectopRAT Abuses Legitimate Audio Software Files to Steal PC Data",
-          "link": "https://hackread.com/sectoprat-abuses-audio-software-steal-pc-data/",
-          "description": "FortiGuard found SectopRAT hidden in modified audio software files, using staged loading to steal browser data and remotely control infected Windows PCs....",
-          "date": "2026-09-25T10:43:28+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
             "ips": []
           }
         }
