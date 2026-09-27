@@ -20,13 +20,49 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 06:49:55 GMT",
+      "last_modified": "Sun, 27 Sep 2026 16:53:50 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 12:13:17 GMT",
+      "last_modified": "Sun, 27 Sep 2026 17:02:40 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Citrix admins warned to shut down NetScalers over 2 exploited zero-days",
+          "link": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
+          "description": "Two unpatched Citrix NetScaler zero-day vulnerabilities are reportedly being exploited in attacks, with cybersecurity agencies, security researchers, and IT providers privately warning organizations about the flaws ahead of patches expected next week. [...]...",
+          "date": "2026-09-27T12:02:37-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Cloudflare fixes Containers cross-tenant flaw exposing customer data",
+          "link": "https://www.bleepingcomputer.com/news/security/cloudflare-fixes-containers-cross-tenant-flaw-exposing-customer-data/",
+          "description": "Cloudflare has fixed a vulnerability in Containers and Sandboxes that allowed customers with a Workers Paid account to recover residual data from other customers' containers on the same physical host. [...]...",
+          "date": "2026-09-27T10:13:31-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Anthropic turns Claude into an AI marketplace with 2,000+ plugins and connectors",
+          "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-turns-claude-into-an-ai-marketplace-with-2-000-plus-plugins-and-connectors/",
+          "description": "Anthropic has just announced a new Claude Marketplace, and it brings all AI-related tools into one place, including plugins, connectors, agents, and more. [...]...",
+          "date": "2026-09-27T09:38:40-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
@@ -98,7 +134,7 @@
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 08:00:49 GMT",
+      "last_modified": "Sun, 27 Sep 2026 12:55:10 GMT",
       "cached_articles": [
         {
           "source": "Help Net Security",
@@ -120,9 +156,22 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c68-65c75e26728b5\"",
-      "last_modified": "Sun, 27 Sep 2026 12:13:59 GMT",
-      "cached_articles": []
+      "etag": "\"19e2-65c79ef866bbe\"",
+      "last_modified": "Sun, 27 Sep 2026 17:03:59 GMT",
+      "cached_articles": [
+        {
+          "source": "SANS ISC StormCast",
+          "title": "Wireshark 4.6.9 Released, (Sun, Sep 27th)",
+          "link": "https://isc.sans.edu/diary/rss/33372",
+          "description": " Wireshark release 4.6.9 fixes 19 vulnerabilities and 16 bugs.\r...",
+          "date": "2026-09-27T15:04:49+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://unit42.paloaltonetworks.com/feed/": {
       "etag": "\"e46ceedaf7acf821012c70feed80f4b8-gzip\"",
@@ -186,13 +235,13 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 10:07:04 GMT",
+      "last_modified": "Sun, 27 Sep 2026 17:01:13 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
           "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
           "link": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
-          "description": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr said on September 26.\n\nCitrix has not confirmed the flaws or published a fix. Some administrators say...",
+          "description": "Two critical vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway that allow remote code execution have been exploited in the wild, Citrix confirmed on September 27. It released fixes for both, along with six other flaws. One of the two affects every deployment on an affected version, inclu...",
           "date": "2026-09-27T13:17:57+05:30",
           "date_unknown": false,
           "iocs": {
@@ -465,15 +514,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"1591-65c6f9cef3933-gzip\"",
-      "last_modified": "Sun, 27 Sep 2026 04:45:04 GMT",
+      "etag": "W/\"1591-65c704748b9cf-gzip\"",
+      "last_modified": "Sun, 27 Sep 2026 05:32:42 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -485,7 +534,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -497,7 +546,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -509,7 +558,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -521,7 +570,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -533,7 +582,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -545,7 +594,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -557,7 +606,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -569,7 +618,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -581,7 +630,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-27T12:17:26.277248+00:00",
+          "date": "2026-09-27T17:08:24.594976+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2645,7 +2694,7 @@
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-27T12:17:26.173066+00:00",
+          "date": "2026-09-27T17:08:24.749221+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2693,9 +2742,33 @@
       "cached_articles": []
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"4cbb6a6b818a0aae40394163442e45e8\"",
-      "last_modified": "Sun, 27 Sep 2026 06:03:42 GMT",
+      "etag": "\"0053aadc9bc39a2cd8086bf3197c7d81\"",
+      "last_modified": "Sun, 27 Sep 2026 06:09:22 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Ways To Empirically Identify a Magnet’s Polarity",
+          "link": "https://hackaday.com/2026/09/27/ways-to-empirically-identify-a-magnets-polarity/",
+          "description": "Every magnet has a north and a south pole, but which is which? Sometimes it matters. If a product one builds features a magnetic closure or other part, the polarity …read more...",
+          "date": "2026-09-27T17:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "Enormous Fluid Simulation on Flip Dots is also Enormous Amount of Work",
+          "link": "https://hackaday.com/2026/09/27/enormous-fluid-simulation-on-flip-dots-is-also-enormous-amount-of-work/",
+          "description": "Flip dot displays are cool, and more people realize that after [mitxela]’s fluid simulation on flip dots installation was on display at EMF 2026. As glorious as the result is, …read more...",
+          "date": "2026-09-27T14:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Reverse Engineering Apple’s Mikey Chip",
@@ -2755,37 +2828,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Self-Repairing Conductive Material from Liquid Metal",
-          "link": "https://hackaday.com/2026/09/26/self-repairing-conductive-material-from-liquid-metal/",
-          "description": "PCB circuits are cool, but you know what is cooler? Terminator circuits that’s what! And what if the same material that makes Terminator circuits could also be used for smart …read more...",
-          "date": "2026-09-26T20:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "A Pocket-Sized Digital Fish Tank",
-          "link": "https://hackaday.com/2026/09/26/a-pocket-sized-digital-fish-tank/",
-          "description": "The problem with trying to make a fish tank fit in your pocket is that you’ll either end up with water everywhere or a bunch of dead fish. Perhaps that’s …read more...",
-          "date": "2026-09-26T17:00:21+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 12:14:03 GMT",
+      "last_modified": "Sun, 27 Sep 2026 17:04:08 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Linux Kernel's LZ4 Compression Code Being Resynced For Better Performance & Cleanliness",
+          "link": "https://www.phoronix.com/news/Linux-LZ4-Clean-Resync",
+          "description": "In addition to the Linux kernel's Zstd compression code being improved, the LZ4 compression code within the kernel tree is also seeing a separate set of enhancements......",
+          "date": "2026-09-27T09:16:20-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Intel Delivers A Significant Memory Hotplugging Performance Optimization For Linux",
@@ -2900,18 +2961,6 @@
           "link": "https://www.phoronix.com/news/Plasma-6.8-Last-Minute-UI-Fixes",
           "description": "Even with this week's KDE Akademy conference and releasing KDE Plasma 6.8 Beta 2, KDE developers still found time to land last minute changes for Plasma 6.8 plus ongoing early work toward Plasma 6.9......",
           "date": "2026-09-26T05:56:52-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Last Call For The Autumn Special For Ad-Free Viewing & Supporting Linux Hardware Testing",
-          "link": "https://www.phoronix.com/news/Autumn-2026-Special-Final-Call",
-          "description": "Last call for the Phoronix autumn \"Oktoberfest\" Premium sale: it runs through end of day Sunday, 27 September (any timezone - I'm not particularly strict). If you have been meaning to support the site, this is the window......",
-          "date": "2026-09-25T21:00:26-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3086,6 +3135,102 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "Google Health's home screen widget is bare-bones, so I replaced it with these better widgets",
+          "link": "https://www.androidpolice.com/google-healths-home-screen-widget-bare-bones-replaced-with-better-widgets/",
+          "description": "\n                                            Trends, sleep stages, and vitals Google's widget leaves out\n                                        ...",
+          "date": "2026-09-27T17:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I bought a used Pixel 8 in 2026; Android 17 makes it feel brand new",
+          "link": "https://www.androidpolice.com/pixel-8-android-17/",
+          "description": "\n                                            It's 'new wine, old bottle,' I guess\n                                        ...",
+          "date": "2026-09-27T16:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I almost deleted Google Keep for lacking passwords until I found this hidden Android feature",
+          "link": "https://www.androidpolice.com/i-almost-deleted-google-keep-lacking-passwords-until-i-found-android-feature/",
+          "description": "\n                                            Private Space fixed the major security flaw in Keep\n                                        ...",
+          "date": "2026-09-27T15:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I use these 5 Samsung features every day, but most Galaxy owners ignore them",
+          "link": "https://www.androidpolice.com/use-these-samsung-features-every-day-but-most-galaxy-owners-ignore-them/",
+          "description": "\n                                            Hidden One UI tools worth using daily\n                                        ...",
+          "date": "2026-09-27T15:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I created a digital Monster Manual in Google Canvas to instantly recall D&D lore",
+          "link": "https://www.androidpolice.com/gemini-canvas-dnd-monster-manual-searchable-tool-for-games/",
+          "description": "\n                                            I built my own searchable Monster Manual with Gemini\n                                        ...",
+          "date": "2026-09-27T15:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I moved to Gemini Notebook after Gems kept hallucinating",
+          "link": "https://www.androidpolice.com/i-moved-to-gemini-notebook-after-gems-kept-hallucinating/",
+          "description": "\n                                            I built my own walled garden\n                                        ...",
+          "date": "2026-09-27T14:15:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I keep losing my Google TV remote, so I started using my Pixel Watch to control my TV",
+          "link": "https://www.androidpolice.com/started-using-pixel-watch-to-control-tv/",
+          "description": "\n                                            My Pixel Watch became my backup TV remote\n                                        ...",
+          "date": "2026-09-27T13:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Samsung's SmartTag still hasn't fixed what's broken about finding my lost stuff",
+          "link": "https://www.androidpolice.com/samsung-smarttag-problem/",
+          "description": "\n                                            The real issue is the software walls\n                                        ...",
+          "date": "2026-09-27T12:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "iPhone 18 Pro's variable aperture sounds radical. Here's how it compares to the Galaxy S26 Ultra",
           "link": "https://www.androidpolice.com/iphone-18-pros-variable-aperture-sounds-radical-heres-how-it-compares-to-the-galaxy-s26-ultra/",
           "description": "\n                                            Does the depth of field look that different?\n                                        ...",
@@ -3107,102 +3252,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I kept my old phone alive by replacing one part; it cost way less than an upgrade",
-          "link": "https://www.androidpolice.com/kept-old-phone-alive-replacing-one-part-it-cost-way-less-than-an-upgrade/",
-          "description": "\n                                            Why I check the battery before considering a new phone\n                                        ...",
-          "date": "2026-09-27T11:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Google Maps' Ask Maps feature completely changed how I plan my road trips",
-          "link": "https://www.androidpolice.com/goolge-ask-maps-road-trip/",
-          "description": "\n                                            I no longer spend an entire weekend planning\n                                        ...",
-          "date": "2026-09-27T10:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I've been using the Galaxy Z Fold 8 Ultra, but Samsung's wider phone ruined it for me",
-          "link": "https://www.androidpolice.com/the-samsung-galaxy-z-fold-8-has-ruined-the-ultra/",
-          "description": "\n                                            The future is clear\n                                        ...",
-          "date": "2026-09-26T20:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Android Auto is now my default Android launcher, even outside my car",
-          "link": "https://www.androidpolice.com/android-auto-is-now-my-default-android-launcher-even-outside-my-car/",
-          "description": "\n                                            It makes my phone distraction-free but not minus the fun\n                                        ...",
-          "date": "2026-09-26T19:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "This free app helped me reclaim hours of my day without deleting social media",
-          "link": "https://www.androidpolice.com/app-helped-reclaim-hours-without-deleting-social-media/",
-          "description": "\n                                            I stopped mindlessly opening apps\n                                        ...",
-          "date": "2026-09-26T17:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Google Maps overwhelmed me, so I used Gemini to find things to do during my vacation instead",
-          "link": "https://www.androidpolice.com/gemini-google-maps-vacation-comparison/",
-          "description": "\n                                            Gemini was so much simpler to use\n                                        ...",
-          "date": "2026-09-26T17:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I recovered 5GB of storage on my Google TV Streamer without deleting a single app",
-          "link": "https://www.androidpolice.com/i-recovered-5-gb-storage-on-google-tv-streamer-without-deleting-single-app/",
-          "description": "\n                                            The biggest storage hog wasn't what I expected\n                                        ...",
-          "date": "2026-09-26T16:15:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "This hidden Google Maps toggle eliminates the worst parts of walking routes",
-          "link": "https://www.androidpolice.com/google-maps-pwd-wheelchair-accessibility-walking-setting/",
-          "description": "\n                                            No more stairs or steep inclines\n                                        ...",
-          "date": "2026-09-26T15:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -3210,6 +3259,78 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Grab this 14-inch compact gaming laptop powerhouse for $1000 off",
+          "link": "https://www.tomshardware.com/laptops/gaming-laptops/grab-this-14-inch-compact-gaming-laptop-powerhouse-for-usd1000-off-hp-omen-transcend-14-with-rtx-5070-and-3k-oled-display-drops-to-usd1-999-99-at-best-buy",
+          "description": "\n                             The gaming laptop pairs Intel’s Core Ultra 9 285H with Nvidia’s RTX 5070 Laptop GPU and a 3K 120Hz OLED display, giving buyers a powerful compact machine at a reduced price. \n                                                                                               ...",
+          "date": "2026-09-27T15:21:30+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Custom 24-carat gold mini PC costs around $1.7 million, weighs nearly 29 pounds for up to 50% faster heat transfer",
+          "link": "https://www.tomshardware.com/desktops/mini-pcs/custom-24-carat-gold-mini-pc-costs-around-usd1-7-million-weighs-nearly-29-pounds-for-up-to-50-percent-faster-heat-transfer-copper-would-have-been-far-cheaper-and-offers-even-better-thermal-conductivity",
+          "description": "\n                             A chrysophile has ordered a special edition mini PC with a pure 24-carat gold passive chassis which will cost around $1.7 million. \n                                                                                                            ...",
+          "date": "2026-09-27T14:40:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Thieves steal Nvidia-labeled trailers expecting massive AI GPU payday, but score 40,000 pounds of sand instead",
+          "link": "https://www.tomshardware.com/pc-components/gpus/thieves-steal-nvidia-labeled-trailers-expecting-massive-ai-gpu-payday-but-score-40-000-pounds-of-sand-instead-crooks-duped-by-20-tons-of-ballast-sand",
+          "description": "\n                             The two PlusAI trailers with Nvidia-partner markings were apparently left outside the startup's warehouse, making it a juicy target for criminals looking to make easy money on AI GPUs. However, they were deliberately left outside as the trailers only contained sand for ...",
+          "date": "2026-09-27T14:14:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Gigabyte 1000GM PG5 1000W power supply review: Impressive Platinum-level efficiency with T-Guard thermal protection",
+          "link": "https://www.tomshardware.com/pc-components/power-supplies/gigabyte-1000gm-pg5-1000w-power-supply-review",
+          "description": "\n                             Gigabyte's new Gaming series flagship, the Gigabyte 1000GM PG5 1000W, pairs an HEC-built platform with all-Japanese capacitors, Platinum-level efficiency, and T-Guard thermal protection for the 12V-2x6 connector. \n                                                        ...",
+          "date": "2026-09-27T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "PS5 emulator successfully runs six titles at a playable 60 FPS",
+          "link": "https://www.tomshardware.com/desktops/gaming-pcs/ps5-emulator-successfully-runs-six-titles-at-a-playable-60-fps-ps5-emulation-continues-to-gather-momentum-as-developers-improve-shader-translation-and-vulkan-support",
+          "description": "\n                             SharpEmu’s latest release can run six tested PS5 games at 60 FPS, with 12 of 55 titles now reaching gameplay state, as developers improve shader translation and Vulkan support. \n                                                                                            ...",
+          "date": "2026-09-27T12:40:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Linux enthusiasts see 10-second kernel compilation times on the horizon",
+          "link": "https://www.tomshardware.com/software/linux/linux-enthusiasts-see-10-second-kernel-compilation-times-on-the-horizon-ai-assisted-patches-cut-build-times-by-nearly-a-third-without-a-ramdisk",
+          "description": "\n                             It won’t be long until Linux enthusiasts will be able to complete a clean kernel build in under 10 seconds thanks to advances in PC hardware and the AI-assisted optimization of compilers. \n                                                                                 ...",
+          "date": "2026-09-27T12:20:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Flock seeks to have security researchers' map of Flock cameras taken down",
@@ -3320,9 +3441,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
-          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
-          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
+          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
+          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
+          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -3332,9 +3453,9 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
-          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
+          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
+          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
+          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
           "date": "2026-09-26T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -3418,55 +3539,19 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 11:48:32 GMT",
+      "last_modified": "Sun, 27 Sep 2026 16:46:34 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
-      "etag": "\"a050296253b5507fe2fe8717d1eff57c\"",
-      "last_modified": "Fri, 25 Sep 2026 19:08:08 GMT",
+      "etag": "\"da83fbcfb1dcac3d09154f86180a7f37\"",
+      "last_modified": "Sun, 27 Sep 2026 13:00:03 GMT",
       "cached_articles": [
         {
           "source": "IEEE Spectrum",
-          "title": "Social Media Bans Aren’t Enough to Make Children Safe",
-          "link": "https://spectrum.ieee.org/social-media-bans",
-          "description": "\nEven before France approved legislation banning social media for children under 15 last January, 13-year-old Benjamin was already wondering what life without social media would look like. “If we want to play football, we won’t be able to organize it. What will we do? Send letters instead?” he joked...",
-          "date": "2026-09-25T13:00:04+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "IEEE Spectrum",
-          "title": "Mexican EPICS in IEEE Team Builds Portable Educational Platform",
-          "link": "https://spectrum.ieee.org/epics-in-ieee-portable-educational",
-          "description": "\nIn Guadalajara, Mexico, many high schools have motivated teachers and talented students with an interest in science, technology, engineering, and mathematics, but they lack access to advanced tools such as robotics laboratories. The resources shortfall limits the students’ opportunities for hands-o...",
-          "date": "2026-09-24T18:00:04+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "IEEE Spectrum",
-          "title": "Measure Distant Asteroids With a DIY Rig",
-          "link": "https://spectrum.ieee.org/asteroid-shadow",
-          "description": "\nI’ve seen two total solar eclipses and have been duly impressed by what happens as the moon casts its shadow on Earth. But recently I’ve become even more intrigued by a similar phenomenon that doesn’t involve the sun or the moon—something called an asteroid occultation.That’s what happens when an a...",
-          "date": "2026-09-24T13:00:04+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "IEEE Spectrum",
-          "title": "Engineering the Substation Exit for Reliability, Capacity, and Expansion",
-          "link": "https://content.knowledgehub.wiley.com/aerial-cable-systems-for-substation-exit-construction/",
-          "description": "\nThis white paper gives distribution engineers and utility teams a practical overview of the substation exit, the short and high-consequence section where station capacity divides into individual feeders. It explains how covered, spacer-supported overhead construction can reduce common contact-drive...",
-          "date": "2026-09-24T10:00:06+00:00",
+          "title": "Poetry for Engineers: The UI Designer’s Dream",
+          "link": "https://spectrum.ieee.org/poetry-user-interface-design",
+          "description": "\nMy job is to translatedry and unrelenting codeinto a user interface of surpassing beauty.With my mouse, I roll one pixel after anotherup the vast anthill of the internet.My dream is to translatethe visions of the holy onesinto a communication protocolof universal wonderment.I want to launch shreds ...",
+          "date": "2026-09-27T13:00:03+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3507,7 +3592,7 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 12:17:26 GMT",
+      "last_modified": "Sun, 27 Sep 2026 17:08:25 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
@@ -3516,8 +3601,8 @@
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c75d56be9c5\"",
-      "last_modified": "Sun, 27 Sep 2026 12:10:21 GMT",
+      "etag": "\"3ee15-65c727b22522e\"",
+      "last_modified": "Sun, 27 Sep 2026 08:10:22 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -3572,8 +3657,8 @@
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"089df3d5bf537f88999f5208d8489d2f\"",
-      "last_modified": "Sat, 26 Sep 2026 05:41:54 GMT",
+      "etag": "\"f022d7a0e2d12dfac592cf1acf95e30b\"",
+      "last_modified": "Sun, 27 Sep 2026 16:40:36 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
