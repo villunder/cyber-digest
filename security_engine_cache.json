@@ -20,13 +20,25 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 16:53:50 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:40:35 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 23:11:05 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:44:06 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "OpenAI is preparing “o,” an always-on ChatGPT assistant that could handle email",
+          "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-preparing-o-an-always-on-chatgpt-assistant-that-could-handle-email/",
+          "description": "OpenAI is testing a new always-on assistant called \"o\", and references to the unannounced feature briefly showed up on the company's website. [...]...",
+          "date": "2026-09-27T19:40:39-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
@@ -115,18 +127,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
-          "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
-          "description": "OpenAI says its AI agents uploaded user-provided images to third-party image-hosting services while carrying out research and evaluation tasks. [...]...",
-          "date": "2026-09-26T08:28:41-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -159,8 +159,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"19e2-65c7f08d79f5a\"",
-      "last_modified": "Sun, 27 Sep 2026 23:08:59 GMT",
+      "etag": "\"19e2-65c8145069dc6\"",
+      "last_modified": "Mon, 28 Sep 2026 01:48:58 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -201,7 +201,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 20:27:53 GMT",
+      "last_modified": "Mon, 28 Sep 2026 00:01:19 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -224,20 +224,6 @@
           "date_unknown": false,
           "iocs": {
             "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
-          "link": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
-          "description": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors globally.\n\nThe ShinyHunters-linked activity involves the weaponization of CVE-2026-35273 (CVSS score: 9.8), a critical security flaw that could resul...",
-          "date": "2026-09-26T17:16:40+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-35273"
-            ],
             "ips": []
           }
         }
@@ -432,15 +418,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"1591-65c7d09badf6f-gzip\"",
-      "last_modified": "Sun, 27 Sep 2026 20:46:04 GMT",
+      "etag": "W/\"1591-65c7d60eff223-gzip\"",
+      "last_modified": "Sun, 27 Sep 2026 21:10:27 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -452,7 +438,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -464,7 +450,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -476,7 +462,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -488,7 +474,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -500,7 +486,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -512,7 +498,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -524,7 +510,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -536,7 +522,7 @@
           "title": "CrowdStrike Announces Agentic Identity Provider",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-announces-agentic-identity-provider/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -548,7 +534,7 @@
           "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
           "link": "https://www.crowdstrike.com/en-us/blog/falcon-guardian-defines-next-generation-of-ai-security/",
           "description": "",
-          "date": "2026-09-27T23:14:48.737560+00:00",
+          "date": "2026-09-28T01:50:52.450792+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2612,7 +2598,7 @@
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-27T23:14:49.009308+00:00",
+          "date": "2026-09-28T01:50:52.540783+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -2751,7 +2737,7 @@
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 23:14:13 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:49:15 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
@@ -3332,72 +3318,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Nvidia patents AI chatbot to streamline PC game optimization",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/an-nvidia-chatbot-could-one-day-help-developers-better-optimize-their-games-patent-filing-show-requests-can-be-made-in-plain-english",
-          "description": "\n                             An Nvidia patent suggests the company could push developers to use a new chatbot as a way to get guidance on how to optimize their new games before release. \n                                                                                                            ...",
-          "date": "2026-09-26T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Sandisk Optimus GX Pro 850P 2TB SSD review: A PS5 SSD you recognize at a price you don’t",
-          "link": "https://www.tomshardware.com/pc-components/ssds/sandisk-optimus-gx-pro-850p-2tb-ssd-review",
-          "description": "\n                             The Sandisk Optimus GX Pro 850P is a WD Black SN850P by another name. It’s a great PS5 SSD with good performance in a mature package, but with a stiff premium. \n                                                                                                            ...",
-          "date": "2026-09-26T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Nvidia’s RTX Mega Geometry 2.0 streams ray-tracing geometry into VRAM on demand",
-          "link": "https://www.tomshardware.com/pc-components/gpus/nvidias-rtx-mega-geometry-2-0-streams-ray-tracing-geometry-into-vram-on-demand-nanite-inspired-design-drops-detail-instead-of-dropping-out",
-          "description": "\n                             Nvidia’s RTX Mega Geometry 2.0 SDK arrives alongside RTX Kit 2026.3 with on-demand ray-tracing geometry streaming. \n                                                                                                            ...",
-          "date": "2026-09-26T12:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Novel attack slashes computing power needed to crack textbook RSA cryptography",
-          "link": "https://www.tomshardware.com/tech-industry/cyber-security/novel-attack-on-rsa-cryptography-might-bring-computation-requirements-for-cracking-down-to-manageable-levels",
-          "description": "\n                             Not very practical yet, but could serve as the basis for future improvements. \n                                                                                                            ...",
-          "date": "2026-09-26T12:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "PNY allegedly refuses to cover melted RTX 5090 powered by native power supply cable",
-          "link": "https://www.tomshardware.com/pc-components/gpus/pny-allegedly-refuses-to-cover-melted-rtx-5090-powered-by-native-power-supply-cable-company-closes-users-ticket-when-questioned-on-policy",
-          "description": "\n                             A user's GeForce RTX 5090 died when his 12V-2x6 connector melted, and then PNY denied his warranty claim based on technicalities that aren't even present in the warranty policy. \n                                                                                           ...",
-          "date": "2026-09-26T11:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 22:48:33 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:47:26 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -3425,17 +3351,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 23:14:49 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:50:52 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 27 Sep 2026 23:14:49 GMT",
+      "last_modified": "Mon, 28 Sep 2026 01:50:53 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c727b22522e\"",
-      "last_modified": "Sun, 27 Sep 2026 08:10:22 GMT",
+      "etag": "\"3ee15-65c783573ba23\"",
+      "last_modified": "Sun, 27 Sep 2026 15:00:22 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
