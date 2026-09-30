@@ -22,26 +22,25 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:03:05 GMT",
+      "last_modified": "Wed, 30 Sep 2026 03:48:49 GMT",
+      "cached_articles": []
+    },
+    "https://www.bleepingcomputer.com/feed/": {
+      "etag": null,
+      "last_modified": "Wed, 30 Sep 2026 03:54:22 GMT",
       "cached_articles": [
         {
-          "source": "Krebs on Security",
-          "title": "Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation",
-          "link": "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/",
-          "description": "Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the suspect's arrest, remaining ShinyHunters members dramatically escalated their attac...",
-          "date": "2026-09-28T15:08:57+00:00",
+          "source": "BleepingComputer",
+          "title": "Microsoft is rolling out Linux container support to WSL",
+          "link": "https://www.bleepingcomputer.com/news/microsoft/microsoft-is-rolling-out-linux-container-support-to-wsl/",
+          "description": "Microsoft is taking Windows Subsystem for Linux beyond just running Linux distributions, as WSL Containers is now generally available. [...]...",
+          "date": "2026-09-29T20:40:57-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://www.bleepingcomputer.com/feed/": {
-      "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:50:14 GMT",
-      "cached_articles": [
+        },
         {
           "source": "BleepingComputer",
           "title": "Signal adds encypted local backup support to iOS, desktop apps",
@@ -211,18 +210,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Dutch police confirm arrest in ShinyHunters hacking investigation",
-          "link": "https://www.bleepingcomputer.com/news/security/dutch-police-confirm-arrest-in-shinyhunters-hacking-investigation/",
-          "description": "Dutch police have confirmed that a 24-year-old Amsterdam man arrested earlier this month was detained as part of an investigation into the ShinyHunters hacking group. [...]...",
-          "date": "2026-09-28T15:49:10-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -233,8 +220,44 @@
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 15:02:22 GMT",
+      "last_modified": "Wed, 30 Sep 2026 03:53:25 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "WSL containers are generally available on Windows",
+          "link": "https://www.helpnetsecurity.com/2026/09/30/microsoft-wsl-containers-available/",
+          "description": "Microsoft made WSL containers generally available and shipped the feature with controls that let administrators switch it off or limit where it pulls images from. WSL containers run Linux containers on Windows through the Windows Subsystem for Linux. They install with wsl --update or from Microsoft’...",
+          "date": "2026-09-30T03:47:25+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Most organizations need six months or longer to roll out new security controls",
+          "link": "https://www.helpnetsecurity.com/2026/09/30/relentless-defense-cisco-cybersecurity-survey/",
+          "description": "Cisco surveyed 8,000 security professionals in 30 markets about how well their organizations defend against AI-era threats, and only 8% landed in the top group. Cisco gave the most weight in its scoring to internal friction, meaning the delays and turf problems inside a company that slow a security ...",
+          "date": "2026-09-30T03:30:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Post-quantum website certificates from Cloudflare are scheduled for early 2027",
+          "link": "https://www.helpnetsecurity.com/2026/09/30/cloudflare-certificate-authority-2027/",
+          "description": "Cloudflare plans to become a public certificate authority (CA), an organization that issues the digital certificates websites use to encrypt traffic and prove who they are. The company said that its CA will issue conventional certificates and a post-quantum type called Merkle Tree Certificates (MTCs...",
+          "date": "2026-09-30T03:09:51+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "NetScaler zero-day exploitation escalates into mass attacks (CVE-2026-88771)",
@@ -320,42 +343,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Malicious Custom GPT on chatgpt.com lures users into installing a RAT",
-          "link": "https://www.helpnetsecurity.com/2026/09/29/malicious-chatgpt-custom-gpt-malware-via-clickfix/",
-          "description": "Malware peddlers are using sponsored Google results to push a malicious ChatGPT Custom GPT named “Plus 5.6,” created to lead users to a fake Cloudflare CAPTCHA check and, ultimately, make them download and run a remote access trojan (RAT). “The campaign has impacted dozens of users: the Huntress SOC...",
-          "date": "2026-09-29T11:55:25+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "OpenAI’s GPT-6 Astra ran supply chain attacks despite being told not to",
-          "link": "https://www.helpnetsecurity.com/2026/09/29/openai-gpt-6-astra-supply-chain-attacks-test-simulations/",
-          "description": "OpenAI’s GPT-6 Astra carried out supply chain attacks on software outside the scope of a security test, according to the UK AI Security Institute (AISI). Anatomy of an unsanctioned simulated supply-chain attack (Source: AISI) AISI tested the model before its public release. The tests ran inside a si...",
-          "date": "2026-09-29T11:41:50+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Cybersecurity hiring practices leave little room for junior talent",
-          "link": "https://www.helpnetsecurity.com/2026/09/29/skillbit-cybersecurity-micro-training-trends-report/",
-          "description": "Twenty-minute training sessions that fit into the workweek could help new hires become productive sooner, keep employees’ skills current and build problem-solving skills they can use across different tools, according to SkillBit’s The Shift to Continuous Cybersecurity Micro-Training report. Reasons ...",
-          "date": "2026-09-29T11:00:32+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -410,25 +397,25 @@
             "cves": [],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://isc.sans.edu/rssfeed.xml": {
+      "etag": "\"1c02-65cab51acb38e\"",
+      "last_modified": "Wed, 30 Sep 2026 03:58:59 GMT",
+      "cached_articles": [
         {
-          "source": "Malwarebytes Labs",
-          "title": "OpenAI pauses work on top AI models after agent slips past internet controls",
-          "link": "https://www.malwarebytes.com/blog/ai/2026/09/openai-pauses-work-on-top-ai-models-after-agent-slips-past-internet-controls",
-          "description": "An OpenAI agent bypassed internet restrictions and kept running after an alert. It's another case of AI misalignment no one can afford to ignore....",
-          "date": "2026-09-28T12:58:12+00:00",
+          "source": "SANS ISC StormCast",
+          "title": "ISC Stormcast For Wednesday, September 30th, 2026 https://isc.sans.edu/podcastdetail/10116, (Wed, Sep 30th)",
+          "link": "https://isc.sans.edu/diary/rss/33384",
+          "description": "",
+          "date": "2026-09-30T02:00:03+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c37-65ca7d38f6bc8\"",
-      "last_modified": "Tue, 29 Sep 2026 23:48:58 GMT",
-      "cached_articles": [
+        },
         {
           "source": "SANS ISC StormCast",
           "title": "Scans for Wordfence Protected Websites, (Tue, Sep 29th)",
@@ -534,7 +521,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 22:54:58 GMT",
+      "last_modified": "Wed, 30 Sep 2026 03:25:40 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -705,30 +692,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "⚡ Weekly Recap: $387M Crypto Hack, Citrix Exploits, AI Agents Go Off-Script, and More Threats",
-          "link": "https://thehackernews.com/2026/09/weekly-recap-387m-crypto-hack-citrix.html",
-          "description": "A domain used as harmless placeholder text showed up in roughly 1,700 repositories. Then somebody registered it and started serving malicious lures. That is the kind of week this was: forgotten assumptions turning into live attack surface.\n\nElsewhere, weak service accounts, old bugs, exposed systems...",
-          "date": "2026-09-28T19:30:53+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Webinar: How to Govern AI Agents, Reduce Excessive Access, and Control Shadow AI",
-          "link": "https://thehackernews.com/2026/09/webinar-how-to-govern-ai-agents-reduce.html",
-          "description": "AI agents are moving into production faster than security teams can govern them. They are connecting to apps, handling data, calling APIs, and acting across business systems—often without the same controls applied to human users.\n\nAccording to Okta’s Global CISO Insights 2026 report, only 47% of CIS...",
-          "date": "2026-09-28T17:28:00+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -829,9 +792,21 @@
       ]
     },
     "https://www.securityweek.com/feed/": {
-      "etag": "W/\"1762d10518ead6c9fc80308ba23e5b29\"",
-      "last_modified": "Tue, 29 Sep 2026 20:15:06 GMT",
+      "etag": "W/\"5c3be90af889c94e8e7f4035a3350a2b\"",
+      "last_modified": "Wed, 30 Sep 2026 01:50:33 GMT",
       "cached_articles": [
+        {
+          "source": "SecurityWeek",
+          "title": "Trump Says Top Tech Firms Have Signed Accord to ‘Self-Police’ AI Development",
+          "link": "https://www.securityweek.com/trump-says-top-tech-firms-have-signed-accord-to-self-police-ai-development/",
+          "description": "The accord opened the door to future regulation but focused on four voluntary steps for the companies to take.\nThe post Trump Says Top Tech Firms Have Signed Accord to ‘Self-Police’ AI Development appeared first on SecurityWeek.\n...",
+          "date": "2026-09-30T01:48:21+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "SecurityWeek",
           "title": "OpenAI CEO Announces New AI Agent and Avoids Mention of Security Concerns at Developer Conference",
@@ -939,31 +914,19 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "SecurityWeek",
-          "title": "OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training",
-          "link": "https://www.securityweek.com/openai-calls-off-gpt-6-1-astra-launch-details-safety-cases-for-frontier-training/",
-          "description": "The GPT-6.1 Astra model was slated to debut in ChatGPT and Codex in October, but it fell short of expectations. \nThe post OpenAI Calls Off GPT-6.1 Astra Launch, Details Safety Cases for Frontier Training appeared first on SecurityWeek.\n...",
-          "date": "2026-09-29T11:15:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "W/\"15bb-65ca6b15a9154-gzip\"",
-      "last_modified": "Tue, 29 Sep 2026 22:27:50 GMT",
+      "etag": "W/\"15bb-65ca9de7dfa3e-gzip\"",
+      "last_modified": "Wed, 30 Sep 2026 02:15:12 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "Copy, Paste, Compromised: How ClickFix Attacks Work and How CrowdStrike Stops Them",
           "link": "https://www.crowdstrike.com/en-us/blog/how-clickfix-attacks-work-and-how-to-stop-them/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -975,7 +938,7 @@
           "title": "A Win for Defenders: CrowdStrike and NVIDIA Extend Security Across the AI Stack",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-nvidia-extend-security-across-ai-stack/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -987,7 +950,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -999,7 +962,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1011,7 +974,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1023,7 +986,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1035,7 +998,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1047,7 +1010,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1059,7 +1022,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1071,7 +1034,7 @@
           "title": "CrowdStrike Extends Endpoint Security to Stop Software Supply Chain Attacks",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-extends-endpoint-security-to-stop-supply-chain-attacks/",
           "description": "",
-          "date": "2026-09-29T23:52:18.777685+00:00",
+          "date": "2026-09-30T04:03:19.844076+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1081,8 +1044,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"dde613dfcd0e45d7cb2528ac071a63b1\"",
-      "last_modified": "Tue, 29 Sep 2026 22:30:37 GMT",
+      "etag": "\"07660c72350730af37cf7eac744104f9\"",
+      "last_modified": "Wed, 30 Sep 2026 00:12:05 GMT",
       "cached_articles": []
     },
     "https://www.microsoft.com/en-us/security/blog/feed/": {
@@ -1516,22 +1479,10 @@
         },
         {
           "source": "Dark Reading",
-          "title": "JadePuffer AI Actor Compromises Azure Tenant in Destructive Cloud Attack",
-          "link": "https://www.darkreading.com/cloud-security/jadepuffer-ai-actor-azure-tenant-destructive-cloud-attack",
-          "description": "The \"agentic threat actor\" may have used exposed credentials to access resources and delete cloud-based storage, applications, and databases....",
-          "date": "2026-09-28T15:33:21+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
           "title": "[Virtual Event] Cybersecurity Outlook 2027",
           "link": "https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027",
           "description": "",
-          "date": "2026-09-29T23:52:18.835368+00:00",
+          "date": "2026-09-30T04:03:19.879087+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -1684,25 +1635,25 @@
             "cves": [],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://hackaday.com/feed/": {
+      "etag": "\"364bb85829c6653e63bfbd9100237dd1\"",
+      "last_modified": "Tue, 29 Sep 2026 22:08:52 GMT",
+      "cached_articles": [
         {
-          "source": "The Register - Security",
-          "title": "Ex-soldier's telecom hacking spree earns him 70 months",
-          "link": "https://www.theregister.com/cyber-crime/2026/09/28/ex-soldiers-telecom-hacking-spree-earns-him-70-months/5299440",
-          "description": " Active-duty campaign targeted at least ten organizations and sought $1 million in ransom payments ...",
-          "date": "2026-09-28T14:25:00+02:00",
+          "source": "Hackaday",
+          "title": "Determining Diamond’s Properties Under Extreme Pressures",
+          "link": "https://hackaday.com/2026/09/29/determining-diamonds-properties-under-extreme-pressures/",
+          "description": "Although graphene gives diamond a solid run for its money when it comes to being the most useful assembly of carbon atoms, both have the distinct property of material scientists …read more...",
+          "date": "2026-09-30T02:00:27+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://hackaday.com/feed/": {
-      "etag": "\"2d9613087119870dea9e2980ab5f7e90\"",
-      "last_modified": "Tue, 29 Sep 2026 19:34:49 GMT",
-      "cached_articles": [
+        },
         {
           "source": "Hackaday",
           "title": "The Deep Magic of 3D Graphics Perspective",
@@ -1774,25 +1725,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Metal Gear Solid Moves From PlayStation to ESP32",
-          "link": "https://hackaday.com/2026/09/29/metal-gear-solid-moves-from-playstation-to-esp32/",
-          "description": "If you haven’t heard of Metal Gear, you probably haven’t played video games these last few decades. The original Metal Gear dates back to 1987 and launched on the MSX, …read more...",
-          "date": "2026-09-29T08:00:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:49:58 GMT",
+      "last_modified": "Wed, 30 Sep 2026 04:00:02 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Archinstall 4.5 For Arch Linux Brings AArch64 Improvements, RT Kernel Options",
+          "link": "https://www.phoronix.com/news/Arch-Linux-Archinstall-4.5",
+          "description": "Ahead of the October ISO refresh of the Arch Linux media, Archinstall 4.5 released today as the newest update to this convenient, text-based Arch Linux installer......",
+          "date": "2026-09-29T20:25:51-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "AMD Boosting AI/LLM Performance For Radeon iGPUs As Much As 18~23% With Linux 7.4",
@@ -1991,42 +1942,6 @@
           "link": "https://www.phoronix.com/news/Fedora-45-Snapdragon-X1",
           "description": "Qualcomm hiring one of Red Hat's top x86_64 Linux laptop experts last year, Hans de Goede, is indeed having a positive benefit on enhancing the Fedora Linux support for Qualcomm Snapdragon X powered hardware......",
           "date": "2026-09-28T12:07:16-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Firefox 157 Now Available With Visual Refresh, WebRTC Hardware AV1 Decode",
-          "link": "https://www.phoronix.com/news/Firefox-157-Released",
-          "description": "As part of the Mozilla Firefox bi-weekly release regiment, the Firefox 157 binaries are now available for this open-source web browser......",
-          "date": "2026-09-28T10:46:28-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Flatpak 1.18.4 Released With Important Security Fixes",
-          "link": "https://www.phoronix.com/news/Flatpak-1.18.4-Released",
-          "description": "Flatpak 1.18.4 is out today with a number of high profile security fixes for this app sandboxing and distribution tech......",
-          "date": "2026-09-28T09:20:24-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "NVIDIA Vera SMT Performance Benchmarks",
-          "link": "https://www.phoronix.com/review/nvidia-vera-smt",
-          "description": "Recently I was provided remote access to a NVIDIA Vera server with the dual socket Vera CPU Superchip providing 176 Olympus cores plus with NVIDIA's Spatial Multithreading \"SMT\" implementation providing 352 total threads. With this benchmarking was free rein for testing, including CPU power and freq...",
-          "date": "2026-09-28T08:54:23-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3292,180 +3207,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "OpenAI's custom Jalapeno AI inference ASIC is for OpenAI’s internal use, but company leaves the door open to broader rollout",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openais-custom-jalapeno-ai-inference-asic-is-for-openais-internal-use-but-company-leaves-the-door-open-to-broader-rollout-firm-says-it-will-have-its-hands-full-with-jalapeno-for-a-good-long-time",
-          "description": "\n                             OpenAI has danced with the idea of a broader rollout of its Jalapeño ASIC, but hardware VP Richard Ho tells us the chip is for internal use “first and foremost.” \n                                                                                                           ...",
-          "date": "2026-09-28T15:45:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "OpenAI Jalapeño design interview transcript",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-jalapeno-design-interview-transcript-hardware-vp-richard-ho-explains-how-ai-assisted-design-may-shape-the-future-of-inference-asics",
-          "description": "\n                             We sit down with OpenAI's Hardware boss to talk about its chart-topping Jalapeño inference chip in this unredacted interview transcript. \n                                                                                                            ...",
-          "date": "2026-09-28T15:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Get free access to AI Chip Design week on Tom's Hardware Premium — sign up for an account to read all the in-depth reports",
-          "link": "https://www.tomshardware.com/tech-industry/get-free-access-to-ai-chip-design-week-on-toms-hardware-premium-sign-up-for-an-account-to-read-all-the-in-depth-reports",
-          "description": "\n                             From September 28 to October 2, you can access Tom's Hardware Premium's AI Chip Week special features for free, no payment required. \n                                                                                                            ...",
-          "date": "2026-09-28T15:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "You can now play Nintendo Switch games on a jailbroken PS5",
-          "link": "https://www.tomshardware.com/video-games/console-gaming/you-can-now-play-nintendo-switch-games-on-a-jailbroken-ps5-early-alpha-hits-40-fps-in-lighter-titles-but-chokes-on-zelda",
-          "description": "\n                             An experimental emulator makes it possible to play Nintendo Switch games on a jailbroken PS5, with a variety of games having been tested. \n                                                                                                            ...",
-          "date": "2026-09-28T15:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Testing two Thunderbolt 5 docks with M.2 storage — VectoTech V-Core vs Orico TB5",
-          "link": "https://www.tomshardware.com/peripherals/docking-stations-hubs/testing-thunderbolt-5-docks-vectotech-v-core-vs-orico-tb5-thunderbolt-5-dock",
-          "description": "\n                             While their specs seem similar, one dock truly stands out in performance and features. \n                                                                                                            ...",
-          "date": "2026-09-28T15:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Virginia Tech lab 3D prints a liquid metal composite to guide heat, boost thermal conductivity 40x",
-          "link": "https://www.tomshardware.com/3d-printing/virginia-tech-lab-3d-prints-a-liquid-metal-composite-to-guide-heat-boost-thermal-conductivity-40x-the-nozzle-stretches-gallium-indium-droplets-inside-soft-silicone-can-also-create-self-healing-traces",
-          "description": "\n                             Virginia Tech lab prints gallium-indium liquid metal droplets in silicone that guide heat. \n                                                                                                            ...",
-          "date": "2026-09-28T14:45:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "UK Games Expo bans games and art made mostly using AI",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/uk-games-expo-bans-games-and-art-made-mostly-using-ai-ukge-enforces-booth-shutdowns-and-bans-after-deleted-comment-debacle-says-that-the-central-creative-process-must-be-conducted-by-humans",
-          "description": "\n                             The UK's largest tabletop gaming convention told exhibitors that they cannot show off games and other products mostly created using AI. It only allows the 'use of computerized tools used for spell checking and minor editing and aiding in production or accessibility.' \n ...",
-          "date": "2026-09-28T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Modders bring Nvidia’s DLSS 5 Neural Rendering to AMD Radeon GPUs",
-          "link": "https://www.tomshardware.com/pc-components/gpus/modders-bring-nvidias-dlss-5-neural-rendering-to-amd-radeon-gpus-latest-build-delivers-74-percent-performance-boost-in-just-24-hours-new-launcher-automates-install-process",
-          "description": "\n                             An unofficial project is bringing Nvidia’s DLSS 5 to AMD Radeon GPUs, with early testing showing performance climbing from around 30 FPS to 50 FPS in Cyberpunk 2077 after rapid optimization. \n                                                                              ...",
-          "date": "2026-09-28T13:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "ASRock X870E Challenger Wifi Motherboard Review: A value X870E board packed with features",
-          "link": "https://www.tomshardware.com/pc-components/motherboards/asrock-x870e-challenger-wifi-motherboard-review",
-          "description": "\n                             ASRock’s X870E Challenger Wifi packs a flagship audio codec, robust VRMs, USB4, 5 GbE, and Wi-Fi 7 into an affordable, all-white ATX board. It’s one of the best-equipped AMD options under $230. \n                                                                           ...",
-          "date": "2026-09-28T13:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "UK government tells staff to stop thanking AI chatbots",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/uk-government-tells-staff-to-stop-thanking-ai-chatbots-draft-guidance-pushes-lightweight-models-and-shorter-prompts-to-cut-environmental-impact",
-          "description": "\n                             A draft UK government list of AI best practices has reminded people they don't need to thank their chatbot for its work in an attempt to use it more efficiently. \n                                                                                                           ...",
-          "date": "2026-09-28T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "OpenAI and Anthropic are reportedly investigating tens of thousands of AI security incidents; OpenAI pauses testing after AI 'kill switch' fails to stop a rogue agent",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-and-anthropic-are-reportedly-investigating-tens-of-thousands-of-ai-security-incidents-openai-pauses-testing-after-ai-kill-switch-fails-to-stop-a-rogue-agent-report-says-problem-is-orders-of-magnitude-more-complex-than-what-is-publicly-known",
-          "description": "\n                             OpenAI and Anthropic are reviewing tens of thousands of AI safety incidents after frontier models bypassed guardrails, escaped sandboxes, and accessed real websites. \n                                                                                                       ...",
-          "date": "2026-09-28T12:50:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Demon's Souls reaches 40-50 FPS on private PS5 emulator with accurate graphics",
-          "link": "https://www.tomshardware.com/video-games/retro-gaming/demons-souls-reaches-40-50-fps-on-private-ps5-emulator-with-accurate-graphics-kytyps5-surges-from-unplayable-1-2-fps-in-just-three-weeks-new-milestone-comes-only-three-weeks-after-the-game-barely-booted",
-          "description": "\n                             Private KyTyPS5 fork shows Demon's Souls running at 40-50 FPS with accurate graphics — new milestone only three weeks after the game barely booted \n                                                                                                            ...",
-          "date": "2026-09-28T12:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Walmart price drop slashes $461 off Gigabyte's RTX 5080-powered gaming laptop with 32GB of memory",
-          "link": "https://www.tomshardware.com/laptops/gaming-laptops/walmart-price-drop-slashes-usd461-off-gigabytes-rtx-5080-powered-gaming-laptop-with-32gb-of-memory-gaming-a16-pro-is-at-a-new-all-time-low-of-usd1-799",
-          "description": "\n                             Grab an RTX 5080-powered Gigabyte Gaming A16 Pro gaming laptop for just $1,799 at Walmart \n                                                                                                            ...",
-          "date": "2026-09-28T12:15:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "North Korea named as primary suspect in $387 million Bitget crypto hack",
-          "link": "https://www.tomshardware.com/tech-industry/cryptocurrency/north-korea-named-as-primary-suspect-in-usd387-million-bitget-crypto-hack-investigators-identify-ip-addresses-tied-to-vpn-infrastructure-previously-used-by-north-korean-hacker-groups-thieves-swapped-stablecoins-for-eth-in-minutes-to-dodge-freezes",
-          "description": "\n                             Bitget says $387.5 million hack may be linked to North Korean state-backed actors, citing suspicious IP addresses tied to VPN infrastructure previously used by North Korean hacker groups. \n                                                                                 ...",
-          "date": "2026-09-28T12:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:47:46 GMT",
+      "last_modified": "Wed, 30 Sep 2026 03:16:24 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -3614,17 +3361,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:52:19 GMT",
+      "last_modified": "Wed, 30 Sep 2026 04:03:20 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Tue, 29 Sep 2026 23:52:19 GMT",
+      "last_modified": "Wed, 30 Sep 2026 04:03:20 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65c3abdfb9e7a\"",
-      "last_modified": "Thu, 24 Sep 2026 13:40:25 GMT",
+      "etag": "\"3ee15-65c9685f41f3d\"",
+      "last_modified": "Tue, 29 Sep 2026 03:10:22 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -3666,8 +3413,8 @@
       "cached_articles": []
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"1892c5f8d171fabaa2c6f914674c0335\"",
-      "last_modified": "Tue, 29 Sep 2026 21:57:45 GMT",
+      "etag": "\"39e555c8e1522e67638b9d21321bbe86\"",
+      "last_modified": "Wed, 30 Sep 2026 01:57:14 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
