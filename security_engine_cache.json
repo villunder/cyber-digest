@@ -22,12 +22,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Thu, 1 Oct 2026 19:39:48 GMT",
+      "last_modified": "Fri, 2 Oct 2026 00:12:24 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:32:52 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:03:02 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -174,44 +174,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "CISA warns of critical pre-auth RCE flaw in MikroTik RouterOS",
-          "link": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/",
-          "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning of a new critical vulnerability in MikroTik RouterOS that could lead to remote code execution or cause a denial-of-service condition. [...]...",
-          "date": "2026-09-30T11:49:29-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Cisco warns of new SD-WAN zero-day exploited in attacks",
-          "link": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/",
-          "description": "Cisco released security updates to address a critical zero-day in the Catalyst SD-WAN Manager (tracked as CVE-2026-76504) that attackers are actively exploiting to escalate to admin privileges. [...]...",
-          "date": "2026-09-30T10:46:40-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-76504"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "AI's Third Wave: Coworkers Break the Security Model That Worked for Agents",
-          "link": "https://www.bleepingcomputer.com/news/security/ais-third-wave-coworkers-break-the-security-model-that-worked-for-agents/",
-          "description": "Persistent AI coworkers may operate continuously with standing access, creating identity risks that existing security models were not designed to handle. Token Security explains why these agents need their own identities, owners, scoped permissions, and lifecycle controls. [...]...",
-          "date": "2026-09-30T10:01:11-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -222,8 +184,20 @@
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 13:59:46 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:00:35 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "New infosec products of the week: October 2, 2026",
+          "link": "https://www.helpnetsecurity.com/2026/10/02/new-infosec-products-of-the-week-october-2-2026/",
+          "description": "Here’s a look at the most interesting products from the past week, featuring releases from BlackFog, Genea, Vega, and Thales. Vega II brings security-trained AI and lasting memory to the SOC Vega has introduced Vega II, its biggest platform release since emerging from stealth. The update brings fron...",
+          "date": "2026-10-02T04:00:35+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "16-year-old suspected leader of KillSec ransomware group arrested",
@@ -331,20 +305,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "New Cisco SD-WAN zero-day exploited in-the-wild (CVE-2026-76504)",
-          "link": "https://www.helpnetsecurity.com/2026/10/01/new-cisco-sd-wan-zero-day-exploited-in-the-wild-cve-2026-76504/",
-          "description": "For the fifth time this year, Cisco revealed attackers have exploited a vulnerability (CVE-2026-76504) in its SD-WAN solution in zero-day attacks. The vendor’s incident responders became aware of active exploitation of this vulnerability in September 2026, after getting pinged and resolving a Cisco ...",
-          "date": "2026-10-01T10:18:21+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-76504"
-            ],
-            "ips": []
-          }
         }
       ]
     },
@@ -411,25 +371,25 @@
             "cves": [],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://isc.sans.edu/rssfeed.xml": {
+      "etag": "\"1b89-65cd39f30c270\"",
+      "last_modified": "Fri, 02 Oct 2026 04:03:58 GMT",
+      "cached_articles": [
         {
-          "source": "Malwarebytes Labs",
-          "title": "Hackers steal protective order and foster care records from Arizona courts",
-          "link": "https://www.malwarebytes.com/blog/data-breaches/2026/09/hackers-steal-protective-order-and-foster-care-records-from-arizona-courts",
-          "description": "Attackers copied sensitive court records, including more than 150,000 foster care reports, raising privacy and safety concerns for those Arizonans affected....",
-          "date": "2026-09-30T15:29:42+00:00",
+          "source": "SANS ISC StormCast",
+          "title": "ISC Stormcast For Friday, October 2nd, 2026 https://isc.sans.edu/podcastdetail/10120, (Fri, Oct 2nd)",
+          "link": "https://isc.sans.edu/diary/rss/33390",
+          "description": "",
+          "date": "2026-10-02T02:00:02+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1b8d-65ccfeb8127dd\"",
-      "last_modified": "Thu, 01 Oct 2026 23:38:59 GMT",
-      "cached_articles": [
+        },
         {
           "source": "SANS ISC StormCast",
           "title": "ScreenConnect Client (Ab)used by Attackers, (Thu, Oct 1st)",
@@ -509,7 +469,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Thu, 1 Oct 2026 22:53:48 GMT",
+      "last_modified": "Fri, 2 Oct 2026 03:36:43 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -667,44 +627,6 @@
           "link": "https://thehackernews.com/2026/09/attackers-abuse-msp360-to-deploy.html",
           "description": "Microsoft has warned of phishing campaigns distributing an installer for the MSP360 Remote Monitoring and Management (RMM) software under the guise of meeting invitations, PDF-themed lures, software update prompts, and other social-engineering content.\n\n\"Once executed, the legitimate MSP360 installe...",
           "date": "2026-09-30T22:02:59+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Cisco Warns of Attackers Exploiting Critical Authentication Bypass in SD-WAN Manager",
-          "link": "https://thehackernews.com/2026/09/cisco-warns-of-attackers-exploiting.html",
-          "description": "Attackers are exploiting a new critical zero-day flaw in Cisco Catalyst SD-WAN Manager, the system companies use to manage their Cisco SD-WAN networks, Cisco said in an advisory on September 30.\n\nThe flaw, CVE-2026-76504, could allow a remote attacker with no login access to use the Manager's API as...",
-          "date": "2026-09-30T20:54:54+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-76504"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix Lures",
-          "link": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html",
-          "description": "Threat actors are abusing ChatGPT Custom GPTs to disguise them as legitimate product offerings and direct unsuspecting victims to malicious sites that employ ClickFix lures to deliver malware.\n\nHuntress, which observed the activity in late September 2026, said it marks the abuse of yet another featu...",
-          "date": "2026-09-30T20:30:15+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Know Your Enemy: Browser-Based Attack Techniques in 2026",
-          "link": "https://thehackernews.com/2026/09/know-your-enemy-browser-based-attack.html",
-          "description": "Given that the browser is where business apps are accessed and used, it makes sense that attacks are happening there too. Most breaches today begin in a browser session. Often, they never leave it, with the entire attack chain from initial access to exfiltration playing out in the browser.\n\nHere are...",
-          "date": "2026-09-30T17:28:00+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1632,7 +1554,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:40:55 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:08:07 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1688,18 +1610,6 @@
           "link": "https://www.darkreading.com/cybersecurity-careers/ai-reshapes-soc-career-ladder",
           "description": "New Swimlane research underscores a paradox: While AI detection and response is essential to giving defenders an edge, one in four security pros say AI limits their skill development....",
           "date": "2026-09-30T18:56:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Russia's Star Blizzard Ditches ClickFix to Widen Phishing Net",
-          "link": "https://www.darkreading.com/threat-intelligence/russia-star-blizzard-apt-ditches-clickfix-widen-phishing-net",
-          "description": "The APT actor is using a new tactic, dubbed \"RedFlick,\" against Ukrainian-linked targets such as NGOs, think tanks, and journalists to deploy its CosmicPulse backdoor....",
-          "date": "2026-09-30T15:02:25+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1867,9 +1777,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"a803ba8cbf57e69aa8447ec0dda325b7\"",
-      "last_modified": "Thu, 01 Oct 2026 19:37:34 GMT",
+      "etag": "\"ac2cb6c9300c98cde4fe922e0e8e33ab\"",
+      "last_modified": "Thu, 01 Oct 2026 22:03:58 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Power It With Sodium (But Please Don’t)",
+          "link": "https://hackaday.com/2026/10/01/power-it-with-sodium-but-please-dont/",
+          "description": "[Applied Science] has a new demo of an old 1970s patent for a portable generator that is both interesting and terrifying. The generator uses sodium and water, which, if you …read more...",
+          "date": "2026-10-02T02:00:43+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Elgato Key Lights Get Matter Upgrade",
@@ -1941,25 +1863,37 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "SDR– Lets You Patch Together Your Setup",
-          "link": "https://hackaday.com/2026/10/01/sdr-lets-you-patch-together-your-setup/",
-          "description": "It is often helpful to think of a radio as a series of interconnected functional blocks—hence the use of block diagrams to convey how a given radio operates. [Julian Haag] …read more...",
-          "date": "2026-10-01T08:00:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:40:44 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:05:47 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Siemens Slams The Door Shut On Promising Open-Source Radioss Project",
+          "link": "https://www.phoronix.com/news/Siemens-Ends-OpenRadioss",
+          "description": "As a major disappointment to the open-source community, Siemens has decided to end -- and close-up access -- to the OpenRadioss project as the open-source version opened up by Altair Engineering under the GNU AGPL License back in 2022. This was an open-source version of the industry-leading finite e...",
+          "date": "2026-10-01T21:00:31-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Steam On Linux Dives Down To 3.05% For September",
+          "link": "https://www.phoronix.com/news/Steam-Survey-September-2025",
+          "description": "Steam on Linux use in March hit an all-time high of around 5.33% marketshare. Since then it pulled back to around 4% while for September 2026 the Steam Survey results are now in and it's clocking in just above 3%......",
+          "date": "2026-10-01T20:18:56-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Fedora 45 Beta Performance: The Satisfyingly Boring Benchmarks",
@@ -2158,66 +2092,6 @@
           "link": "https://www.phoronix.com/news/EDG-CPP-Open-Sourced",
           "description": "Edison Design Group has open-sourced their EDG C/C++ front-end that has been known in the commercial world for its extensive dialect support and other features. The EDG C++ front-end has been used by the likes of Intel C++ Compiler classic, NVIDIA CUDA NVCC, and even Microsoft Visual Studio for Inte...",
           "date": "2026-09-30T13:53:32-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Framework Desktop With AMD Ryzen AI Max+ PRO 495 Starts Out At $6799 USD",
-          "link": "https://www.phoronix.com/news/Framework-Desktop-Gorgon-Halo",
-          "description": "Framework Computer today opened the pre-order process for their updated Framework Desktop featuring the new AMD Ryzen AI Max+ 496 \"Gorgon Halo\" SoC with 192GB of LPDDR5x-8533 memory......",
-          "date": "2026-09-30T11:15:58-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "OpenJDK vs. GraalVM vs. Eclipse Temurin vs. Semeru Java Performance",
-          "link": "https://www.phoronix.com/review/openjdk-graalvm-temurin-semeru",
-          "description": "Immediately following the OpenJDK 8 through OpenJDK 27 benchmarks I expanded the scope of testing to look at how recent OpenJDK releases have been comparing to alternative JVMs like GraalVM, Temurin, and Semeru. Here are those benchmarks if curious about the Java performance in those different envir...",
-          "date": "2026-09-30T10:42:29-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Qt 6.12 LTS Released With QML Hot Reloading, StyleKit In Experimental Form",
-          "link": "https://www.phoronix.com/news/Qt-6.12-LTS-Released",
-          "description": "Qt 6.12 is now available as the newest version of the Qt6 toolkit and also serving as a Long Term Support (LTS) release......",
-          "date": "2026-09-30T09:20:00-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Rusticl Had A Great Year For Rust OpenCL In Mesa With 3.1 Support, More Drivers",
-          "link": "https://www.phoronix.com/news/Rusticl-2026",
-          "description": "Rusticl lead developer Karol herbst provided a status update on this Mesa Rust-based OpenCL driver during the XDC 2026 conference happening in Toronto......",
-          "date": "2026-09-30T09:03:20-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux 7.4 To Support The NPU On AMD Ryzen AI Max 400 Series \"Gorgon Halo\"",
-          "link": "https://www.phoronix.com/news/AMD-Gorgon-Halo-NPU-LInux",
-          "description": "While the AMD Ryzen AI 400 series \"Gorgon Halo\" systems are nearing the marketplace, the NPU support for Linux was seemingly overlooked until now. But at least the simple enablement patch looks like it will arrive for the upcoming Linux 7.4 kernel......",
-          "date": "2026-09-30T08:20:14-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3209,18 +3083,6 @@
         },
         {
           "source": "Tom's Hardware",
-          "title": "Gears of War: E-Day PC graphics performance tested",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/gears-of-war-e-day-pc-graphics-performance-tested-43-gpus-take-us-back-to-the-start-of-an-iconic-saga",
-          "description": "\n                             Gears of War: E-Day is the first game to implement Unreal Engine's MegaLights technology, allowing for hundreds of dynamic ray-traced light sources in a scene. We put it to the test on 43 graphics cards to see what this next-gen feature demands across three generations ...",
-          "date": "2026-10-01T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
           "title": "Gears of War E-Day is an uncharacteristically CPU-heavy Unreal Engine 5 game",
           "link": "https://www.tomshardware.com/pc-components/cpus/gears-of-war-e-day-is-an-uncharacteristically-cpu-heavy-unreal-engine-5-game-benchmarking-25-cpus-from-intel-and-amd-and-investigating-low-core-mode",
           "description": "\n                             Gears of War E-Day is a surprisingly heavy Unreal Engine 5 game on the CPU. We benchmarked the game with 25 processors, as well as investigated what the “low core mode” actually does. \n                                                                                     ...",
@@ -3236,6 +3098,18 @@
           "title": "HP boards the MacBook Neo competitor train",
           "link": "https://www.tomshardware.com/laptops/hp-boards-the-macbook-neo-competitor-train-omnibook-5-comes-in-four-colors-with-wildcat-lake-and-starts-at-usd699-99",
           "description": "\n                             The new HP OmniBook 5 (14-inch) uses Wildcat Lake and a variety of colors to compete with the MacBook Neo. \n                                                                                                            ...",
+          "date": "2026-10-01T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Gears of War: E-Day PC graphics performance tested",
+          "link": "https://www.tomshardware.com/video-games/pc-gaming/gears-of-war-e-day-pc-graphics-performance-tested-43-gpus-take-us-back-to-the-start-of-an-iconic-saga",
+          "description": "\n                             Gears of War: E-Day is the first game to implement Unreal Engine's MegaLights technology, allowing for hundreds of dynamic ray-traced light sources in a scene. We put it to the test on 43 graphics cards to see what this next-gen feature demands across three generations ...",
           "date": "2026-10-01T13:00:00+00:00",
           "date_unknown": false,
           "iocs": {
@@ -3410,156 +3284,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "AI Chip Design Week",
-          "link": "https://www.tomshardware.com/tag/ai-chip-design-week",
-          "description": "\n                             AI Chip Design Week \n                                                                                                            ...",
-          "date": "2026-09-30T16:02:34+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "TP-Link opens global preorders for its first Wi-Fi 8 router, but ban keeps it out of US market",
-          "link": "https://www.tomshardware.com/networking/routers/tp-link-opens-global-preorders-for-its-first-wi-fi-8-router-but-ban-keeps-it-out-of-us-market-us-left-off-launch-list-as-fcc-freeze-refuses-to-thaw",
-          "description": "\n                             TP-Link's first Wi-Fi 8 product, the Archer 8 Ultra, is off limits in the U.S. \n                                                                                                            ...",
-          "date": "2026-09-30T15:43:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Save 60% on your first month of Meshy 7 AI — streamline your 3D printing workflow for less",
-          "link": "https://www.tomshardware.com/3d-printing/save-60-percent-on-your-first-month-of-meshy-7-ai-streamline-your-3d-printing-workflow-for-less",
-          "description": "\n                             Use the exclusive TOMESHY60 discount code to slash 60% off your first month of Meshy 7. \n                                                                                                            ...",
-          "date": "2026-09-30T15:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Anthropic claims popular Chinese AI model has Mythos-class hacking abilities",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-popular-chinese-ai-model-has-mythos-class-hacking-abilities-frontier-red-teaming-report-details-weak-safeguards-on-open-weight-ai",
-          "description": "\n                             Anthropic has released a frontier red teaming report, claiming that Zhipu AI's GLM-5.3 has weak safeguarding, and can easily be used to generate harmful content. \n                                                                                                           ...",
-          "date": "2026-09-30T14:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Meta's Muse AI agent accused of ignoring user permissions and accessing forbidden personal user data",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/metas-muse-ai-agent-accused-of-accessing-sensitive-user-data-on-iphone-and-mac-without-permission-agent-shocks-reporter-by-referring-to-confidential-messages-it-wasnt-granted-access-to",
-          "description": "\n                             Meta's Muse AI agent has been accused of ignoring user permissions and accessing forbidden personal user data on an iPhone and Mac, including iMessages. \n                                                                                                            ...",
-          "date": "2026-09-30T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "iBuyPower Slate Gaming Desktop review: Strong gaming value and extras",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/ibuypower-slate-gaming-desktop-review",
-          "description": "\n                             The iBuyPower Slate pairs a Ryzen 7 7700X3D and RTX 5070 in a stylish RGB-equipped chassis, delivering strong gaming performance and surprising extras, though productivity performance trails some similarly priced rivals. \n                                                ...",
-          "date": "2026-09-30T13:50:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Grab this 10-port gigabit PoE+ switch with up to 60W of power for under $38, a new record low",
-          "link": "https://www.tomshardware.com/networking/network-switches/grab-this-10-port-gigabit-poe-switch-with-up-to-60w-of-power-for-under-usd38-a-new-record-low-ugreen-switch-upgrades-your-home-network-with-eight-power-delivery-ports-for-cameras-and-wi-fi-extenders",
-          "description": "\n                             This Ugreen 10-port unmanaged Ethernet switch has hit record-low pricing of $37.79, unlocking eight PoE+ ports for up to 60W of power delivery for cameras and WiFi extenders, along with two extra ports for Gigabit uplink to your existing network. \n                      ...",
-          "date": "2026-09-30T13:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Florida attorney general asks judge to bar OpenAI from developing new AI models without third-party approval",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/florida-attorney-general-asks-judge-to-bar-openai-from-developing-new-ai-models-without-third-party-approval-openai-says-it-already-paused-training-its-most-capable-models-last-week",
-          "description": "\n                             Florida asked a court to bar OpenAI from developing new AI models without third-party approval and to keep minors off ChatGPT. \n                                                                                                            ...",
-          "date": "2026-09-30T13:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Trump tells federal agencies to use the term 'Super Intelligence ' instead of artificial intelligence",
-          "link": "https://www.tomshardware.com/tech-industry/policy/trump-tells-federal-agencies-to-use-the-term-super-intelligence-instead-of-artificial-intelligence-president-insists-that-ai-is-only-suffering-from-a-branding-problem",
-          "description": "\n                             President Donald Trump issued an executive order directing all federal agencies to stop using the term 'artificial intelligence' and instead call it 'Super Intelligence.' The president said that the new term will solve AI's branding issue and that it 'more appropriately...",
-          "date": "2026-09-30T12:51:29+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "The price of AI is crashing faster than the rate of Moore's Law, report suggests",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/the-price-of-ai-is-crashing-faster-than-the-rate-of-moores-law-report-suggests-intelligence-costs-are-in-freefall-outpacing-comparative-technologies-like-compute-dna-sequencing-and-lithium-batteries",
-          "description": "\n                             The price of AI \"intelligence,\" has fallen dramatically in recent years, faster than any other transformational technology in history according to some estimates. This raises serious questions about the need to retain access to frontier capabilities, when they show up e...",
-          "date": "2026-09-30T12:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "The state of agentic AI in chip design tools in 2026",
-          "link": "https://www.tomshardware.com/tech-industry/semiconductors/the-state-of-agentic-ai-in-chip-design-tools-in-2026-cadence-synopsys-and-siemens-all-pitch-autonomous-engineers",
-          "description": "\n                             Cadence, Synopsys, and Siemens all offer agentic AI for chip design, largely built on Nvidia's stack, with varying claims of autonomy. \n                                                                                                            ...",
-          "date": "2026-09-30T12:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "The Ethernet spec was first drafted on this day in 1980",
-          "link": "https://www.tomshardware.com/networking/the-ethernet-spec-was-first-drafted-on-this-day-in-1980-dec-intel-and-xerox-defined-the-standard-several-years-before-the-internet-existed",
-          "description": "\n                             On this day in 1980, version 1.0 of the Ethernet specification was published by Digital Equipment Corporation (DEC), Intel, and Xerox. \n                                                                                                            ...",
-          "date": "2026-09-30T12:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:16:58 GMT",
+      "last_modified": "Fri, 02 Oct 2026 03:16:30 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -3567,32 +3297,6 @@
           "link": "https://www.rapid7.com/blog/post/ai-changing-security-operations-center-roles-soc",
           "description": "As AI takes on more of the enrichment, correlation, and initial assessment inside the SOC, roles, skills, and KPIs still require deliberate redesign. Security leaders need to decide where automation is dependable, where human judgment should remain decisive, and how teams should be measured when ale...",
           "date": "2026-10-01T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Rapid7 Blog",
-          "title": "Critical Cisco Catalyst SD-WAN Manager API authentication bypass exploited in the wild (CVE-2026-76504)",
-          "link": "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504",
-          "description": "OverviewOn September 30, 2026, Cisco published a security advisory for CVE-2026-76504, a critical API authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Manager. The vulnerability has a CVSSv3.1 score of 9.8 and results from improper handling of URL encoding (CWE-177). An unauthenti...",
-          "date": "2026-09-30T15:09:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-76504"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Rapid7 Blog",
-          "title": "Higher education is under siege, and fragmented security is making it harder to respond",
-          "link": "https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security",
-          "description": "Higher education faces a difficult security equation. Universities hold large volumes of sensitive student, financial, health, and research data while supporting open networks, distributed users, legacy infrastructure, and increasingly complex cloud environments. Attackers have taken notice, and the...",
-          "date": "2026-09-30T14:16:37+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3663,12 +3367,12 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:40:55 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:08:08 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Thu, 01 Oct 2026 23:40:56 GMT",
+      "last_modified": "Fri, 02 Oct 2026 04:08:08 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
@@ -3702,8 +3406,8 @@
       "cached_articles": []
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"9e46cb72c6eed24a3810f87ddf6c9835\"",
-      "last_modified": "Wed, 30 Sep 2026 21:37:24 GMT",
+      "etag": "\"f8d2c3a890b5dc6bfd5c37aa8e3e2699\"",
+      "last_modified": "Fri, 02 Oct 2026 02:32:58 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
