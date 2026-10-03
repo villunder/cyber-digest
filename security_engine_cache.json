@@ -23,12 +23,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 05:19:15 GMT",
+      "last_modified": "Sat, 3 Oct 2026 07:40:52 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 05:31:58 GMT",
+      "last_modified": "Sat, 03 Oct 2026 11:03:00 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -108,44 +108,6 @@
           "link": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
           "description": "On Thursday, unknown attackers hijacked the official Microsoft account on X, which has over 13 million followers, in what appeared to be a pump-and-dump scheme promoting a crypto token. [...]...",
           "date": "2026-10-02T05:29:56-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-          "link": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
-          "description": "Fortinet is warning customers of a critical FortiMail vulnerability, tracked as CVE-2026-104286, that is being actively exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices. [...]...",
-          "date": "2026-10-01T18:42:49-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-104286"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Autonomous AI agents tried to hack US, Canadian government websites",
-          "link": "https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/",
-          "description": "Autonomous AI agents using aggressive strategies attempted to hack U.S. and Canadian government websites to find school and divorce statistics. [...]...",
-          "date": "2026-10-01T16:52:50-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Microsoft says threat actors are ahead in the early AI race",
-          "link": "https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/",
-          "description": "Microsoft says cyberattackers are currently benefiting from artificial intelligence faster than defenders, allowing threat actors to speed up vulnerability discovery, malware development, and post-compromise activity while security teams struggle to keep pace. [...]...",
-          "date": "2026-10-01T15:32:47-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -293,8 +255,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1b89-65ce8ecffe143\"",
-      "last_modified": "Sat, 03 Oct 2026 05:28:58 GMT",
+      "etag": "\"1b89-65ced9b184eb4\"",
+      "last_modified": "Sat, 03 Oct 2026 11:03:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -375,8 +337,20 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 05:04:22 GMT",
+      "last_modified": "Sat, 3 Oct 2026 11:03:14 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations",
+          "link": "https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html",
+          "description": "Featuring:\n\nCybersecurity is being reshaped by the expansion of cloud infrastructure, AI, distributed systems, and increasingly complex digital environments. As organizations manage more identities, devices, data, and internet-facing infrastructure, security is shifting toward continuous visibility,...",
+          "date": "2026-10-03T16:30:00+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
@@ -844,18 +818,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Ars Technica - Security",
-          "title": "Hacks of 2 federal agencies in a month have spilled a bonanza of sensitive data",
-          "link": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
-          "description": "\n                        It has been a bad month for federal government cybersecurity.\n                    ...",
-          "date": "2026-10-01T20:28:45+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -921,9 +883,23 @@
       "cached_articles": []
     },
     "https://api.msrc.microsoft.com/update-guide/rss": {
-      "etag": "\"0x8DF20B83DE95A31\"",
-      "last_modified": "Fri, 02 Oct 2026 19:06:19 GMT",
+      "etag": "\"0x8DF211C7D9B09A3\"",
+      "last_modified": "Sat, 03 Oct 2026 07:03:56 GMT",
       "cached_articles": [
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2025-10502 Heap buffer overflow in ANGLE",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-10502",
+          "description": "Information published....",
+          "date": "2026-10-03T02:05:04-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2025-10502"
+            ],
+            "ips": []
+          }
+        },
         {
           "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-96940 Microsoft Exchange Server Elevation of Privilege Vulnerability",
@@ -942,7 +918,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 05:34:30 GMT",
+      "last_modified": "Sat, 03 Oct 2026 11:07:41 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1022,18 +998,6 @@
           "link": "https://www.darkreading.com/threat-intelligence/malicious-linux-implants-mimic-asian-mail-security",
           "description": "A trio of newly discovered backdoors walk and quack like legitimate edge solutions, so it's hard to tell they're not....",
           "date": "2026-10-02T13:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Alleged KillSec Ransomware Mastermind a 16-Year-Old",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/killsec-ransomware-mastermind-16-year-old",
-          "description": "Law enforcement from multiple countries collaborated to disrupt a cybercrime operation that has claimed some 500 victims worldwide in the past two years....",
-          "date": "2026-10-01T21:37:50+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1129,9 +1093,33 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"f823076e6d5e69571c66a867e7f202ba\"",
-      "last_modified": "Fri, 02 Oct 2026 21:36:34 GMT",
+      "etag": "\"bed9f3695f8adde39568ce655b74079c\"",
+      "last_modified": "Sat, 03 Oct 2026 04:28:59 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Own The OSD Chip In Your Cheap Composite Monitor",
+          "link": "https://hackaday.com/2026/10/03/own-the-osd-chip-in-your-cheap-composite-monitor/",
+          "description": "[Ogrinz Labs] has built a Robbie the Robot suit, which is super-cool, but has a huge flaw. When inside the suit, he’s too tall to do what the original Robbie …read more...",
+          "date": "2026-10-03T11:00:21+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "That’s No Moon… That’s an Exoplanet!",
+          "link": "https://hackaday.com/2026/10/03/thats-no-moon-thats-an-exoplanet/",
+          "description": "It wasn’t that long ago that a science teacher would have told students that there was no evidence of planets around other star systems. Even more recently, they might have …read more...",
+          "date": "2026-10-03T08:00:24+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Is This The Smallest Internet Radio?",
@@ -1191,37 +1179,49 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Using Vibration to Make Stuff Stick Contact-Free to Ceilings",
-          "link": "https://hackaday.com/2026/10/02/using-vibration-to-make-stuff-stick-contact-free-to-ceilings/",
-          "description": "Generally making stuff stick to something like a ceiling requires resorting to suction cups, glue or something much more permanent, but [Steve Mould] starts his video featuring a playing card …read more...",
-          "date": "2026-10-02T15:30:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "This Week in Security: ShinyHunters Won’t Dox the FBI, Pentagon Data Stolen, and OBS Vulnerable",
-          "link": "https://hackaday.com/2026/10/02/this-week-in-security-shinyhunters-wont-dox-the-fbi-pentagon-data-stolen-and-obs-vulnerable/",
-          "description": "404 Media reports that the ShinyHunters group who stole multiple terabytes of FBI employee data say they do not plan to release the data. Known for ransomware and extortion of …read more...",
-          "date": "2026-10-02T14:00:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 05:31:10 GMT",
+      "last_modified": "Sat, 03 Oct 2026 11:06:14 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Linux 7.4 To Support The Raspberry Pi 10-Inch Touch Display 2",
+          "link": "https://www.phoronix.com/news/Linux-74-RPi-10-Touch-Display-2",
+          "description": "We are nearing the cut-off of new feature material being accepted to DRM-Next ahead of the Linux 7.4 merge window. But this week another round of DRM-Misc changes made it, which included some new hardware support and other last minute items......",
+          "date": "2026-10-03T06:33:10-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Linux 7.3 To Better Support The High-End Turtle Beach VelocityOne Race",
+          "link": "https://www.phoronix.com/news/Linux-7.3-TB-VelocityOne-Race",
+          "description": "Coming with Sunday's Linux 7.3-rc6 kernel release is support added for the Turtle Beach VelocityOne Race, a high-end $649~700 USD racing wheel and pedal system......",
+          "date": "2026-10-03T06:18:05-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "KDE Plasma 6.8 Now Makes Tiled Windows Fit Together More Nicely",
+          "link": "https://www.phoronix.com/news/KDE-Plasma-6.8-Tiled-Windows",
+          "description": "There is just over one week to go until the much anticipated KDE Plasma 6.8 desktop release. Some last minute fixes continue flowing into Plasma 6.8 as well as early feature work continuing for Plasma 6.9......",
+          "date": "2026-10-03T06:07:10-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Wine 11.19 Released With Wayland Color Management For Vulkan, DNS Query Caching",
@@ -1389,49 +1389,73 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Fedora 45 Beta Performance: The Satisfyingly Boring Benchmarks",
-          "link": "https://www.phoronix.com/review/fedora-45-beta-benchmarks",
-          "description": "While there have been a number of Ubuntu 26.10 development benchmarks in recent weeks and more on the way, some Phoronix readers have asked about the lack of any early Fedora 45 tests given its recent beta. For good reason, it's largely boring but here are some to illustrate....",
-          "date": "2026-10-01T16:57:58-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Mesa Drops Its Poorly Maintained & Rarely Used Direct3D 10 User-Mode Driver",
-          "link": "https://www.phoronix.com/news/Mesa-Drops-Direct3D-10-UMD",
-          "description": "Back in 2021 the Direct3D 10 User-Mode Driver \"d3d10umd\" was introduced as a new Gallium3D state tracker to work as a Windows WDDM UMD driver similar to Windows WARP while leveraging LLVMpipe for better performance. Now five years later the poorly maintained code is removed from the Mesa codebase......",
-          "date": "2026-10-01T16:00:08-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Ubuntu 26.10 Beta Released With Linux 7.3 Kernel, GNOME 51 Desktop",
-          "link": "https://www.phoronix.com/news/Ubuntu-26.10-Beta-Released",
-          "description": "Ubuntu 26.10 beta is now available for the official Ubuntu editions as well as the various community flavors......",
-          "date": "2026-10-01T15:26:05-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "\"d65022ddb9869e66c4d9856b325ff756\"",
-      "last_modified": "Fri, 02 Oct 2026 21:55:41 GMT",
+      "etag": "W/\"273d10464b3d45f1dd3b8a845622f387\"",
+      "last_modified": "Sat, 03 Oct 2026 11:00:34 GMT",
       "cached_articles": [
+        {
+          "source": "Android Authority",
+          "title": "These 9 Thunderbird features made me ditch Gmail for good",
+          "link": "https://www.androidauthority.com/ditched-gmail-for-thunderbird-why-3716057/",
+          "description": "The underdog with cooler and better features...",
+          "date": "2026-10-03T11:00:34+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I used Pixel’s new battery summaries for a week — and Google has work to do",
+          "link": "https://www.androidauthority.com/pixel-battery-summaries-hands-on-3718048/",
+          "description": "Battery summaries have a long way to go....",
+          "date": "2026-10-03T10:30:43+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "What’s the best Snapdragon 8 Gen 5 series chip? I tested them all to find out",
+          "link": "https://www.androidauthority.com/all-snapdragon-8-gen-5-chips-tested-3704993/",
+          "description": "CPU testing goes about as expected, but GPU benchmarking is another story altogether....",
+          "date": "2026-10-03T10:00:05+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I hate when Android brands copy Apple — but the iPhone Duo is the exception",
+          "link": "https://www.androidauthority.com/hate-when-android-copies-apple-iphone-duo-exception-3716696/",
+          "description": "The iPhone Duo could make Android foldables much better....",
+          "date": "2026-10-03T09:30:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "My Samsung phone was full of screenshots. This quick trick fixed it",
+          "link": "https://www.androidauthority.com/samsung-phone-full-screenshots-fixed-how-3715634/",
+          "description": "It should be possible to do this natively....",
+          "date": "2026-10-03T09:00:03+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "Lenovo Smart Clocks are finally getting their weather back",
@@ -1851,210 +1875,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Want to be the first to try a new Nothing device? Now’s your chance",
-          "link": "https://www.androidauthority.com/nothing-community-review-program-3718169/",
-          "description": "Nothing's looking for real users to try out its upcoming products....",
-          "date": "2026-10-01T20:51:14+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "T-Mobile’s next plans could give customers more ways to mix things up",
-          "link": "https://www.androidauthority.com/t-mobile-t-mix-plans-leak-3718145/",
-          "description": "Three new tiers could arrive alongside a fresh approach to perks....",
-          "date": "2026-10-01T19:45:51+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Got Google Play Points? Play Fest will let you turn them into swag, premium gear, and big prizes",
-          "link": "https://www.androidauthority.com/google-play-fest-3718139/",
-          "description": "Google Play is throwing a celebration that could net you some cool prizes....",
-          "date": "2026-10-01T19:07:11+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "AT&T, T-Mobile, and Verizon are officially teaming up to kill dead zones",
-          "link": "https://www.androidauthority.com/att-t-mobile-verizon-dead-zone-joint-venture-3718134/",
-          "description": "The big three are pooling resources to improve satellite coverage....",
-          "date": "2026-10-01T18:49:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Gemini Live’s camera just became much more useful for accessibility",
-          "link": "https://www.androidauthority.com/gemini-live-guided-vision-launch-3718122/",
-          "description": "Gemini can now describe your surroundings and guide your camera with spoken cues....",
-          "date": "2026-10-01T18:28:51+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google’s new Android sideloading rules are coming — and here are all the ways to bypass them",
-          "link": "https://www.androidauthority.com/how-to-bypass-android-developer-verification-sideloading-rules-3718002/",
-          "description": "From Advanced Flow to ADB and Shizuku, power users can continue installing unverified APKs on Android....",
-          "date": "2026-10-01T16:42:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "All-time low deal: Logitech G515 Lightspeed TKL plunges 50% to $79.99",
-          "link": "https://www.androidauthority.com/logitech-g515-lightspeed-tkl-keyboard-3718104/",
-          "description": "Logitech’s G515 Lightspeed TKL drops to a record-low $79.99 at Amazon, packing tri-mode wireless and tactile switches....",
-          "date": "2026-10-01T16:14:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Amazon unveils this year’s colorful Kindle upgrades",
-          "link": "https://www.androidauthority.com/2026-kindle-3718066/",
-          "description": "Amazon plays e-reader catch-up with its new Kindle series and the Kindle Click remote....",
-          "date": "2026-10-01T16:13:32+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Kindle Colorsoft Kids deal knocks the 16GB color e-reader down to $209.99",
-          "link": "https://www.androidauthority.com/kindle-colorsoft-kids-deal-3718098/",
-          "description": "Save $90 on the Kindle Colorsoft Kids and get a color E Ink display, 16GB storage, and up to 12 weeks of battery life....",
-          "date": "2026-10-01T16:05:12+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The Toshiba 65-inch ArtVision QLED TV just hit its lowest price since launch",
-          "link": "https://www.androidauthority.com/toshiba-65-inch-artvision-qled-tv-deal-3718087/",
-          "description": "The Toshiba 65-inch ArtVision Fire TV drops to $1,098, its best price yet with QLED, 165Hz, and art-frame styling....",
-          "date": "2026-10-01T15:42:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google Messages is having trouble sending media files over RCS (Update: Fix)",
-          "link": "https://www.androidauthority.com/google-messages-rcs-media-issue-3718038/",
-          "description": "Google Messages is refusing to send media to other Android phones....",
-          "date": "2026-10-01T15:40:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Belkin’s slim 10K magnetic battery pack gets a solid early Prime Day price drop",
-          "link": "https://www.androidauthority.com/belkin-qi2-15w-slim-magnetic-power-bank-deal-3717087/",
-          "description": "Belkin's 10,000mAh Qi2 magnetic power bank drops to $59.99 on Amazon, its best price we've seen this year....",
-          "date": "2026-10-01T14:27:05+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Corsair’s Harpoon v2 Wireless gaming mouse is down to $49.99 with tri-mode connectivity",
-          "link": "https://www.androidauthority.com/corsair-harpoon-v2-wireless-gaming-mouse-deal-3717130/",
-          "description": "This Prime Day offer cuts 29% off the Corsair Harpoon v2 Wireless, a lightweight gaming mouse with 3 ways to connect....",
-          "date": "2026-10-01T14:03:39+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "6 of the best new Android apps you need to try this October",
-          "link": "https://www.androidauthority.com/best-new-android-apps-games-october-2026-3717818/",
-          "description": "This month's edition includes a useful AI gallery search tool, an new internet radio streamer, and a bonus app!...",
-          "date": "2026-10-01T14:00:44+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Amazon slashes Belkin’s 16-in-1 triple display USB-C dock to its best price this year",
-          "link": "https://www.androidauthority.com/belkin-16-in-1-triple-display-usb-c-dock-deal-3717074/",
-          "description": "Save 20% on Belkin’s 16-in-1 Triple Display USB-C Dock, a 16-port setup with triple 4K support and 2.5Gb Ethernet....",
-          "date": "2026-10-01T13:44:13+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The Galaxy S26 price increase we were dreading is here",
-          "link": "https://www.androidauthority.com/samsung-galaxy-s26-series-price-increase-3717926/",
-          "description": "All models of the Galaxy S26 series are now pricier by $100, while the 1TB Galaxy S26 Ultra sees an even larger increase....",
-          "date": "2026-10-01T13:00:32+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Android’s controversial new developer verification rules are officially here",
-          "link": "https://www.androidauthority.com/android-sideloading-developer-verification-first-wave-rollout-3717921/",
-          "description": "Google’s developer verification rules have reached their first Android users....",
-          "date": "2026-10-01T12:21:24+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2067,6 +1887,42 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Android Police - News",
+          "title": "Android ad blockers are frustrating to use, but this free open source one is perfect",
+          "link": "https://www.androidpolice.com/dnsnet-ad-blocker-android/",
+          "description": "\n                                            Block 'em and watch 'em scram\n                                        ...",
+          "date": "2026-10-03T11:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I've restarted my Pixel 10 Pro three times this month; Google still won't fix it",
+          "link": "https://www.androidpolice.com/ive-restarted-my-pixel-10-pro-three-times-this-month-alone-google-still-wont-fix-it/",
+          "description": "\n                                            A year later, things aren't getting better\n                                        ...",
+          "date": "2026-10-03T10:30:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "After one year with the Googlebook's free trial bundle, year-two costs are brutal",
+          "link": "https://www.androidpolice.com/googlebook-free-subscriptions-are-expensive/",
+          "description": "\n                                            Watch out for the year-two jump scare\n                                        ...",
+          "date": "2026-10-03T10:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Police - News",
           "title": "You can finally get a theater-sized 75-inch 4K TV for less than a gaming console",
@@ -2150,42 +2006,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Remix is the silliest new Google Photos feature, but I can't stop using it",
-          "link": "https://www.androidpolice.com/google-photos-remix-15-new-templates/",
-          "description": "\n                                            The new Remix templates are silly, but genuinely fun to try\n                                        ...",
-          "date": "2026-10-02T17:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "The Pixel 10a just got a $100 price hike without getting any better",
-          "link": "https://www.androidpolice.com/pixel-10a-price-hike-without-getting-any-better/",
-          "description": "\n                                            All thanks to the DRAM and NAND crisis\n                                        ...",
-          "date": "2026-10-02T15:31:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I tried Gemini's free new movie maker; Hollywood has absolutely nothing to worry about",
-          "link": "https://www.androidpolice.com/i-tried-geminis-free-new-movie-maker-and-hollywood-has-nothing-to-fear/",
-          "description": "\n                                            Google Vids is hilarious, but it's not a serious auteur by any means\n                                        ...",
-          "date": "2026-10-02T15:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2193,6 +2013,42 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Amazon promises to spend $1 billion on communities close to its data centers, but critics push back",
+          "link": "https://www.tomshardware.com/tech-industry/data-centers/amazon-promises-to-spend-usd1-billion-on-communities-close-to-its-data-centers-but-critics-push-back-planned-spend-accounts-for-just-0-1-percent-of-its-2026-ai-infrastructure-investments",
+          "description": "\n                             AWS CEO Matt Garman said in a company blog post that it will allocate $1 billion over five years to key issues that data center communities raised, including education, workforce pathways, energy affordability, and more. This amounts to grants of $200 million annually, ...",
+          "date": "2026-10-03T10:50:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "AMD’s secret Zen 3 gaming CPU had 128MB of game-boosting L3 cache but never saw the light of day",
+          "link": "https://www.tomshardware.com/pc-components/cpus/amds-secret-zen-3-gaming-cpu-had-128mb-of-l3-cache-but-never-saw-the-light-of-day-canceled-ryzen-9-5900x3d-breaks-free-from-the-chipmakers-vault",
+          "description": "\n                             A user from the Chinese Chiphell forums shows off AMD's unreleased Ryzen 9 5900X3D, the X3D variant of the Ryzen 9 5900X. \n                                                                                                            ...",
+          "date": "2026-10-03T10:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data",
+          "description": "\n                             The model created its own World of Warcraft pathfinder on a private server with one prompt in OpenAI's Codex. \n                                                                                                            ...",
+          "date": "2026-10-03T10:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Toshiba to double HDD production capacity amid devastating shortages",
@@ -2389,7 +2245,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 03:17:21 GMT",
+      "last_modified": "Sat, 03 Oct 2026 10:46:44 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -2479,17 +2335,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 05:34:30 GMT",
+      "last_modified": "Sat, 03 Oct 2026 11:07:42 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 05:34:31 GMT",
+      "last_modified": "Sat, 03 Oct 2026 11:07:42 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65cc6052e2f07\"",
-      "last_modified": "Thu, 01 Oct 2026 11:50:20 GMT",
+      "etag": "\"3ee15-65cb20b69376c\"",
+      "last_modified": "Wed, 30 Sep 2026 12:00:25 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
