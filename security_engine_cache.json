@@ -23,13 +23,25 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 16:32:40 GMT",
+      "last_modified": "Sat, 3 Oct 2026 20:55:00 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:45:28 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:49:44 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "ShinyHunters hacker reportedly detained in Jordan, aiding FBI",
+          "link": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacker-reportedly-detained-in-jordan-aiding-fbi/",
+          "description": "A suspected ShinyHunters hacking group member known online as \"Rey\" has reportedly been detained in Jordan and is cooperating with the FBI to help locate other members of the extortion group. [...]...",
+          "date": "2026-10-03T15:09:38-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Danish university DTU breach exposes data of up to 200,000 people",
@@ -108,18 +120,6 @@
           "link": "https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/",
           "description": "Dell has patched two maximum severity vulnerabilities in the Container Storage Modules (CSM) that connect Dell enterprise storage arrays to Kubernetes environments. [...]...",
           "date": "2026-10-02T08:37:40-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Microsoft’s X account hacked in crypto pump-and-dump scheme",
-          "link": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
-          "description": "On Thursday, unknown attackers hijacked the official Microsoft account on X, which has over 13 million followers, in what appeared to be a pump-and-dump scheme promoting a crypto token. [...]...",
-          "date": "2026-10-02T05:29:56-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -267,8 +267,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1bed-65cf4082b1654\"",
-      "last_modified": "Sat, 03 Oct 2026 18:43:59 GMT",
+      "etag": "\"1bed-65cf6afa8ace3\"",
+      "last_modified": "Sat, 03 Oct 2026 21:53:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -349,7 +349,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 18:27:01 GMT",
+      "last_modified": "Sat, 3 Oct 2026 21:49:22 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -443,18 +443,6 @@
           "link": "https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html",
           "description": "The quarterly board meeting is two weeks out. The security team is pulling exports from the identity provider, the cloud posture tool, the vulnerability scanner, the SIEM and the EDR console. Someone is building a spreadsheet to reconcile them. Someone else is turning that spreadsheet into slides.\n\n...",
           "date": "2026-10-02T17:00:00+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Android 17 Advanced Protection Locks Accessibility Services to Verified Accessibility Tools",
-          "link": "https://thehackernews.com/2026/10/android-17-advanced-protection-locks.html",
-          "description": "Google has announced a new security measure that limits access to Android's accessibility services to verified applications classified as Accessibility Tools when Advanced Protection is enabled.\n\nWith malicious Android applications abusing the API serving as the main conduit for malware and financia...",
-          "date": "2026-10-02T13:31:30+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -814,8 +802,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"954c037a2724fe0be6bc75c1867c0867\"",
-      "last_modified": "Sat, 03 Oct 2026 17:50:24 GMT",
+      "etag": "\"303ed8b273bfb3df825b8e7ab332daaa\"",
+      "last_modified": "Sat, 03 Oct 2026 19:45:17 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -928,7 +916,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:58:58 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1103,9 +1091,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"e5bfe0bb2ed9feae1e57129a6b326086\"",
-      "last_modified": "Sat, 03 Oct 2026 04:35:37 GMT",
+      "etag": "\"299c5b3a1f79254aa92a41db1272b30c\"",
+      "last_modified": "Sat, 03 Oct 2026 15:26:41 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "2026 Retrocomputer Challenge: Vectron65 Plus Puts the Emphasis on Plus",
+          "link": "https://hackaday.com/2026/10/03/2026-retrocomputer-challenge-vectron65-plus-puts-the-emphasis-on-plus/",
+          "description": "[Nick Bild] evidently has a soft spot for the 6502, given that his Vectron65 Plus home computer project uses at least one of them, depending on the add-ons. You see, …read more...",
+          "date": "2026-10-03T20:00:27+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "The ESP32, An SDR In Itself",
@@ -1177,25 +1177,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Electronic Busy Board is Fun for Kids and Hackers",
-          "link": "https://hackaday.com/2026/10/02/electronic-busy-board-is-fun-for-kids-and-hackers/",
-          "description": "While you may not be familiar with the term “busy board”, you’ve almost certainly seen one. It’s the sort of toy with a bunch of buttons, switches, and of course …read more...",
-          "date": "2026-10-02T23:00:40+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:41:37 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:56:38 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "The Amazing Work By Valve's Timur Kristóf On Improving Old AMD GPUs On Linux",
+          "link": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
+          "description": "Over the past year Timur Kristóf of Valve's Linux graphics driver team has made multiple very nice improvements to the AMDGPU kernel driver for enhancing support for old (GCN 1.0/1.1 era from a decade ago) graphics cards so that they can better handle Linux gaming and other tasks. This week in Toron...",
+          "date": "2026-10-03T14:56:28-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Linux Patches Show Promising Results For Lower Latency Of Short Slice Tasks",
@@ -1394,18 +1394,6 @@
           "link": "https://www.phoronix.com/news/Coreboot-26.09-Released",
           "description": "Coreboot 26.09 released yesterday as the latest quarterly feature release to this open-source software for replacing proprietary BIOS and system firmware on a growing selection of devices......",
           "date": "2026-10-02T06:06:11-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "KDE Nearing Decision Point On BuildStream-Based KDE Linux",
-          "link": "https://www.phoronix.com/news/BuildStream-Based-KDE-Linux",
-          "description": "KDE Linux developers have been experimenting with a build of their Linux distribution based on BuildStream to ship as an OS image rather than a set of Arch Linux packages. They are nearing a point soon where they will decide if they will officially ship this BuildStream-based KDE Linux image......",
-          "date": "2026-10-02T05:54:20-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1911,6 +1899,30 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I switched to Vivaldi and realized how much Chrome made me work for basic features",
+          "link": "https://www.androidpolice.com/switched-to-vivaldi-realized-chrome-made-me-work-for-basic-features/",
+          "description": "\n                                            These missing features made me question everything\n                                        ...",
+          "date": "2026-10-03T21:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "6 One UI 9 features you should immediately try out",
+          "link": "https://www.androidpolice.com/one-ui-9-features-you-should-try/",
+          "description": "\n                                            The One UI 9 features worth trying first\n                                        ...",
+          "date": "2026-10-03T19:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "I've waited years for the Kindle Click just to escape Amazon's relentless touchscreen-only e-reader design",
           "link": "https://www.androidpolice.com/waited-years-kindle-click-escape-amazons-touchscreen-only-e-reader-design/",
           "description": "\n                                            Amazon is finally fixing its touchscreen-only Kindle design with the new Kindle Click and Page-Turn Cover\n                                        ...",
@@ -1999,30 +2011,6 @@
           "link": "https://www.androidpolice.com/apps-transform-windows-pc-googlebook/",
           "description": "\n                                            Hold off on the Googlebook for now\n                                        ...",
           "date": "2026-10-03T12:45:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I spent 15 years in Chrome before finding a search method that actually saves time",
-          "link": "https://www.androidpolice.com/i-spent-15-years-in-chrome-before-finding-search-method-that-saves-time/",
-          "description": "\n                                            I no longer search the web the old way in Chrome\n                                        ...",
-          "date": "2026-10-03T12:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Android ad blockers are frustrating to use, but this free open source one is perfect",
-          "link": "https://www.androidpolice.com/dnsnet-ad-blocker-android/",
-          "description": "\n                                            Block 'em and watch 'em scram\n                                        ...",
-          "date": "2026-10-03T11:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2411,7 +2399,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:49:12 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -2501,12 +2489,12 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:58:58 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
+      "last_modified": "Sat, 03 Oct 2026 21:58:59 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
@@ -2581,9 +2569,21 @@
       ]
     },
     "https://www.hackread.com/feed/": {
-      "etag": "W/\"40eb349f27a7521066e4c6e44954ec5a\"",
-      "last_modified": "Sat, 03 Oct 2026 12:00:07 GMT",
+      "etag": "W/\"4f0d7b78801979908c292dcc60e5bb64\"",
+      "last_modified": "Sat, 03 Oct 2026 21:31:37 GMT",
       "cached_articles": [
+        {
+          "source": "HackRead",
+          "title": "ShinyHunters Suspect “Rey” Detained in Jordan, Reportedly Helping FBI",
+          "link": "https://hackread.com/shinyhunters-hacker-rey-detained-jordan-fbi/",
+          "description": "ShinyHunters hacker “Rey” was detained in Jordan and is reportedly cooperating with the FBI after the group claimed major FBI and corporate data breaches....",
+          "date": "2026-10-03T20:34:16+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "HackRead",
           "title": "Dutch Institute for Vulnerability Disclosure Breached via Zammad 0-Days",
