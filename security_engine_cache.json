@@ -23,12 +23,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 14:09:10 GMT",
+      "last_modified": "Sat, 3 Oct 2026 16:32:40 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 15:05:20 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:45:28 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -267,8 +267,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1bed-65cf107457849\"",
-      "last_modified": "Sat, 03 Oct 2026 15:08:59 GMT",
+      "etag": "\"1bed-65cf4082b1654\"",
+      "last_modified": "Sat, 03 Oct 2026 18:43:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -349,8 +349,32 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 14:12:50 GMT",
+      "last_modified": "Sat, 3 Oct 2026 18:27:01 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "MI5 Says China’s MSS Funded Research Involving 100+ U.K.-Linked Academics",
+          "link": "https://thehackernews.com/2026/10/mi5-says-chinas-mss-funded-research.html",
+          "description": "The U.K.'s domestic intelligence and security agency has warned that more than 100 academics have helped China boost its intelligence gathering efforts on behalf of Beijing's state security service.\n\nIn a \"Security Service Espionage Alert\" issued on September 30, 2026, MI5 said the \"primary purpose ...",
+          "date": "2026-10-03T20:08:46+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
+          "link": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
+          "description": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portuguese- and Spanish-speaking countries.\n\nThe activity, observed by the Symantec and Carbon Black Threat H...",
+          "date": "2026-10-03T20:06:33+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations",
@@ -434,20 +458,6 @@
           "date_unknown": false,
           "iocs": {
             "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
-          "link": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
-          "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on Thursday, added a critical security flaw impacting Fortinet FortiMail to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation.\n\nThe vulnerability, tracked as CVE-2026-104286 (CVSS score: 9.8),...",
-          "date": "2026-10-02T11:19:50+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-104286"
-            ],
             "ips": []
           }
         }
@@ -562,8 +572,8 @@
       ]
     },
     "https://www.securityweek.com/feed/": {
-      "etag": "W/\"332ed62853c00814d0ef1c4674ba8eab\"",
-      "last_modified": "Sat, 03 Oct 2026 11:46:48 GMT",
+      "etag": "W/\"78a4c835ef55c5642677c0468bd819c1\"",
+      "last_modified": "Sat, 03 Oct 2026 17:10:58 GMT",
       "cached_articles": [
         {
           "source": "SecurityWeek",
@@ -804,8 +814,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"60eb13f276ad9026e6270d0b09123873\"",
-      "last_modified": "Sat, 03 Oct 2026 11:15:33 GMT",
+      "etag": "\"954c037a2724fe0be6bc75c1867c0867\"",
+      "last_modified": "Sat, 03 Oct 2026 17:50:24 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -918,7 +928,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 15:11:06 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1032,6 +1042,18 @@
       "cached_articles": [
         {
           "source": "The Register - Security",
+          "title": "Anthropic's super bug-hunting model Mythos is hardcore good at math, as latest vuln under attack shows",
+          "link": "https://www.theregister.com/security/2026/10/03/anthropics-super-bug-hunting-model-mythos-is-hardcore-good-at-math-as-latest-vuln-under-attack-shows/5300933",
+          "description": " Exploitation attempts came from China-hosted IP, VulnCheck researcher says ...",
+          "date": "2026-10-03T17:27:00+02:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Register - Security",
           "title": "OpenAI alerts 100+ orgs that its 'misaligned models' attempted to break in - or worse",
           "link": "https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891",
           "description": " Mostly 'routine research tasks,' and 'some involved government websites, which our models often use,' AI giant tells The Reg ...",
@@ -1081,9 +1103,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"cf4c79469ecb52baab0eab6ae0b6a74c\"",
-      "last_modified": "Sat, 03 Oct 2026 04:33:20 GMT",
+      "etag": "\"e5bfe0bb2ed9feae1e57129a6b326086\"",
+      "last_modified": "Sat, 03 Oct 2026 04:35:37 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "The ESP32, An SDR In Itself",
+          "link": "https://hackaday.com/2026/10/03/the-esp32-an-sdr-in-itself/",
+          "description": "Perhaps the most famous of all the software-defined radio (SDR) receivers is the RTL-SDR, a digital TV receiver on which an undocumented feature was found. Perhaps other radio-enabled chips also …read more...",
+          "date": "2026-10-03T17:00:31+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Fixing a Power Grid That Loses Over Half Its Power to Inefficiency and Theft",
@@ -1155,25 +1189,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "2026 Retrocomputing Challenge: A Homebrew Computer In Only Three ICs",
-          "link": "https://hackaday.com/2026/10/02/2026-retrocomputing-challenge-a-homebrew-computer-in-only-three-ics2026-retrocomputing-challenge-a-homebrew-computer-in-only-3-ics/",
-          "description": "Homebrew computers don’t have to be retrocomputers, but [Just4Fun]’s all-through-hole, 68008-based “68k-MBC” certainly qualifies, so it is a worthy entry in our ongoing contest. While there are both “full” and …read more...",
-          "date": "2026-10-02T20:00:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 15:06:18 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:41:37 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Linux Patches Show Promising Results For Lower Latency Of Short Slice Tasks",
+          "link": "https://www.phoronix.com/news/Linux-Latency-Short-Slice-Tasks",
+          "description": "Linaro engineer Vincent Guittot sent out a set of patches on Friday working on scheduling latency improvements, especially when multiple short slice tasks are running concurrently on the same system......",
+          "date": "2026-10-03T13:25:38-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "Moose: GNOME Gains Another Local AI App Option",
@@ -1877,6 +1911,42 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I've waited years for the Kindle Click just to escape Amazon's relentless touchscreen-only e-reader design",
+          "link": "https://www.androidpolice.com/waited-years-kindle-click-escape-amazons-touchscreen-only-e-reader-design/",
+          "description": "\n                                            Amazon is finally fixing its touchscreen-only Kindle design with the new Kindle Click and Page-Turn Cover\n                                        ...",
+          "date": "2026-10-03T17:45:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Max resolution is killing my Pixel's battery life, but I refuse to turn it off",
+          "link": "https://www.androidpolice.com/max-resolution-killing-my-pixel-phone-battery-life-but-i-refuse-turn-it-off/",
+          "description": "\n                                            Losing a few battery percentages is worth gaining the extra clarity\n                                        ...",
+          "date": "2026-10-03T17:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Google Pixel 11 Pro Fold's hidden feature is fueling my Pokémon Go addiction",
+          "link": "https://www.androidpolice.com/googles-private-space-play-pokmon-go-on-both-sides-of-pixel-fold/",
+          "description": "\n                                            This is how I caught 14 shiny Gibles in one hour\n                                        ...",
+          "date": "2026-10-03T16:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "I tested the CMF Clip Pro earbuds. They're good, but have a problem I can't ignore",
           "link": "https://www.androidpolice.com/cmf-clip-pro-review/",
           "description": "\n                                            Hear the world around you. All. The. Time.\n                                        ...",
@@ -1958,42 +2028,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I've restarted my Pixel 10 Pro three times this month; Google still won't fix it",
-          "link": "https://www.androidpolice.com/ive-restarted-my-pixel-10-pro-three-times-this-month-alone-google-still-wont-fix-it/",
-          "description": "\n                                            A year later, things aren't getting better\n                                        ...",
-          "date": "2026-10-03T10:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "After one year with the Googlebook's free trial bundle, year-two costs are brutal",
-          "link": "https://www.androidpolice.com/googlebook-free-subscriptions-are-expensive/",
-          "description": "\n                                            Watch out for the year-two jump scare\n                                        ...",
-          "date": "2026-10-03T10:00:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "You can finally get a theater-sized 75-inch 4K TV for less than a gaming console",
-          "link": "https://www.androidpolice.com/tcls-480-75-inch-4k-google-tv-is-hard-to-pass-up/",
-          "description": "\n                                            The living upgrade you've been waiting for\n                                        ...",
-          "date": "2026-10-02T22:46:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2001,6 +2035,18 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "7-year-old Nvidia Shield TV Pro gets shocking 50% price hike driven by AI memory shortage",
+          "link": "https://www.tomshardware.com/service-providers/streaming/7-year-old-nvidia-shield-tv-pro-gets-shocking-50-percent-price-hike-driven-by-ai-memory-shortage-chipmaker-axes-entry-level-shield-tv-as-component-prices-soar",
+          "description": "\n                             The Shield TV Pro remains one of Nvidia’s longest-running consumer devices, but its $299.99 price tag now makes the streaming box considerably more expensive than when it launched. \n                                                                                        ...",
+          "date": "2026-10-03T16:59:51+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Elon Musk confirms discussions with TSMC about Terafab chipmaking collaboration",
@@ -2365,7 +2411,7 @@
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 14:50:29 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -2455,17 +2501,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 15:11:07 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 15:11:07 GMT",
+      "last_modified": "Sat, 03 Oct 2026 18:46:32 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65cd586f09a41\"",
-      "last_modified": "Fri, 02 Oct 2026 06:20:21 GMT",
+      "etag": "\"3ee15-65cebbcfea94d\"",
+      "last_modified": "Sat, 03 Oct 2026 08:50:18 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
