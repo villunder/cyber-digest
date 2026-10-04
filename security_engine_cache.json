@@ -28,8 +28,20 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:49:44 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:22:38 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Google Gemini could soon get full access to your Mac’s files, apps and the web",
+          "link": "https://www.bleepingcomputer.com/news/google/google-gemini-could-soon-get-full-access-to-your-macs-files-apps-and-the-web/",
+          "description": "Google's Gemini could soon access any file on your macOS device, open apps, browse the web, and perform actions without asking for permission every time. [...]...",
+          "date": "2026-10-03T19:12:34-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "ShinyHunters hacker reportedly detained in Jordan, aiding FBI",
@@ -267,8 +279,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1bed-65cf6afa8ace3\"",
-      "last_modified": "Sat, 03 Oct 2026 21:53:59 GMT",
+      "etag": "\"1bed-65cf8c81e8b3a\"",
+      "last_modified": "Sun, 04 Oct 2026 00:23:59 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -349,7 +361,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sat, 3 Oct 2026 21:49:22 GMT",
+      "last_modified": "Sun, 4 Oct 2026 00:05:41 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -422,30 +434,6 @@
             "cves": [
               "CVE-2026-63688"
             ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "OpenAI Parts Ways With Three Safety Researchers Over Sensitive Information Mishandling",
-          "link": "https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.html",
-          "description": "OpenAI has parted ways with three members of its safety team after they leaked private information in violation of company policies, The Wall Street Journal reported.\n\n\"We have parted ways with three individuals for violating our policies on accessing and handling sensitive company information,\" a s...",
-          "date": "2026-10-02T17:53:15+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Why CISOs Struggle to Answer the Board's Three Hardest Questions, and How to Fix the Report",
-          "link": "https://thehackernews.com/2026/10/why-cisos-struggle-to-answer-boards.html",
-          "description": "The quarterly board meeting is two weeks out. The security team is pulling exports from the identity provider, the cloud posture tool, the vulnerability scanner, the SIEM and the EDR console. Someone is building a spreadsheet to reconcile them. Someone else is turning that spreadsheet into slides.\n\n...",
-          "date": "2026-10-02T17:00:00+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
             "ips": []
           }
         }
@@ -916,7 +904,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:58:58 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:28:51 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -1075,25 +1063,25 @@
             "cves": [],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://hackaday.com/feed/": {
+      "etag": "\"d50571e9af72d1d0d589bbe1f918012d\"",
+      "last_modified": "Sat, 03 Oct 2026 04:39:20 GMT",
+      "cached_articles": [
         {
-          "source": "The Register - Security",
-          "title": "Fortinet sounds the alarm over actively exploited FortiMail zero-day",
-          "link": "https://www.theregister.com/security/2026/10/02/fortinet-sounds-the-alarm-over-actively-exploited-fortimail-zero-day/5300803",
-          "description": " No login required, exploitation underway, and some admins are still waiting for patches ...",
-          "date": "2026-10-02T12:53:49+02:00",
+          "source": "Hackaday",
+          "title": "A Good DIY Solder Stencil Begins With a Cleanly-Sliced Soda Can",
+          "link": "https://hackaday.com/2026/10/03/a-good-diy-solder-stencil-begins-with-a-cleanly-sliced-soda-can/",
+          "description": "Solder stencils are a fantastic way to accurately apply solder paste to a PCB. Professionally-made stencils are cut from steel, but for the home hacker, soda cans continue to be …read more...",
+          "date": "2026-10-03T23:00:29+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://hackaday.com/feed/": {
-      "etag": "\"299c5b3a1f79254aa92a41db1272b30c\"",
-      "last_modified": "Sat, 03 Oct 2026 15:26:41 GMT",
-      "cached_articles": [
+        },
         {
           "source": "Hackaday",
           "title": "2026 Retrocomputer Challenge: Vectron65 Plus Puts the Emphasis on Plus",
@@ -1165,25 +1153,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "2026 Retrocomputing Challenge: Lunar Lander on the PDP-1",
-          "link": "https://hackaday.com/2026/10/02/2026-retrocomputing-challenge-lunar-lander-on-the-pdp-1/",
-          "description": "A lot of the retrocomputing world is focused on the 1980s, and for good reason– the home computer revolution was in full swing in that decade, and there is a …read more...",
-          "date": "2026-10-03T02:00:48+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:56:38 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:26:41 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Arm Working On \"TLBID\" For Linux To Increase Performance On High Core Count CPUs",
+          "link": "https://www.phoronix.com/news/ARM64-Linux-TLBI-Domains",
+          "description": "Arm sent out an initial set of patches this week working on support in the Linux kernel for TLBI Domains. This \"TLBID\" feature is an upcoming Arm architecture capability designed to increase performance on high core count systems......",
+          "date": "2026-10-03T20:10:09-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "The Amazing Work By Valve's Timur Kristóf On Improving Old AMD GPUs On Linux",
@@ -1346,54 +1334,6 @@
           "link": "https://www.phoronix.com/news/Mesa-PowerVR-Vulkan-2026",
           "description": "Imagination Tech was at XDC 2026 Toronto this week to talk up their ongoing work around their PowerVR Mesa Vulkan driver (and PVR upstream DRM kernel driver) with this driver continuing to improve, plans for supporting their new Volcanic GPU architecture, and other improvements......",
           "date": "2026-10-02T09:00:03-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Intel Iris Open-Source Driver Now Supports Efficient 64-bit Addressing Mode",
-          "link": "https://www.phoronix.com/news/Intel-Iris-Efficient-64-bit",
-          "description": "As a follow-up to the news one month ago of Intel Nova Lake P's graphics introducing a new 64-bit GPU mode, the latest driver-side enablement has now landed for Intel's Iris Gallium3D OpenGL driver for supporting efficient 64-bit addressing......",
-          "date": "2026-10-02T07:46:37-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Ubuntu's Next Rust Effort May See OpenPGP Replaced By Sequoia PGP",
-          "link": "https://www.phoronix.com/news/Ubuntu-Rust-Sequoia-PGP",
-          "description": "Canonical engineer Richard Scott McNew published a status update surrounding the Rust programming language efforts in the upcoming Ubuntu 26.10 release. Sequoia PGP is being rolled out to Ubuntu Linux and in a future release may end up replacing OpenPGP......",
-          "date": "2026-10-02T06:27:20-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Apex Compute Developing Open-Source Mesa Vulkan Driver For Their Hardware",
-          "link": "https://www.phoronix.com/news/Apex-Compute-Mesa-Vulkan",
-          "description": "Apex Compute is the company started in California in 2024 that aims to produce high-efficiency AI accelerators for real-time edge AI inferencing. So far they have an FPGA prototype for licensing and deployment and carries the bold claim of being \"20x faster than the NVIDIA Jetson\" and at under 10W a...",
-          "date": "2026-10-02T06:17:55-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Coreboot 26.09 Released With Framework Laptop 12 Support, AI Review Comment Policy",
-          "link": "https://www.phoronix.com/news/Coreboot-26.09-Released",
-          "description": "Coreboot 26.09 released yesterday as the latest quarterly feature release to this open-source software for replacing proprietary BIOS and system firmware on a growing selection of devices......",
-          "date": "2026-10-02T06:06:11-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1899,6 +1839,30 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "I changed these hidden Google Maps settings; now my Android Auto navigation is miles better",
+          "link": "https://www.androidpolice.com/changed-these-google-maps-settings-android-auto-became-much-easier-to-use/",
+          "description": "\n                                            Small tweaks made every drive smoother\n                                        ...",
+          "date": "2026-10-03T23:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "Motorola's wide foldable could be my next phone if the price is right",
+          "link": "https://www.androidpolice.com/motorolas-wide-foldable-could-be-my-next-phone-if-price-is-right/",
+          "description": "\n                                            A wide screen I can pocket matters more than a bigger one\n                                        ...",
+          "date": "2026-10-03T22:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "I switched to Vivaldi and realized how much Chrome made me work for basic features",
           "link": "https://www.androidpolice.com/switched-to-vivaldi-realized-chrome-made-me-work-for-basic-features/",
           "description": "\n                                            These missing features made me question everything\n                                        ...",
@@ -1987,30 +1951,6 @@
           "link": "https://www.androidpolice.com/f-droid-20-fixed-all-my-issues-with-finding-installing-and-updating-open-source-apps/",
           "description": "\n                                            A refreshed interface and smarter search make F-Droid a cleaner, easier place to discover niche open source apps\n                                        ...",
           "date": "2026-10-03T14:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I stopped upgrading my Galaxy Watch every year; here's what I learned",
-          "link": "https://www.androidpolice.com/i-stopped-upgrading-my-galaxy-watch/",
-          "description": "\n                                            My Galaxy Watch 6 outlasted five newer generations\n                                        ...",
-          "date": "2026-10-03T13:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "6 apps that transformed my Windows PC into a Googlebook",
-          "link": "https://www.androidpolice.com/apps-transform-windows-pc-googlebook/",
-          "description": "\n                                            Hold off on the Googlebook for now\n                                        ...",
-          "date": "2026-10-03T12:45:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2310,96 +2250,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Grab an $80 discount on this TP-Link Wi-Fi 7 router with five 2.5G Ethernet ports, now $169.99",
-          "link": "https://www.tomshardware.com/networking/routers/grab-an-usd80-discount-on-this-tp-link-wi-fi-7-router-with-five-2-5g-ethernet-ports-limited-time-deal-on-the-archer-be550-nets-a-tri-band-router-with-fast-speeds-to-upgrade-your-home-network",
-          "description": "\n                             The TP-Link Archer BE550 Wi-Fi 7 router is on sale for a limited-time only, down to $169.99, netting you powerful kit with six antennas and five 2.5G Ethernet ports. \n                                                                                                       ...",
-          "date": "2026-10-02T12:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Save $50 on Elgato's biggest Stream Deck",
-          "link": "https://www.tomshardware.com/peripherals/save-usd50-on-elgatos-biggest-stream-deck-this-32-key-monster-macro-pad-is-now-down-to-usd199",
-          "description": "\n                             Elgato's Stream Deck is enjoying a 20% discount at Amazon. Pick up the Stream Deck XL for just $199. \n                                                                                                            ...",
-          "date": "2026-10-02T12:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Micron now has an 88% margin on consumer memory as price hikes drive profits",
-          "link": "https://www.tomshardware.com/pc-components/dram/micron-now-has-an-88-percent-margin-on-consumer-memory-price-hikes-drive-revenue-client-business-is-microns-only-unit-that-shipped-less-memory-this-quarter",
-          "description": "\n                             Micron's consumer business is its most profitable by margin according to the company's fiscal Q4 2026 financial report, despite shipping less memory in the quarter. \n                                                                                                        ...",
-          "date": "2026-10-02T11:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Micro Center requires photo ID and signed no-export pledge to buy RTX 5090 gaming GPU",
-          "link": "https://www.tomshardware.com/pc-components/gpus/micro-center-requires-photo-id-and-signed-no-export-pledge-to-buy-rtx-5090-gaming-gpu-buyer-forced-to-sign-declaration-disclosing-install-location-and-promise-gpu-will-remain-in-the-us",
-          "description": "\n                             The form requires RTX 5090 buyers to input their personal data before getting approved to make the purchase. However, it remains unclear how Micro Center can use this information to track illegally exported GPUs. \n                                                        ...",
-          "date": "2026-10-02T11:15:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Component shortages drive Raspberry Pi prices up by up to 23%",
-          "link": "https://www.tomshardware.com/raspberry-pi/component-shortages-drive-raspberry-pi-prices-up-by-up-to-23-percent-escalating-lpddr4-lpddr5-costs-trigger-the-third-price-hike-of-the-year",
-          "description": "\n                             Raspberry Pi announces price adjustments for the 2GB Raspberry Pi 4 and Raspberry Pi 5 models. \n                                                                                                            ...",
-          "date": "2026-10-02T11:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "PewDiePie unveils ‘uncensored’ Ajax AI model for home PCs",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/pewdiepie-unveils-uncensored-ajax-ai-model-built-to-run-on-home-pcs-creator-says-openai-banned-him-twice-while-making-it",
-          "description": "\n                             PewDiePie says OpenAI banned him twice while he made Ajax, a fine-tuned Qwen3.5-9B agent. \n                                                                                                            ...",
-          "date": "2026-10-02T10:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "California bill requiring 3D printers to block firearm printing becomes law",
-          "link": "https://www.tomshardware.com/3d-printing/california-bill-requiring-3d-printers-to-block-firearm-printing-becomes-law-rule-to-require-manufacturers-to-include-blocking-technology-once-an-industry-standard-is-published",
-          "description": "\n                             California will require 3D printer manufacturers to include firearm blocking technology once ASTM International publishes a standard for it. However, the California DOJ is only mandated to check for one until July 1, 2029, after which it is no longer obliged by law to d...",
-          "date": "2026-10-02T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:49:12 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:16:38 GMT",
       "cached_articles": [
         {
           "source": "Rapid7 Blog",
@@ -2489,12 +2345,12 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:58:58 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:28:51 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sat, 03 Oct 2026 21:58:59 GMT",
+      "last_modified": "Sun, 04 Oct 2026 00:28:51 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
@@ -2528,8 +2384,8 @@
       "cached_articles": []
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"65036979620cec890087d8cf76a11cca\"",
-      "last_modified": "Sat, 03 Oct 2026 13:08:20 GMT",
+      "etag": "\"de424677e0bb8ff1b36d1f090f383e29\"",
+      "last_modified": "Sat, 03 Oct 2026 21:18:17 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
