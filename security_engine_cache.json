@@ -28,8 +28,22 @@
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:13:48 GMT",
+      "last_modified": "Sun, 04 Oct 2026 23:18:04 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
+          "link": "https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/",
+          "description": "Citrix has released emergency updates for a new NetScaler denial-of-service vulnerability tracked as CVE-2026-88779 that has been exploited in zero-day attacks, with researchers investigating whether it can also be exploited for remote code execution. [...]...",
+          "date": "2026-10-04T17:58:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-88779"
+            ],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Anthropic asks Claude users to share voice data for AI model training",
@@ -109,8 +123,8 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c5c-65d0979bfc111\"",
-      "last_modified": "Sun, 04 Oct 2026 20:18:58 GMT",
+      "etag": "\"1c5c-65d0c0f58323c\"",
+      "last_modified": "Sun, 04 Oct 2026 23:23:58 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -179,7 +193,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 4 Oct 2026 19:19:23 GMT",
+      "last_modified": "Sun, 4 Oct 2026 22:29:26 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -223,18 +237,6 @@
           "link": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
           "description": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portuguese- and Spanish-speaking countries.\n\nThe activity, observed by the Symantec and Carbon Black Threat H...",
           "date": "2026-10-03T20:06:33+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "The State of Cybersecurity in 2026: Key Segments, Insights, and Innovations",
-          "link": "https://thehackernews.com/2026/10/the-state-of-cybersecurity-in-2026key.html",
-          "description": "Featuring:\n\nCybersecurity is being reshaped by the expansion of cloud infrastructure, AI, distributed systems, and increasingly complex digital environments. As organizations manage more identities, devices, data, and internet-facing infrastructure, security is shifting toward continuous visibility,...",
-          "date": "2026-10-03T16:30:00+05:30",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -394,15 +396,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "\"159d-65cfd2101f3b5-gzip\"",
-      "last_modified": "Sun, 04 Oct 2026 05:35:10 GMT",
+      "etag": "\"159d-65cff6d279710-gzip\"",
+      "last_modified": "Sun, 04 Oct 2026 08:19:37 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
           "title": "CrowdStrike Expands Federal SOC Modernization Through CISA-Funded SIEMaaS",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-expands-federal-soc-modernization-via-cisa-siemaas/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -414,7 +416,7 @@
           "title": "Copy, Paste, Compromised: How ClickFix Attacks Work and How CrowdStrike Stops Them",
           "link": "https://www.crowdstrike.com/en-us/blog/how-clickfix-attacks-work-and-how-to-stop-them/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -426,7 +428,7 @@
           "title": "A Win for Defenders: CrowdStrike and NVIDIA Extend Security Across the AI Stack",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-nvidia-extend-security-across-ai-stack/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -438,7 +440,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -450,7 +452,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -462,7 +464,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -474,7 +476,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -486,7 +488,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -498,7 +500,7 @@
           "title": "September 2026 Patch Tuesday: Two Exploited Zero-Days and 113 Critical Vulnerabilities Among 972 CVEs",
           "link": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -510,7 +512,7 @@
           "title": "CrowdStrike Delivers the Next Evolution of the Agentic SOC",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-delivers-next-evolution-of-agentic-soc/",
           "description": "",
-          "date": "2026-10-04T06:13:32.230519+00:00",
+          "date": "2026-10-04T23:27:52.970069+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -635,7 +637,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:20:13 GMT",
+      "last_modified": "Sun, 04 Oct 2026 23:27:54 GMT",
       "cached_articles": []
     },
     "https://redcanary.com/feed/": {
@@ -677,9 +679,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"8d6a4cf580ce747a155c7db57be8e49c\"",
-      "last_modified": "Sun, 04 Oct 2026 05:49:54 GMT",
+      "etag": "\"e0f112cd29316c60af403e004ba94497\"",
+      "last_modified": "Sun, 04 Oct 2026 19:50:40 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Hackaday Links: October 3, 2026",
+          "link": "https://hackaday.com/2026/10/04/hackaday-links-october-3-2026/",
+          "description": "If you’re interested in aerospace, there’s an excellent chance you’ve heard the rumor that NASA is trying to get its SR-71 flying again. Or at the very least, they are …read more...",
+          "date": "2026-10-04T23:00:26+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Tearing Down a Heavy Oscilloscope",
@@ -751,25 +765,25 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Play PlayStation 2 and XBox 1 Games on Your Jailbroken PS5",
-          "link": "https://hackaday.com/2026/10/03/play-playstation-2-and-xbox-1-games-on-your-jailbroken-ps5/",
-          "description": "Whereas PlayStation 3 and earlier were rather specialized consoles, today’s consoles like the PlayStation 5 are essentially x86-based gaming PCs in a fancy case, with custom firmware to lock it …read more...",
-          "date": "2026-10-04T02:00:43+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:17:02 GMT",
+      "last_modified": "Sun, 04 Oct 2026 23:27:06 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Linux 7.3-rc6 Released: Normal For The New \"AI Normal\"",
+          "link": "https://www.phoronix.com/news/Linux-7.3-rc6-Released",
+          "description": "Linus Torvalds just released Linux 7.3-rc7 as we work toward the stable Linux 7.3 kernel release in two weeks......",
+          "date": "2026-10-04T17:04:15-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "OpenCourant: Rocky Linux Developers Create Community Fork Of OpenRadioss",
@@ -884,54 +898,6 @@
           "link": "https://www.phoronix.com/news/GNOME-Moose-Local-AI",
           "description": "Beyond the various local AI agent/chat options not catering to a specific desktop environment, the GNOME desktop has seen Newelle as an AI app catering to GNOME/GTK4. There's now another local AI option for the GNOME desktop with Moose......",
           "date": "2026-10-03T07:47:01-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "KosmicKrisp Now Conformant To Vulkan 1.4, Improving Performance Against Apple's Metal",
-          "link": "https://www.phoronix.com/news/KosmicKrisp-Vulkan-1.4-2026",
-          "description": "KosmicKrisp is the effort led by LunarG for developing a modern Vulkan-on-Metal driver for Apple systems within Mesa. This modern alternative to MoltenVK continues progressing well and now enjoys Vulkan 1.4 conformance and its performance continues inching closer to that of the native Apple Metal AP...",
-          "date": "2026-10-03T07:24:07-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux 7.4 To Support The Raspberry Pi 10-Inch Touch Display 2",
-          "link": "https://www.phoronix.com/news/Linux-74-RPi-10-Touch-Display-2",
-          "description": "We are nearing the cut-off of new feature material being accepted to DRM-Next ahead of the Linux 7.4 merge window. But this week another round of DRM-Misc changes made it, which included some new hardware support and other last minute items......",
-          "date": "2026-10-03T06:33:10-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux 7.3 To Better Support The High-End Turtle Beach VelocityOne Race",
-          "link": "https://www.phoronix.com/news/Linux-7.3-TB-VelocityOne-Race",
-          "description": "Coming with Sunday's Linux 7.3-rc6 kernel release is support added for the Turtle Beach VelocityOne Race, a high-end $649~700 USD racing wheel and pedal system......",
-          "date": "2026-10-03T06:18:05-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "KDE Plasma 6.8 Now Makes Tiled Windows Fit Together More Nicely",
-          "link": "https://www.phoronix.com/news/KDE-Plasma-6.8-Tiled-Windows",
-          "description": "There is just over one week to go until the much anticipated KDE Plasma 6.8 desktop release. Some last minute fixes continue flowing into Plasma 6.8 as well as early feature work continuing for Plasma 6.9......",
-          "date": "2026-10-03T06:07:10-04:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1089,6 +1055,42 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
+          "title": "Unexpected Keyboard does what Gboard won't: let me customize every single keystroke",
+          "link": "https://www.androidpolice.com/unexpected-keyboard-gboard-alternative/",
+          "description": "\n                                            Gboard feels like training wheels now\n                                        ...",
+          "date": "2026-10-04T23:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "I turned Gemini Notebook into my gardening expert; my plants finally stopped dying",
+          "link": "https://www.androidpolice.com/turned-gemini-notebook-into-gardening-expert-plants-finally-stopped-dying/",
+          "description": "\n                                            Use AI to grow more plants\n                                        ...",
+          "date": "2026-10-04T22:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
+          "title": "This app turned my old Pixel 4a into a Bluetooth keyboard for my desktop PC",
+          "link": "https://www.androidpolice.com/bluke-pixel-4a-bluetooth-keyboard-pc/",
+          "description": "\n                                            I leave my couch less frequently now\n                                        ...",
+          "date": "2026-10-04T21:00:10+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Police - News",
           "title": "6 Google Messages tricks that fixed my worst RCS texting annoyances",
           "link": "https://www.androidpolice.com/google-messages-tricks-that-fixed-worst-rcs-texting-annoyances/",
           "description": "\n                                            Gestures and settings that made RCS chats less irritating\n                                        ...",
@@ -1165,42 +1167,6 @@
           "link": "https://www.androidpolice.com/i-put-pixels-excellent-now-playing-on-my-watch-and-i-cannot-go-back/",
           "description": "\n                                            Now On Wrist puts recognized tracks on your watch face so you can catch artists and save discoveries without touching your phone\n                                        ...",
           "date": "2026-10-04T14:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I replaced my Samsung home screen with a TV launcher; my phone finally feels calm",
-          "link": "https://www.androidpolice.com/i-replaced-my-samsung-home-screen-with-a-tv-launcher/",
-          "description": "\n                                            The TV launcher feels undesirably good on a phone\n                                        ...",
-          "date": "2026-10-04T13:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I found an Android note-taking app that puts Google Keep, OneNote, and Obsidian to shame",
-          "link": "https://www.androidpolice.com/found-android-note-taking-app-that-puts-google-keep-onenote-obsidian-to-shame/",
-          "description": "\n                                            This hidden gem does almost everything\n                                        ...",
-          "date": "2026-10-04T12:45:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "Goodbye, Instapaper: This is why Chrome's secret free reader won me over",
-          "link": "https://www.androidpolice.com/goodbye-instapaper-why-chromes-secret-free-reader-won-me-over/",
-          "description": "\n                                            Chrome's reading mode is heavily underutilized\n                                        ...",
-          "date": "2026-10-04T12:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1536,60 +1502,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "California subpoenas OpenAI over rogue AI agents conducting hacking attacks",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/california-subpoenas-openai-as-it-investigates-huggingface-breach-doj-wants-more-information-on-cybersecurity-incidents-to-determine-developer-responsibility",
-          "description": "\n                             California state Attorney General Rob Bonta issued a subpoena to OpenAI, compelling it to submit information on the hacking incidents that its models have been involved in. While the investigators haven't determined yet whether the company has broken any rules or regula...",
-          "date": "2026-10-03T11:15:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Amazon promises to spend $1 billion on communities close to its data centers, but critics push back",
-          "link": "https://www.tomshardware.com/tech-industry/data-centers/amazon-promises-to-spend-usd1-billion-on-communities-close-to-its-data-centers-but-critics-push-back-planned-spend-accounts-for-just-0-1-percent-of-its-2026-ai-infrastructure-investments",
-          "description": "\n                             AWS CEO Matt Garman said in a company blog post that it will allocate $1 billion over five years to key issues that data center communities raised, including education, workforce pathways, energy affordability, and more. This amounts to grants of $200 million annually, ...",
-          "date": "2026-10-03T10:50:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "AMD’s secret Zen 3 gaming CPU had 128MB of game-boosting L3 cache but never saw the light of day",
-          "link": "https://www.tomshardware.com/pc-components/cpus/amds-secret-zen-3-gaming-cpu-had-128mb-of-l3-cache-but-never-saw-the-light-of-day-canceled-ryzen-9-5900x3d-breaks-free-from-the-chipmakers-vault",
-          "description": "\n                             A user from the Chinese Chiphell forums shows off AMD's unreleased Ryzen 9 5900X3D, the X3D variant of the Ryzen 9 5900X. \n                                                                                                            ...",
-          "date": "2026-10-03T10:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "ChatGPT-6 Astra plays World of Warcraft 'blind' and clears the orc starting zone in 40 minutes with no deaths",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/gpt-6-astra-plays-world-of-warcraft-blind-and-clears-the-orc-starting-zone-in-40-minutes-with-no-deaths-ai-agent-navigates-by-server-network-traffic-with-pulled-quest-data",
-          "description": "\n                             The model created its own World of Warcraft pathfinder on a private server with one prompt in OpenAI's Codex. \n                                                                                                            ...",
-          "date": "2026-10-03T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:18:39 GMT",
+      "last_modified": null,
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -1666,17 +1584,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:20:14 GMT",
+      "last_modified": "Sun, 04 Oct 2026 23:27:53 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 20:20:13 GMT",
+      "last_modified": "Sun, 04 Oct 2026 23:27:53 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65cc888f5be13\"",
-      "last_modified": "Thu, 01 Oct 2026 14:50:21 GMT",
+      "etag": "\"3ee15-65cebbcfea94d\"",
+      "last_modified": "Sat, 03 Oct 2026 08:50:18 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
