@@ -23,12 +23,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Sun, 4 Oct 2026 18:22:36 GMT",
+      "last_modified": "Mon, 5 Oct 2026 01:41:56 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 23:18:04 GMT",
+      "last_modified": "Mon, 05 Oct 2026 02:08:11 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -123,9 +123,33 @@
       "cached_articles": []
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1c5c-65d0c0f58323c\"",
-      "last_modified": "Sun, 04 Oct 2026 23:23:58 GMT",
+      "etag": "\"1a07-65d0e6f54ee33\"",
+      "last_modified": "Mon, 05 Oct 2026 02:13:59 GMT",
       "cached_articles": [
+        {
+          "source": "SANS ISC StormCast",
+          "title": "ISC Stormcast For Monday, October 5th, 2026 https://isc.sans.edu/podcastdetail/10122, (Mon, Oct 5th)",
+          "link": "https://isc.sans.edu/diary/rss/33398",
+          "description": "",
+          "date": "2026-10-05T02:00:02+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SANS ISC StormCast",
+          "title": "TTY Logs and the Data it Captures, (Sun, Oct 4th)",
+          "link": "https://isc.sans.edu/diary/rss/33396",
+          "description": " For an experiment, I created a script [1] that parses and send the TTY logs collected from actors or bots activity that run various commands after they successfully login the DShield sensor. Those TTY logs are sent daily at the end of each day to the DShield SIEM [2] to be correlated with all the d...",
+          "date": "2026-10-05T00:15:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "SANS ISC StormCast",
           "title": "User Agent Strings Curiosities, (Sun, Oct 4th)",
@@ -193,7 +217,7 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Sun, 4 Oct 2026 22:29:26 GMT",
+      "last_modified": "Mon, 5 Oct 2026 01:33:14 GMT",
       "cached_articles": [
         {
           "source": "The Hacker News",
@@ -637,7 +661,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 23:27:54 GMT",
+      "last_modified": "Mon, 05 Oct 2026 02:17:48 GMT",
       "cached_articles": []
     },
     "https://redcanary.com/feed/": {
@@ -679,9 +703,21 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"e0f112cd29316c60af403e004ba94497\"",
-      "last_modified": "Sun, 04 Oct 2026 19:50:40 GMT",
+      "etag": "\"2a4ad466d1ae9f3ba87cf7b2512739f8\"",
+      "last_modified": "Sun, 04 Oct 2026 13:18:40 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Upgrading a Benchtop Laser for Megawatt Power",
+          "link": "https://hackaday.com/2026/10/04/upgrading-a-benchtop-laser-for-megawatt-power/",
+          "description": "One fascinating thing about a pulsed laser is that, though the average power may be measured in watts or milliwatts, the peak power can easily reach millions of times that. …read more...",
+          "date": "2026-10-05T02:00:01+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Hackaday Links: October 3, 2026",
@@ -753,24 +789,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Debloat The Internet With a Self-Hosted Compressing Proxy",
-          "link": "https://hackaday.com/2026/10/03/debloat-the-internet-with-a-self-hosted-compressing-proxy/",
-          "description": "It’s no secret that the size of webpages has been slowly — or not so slowly — creeping up over the years. Does a simple website need to span multiple …read more...",
-          "date": "2026-10-04T05:00:40+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 23:27:06 GMT",
+      "last_modified": "Mon, 05 Oct 2026 02:17:08 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
@@ -891,24 +915,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Moose: GNOME Gains Another Local AI App Option",
-          "link": "https://www.phoronix.com/news/GNOME-Moose-Local-AI",
-          "description": "Beyond the various local AI agent/chat options not catering to a specific desktop environment, the GNOME desktop has seen Newelle as an AI app catering to GNOME/GTK4. There's now another local AI option for the GNOME desktop with Moose......",
-          "date": "2026-10-03T07:47:01-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "W/\"8c8ab05d99b1d004fa726c30e63c55da\"",
-      "last_modified": "Sun, 04 Oct 2026 17:00:58 GMT",
+      "etag": "W/\"5d2c5afe3039afe434c958300c473515\"",
+      "last_modified": "Sun, 04 Oct 2026 23:39:03 GMT",
       "cached_articles": [
         {
           "source": "Android Authority",
@@ -916,30 +928,6 @@
           "link": "https://www.androidauthority.com/soulog-sense-ai-voice-recorder-3716740/",
           "description": "It not only records your conversations, but it also helps you understand and organize them....",
           "date": "2026-10-04T17:00:58+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Is your phone not charging? Try this simple fix before paying for a repair",
-          "link": "https://www.androidauthority.com/usb-c-port-cleaning-3716899/",
-          "description": "How to clean your phone’s USB-C port and fix charging....",
-          "date": "2026-10-04T11:00:50+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Your Samsung Gallery app finally syncs with Google Photos — how to set it up right now",
-          "link": "https://www.androidauthority.com/samsung-gallery-google-photos-sync-how-use-3717795/",
-          "description": "For better or worse, OneDrive's gone....",
-          "date": "2026-10-04T10:30:16+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -976,66 +964,6 @@
           "link": "https://www.androidauthority.com/samsung-galaxy-z-fold-8-one-monther-later-3710165/",
           "description": "A month with the Galaxy Z Fold 8 has quietly ruined every other phone for me. ...",
           "date": "2026-10-04T09:00:27+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "These 9 Thunderbird features made me ditch Gmail for good",
-          "link": "https://www.androidauthority.com/ditched-gmail-for-thunderbird-why-3716057/",
-          "description": "The underdog with cooler and better features...",
-          "date": "2026-10-03T11:00:34+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "I used Pixel’s new battery summaries for a week — and Google has work to do",
-          "link": "https://www.androidauthority.com/pixel-battery-summaries-hands-on-3718048/",
-          "description": "Battery summaries have a long way to go....",
-          "date": "2026-10-03T10:30:43+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "What’s the best Snapdragon 8 Gen 5 series chip? I tested them all to find out",
-          "link": "https://www.androidauthority.com/all-snapdragon-8-gen-5-chips-tested-3704993/",
-          "description": "CPU testing goes about as expected, but GPU benchmarking is another story altogether....",
-          "date": "2026-10-03T10:00:05+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "I hate when Android brands copy Apple — but the iPhone Duo is the exception",
-          "link": "https://www.androidauthority.com/hate-when-android-copies-apple-iphone-duo-exception-3716696/",
-          "description": "The iPhone Duo could make Android foldables much better....",
-          "date": "2026-10-03T09:30:40+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "My Samsung phone was full of screenshots. This quick trick fixed it",
-          "link": "https://www.androidauthority.com/samsung-phone-full-screenshots-fixed-how-3715634/",
-          "description": "It should be possible to do this natively....",
-          "date": "2026-10-03T09:00:03+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1406,108 +1334,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Buying used CPUs can expose users to existing bans from anti-cheat engines, and there's no way to check for violations before purchase",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/buying-used-cpus-can-expose-users-to-existing-bans-from-anti-cheat-engines-some-anti-cheat-engines-enforce-permanent-bans-while-others-have-an-expiration-date",
-          "description": "\n                             The CPU's previous owner apparently used it for cheating on Valorant, with its HWID getting flagged by Vanguard. When the Redditor bought and installed it on their PC, their Valorant account received a ban, too. \n                                                         ...",
-          "date": "2026-10-03T14:09:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "This week on Tom's Hardware Premium: October 3, 2026",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/this-week-on-toms-hardware-premium-october-3-2026-ai-chip-design-week-openai-interview-and-ai-agent-safety",
-          "description": "\n                             This week on Tom's Hardware Premium, we open the floodgates with a free-to-access chip design week, including expert interviews, a sit-down with OpenAI on its custom ASIC, and much more. \n                                                                                  ...",
-          "date": "2026-10-03T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Steam hits record $1.7 billion in September 2026 despite soaring PC hardware costs",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/steam-revenue-hit-usd1-7-billion-in-september-2026-pc-gaming-spending-grows-despite-skyrocketing-hardware-costs",
-          "description": "\n                             Steam's latest revenues highlight continued strength in PC gaming, with players continuing to spend heavily even as the cost of building and upgrading gaming PCs rises. \n                                                                                                    ...",
-          "date": "2026-10-03T13:35:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "AI agents use 5x more tokens than humans as cached prompts explode, headed for 10x",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/futurum-ceo-says-agents-use-ai-5x-more-than-humans-number-will-eventually-hit-10x-but-agents-are-mostly-rereading-what-theyve-already-seen",
-          "description": "\n                             Daniel Newman’s number comes from OpenRouter data, where agents passed humans in February and grew 14x by August. \n                                                                                                            ...",
-          "date": "2026-10-03T13:10:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Scare up big savings in Bambu Lab's Halloween sale right now, with up to 30% off",
-          "link": "https://www.tomshardware.com/3d-printing/scare-up-big-savings-in-bambu-labs-halloween-sale-right-now-with-up-to-30-percent-off-grab-usd250-off-the-dual-extruder-h2d-plus-bulk-spool-discounts-and-pumpkin-themed-bundles",
-          "description": "\n                             Don't let huge 3D printer prices scare you, because Bambu Lab's Halloween sale has knocked up to 30% off a new printer, with big bulk discounts on filament rolls, too. \n                                                                                                     ...",
-          "date": "2026-10-03T12:50:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Malicious VPN config files can let attackers run commands on Asus routers",
-          "link": "https://www.tomshardware.com/tech-industry/cyber-security/malicious-vpn-config-files-can-let-attackers-run-commands-on-asus-routers-companys-patch-also-fixes-a-bug-that-lets-a-logged-in-attacker-switch-on-telnet-with-root-access",
-          "description": "\n                             Until routers on Asus’s 3.0.0.6_102 firmware are updated, the company says not to import untrusted VPN files. \n                                                                                                            ...",
-          "date": "2026-10-03T12:30:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Google freezes open-source bug bounty program amid flood of invalid AI slop submissions",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1",
-          "description": "\n                             Google suspends product vulnerability submissions to its Open Source Software Vulnerability Reward Program (OSS VRP) over an influx of invalid AI-driven reports. \n                                                                                                           ...",
-          "date": "2026-10-03T12:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "$5,245 prebuilt RTX 5090 PC's connectors melt after sitting boxed for a year",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/usd5-245-prebuilt-rtx-5090-pcs-connectors-melt-after-sitting-boxed-for-a-year-digital-storm-and-pny-deny-warranty-claims-over-expired-coverage-and-third-party-cables",
-          "description": "\n                             When one gamer's prebuilt PC had a GPU and power cables burn up, they didn't know where to turn: the system builder or the GPU manufacturer. It turned into a headache of differing policies and warranties. \n                                                                ...",
-          "date": "2026-10-03T11:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": null,
+      "last_modified": "Mon, 05 Oct 2026 02:16:35 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -1584,17 +1416,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 23:27:53 GMT",
+      "last_modified": "Mon, 05 Oct 2026 02:17:49 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Sun, 04 Oct 2026 23:27:53 GMT",
+      "last_modified": "Mon, 05 Oct 2026 02:17:49 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65cebbcfea94d\"",
-      "last_modified": "Sat, 03 Oct 2026 08:50:18 GMT",
+      "etag": "\"3ee15-65d0a315aac25\"",
+      "last_modified": "Sun, 04 Oct 2026 21:10:19 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
