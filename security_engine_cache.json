@@ -25,12 +25,12 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Tue, 6 Oct 2026 00:30:18 GMT",
+      "last_modified": "Tue, 6 Oct 2026 06:20:57 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:26:37 GMT",
+      "last_modified": "Tue, 06 Oct 2026 07:05:08 GMT",
       "cached_articles": [
         {
           "source": "BleepingComputer",
@@ -183,14 +183,74 @@
       ]
     },
     "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml": {
-      "etag": "\"1791213607\"",
-      "last_modified": "Mon, 05 Oct 2026 15:20:07 GMT",
+      "etag": "\"1791268007\"",
+      "last_modified": "Tue, 06 Oct 2026 06:26:47 GMT",
       "cached_articles": []
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Mon, 05 Oct 2026 14:54:03 GMT",
+      "last_modified": "Tue, 06 Oct 2026 06:03:27 GMT",
       "cached_articles": [
+        {
+          "source": "Help Net Security",
+          "title": "U.S. Bank CISO says the security role keeps growing and no one can own all of it",
+          "link": "https://www.helpnetsecurity.com/2026/10/06/ann-barron-dicamillo-collective-cyber-defense/",
+          "description": "In this interview with Help Net Security, Ann Barron-DiCamillo, EVP, CISO at U.S. Bank, talks about how the CISO role has grown to cover fraud, resilience, third-party risk, and AI governance. She says no single leader can own all of it, so partnerships across technology, risk, legal, and business t...",
+          "date": "2026-10-06T06:00:54+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Reflection’s Beam trails top open models on coding tests but claims lower inference compute",
+          "link": "https://www.helpnetsecurity.com/2026/10/06/reflections-beam-trails-top-open-models-on-coding-tests-but-claims-lower-inference-compute/",
+          "description": "Reflection AI has built Beam, a 501-billion-parameter open-weight model for coding and agent tasks, and plans to publish the weights under an Apache 2.0 license later this month. Open-weight means developers can download the trained model and run it on their own hardware. Beam uses a mixture-of-expe...",
+          "date": "2026-10-06T05:22:28+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "NIS2 compliance: 7 low-cost steps to secure credentials",
+          "link": "https://www.helpnetsecurity.com/2026/10/06/passwork-nis2-credential-security/",
+          "description": "Security budgets rarely stretch to cover a full NIS2 programme in one pass. Credential controls are where a constrained team can start, because they make access visible, revocable, and reviewable without new infrastructure. NIS2 compliance rests on risk-management measures that fit the actual risk a...",
+          "date": "2026-10-06T05:00:44+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Product showcase: Webroot Mobile Security screens texts, blocks risky sites, and checks for data leaks",
+          "link": "https://www.helpnetsecurity.com/2026/10/06/product-showcase-webroot-mobile-security/",
+          "description": "Webroot Mobile Security combines device security checks, Safari protection, text scam filtering, and data breach monitoring. It is available for iPhone, iPad, and Android devices. The app requires an active Webroot subscription and is included with Essentials, Premium, and Total Protection. The home...",
+          "date": "2026-10-06T04:30:30+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Help Net Security",
+          "title": "Cybersecurity jobs available right now: October 6, 2026",
+          "link": "https://www.helpnetsecurity.com/2026/10/06/cybersecurity-jobs-available-right-now-october-6-2026/",
+          "description": "Associate IAM Engineer New York City Office of Technology & Innovation | USA | On-site – View job details As an Associate IAM Engineer, you will support daily identity and access management operations in Microsoft Entra ID and related platforms. You will manage users, groups, access provisioning, an...",
+          "date": "2026-10-06T04:00:58+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Help Net Security",
           "title": "CISA flags new exploited NetScaler flaw as attackers crash appliances (CVE-2026-88779)",
@@ -252,68 +312,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "RemoveMacAI turns off Apple Intelligence on macOS 27 and deletes its models",
-          "link": "https://www.helpnetsecurity.com/2026/10/05/removemacai-turn-off-apple-intelligence/",
-          "description": "A developer has released RemoveMacAI, a free command-line tool that turns off Apple Intelligence on macOS 27 and deletes about 12 GB of downloaded AI models. It requires a Mac with Apple silicon. macOS 27 doesn’t have a switch for Apple Intelligence, and the models stay on disk after you disable the...",
-          "date": "2026-10-05T12:26:49+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Out-of-band Exchange Server update fixes high-severity mailbox access bug (CVE-2026-96940)",
-          "link": "https://www.helpnetsecurity.com/2026/10/05/exchange-server-vulnerability-cve-2026-96940/",
-          "description": "Microsoft has pushed out an out-of-band security update for Exchange Server that fixes a high-severity vulnerability (CVE-2026-96940) that may allow authenticated attackers to read emails and attachments of other users in the same organization, but “does not allow access across tenant boundaries.” C...",
-          "date": "2026-10-05T10:38:42+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-96940"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Detained ShinyHunters hacker reportedly helping FBI track down fellow members",
-          "link": "https://www.helpnetsecurity.com/2026/10/05/shinyhunters-member-rey-detained-jordan-fbi/",
-          "description": "A suspected ShinyHunters member known as Rey has been detained in Jordan and is reportedly helping the FBI track down the rest of the group. Reuters reports that Jordanian authorities detained Saif al-Din Khader, alias Rey, last week, with two of its three sources placing the arrest on Tuesday. One ...",
-          "date": "2026-10-05T10:36:02+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "MAKERphone 2: A DIY 4G phone with plug-in camera, speaker and prototyping board",
-          "link": "https://www.helpnetsecurity.com/2026/10/05/makerphone-2-diy-4g-phone/",
-          "description": "CircuitMess, a Croatian electronics kit maker, is selling MAKERphone 2.0, a build-it-yourself 4G phone on Kickstarter that buyers program in MicroPython or Arduino C++ and extend with plug-in hardware. Insert a SIM and it makes real calls and sends real texts. For anyone who tests or tinkers with de...",
-          "date": "2026-10-05T09:50:37+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Help Net Security",
-          "title": "Apple tightens macOS disk access as AI agents become more powerful",
-          "link": "https://www.helpnetsecurity.com/2026/10/05/macos-full-disk-access-updates/",
-          "description": "Apple plans to introduce additional controls for Full Disk Access in macOS, citing growing privacy risks as AI agents become more capable and autonomous. Users will need to take explicit action to grant apps this permission. The company has not specified a rollout date or detailed how the controls w...",
-          "date": "2026-10-05T08:11:17+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -360,8 +358,8 @@
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"1a07-65d212788e877\"",
-      "last_modified": "Tue, 06 Oct 2026 00:33:58 GMT",
+      "etag": "\"1a07-65d26ac2b7ef3\"",
+      "last_modified": "Tue, 06 Oct 2026 07:08:58 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
@@ -430,8 +428,32 @@
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Tue, 6 Oct 2026 00:17:03 GMT",
+      "last_modified": "Tue, 6 Oct 2026 06:04:22 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "Denmark Says Attackers Accessed CPR Data for 8.8 Million People via Company Account",
+          "link": "https://thehackernews.com/2026/10/denmark-says-attackers-accessed-cpr.html",
+          "description": "Unauthorized parties have gained access to the names, addresses, and personal identification numbers of about 8.8 million people, living and dead, in Denmark's national population register, the country's digitalization ministry said on October 5.\n\nThey used a private Danish company's lawful right to...",
+          "date": "2026-10-06T11:30:30+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "ClickFix Smuggles Payloads Through Browser Cache to Bypass Windows Run Limits",
+          "link": "https://thehackernews.com/2026/10/clickfix-smuggles-payloads-through.html",
+          "description": "A new type of ClickFix attack is using compromised websites to trick users into executing a malicious payload cached in a web browser's cache.\n\n\"Instead of downloading and executing remote payloads like the typical attack pattern, in this attack, the websites pre-fetch a script payload into the brow...",
+          "date": "2026-10-06T10:52:55+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users' Mailboxes",
@@ -530,9 +552,33 @@
       "cached_articles": []
     },
     "https://www.csoonline.com/feed/": {
-      "etag": "\"84dd282bba15cbc8deec64e39f2b1b15\"",
-      "last_modified": "Mon, 05 Oct 2026 12:14:09 GMT",
+      "etag": "\"3abcaf83ba13bf44155717f274d6c8ae\"",
+      "last_modified": "Tue, 06 Oct 2026 06:03:40 GMT",
       "cached_articles": [
+        {
+          "source": "CSO Online",
+          "title": "Dell patches 18 critical flaws that could hand attackers the keys to storage and Kubernetes",
+          "link": "https://www.csoonline.com/article/4230923/dell-patches-18-critical-flaws-that-could-hand-attackers-the-keys-to-storage-and-kubernetes.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nDell’s security team has had a busy week.\n\n\n\nThe company has announced a slew of Common Vulnerabilities and Exposures (CVEs) impacting its Dell Container Storage Modules (CSM) and Dell System Update (DSU).\n\n\n\nDisclosed by Dell in two security notices, these critical vulnerabil...",
+          "date": "2026-10-06T01:25:24+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "CSO Online",
+          "title": "ShinyHunters’ exploitation of a new PeopleSoft zero-day hole threatens to change enterprise risk dynamics",
+          "link": "https://www.csoonline.com/article/4230892/shinyhunters-exploitation-of-a-new-peoplesoft-zero-day-hole-threatens-to-change-enterprise-risk-dynamics.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nA recent compromise of PeopleSoft by hacking group ShinyHunters is causing new concerns for enterprise users of the Oracle product, with analysts recommending extreme measures in response.\n\n\n\nLaw enforcement has made some progress in its pursuit of the cyber criminals involved...",
+          "date": "2026-10-06T01:02:05+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "CSO Online",
           "title": "Citrix warns of actively exploited NetScaler flaw days after zero-day patch rush",
@@ -666,15 +712,15 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "\"158e-65d211fbcde9b-gzip\"",
-      "last_modified": "Tue, 06 Oct 2026 00:31:48 GMT",
+      "etag": "\"158e-65d2606830c06-gzip\"",
+      "last_modified": "Tue, 06 Oct 2026 06:22:39 GMT",
       "cached_articles": [
         {
           "source": "CrowdStrike Blog",
-          "title": "New in Falcon Cloud Security: Third-Party App Insights and AI-Enhanced Remediation",
-          "link": "https://www.crowdstrike.com/en-us/blog/falcon-cloud-security-third-party-app-insights-ai-enhanced-remedation/",
+          "title": "Falcon Data Security for SaaS Secures Sensitive Data in Microsoft 365",
+          "link": "https://www.crowdstrike.com/en-us/blog/falcon-data-security-for-saas-secures-sensitive-data/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -683,10 +729,10 @@
         },
         {
           "source": "CrowdStrike Blog",
-          "title": "Falcon Data Security for SaaS Secures Sensitive Data in Microsoft 365",
-          "link": "https://www.crowdstrike.com/en-us/blog/falcon-data-security-for-saas-secures-sensitive-data/",
+          "title": "New in Falcon Cloud Security: Third-Party App Insights and AI-Enhanced Remediation",
+          "link": "https://www.crowdstrike.com/en-us/blog/falcon-cloud-security-third-party-app-insights-ai-enhanced-remedation/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -698,7 +744,7 @@
           "title": "CrowdStrike Expands Federal SOC Modernization Through CISA-Funded SIEMaaS",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-expands-federal-soc-modernization-via-cisa-siemaas/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -710,7 +756,7 @@
           "title": "Copy, Paste, Compromised: How ClickFix Attacks Work and How CrowdStrike Stops Them",
           "link": "https://www.crowdstrike.com/en-us/blog/how-clickfix-attacks-work-and-how-to-stop-them/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -722,7 +768,7 @@
           "title": "A Win for Defenders: CrowdStrike and NVIDIA Extend Security Across the AI Stack",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-nvidia-extend-security-across-ai-stack/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -734,7 +780,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: Proactive Security Platforms, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-proactive-security-platforms-q3-2026/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -746,7 +792,7 @@
           "title": "CrowdStrike Named a Leader in The Forrester Wave&trade;: External Threat Intelligence Service Providers, Q3 2026",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-named-leader-forrester-wave-external-threat-intelligence-q3-2026/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -758,7 +804,7 @@
           "title": "CrowdStrike SafeMind: When the Best Offense Builds the Best Defense",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-safemind-best-offense-builds-best-defense/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -770,7 +816,7 @@
           "title": "CrowdStrike Accelerates Real-Time Data Classification with On-Device AI",
           "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-accelerates-real-time-data-classification-with-on-device-ai/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -782,7 +828,7 @@
           "title": "PhantomRaven: An LLM-Generated Information Stealer Developed for Bug Bounty Hunting",
           "link": "https://www.crowdstrike.com/en-us/blog/phantomraven-llm-generated-information-stealer-for-bug-bounty-hunting/",
           "description": "",
-          "date": "2026-10-06T00:35:28.575830+00:00",
+          "date": "2026-10-06T07:11:29.826942+00:00",
           "date_unknown": true,
           "iocs": {
             "cves": [],
@@ -792,8 +838,8 @@
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"2395f55d27b567fefc6abebf17a03c95\"",
-      "last_modified": "Mon, 05 Oct 2026 22:39:30 GMT",
+      "etag": "\"6158cfb2673d6acf5ffa8f4724e536db\"",
+      "last_modified": "Tue, 06 Oct 2026 02:12:18 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -810,8 +856,8 @@
       ]
     },
     "https://www.microsoft.com/en-us/security/blog/feed/": {
-      "etag": "\"c9faf99a9afd6890bbdbd2c7902393e4-gzip\"",
-      "last_modified": "Mon, 05 Oct 2026 16:04:43 GMT",
+      "etag": "\"c9a82c451b96f0716b2b52fe9ef6a097-gzip\"",
+      "last_modified": "Mon, 05 Oct 2026 22:36:40 GMT",
       "cached_articles": []
     },
     "https://www.sentinelone.com/feed/": {
@@ -869,7 +915,7 @@
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:35:28 GMT",
+      "last_modified": "Tue, 06 Oct 2026 07:11:29 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -948,6 +994,30 @@
       "cached_articles": [
         {
           "source": "The Register - Security",
+          "title": "Atlassian warns of critical file access flaw in its datacenter products",
+          "link": "https://www.theregister.com/security/2026/10/06/atlassian-warns-of-critical-file-access-flaw-in-its-datacenter-products/5301284",
+          "description": " Tells users ‘action required’ – but maybe don’t make that action a Jira ticket, because it has this bug ...",
+          "date": "2026-10-06T06:20:00+02:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Register - Security",
+          "title": "Security researcher claims they found KVM guest-host escape flaw",
+          "link": "https://www.theregister.com/offbeat/2026/10/06/security-researcher-claims-they-found-kvm-guest-host-escape-flaw/5301267",
+          "description": " Firecracker MicroVMs, which started at AWS, seem to be the problem ...",
+          "date": "2026-10-06T04:06:20+02:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Register - Security",
           "title": "Citrix NetScaler security snafus get even worse amid more 0-day reports",
           "link": "https://www.theregister.com/security/2026/10/05/citrix-netscaler-security-snafus-get-even-worse-amid-more-0-day-reports/5301232",
           "description": " The new vuln, CVE-2026-88779, is a memory overflow bug that leads to denial of service ...",
@@ -999,9 +1069,33 @@
       ]
     },
     "https://hackaday.com/feed/": {
-      "etag": "\"8a1a4836d7fcd8e37a591a36b0c3c786\"",
-      "last_modified": "Mon, 05 Oct 2026 16:20:52 GMT",
+      "etag": "\"9a89dd3ab9191eb883e9922670c31952\"",
+      "last_modified": "Tue, 06 Oct 2026 04:50:04 GMT",
       "cached_articles": [
+        {
+          "source": "Hackaday",
+          "title": "Two Microcontrollers Talking, All It Needs is an LED",
+          "link": "https://hackaday.com/2026/10/05/two-microcontrollers-talking-all-it-needs-is-an-led/",
+          "description": "There are some projects that seem at first sight to be easy, but anyone who tries them finds a whole heap of unexpected problems and turns to the off-the-shelf device. …read more...",
+          "date": "2026-10-06T05:00:26+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "3D-Printed Filter Removes Most Microplastics From Water",
+          "link": "https://hackaday.com/2026/10/05/3d-printed-filter-removes-most-microplastics-from-water/",
+          "description": "With the rise of synthetic polymers in everywhere from clothing, packaging and beyond, we have also seen a corresponding rise in fragments of these polymers in the environment. These micro- …read more...",
+          "date": "2026-10-06T02:00:57+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "Ambition, Thy Name is a 3D Printed Transonic R/C Jet",
@@ -1061,40 +1155,16 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Hackaday",
-          "title": "The FPGA Chronicles: Open Source It",
-          "link": "https://hackaday.com/2026/10/05/the-fpga-chronicles-open-source-it/",
-          "description": "Last time, we looked at getting started with the GOWIN tools and a Tang Nano 20K FPGA. The software from GOWIN isn’t bad, but it isn’t open source, and there …read more...",
-          "date": "2026-10-05T14:00:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Porting Video Games to VHS",
-          "link": "https://hackaday.com/2026/10/05/porting-video-games-to-vhs/",
-          "description": "Although VHS-based games have existed for about as long as VHS players have sat in millions of living rooms, they always tended to be rather sparse gaming experiences. For example, …read more...",
-          "date": "2026-10-05T11:00:16+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:32:29 GMT",
+      "last_modified": "Tue, 06 Oct 2026 07:07:34 GMT",
       "cached_articles": [
         {
           "source": "Phoronix",
-          "title": "TrueNAS 27 RC.1 Released: LInux 6.18 LTS + OpenZFS 2.4",
+          "title": "TrueNAS 27 RC.1 Released: Linux 6.18 LTS + OpenZFS 2.4",
           "link": "https://www.phoronix.com/news/TrueNAS-27-RC.1-Release",
           "description": "TrueNAS 27 RC.1 released today in working toward the next major release of this Linux-based storage/NAS operating system from iXsystems......",
           "date": "2026-10-05T20:25:45-04:00",
@@ -1247,37 +1317,85 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "OpenCourant: Rocky Linux Developers Create Community Fork Of OpenRadioss",
-          "link": "https://www.phoronix.com/news/OpenRadioss-OpenCourant",
-          "description": "This week was the surprising and unfortunate decision of Siemens shutting down the OpenRadioss project as the four year old open-source project started by Altair Engineering with their prominent Radioss finite element solver. Siemens didn't just end the project but they shutdown the GitHub repositor...",
-          "date": "2026-10-04T13:51:01-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "MGLRU-FG Delivering Up To 10~40% Higher Performance For Linux In Some Tests",
-          "link": "https://www.phoronix.com/news/Linux-MGLRU-FG-Patches",
-          "description": "Linux's Multi-Gen LRU \"MGLRU\" has already achieved nice performance gains for Linux in recent years by optimizing page reclaims and improves performance under memory pressure. The new MGLRU-FG patches aim to take things further......",
-          "date": "2026-10-04T11:16:26-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "\"2da9f5a5f01c31b2ee88a96488958758\"",
-      "last_modified": "Mon, 05 Oct 2026 23:47:04 GMT",
+      "etag": "W/\"c49227001c2e3a9fe9c96cf102aa6d8d\"",
+      "last_modified": "Tue, 06 Oct 2026 06:39:13 GMT",
       "cached_articles": [
+        {
+          "source": "Android Authority",
+          "title": "Google adds support for Markdown files in Google Docs and Drive",
+          "link": "https://www.androidauthority.com/google-docs-drive-markdown-file-support-3719441/",
+          "description": "Google is finally making life easier for people who prefer writing in Markdown....",
+          "date": "2026-10-06T06:39:13+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Snapseed could soon bring a professional camera feature to your phone",
+          "link": "https://www.androidauthority.com/snapseed-focus-peaking-apk-teardown-3719427/",
+          "description": "Focus peaking could soon join Snapseed's repository of useful photography tools....",
+          "date": "2026-10-06T06:29:09+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Samsung’s updated SmartThings takes a few notes from One UI’s Now Brief",
+          "link": "https://www.androidauthority.com/samsung-smartthings-now-brief-update-3719415/",
+          "description": "It also brings local device controls and support for Matter 1.6. ...",
+          "date": "2026-10-06T06:05:32+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Google’s latest Play Services update has a neat trick for your lost belongings",
+          "link": "https://www.androidauthority.com/google-play-services-update-october-2026-3719420/",
+          "description": "Your keys can run, but Find Hub is getting better at chasing....",
+          "date": "2026-10-06T05:30:51+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Amazon Alexa won’t stop saying ‘lalala’ and users are creeped out (Updated: Fix incoming)",
+          "link": "https://www.androidauthority.com/amazon-alexa-la-la-la-3719167/",
+          "description": "La, la, la, la, la......",
+          "date": "2026-10-06T03:56:35+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "ChatGPT users, your AI-written text will soon carry a hidden watermark",
+          "link": "https://www.androidauthority.com/chatgpt-text-watermarking-3719403/",
+          "description": "The days of using ChatGPT to write your assignments and reports may be coming to an end....",
+          "date": "2026-10-06T03:38:49+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "Samsung confirms the best new thing about its SmartTag 3 trackers",
@@ -1380,18 +1498,6 @@
           "link": "https://www.androidauthority.com/kindle-colorsoft-deal-3719202/",
           "description": "Amazon drops the Kindle Colorsoft 16GB to $189.99, giving this 7-inch color E-Ink reader its lowest price in months....",
           "date": "2026-10-05T15:43:44+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Amazon Alexa won’t stop saying ‘lalala’ and users are creeped out",
-          "link": "https://www.androidauthority.com/amazon-alexa-la-la-la-3719167/",
-          "description": "La, la, la, la, la......",
-          "date": "2026-10-05T15:34:35+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1757,18 +1863,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The Soulog Sense is an AI voice recorder with a personal context system that never misses a word",
-          "link": "https://www.androidauthority.com/soulog-sense-ai-voice-recorder-3716740/",
-          "description": "It not only records your conversations, but it also helps you understand and organize them....",
-          "date": "2026-10-04T17:00:58+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -1794,6 +1888,18 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Android Police - News",
+          "title": "Google Docs finally gets the file support we've been waiting for",
+          "link": "https://www.androidpolice.com/google-docs-support-for-markdown-files/",
+          "description": "\n                                            You no longer need to convert those .md files\n                                        ...",
+          "date": "2026-10-06T03:56:03+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Police - News",
           "title": "6 Google Drive tools that reduce frustrating file clutter and make managing files easier",
@@ -1901,18 +2007,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Police - News",
-          "title": "I linked my work tools to Gemini; I barely open Wispr Flow anymore",
-          "link": "https://www.androidpolice.com/i-linked-my-work-tools-to-gemini-i-barely-open-wispr-flow-anymore/",
-          "description": "\n                                            From meeting notes to done, with less app hopping\n                                        ...",
-          "date": "2026-10-05T13:30:10+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -1920,6 +2014,42 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Best Amazon Prime Day tech deals live",
+          "link": "https://www.tomshardware.com/live/news/amazon-prime-big-deal-days-2026-day-one",
+          "description": "\n                             Get all the best deals in the October 2026 Amazon Prime Big Deal Days tech event. \n                                                                                                            ...",
+          "date": "2026-10-06T06:50:09+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Samsung 9100 Pro SSDs slashed up to 41% while supplies last — huge price cuts hit all capacities from 1TB to 8TB",
+          "link": "https://www.tomshardware.com/pc-components/samsung-9100-pro-ssds-slashed-up-to-41-percent-while-supplies-last-huge-price-cuts-hit-all-capacities-from-1tb-to-8tb",
+          "description": "\n                             Amazon slashes the prices of Samsung's entire 9100 Pro lineup of PCIe 5.0 SSDs during the Big Deals sale. \n                                                                                                            ...",
+          "date": "2026-10-06T05:09:30+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Get a rare deal on a shuckable 16TB Seagate Expansion Desktop drive at $0.02 per GB",
+          "link": "https://www.tomshardware.com/pc-components/external-hdds/get-a-rare-deal-on-the-shuckable-16tb-seagate-expansion-desktop-drive-at-usd0-02-per-gb-save-usd100-on-this-big-drive-ahead-of-prime-big-deal-days",
+          "description": "\n                             The Seagate Expansion Desktop 16TB is a surprisingly decent value at $449.99, at least given where high-capacity HDD prices sit broadly right now. \n                                                                                                            ...",
+          "date": "2026-10-06T01:18:02+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Get into a 32GB DDR5 memory kit for less this Big Deals Day with these picks",
@@ -2207,132 +2337,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Best Amazon Prime Day tech deals live",
-          "link": "https://www.tomshardware.com/live/news/amazon-prime-big-deal-days-2026",
-          "description": "\n                             Get all the best deals in the October 2026 Amazon Prime Big Deal Days tech event. \n                                                                                                            ...",
-          "date": "2026-10-05T06:48:40+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Modder 'fixes' melting RTX 5090 power connectors with custom distributor",
-          "link": "https://www.tomshardware.com/pc-components/gpus/modder-fixes-melting-rtx-5090-power-connectors-with-custom-distributor-dual-8-pin-mod-peaks-at-just-40c-during-a-48-hour-550w-stress-test",
-          "description": "\n                             Reddit user u/DallasGrave shared a fix for his RTX 5090, one of the best graphics cards, whose 12VHPWR connector was overheating, along with an image of a module screwed onto the back of his GPU. \n                                                                         ...",
-          "date": "2026-10-04T14:50:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Robotics startup has real human vs. robot cage match, California responds with cease-and-desist order",
-          "link": "https://www.tomshardware.com/tech-industry/robotics/robotics-startup-has-real-human-vs-robot-cage-match-california-responds-with-cease-and-desist-order-regulator-threatens-misdemeanor-charges-after-youtuber-fights-three-robotic-humanoids",
-          "description": "\n                             The California State Athletic Commission intervened when it saw a human facing off with a humanoid robot inside the fighting ring. \n                                                                                                            ...",
-          "date": "2026-10-04T14:36:25+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Modder brings Nvidia Pascal GPU support to Windows XP 32-bit",
-          "link": "https://www.tomshardware.com/pc-components/gpu-drivers/modder-brings-nvidia-pascal-gpu-support-to-windows-xp-32-bit-modded-drivers-unlock-better-displayport-and-hdmi-support-for-modern-monitors",
-          "description": "\n                             Retro techie retrofits Nvidia Windows XP 32-bit drivers with Pascal card support and improved DisplayPort and HDMI support for contemporary displays \n                                                                                                            ...",
-          "date": "2026-10-04T14:25:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Database expert runs Doom in SQL with just 5,900 lines of code",
-          "link": "https://www.tomshardware.com/video-games/pc-gaming/database-expert-runs-doom-in-sql-with-just-5-900-lines-of-code-1-300-line-graphical-renderer-spans-89-different-tables-full-featured-sqldoom-is-the-sequel-to-embryonic-doomql",
-          "description": "\n                             Database expert runs Doom in SQL again — full-featured SQLDoom is the sequel to embryonic DoomQL \n                                                                                                            ...",
-          "date": "2026-10-04T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "US Army unit deploys drone assembled completely in-house, uses 3D-printed 'Dragoon Bombs' with ball bearing shrapnel",
-          "link": "https://www.tomshardware.com/tech-industry/drones/us-army-unit-deploys-drone-assembled-completely-in-house-uses-3d-printed-dragoon-bombs-with-ball-bearing-shrapnel-device-has-a-range-of-up-to-12-miles-and-can-be-configured-for-anti-personnel-and-anti-light-armor-missions",
-          "description": "\n                             U.S. Army soldiers are training to assemble drones and 3D-print bomb casings for field use. \n                                                                                                            ...",
-          "date": "2026-10-04T13:40:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "AI robot company decommissioned its robots ‘Terminator-style’ in a 75-ton vat of molten steel",
-          "link": "https://www.tomshardware.com/tech-industry/robotics/ai-robot-company-decommissioned-its-robots-terminator-style-in-a-75-ton-vat-of-molten-steel-arnold-schwarzenegger-suggested-melting-them-one-robot-held-up-a-thumbs-up-sign-as-it-sank-into-molten-metal",
-          "description": "\n                             AI Robotics company Figure found a creative way of decommissioning its old F.02 fleet without having to allocate resources for difficult and time-consuming disassembly. \n                                                                                                    ...",
-          "date": "2026-10-04T13:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "ChatGPT-6 Astra cracks 217-year-old Napoleonic code in just six hours",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders",
-          "description": "\n                             An AI engineer used GPT-6 Astra to reveal the contents of a cipher that hadn’t been read since the Napoleonic Wars. The task was initiated with a single image and prompt, and took just six hours from start to finish. \n                                                    ...",
-          "date": "2026-10-04T13:08:46+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Iranian national extradited to US over alleged $3.4 billion state-backed hacking campaign in rare legal win for law enforcement",
-          "link": "https://www.tomshardware.com/tech-industry/cyber-security/iranian-national-extradited-to-us-over-alleged-usd3-4-billion-state-backed-hacking-campaign-in-rare-legal-win-for-law-enforcement-operative-helped-steal-31-terabytes-of-data-from-over-300-universities",
-          "description": "\n                             An Iranian-Turkish man has been extradited from Montenegro to the U.S. over his alleged role in a hacking campaign that targeted hundreds of universities, companies, and government agencies and stole more than 31 TB of academic data. \n                                   ...",
-          "date": "2026-10-04T12:55:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "German utility provider introduces 'gaming electricity' plan targeting high-consumption households, like those running multiple high-end gaming PCs",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/german-utility-provider-introduces-gaming-electricity-plan-targeting-high-consumption-households-like-those-running-multiple-high-end-gaming-pcs-plan-requires-2-500-kwh-per-year-to-offset-a-higher-base-price-claims-to-use-renewable-energy",
-          "description": "\n                             SWK Energie launched a new tariff marketed directly towards gamers. While it will not improve the FPS on your gaming PC, it could help cut the electricity bills of large consumers, whether the power is used by an RTX 5090 or a Tesla. \n                                   ...",
-          "date": "2026-10-04T12:47:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:16:29 GMT",
+      "last_modified": "Tue, 06 Oct 2026 06:50:09 GMT",
       "cached_articles": []
     },
     "https://spectrum.ieee.org/rss/fulltext": {
@@ -2360,17 +2370,17 @@
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:35:28 GMT",
+      "last_modified": "Tue, 06 Oct 2026 07:11:30 GMT",
       "cached_articles": []
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Tue, 06 Oct 2026 00:35:28 GMT",
+      "last_modified": "Tue, 06 Oct 2026 07:11:30 GMT",
       "cached_articles": []
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"3ee15-65ce45cff8590\"",
-      "last_modified": "Sat, 03 Oct 2026 00:02:22 GMT",
+      "etag": "\"3ee15-65cebbcfea94d\"",
+      "last_modified": "Sat, 03 Oct 2026 08:50:18 GMT",
       "cached_articles": []
     },
     "https://security.googleblog.com/feeds/posts/default": {
@@ -2412,8 +2422,8 @@
       "cached_articles": []
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"e833428615365029b90b765114a34b69\"",
-      "last_modified": "Mon, 05 Oct 2026 20:59:30 GMT",
+      "etag": "\"05cca83b2a1795af0c0b5bbfec3acde3\"",
+      "last_modified": "Tue, 06 Oct 2026 01:55:49 GMT",
       "cached_articles": []
     },
     "https://www.wordfence.com/feed/": {
