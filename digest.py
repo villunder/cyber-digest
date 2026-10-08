@@ -797,12 +797,14 @@ def build_web_dashboard(categorized):
             --border-color: #334155;
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-dark); color: var(--text-main); padding: 20px; line-height: 1.5; }}
+        html {{ -webkit-text-size-adjust: 100%; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-dark); color: var(--text-main); padding: 20px; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); line-height: 1.5; overflow-wrap: anywhere; }}
+        a:focus-visible, button:focus-visible, input:focus-visible {{ outline: 2px solid #93c5fd; outline-offset: 2px; }}
         .container {{ max-width: 1300px; margin: 0 auto; }}
         header {{ display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }}
-        h1 {{ font-size: 1.8rem; font-weight: 700; color: #fff; }}
+        h1 {{ font-size: clamp(1.25rem, 4.5vw, 1.8rem); font-weight: 700; color: #fff; }}
         .last-update {{ color: var(--text-muted); font-size: 0.9rem; }}
-        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }}
+        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-bottom: 20px; }}
         .stat-card {{ background: var(--card-bg); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--border-color); }}
         .stat-card.targeted {{ border-left-color: var(--accent-targeted); }}
         .stat-card.critical {{ border-left-color: var(--accent-critical); }}
@@ -810,29 +812,31 @@ def build_web_dashboard(categorized):
         .stat-value {{ font-size: 1.8rem; font-weight: bold; margin-top: 5px; }}
         .stat-label {{ font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; }}
         .controls {{ display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }}
-        .search-box {{ flex: 1; min-width: 250px; padding: 10px 15px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-size: 0.95rem; }}
-        .tabs {{ display: flex; gap: 8px; }}
-        .tab-btn {{ background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; }}
-        .tab-btn.active {{ background: var(--accent-general); border-color: var(--accent-general); color: #fff; }}
-        .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; }}
-        .card {{ background: var(--card-bg); border-radius: 8px; padding: 20px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; }}
+        .search-box {{ flex: 1 1 250px; min-width: 0; min-height: 44px; padding: 10px 15px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-size: 0.95rem; }}
+        .tabs {{ display: flex; gap: 8px; flex-wrap: wrap; }}
+        .tab-btn {{ background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 16px; min-height: 44px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.95rem; }}
+        .tab-btn.active {{ background: #1d4ed8; border-color: #1d4ed8; color: #fff; }}
+        .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }}
+        .card {{ min-width: 0; background: var(--card-bg); border-radius: 8px; padding: 16px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; }}
         .card.targeted-card {{ border-top: 3px solid var(--accent-targeted); }}
         .card.critical-card {{ border-top: 3px solid var(--accent-critical); }}
         .card.general-card {{ border-top: 3px solid var(--accent-general); }}
         .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; margin-bottom: 12px; gap: 5px; flex-wrap: wrap; }}
         .source-tag {{ color: var(--text-muted); font-weight: 600; }}
         .date-tag {{ color: var(--text-muted); }}
-        .badge {{ padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 0.7rem; }}
-        .badge-new {{ background: #10b981; color: #fff; }}
-        .badge-infra {{ background: #a855f7; color: #fff; }}
-        .badge-score {{ background: #475569; color: #38bdf8; }}
+        .badge {{ padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 0.75rem; }}
+        .badge-new {{ background: #047857; color: #fff; }}
+        .badge-infra {{ background: #7e22ce; color: #fff; }}
+        .badge-score {{ background: #0f172a; color: #7dd3fc; border: 1px solid #475569; }}
         .cve-badge {{ background: #334155; color: #38bdf8; padding: 2px 6px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-family: monospace; }}
         .ioc-container {{ display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }}
         .ioc-pill {{ background: #0f172a; color: #f43f5e; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; border: 1px solid #334155; }}
-        .card-title {{ font-size: 1.1rem; margin-bottom: 10px; line-height: 1.3; }}
+        .card-title {{ font-size: 1.05rem; margin-bottom: 10px; line-height: 1.35; overflow-wrap: anywhere; }}
         .card-title a {{ color: #fff; text-decoration: none; }}
         .card-title a:hover {{ color: var(--accent-general); }}
-        .card-desc {{ color: var(--text-muted); font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
+        .card-desc {{ color: var(--text-muted); font-size: 0.9rem; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
+        @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 10px; }} .stat-card {{ padding: 12px 16px; }} .stat-value {{ font-size: 1.5rem; }} }}
+        @media (prefers-reduced-motion: reduce) {{ * {{ scroll-behavior: auto !important; }} }}
         .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; }}
     </style>
 </head>
@@ -863,7 +867,7 @@ def build_web_dashboard(categorized):
             </div>
         </div>
         <div class="controls">
-            <input type="text" id="searchInput" class="search-box" placeholder="Căutare după termen, CVE sau IP..." onkeyup="filterCards()">
+            <input type="search" id="searchInput" class="search-box" aria-label="Căutare după termen, CVE sau IP" placeholder="Căutare după termen, CVE sau IP..." oninput="filterCards()">
             <div class="tabs">
                 <button class="tab-btn active" onclick="filterCategory('all', this)">Toate</button>
                 <button class="tab-btn" onclick="filterCategory('targeted-card', this)">Vizate</button>
