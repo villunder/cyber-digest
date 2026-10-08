@@ -15,6 +15,10 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 CANDIDATES = [
+    # --- verificare format dată (articole fără dată parsabilă pe dashboard) ---
+    ("DATECHECK CrowdStrike", "https://www.crowdstrike.com/blog/feed/"),
+    ("DATECHECK GitHub security", "https://github.blog/category/security/feed/"),
+    ("DATECHECK Proofpoint", "https://www.proofpoint.com/us/rss.xml"),
     # --- înlocuiri pentru surse căzute ---
     ("CISA ICS advisories", "https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml"),
     ("CISA KEV (GitHub cisagov)", "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"),
@@ -112,7 +116,10 @@ def probe(item):
                     d = items[0].find(f"{ATOM}updated")
                 if d is None:
                     d = items[0].find(f"{ATOM}published")
-                newest = _text(d)[:25]
+                newest = _text(d)[:40]
+                if name.startswith("DATECHECK"):
+                    tags = ",".join(c.tag.split("}")[-1] for c in items[0])
+                    newest += f" tags=[{tags}]"
     except Exception as e:
         return f"BAD  | {name} | {code} {ctype} parse: {str(e)[:50]} | {len(body)}B | {final}"
     redirect = "" if final == url else f" -> {final}"
