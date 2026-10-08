@@ -70,14 +70,6 @@ ATOM_NS = "{http://www.w3.org/2005/Atom}"
 
 RSS_SOURCES = [
     # Surse Naționale & Oficiale / Guvernamentale
-    {"name": "DNSC - Alerte", "url": "https://dnsc.ro/rss/alerte.xml", "priority": 95},
-    {"name": "DNSC - Știri", "url": "https://dnsc.ro/rss/stiri.xml", "priority": 90},
-    {"name": "CERT-RO / DNSC Blog", "url": "https://dnsc.ro/blog/rss", "priority": 90},
-    {"name": "CISA - Cybersecurity Advisories", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "priority": 100},
-    {"name": "CISA - Current Activity", "url": "https://www.cisa.gov/uscert/ncas/current-activity.xml", "priority": 100},
-    {"name": "NVD NIST - Recent CVEs", "url": "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml", "priority": 95},
-    {"name": "ENISA - News & Press", "url": "https://www.enisa.europa.eu/media/news-items/news-rss", "priority": 85},
-    {"name": "CERT-EU - Publications", "url": "https://www.cert.europa.eu/publications/feed/", "priority": 90},
     {"name": "NCSC UK - News & Threats", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "priority": 90},
     {"name": "ACS CISA Australia - Advisories", "url": "https://www.cyber.gov.au/rss.xml", "priority": 85},
 
@@ -89,7 +81,6 @@ RSS_SOURCES = [
     {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "priority": 65},
     {"name": "Ars Technica - Security", "url": "https://arstechnica.com/security/feed/", "priority": 70},
     {"name": "SANS ISC StormCast", "url": "https://isc.sans.edu/rssfeed.xml", "priority": 85},
-    {"name": "Trend Micro - Security News", "url": "https://newsroom.trendmicro.com/rss", "priority": 75},
     {"name": "Sophos News", "url": "https://news.sophos.com/en-us/feed/", "priority": 75},
     {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/", "priority": 80},
     {"name": "Malwarebytes Labs", "url": "https://www.malwarebytes.com/blog/feed/index.xml", "priority": 75},
@@ -102,25 +93,16 @@ RSS_SOURCES = [
     # Windows și Ecosistemul Microsoft
     {"name": "Microsoft Security Response (MSRC)", "url": "https://api.msrc.microsoft.com/update-guide/rss", "priority": 95},
     {"name": "Microsoft Security Blog", "url": "https://www.microsoft.com/en-us/security/blog/feed/", "priority": 85},
-    {"name": "Windows IT Pro Blog", "url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/WindowsITProBlog/rss", "priority": 70},
 
     # Threat Intel Vendori & Infra
     {"name": "Cisco Talos Intelligence", "url": "https://blog.talosintelligence.com/rss/", "priority": 85},
     {"name": "Unit 42 (Palo Alto Networks)", "url": "https://unit42.paloaltonetworks.com/feed/", "priority": 85},
     {"name": "CrowdStrike Blog", "url": "https://www.crowdstrike.com/blog/feed/", "priority": 85},
-    {"name": "Mandiant / Google Cloud Security", "url": "https://cloud.google.com/blog/products/identity-security/rss/", "priority": 85},
-    {"name": "Fortinet FortiGuard Labs", "url": "https://www.fortinet.com/blog/rss.xml", "priority": 80},
     {"name": "Check Point Research", "url": "https://research.checkpoint.com/feed/", "priority": 80},
     {"name": "ESET WeLiveSecurity", "url": "https://www.welivesecurity.com/feed/", "priority": 75},
     {"name": "Rapid7 Blog", "url": "https://blog.rapid7.com/rss/", "priority": 80},
-    {"name": "Qualys Security Blog", "url": "https://blog.qualys.com/feed", "priority": 80},
-    {"name": "SentinelOne Blog", "url": "https://www.sentinelone.com/feed/", "priority": 80},
-    {"name": "Symantec Threat Intelligence", "url": "https://symantec-enterprise-blogs.security.com/blogs/feed/threat-intelligence", "priority": 80},
-    {"name": "Zscaler ThreatLabz", "url": "https://www.zscaler.com/blogs/rss/threatlabz", "priority": 80},
     {"name": "Red Canary Blog", "url": "https://redcanary.com/feed/", "priority": 80},
-    {"name": "Securin Vulnerability Lab", "url": "https://www.securin.io/feed/", "priority": 75},
     {"name": "Censys Research", "url": "https://censys.com/feed/", "priority": 75},
-    {"name": "Shodan Blog", "url": "https://article.shodan.io/rss/", "priority": 75},
 
     # Android și Securitate Mobilă
     {"name": "Google Online Security Blog", "url": "https://security.googleblog.com/feeds/posts/default", "priority": 85},
@@ -133,20 +115,43 @@ RSS_SOURCES = [
     {"name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "priority": 60},
     {"name": "IEEE Spectrum", "url": "https://spectrum.ieee.org/rss/fulltext", "priority": 65},
     {"name": "Phoronix", "url": "https://www.phoronix.com/rss.php", "priority": 60},
-    {"name": "PicoVM / Low Level Security", "url": "https://lowlevel.com/feed.xml", "priority": 65},
 
     # Platforme Web, Cloud & Tehnologii Direct Vizate
     {"name": "Joomla Community News", "url": "https://community.joomla.org/blogs.feed?type=rss", "priority": 90},
     {"name": "Joomla Security Announcements", "url": "https://developer.joomla.org/security-centre.feed?type=rss", "priority": 95},
     {"name": "PHP.net News", "url": "https://www.php.net/news.rss", "priority": 90},
-    {"name": "cPanel News", "url": "https://news.cpanel.com/feed/", "priority": 90},
     {"name": "Cloudflare Blog - Security", "url": "https://blog.cloudflare.com/tag/security/rss/", "priority": 85},
-    {"name": "AWS Security Bulletin", "url": "https://aws.amazon.com/security/security-bulletins/rss/", "priority": 90},
     {"name": "GitHub Security Advisories", "url": "https://github.blog/category/security/feed/", "priority": 85},
     {"name": "Project Zero (Google)", "url": "https://googleprojectzero.blogspot.com/feeds/posts/default", "priority": 95},
     {"name": "PortSwigger Web Security", "url": "https://portswigger.net/research/rss", "priority": 90},
-    {"name": "Offensive Security (OffSec)", "url": "https://www.offsec.com/feed/", "priority": 80},
     {"name": "Wordfence Security Blog", "url": "https://www.wordfence.com/feed/", "priority": 85},
+
+    # --- Adăugate/verificate de pe runner-ul GitHub (probe 8 oct. 2026) ---
+    {"name": "DNSC - Știri și alerte", "url": "https://www.dnsc.ro/feed", "priority": 95},
+    {"name": "CISA - Known Exploited Vulnerabilities", "type": "cisa_kev", "priority": 100,
+     "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+     "urls": ["https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+              "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"]},
+    {"name": "NVD NIST - Critical CVEs", "type": "nvd_api", "push": False, "priority": 90,
+     "url": "https://services.nvd.nist.gov/rest/json/cves/2.0"},
+    {"name": "CERT-EU - Security Advisories", "url": "https://cert.europa.eu/publications/security-advisories-rss", "priority": 90},
+    {"name": "CERT-EU - Threat Intelligence", "url": "https://cert.europa.eu/publications/threat-intelligence-rss", "priority": 85},
+    {"name": "CERT/CC - Vulnerability Notes", "url": "https://kb.cert.org/vuls/atomfeed/", "priority": 90},
+    {"name": "AWS Security Bulletins", "url": "https://aws.amazon.com/security/security-bulletins/feed/", "priority": 90},
+    {"name": "AWS Security Blog", "url": "https://aws.amazon.com/blogs/security/feed/", "priority": 80},
+    {"name": "Google Cloud Threat Intelligence", "url": "https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/", "priority": 85},
+    {"name": "SentinelOne Labs", "url": "https://www.sentinelone.com/labs/feed/", "priority": 80},
+    {"name": "Zero Day Initiative", "url": "https://www.zerodayinitiative.com/rss/published/", "priority": 85},
+    {"name": "Elastic Security Labs", "url": "https://www.elastic.co/security-labs/rss/feed.xml", "priority": 85},
+    {"name": "watchTowr Labs", "url": "https://labs.watchtowr.com/rss/", "priority": 85},
+    {"name": "Huntress Blog", "url": "https://www.huntress.com/blog/rss.xml", "priority": 80},
+    {"name": "Proofpoint Threat Insight", "url": "https://www.proofpoint.com/us/rss.xml", "priority": 80},
+    {"name": "Citizen Lab", "url": "https://citizenlab.ca/feed/", "priority": 75},
+    {"name": "The Record (Recorded Future News)", "url": "https://therecord.media/feed", "priority": 75},
+    {"name": "Health-ISAC", "url": "https://health-isac.org/feed/", "priority": 85},
+    {"name": "Chrome Releases", "url": "https://chromereleases.googleblog.com/feeds/posts/default", "priority": 75},
+    {"name": "PHP.net - Releases", "url": "https://www.php.net/releases/feed.php", "priority": 90},
+    {"name": "MariaDB Blog", "url": "https://mariadb.org/feed/", "priority": 75},
 ]
 
 SOURCE_PRIORITY_MAP = {src['name']: src['priority'] for src in RSS_SOURCES}
@@ -173,10 +178,12 @@ HOURS_LOOKBACK = 36
 # Surse rare dar importante: fereastra de 36h le golește aproape mereu (ex. Joomla, PHP.net).
 LONG_WINDOW_HOURS = 168
 LONG_WINDOW_SOURCES = {
-    "Joomla Security Announcements", "Joomla Community News", "PHP.net News", "cPanel News",
+    "Joomla Security Announcements", "Joomla Community News", "PHP.net News", "PHP.net - Releases",
     "Wordfence Security Blog", "Project Zero (Google)", "Google Online Security Blog",
     "PortSwigger Web Security", "NCSC UK - News & Threats", "GitHub Security Advisories",
-    "Kaspersky Securelist", "DNSC - Alerte", "CISA - Cybersecurity Advisories",
+    "Kaspersky Securelist", "DNSC - Știri și alerte", "CISA - Known Exploited Vulnerabilities",
+    "CERT-EU - Security Advisories", "CERT/CC - Vulnerability Notes", "AWS Security Bulletins",
+    "Zero Day Initiative", "Health-ISAC", "MariaDB Blog",
 }
 # Surse de consum/hardware: păstrăm doar articolele cu semnal real de securitate.
 NOISY_SOURCES = {
@@ -329,6 +336,113 @@ def _fetch_url_with_retry(url, headers, timeout):
 
 FEED_HEALTH = {}
 
+def _serialize_articles(articles):
+    out = []
+    for art in articles:
+        c = art.copy()
+        if isinstance(c.get('date'), datetime.datetime):
+            c['date'] = c['date'].isoformat()
+        c.pop('date_obj', None)
+        out.append(c)
+    return out
+
+def _make_article(source, title, link, description, pub_dt):
+    clean_desc = html.unescape(description or "")[:300]
+    clean_desc = clean_desc + "..." if description else ""
+    return {
+        'source': source['name'],
+        'title': title,
+        'link': normalize_url(link),
+        'description': clean_desc,
+        'date': pub_dt.isoformat(),
+        'date_obj': pub_dt,
+        'date_unknown': False,
+        'iocs': extract_iocs(f"{title} {clean_desc}"),
+        'no_push': source.get('push') is False,
+    }
+
+def parse_cisa_kev(data, source, now_utc):
+    threshold = now_utc - datetime.timedelta(hours=lookback_for(source['name']))
+    articles = []
+    for v in data.get('vulnerabilities', []):
+        try:
+            added = datetime.datetime.strptime(v['dateAdded'], '%Y-%m-%d').replace(tzinfo=datetime.timezone.utc)
+        except (KeyError, ValueError):
+            continue
+        if added < threshold:
+            continue
+        cve = v.get('cveID', '')
+        ransom = " Folosit în campanii ransomware." if v.get('knownRansomwareCampaignUse') == 'Known' else ""
+        title = f"CISA KEV: {cve} — {v.get('vendorProject', '')} {v.get('product', '')}: {v.get('vulnerabilityName', '')}".strip()
+        desc = (f"Exploited in the wild (CISA Known Exploited Vulnerabilities, adăugat {v['dateAdded']}).{ransom} "
+                f"{v.get('shortDescription', '')}")
+        articles.append(_make_article(source, title, f"https://nvd.nist.gov/vuln/detail/{cve}", desc, added))
+    return articles
+
+def parse_nvd(data, source, now_utc):
+    articles = []
+    for item in data.get('vulnerabilities', []):
+        cve = item.get('cve', {})
+        cid = cve.get('id')
+        if not cid:
+            continue
+        try:
+            pub = datetime.datetime.fromisoformat(cve['published'])
+        except (KeyError, ValueError):
+            continue
+        if pub.tzinfo is None:
+            pub = pub.replace(tzinfo=datetime.timezone.utc)
+        desc = next((d.get('value', '') for d in cve.get('descriptions', []) if d.get('lang') == 'en'), "")
+        score = None
+        for key in ('cvssMetricV31', 'cvssMetricV40', 'cvssMetricV30'):
+            metrics = cve.get('metrics', {}).get(key)
+            if metrics:
+                score = metrics[0].get('cvssData', {}).get('baseScore')
+                break
+        score_txt = f" (CVSS {score})" if score is not None else ""
+        title = f"NVD critical vulnerability: {cid}{score_txt} {desc[:110]}".strip()
+        articles.append(_make_article(source, title, f"https://nvd.nist.gov/vuln/detail/{cid}", desc, pub))
+    return articles
+
+def _nvd_request_url(source, now_utc):
+    start = now_utc - datetime.timedelta(hours=HOURS_LOOKBACK)
+    fmt = lambda d: urllib.parse.quote(d.strftime('%Y-%m-%dT%H:%M:%S.000') + '+00:00')
+    return (f"{source['url']}?cvssV3Severity=CRITICAL&resultsPerPage=100"
+            f"&pubStartDate={fmt(start)}&pubEndDate={fmt(now_utc)}")
+
+def fetch_json_source(source, http_cache):
+    """Surse JSON (CISA KEV, NVD API). La eroare se folosesc articolele din cache (stale)."""
+    cache_key = f"json::{source['name']}"
+    cache_entry = http_cache.get(cache_key, {})
+    headers = {'User-Agent': 'CyberSecurityMonitor/4.8', 'Accept': 'application/json'}
+    if source['type'] == 'nvd_api' and os.getenv("NVD_API_KEY"):
+        headers['apiKey'] = os.getenv("NVD_API_KEY")
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    try:
+        urls = source.get('urls') or [source['url']]
+        last_err = None
+        data = None
+        for base in urls:
+            try:
+                url = _nvd_request_url(source, now_utc) if source['type'] == 'nvd_api' else base
+                content, _, _, _ = _fetch_url_with_retry(url, headers, REQUEST_TIMEOUT * 2)
+                data = json.loads(content)
+                break
+            except Exception as e:
+                last_err = e
+        if data is None:
+            raise last_err
+        parser = parse_cisa_kev if source['type'] == 'cisa_kev' else parse_nvd
+        articles = parser(data, source, now_utc)
+        http_cache[cache_key] = {'etag': None, 'last_modified': None, 'cached_articles': _serialize_articles(articles)}
+        FEED_HEALTH[source['name']] = {'ok': True, 'status': f"JSON {len(articles)}"}
+        return articles
+    except Exception as e:
+        print(f"[!] Eroare la sursa JSON '{source['name']}': {type(e).__name__}: {str(e)[:100]}")
+        stale = _restore_cached_articles(cache_entry)
+        FEED_HEALTH[source['name']] = {'ok': False, 'status': f"{type(e).__name__}: {str(e)[:80]}", 'stale': len(stale)}
+        return stale
+
 def _restore_cached_articles(cache_entry):
     cached_arts = copy.deepcopy(cache_entry.get('cached_articles', []))
     for art in cached_arts:
@@ -342,6 +456,8 @@ def _restore_cached_articles(cache_entry):
     return cached_arts
 
 def fetch_single_feed(source, http_cache):
+    if source.get('type') in ('cisa_kev', 'nvd_api'):
+        return fetch_json_source(source, http_cache)
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 CyberSecurityMonitor/4.8'
     }
@@ -532,6 +648,9 @@ def fetch_and_filter():
     print(f"[*] Surse active: {ok_count}/{len(RSS_SOURCES)}; eșuate: {len(failed)}")
     for n, st in sorted(failed.items()):
         print(f"    - {n}: {st}")
+    # Elimină intrările HTTP ale surselor scoase din configurare (cache-ul nu mai crește cu surse moarte)
+    valid_keys = {src['url'] for src in RSS_SOURCES} | {f"json::{src['name']}" for src in RSS_SOURCES if src.get('type')}
+    http_cache = {k: v for k, v in http_cache.items() if k in valid_keys}
     cache['first_seen'] = first_seen_cache
     cache['http_cache'] = http_cache
     cache['feed_health'] = {'updated': now_utc.isoformat(), 'ok': ok_count,
@@ -1101,7 +1220,8 @@ def select_push_alerts(categorized, cache, now_utc):
     notified = cache.setdefault('notified', {})
     first_run = not notified and not cache.get('notified_seeded')
     candidates = [a for k in ('targeted', 'critical') for a in categorized[k]
-                  if a.get('risk_score', 0) >= NTFY_MIN_SCORE]
+                  if a.get('risk_score', 0) >= NTFY_MIN_SCORE
+                  and not (a.get('no_push') and not a.get('is_targeted_infra'))]
     fresh = [a for a in candidates if _alert_id(a) not in notified]
     for a in fresh:
         notified[_alert_id(a)] = now_utc.isoformat()
