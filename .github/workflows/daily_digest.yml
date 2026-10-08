@@ -2,60 +2,95 @@ name: Daily Security Digest
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    # La fiecare 15 min, decalat față de :00/:30 (orele de vârf, când GitHub amână/ignoră cron-urile).
+    # Dacă adaugi declanșatorul extern (Cloudflare Worker, vezi AUDIT.md), schimbă în '17 * * * *' (rezervă orară).
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: 'Ignoră cache-ul HTTP (ETag) și reia toate sursele'
+        type: boolean
+        default: false
+      send_email:
+        description: 'Trimite emailul zilnic acum'
+        type: boolean
+        default: false
 
 permissions:
-  contents: write
+  contents: write   # doar pentru snapshot-ul zilnic al stării
   pages: write
   id-token: write
 
+# cancel-in-progress: true => o rulare blocată (ex. în așteptarea aprobării mediului) este înlocuită de următoarea
+# în loc să țină coada ore întregi. Deploy-ul precedent rămâne live dacă o rulare e anulată.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+
+      - name: Restore engine state (ETag cache, notified, last email)
+        uses: actions/cache@v4
         with:
-          fetch-depth: 0
+          path: security_engine_cache.json
+          key: engine-state-${{ github.run_id }}
+          restore-keys: |
+            engine-state-
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests defusedxml jinja2
+          pip install defusedxml
 
       - name: Run Security Digest Engine
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python digest.py
+          FORCE_REFRESH: ${{ inputs.force_refresh }}
+          FORCE_EMAIL: ${{ inputs.send_email }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}   # opțional; fără el, notificările push sunt dezactivate
+        run: python digest.py
 
-      - name: Persist Cache to Repository
+      - name: Daily state snapshot (keeps the repo active, durable copy of the state)
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add security_engine_cache.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update security engine cache [skip ci]" && git push)
+          last=$(git log -1 --format=%ct)
+          now=$(date +%s)
+          if [ $((now - last)) -gt 72000 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add security_engine_cache.json
+            git diff --staged --quiet || (git commit -m "chore: daily state snapshot [skip ci]" && git push) || echo "snapshot push skipped"
+          fi
+
+      - name: Prepare site (publish only index.html)
+        run: |
+          mkdir -p _site
+          cp index.html _site/index.html
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
