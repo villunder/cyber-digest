@@ -1,0 +1,22 @@
+name: Probe Feeds
+
+# Verifică de pe runner-ul GitHub (același IP/UA ca la digest) ce URL-uri de feed răspund și se parsează.
+# Rulare doar manuală. Rezultatul apare în log: o linie pe URL.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - run: pip install defusedxml
+      - name: Probe candidate feeds
+        run: python tests/probe_feeds.py
