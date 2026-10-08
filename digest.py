@@ -71,7 +71,6 @@ ATOM_NS = "{http://www.w3.org/2005/Atom}"
 RSS_SOURCES = [
     # Surse Naționale & Oficiale / Guvernamentale
     {"name": "NCSC UK - News & Threats", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "priority": 90},
-    {"name": "ACS CISA Australia - Advisories", "url": "https://www.cyber.gov.au/rss.xml", "priority": 85},
 
     # Threat Intelligence & Știri Securitate Enterprise
     {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "priority": 75},
@@ -81,7 +80,6 @@ RSS_SOURCES = [
     {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "priority": 65},
     {"name": "Ars Technica - Security", "url": "https://arstechnica.com/security/feed/", "priority": 70},
     {"name": "SANS ISC StormCast", "url": "https://isc.sans.edu/rssfeed.xml", "priority": 85},
-    {"name": "Sophos News", "url": "https://news.sophos.com/en-us/feed/", "priority": 75},
     {"name": "Kaspersky Securelist", "url": "https://securelist.com/feed/", "priority": 80},
     {"name": "Malwarebytes Labs", "url": "https://www.malwarebytes.com/blog/feed/index.xml", "priority": 75},
     {"name": "Schneier on Security", "url": "https://www.schneier.com/feed/atom/", "priority": 75},
@@ -145,13 +143,11 @@ RSS_SOURCES = [
     {"name": "Elastic Security Labs", "url": "https://www.elastic.co/security-labs/rss/feed.xml", "priority": 85},
     {"name": "watchTowr Labs", "url": "https://labs.watchtowr.com/rss/", "priority": 85},
     {"name": "Huntress Blog", "url": "https://www.huntress.com/blog/rss.xml", "priority": 80},
-    {"name": "Proofpoint Threat Insight", "url": "https://www.proofpoint.com/us/rss.xml", "priority": 80},
     {"name": "Citizen Lab", "url": "https://citizenlab.ca/feed/", "priority": 75},
     {"name": "The Record (Recorded Future News)", "url": "https://therecord.media/feed", "priority": 75},
     {"name": "Health-ISAC", "url": "https://health-isac.org/feed/", "priority": 85},
     {"name": "Chrome Releases", "url": "https://chromereleases.googleblog.com/feeds/posts/default", "priority": 75},
     {"name": "PHP.net - Releases", "url": "https://www.php.net/releases/feed.php", "priority": 90},
-    {"name": "MariaDB Blog", "url": "https://mariadb.org/feed/", "priority": 75},
 ]
 
 SOURCE_PRIORITY_MAP = {src['name']: src['priority'] for src in RSS_SOURCES}
@@ -183,7 +179,7 @@ LONG_WINDOW_SOURCES = {
     "PortSwigger Web Security", "NCSC UK - News & Threats", "GitHub Security Advisories",
     "Kaspersky Securelist", "DNSC - Știri și alerte", "CISA - Known Exploited Vulnerabilities",
     "CERT-EU - Security Advisories", "CERT/CC - Vulnerability Notes", "AWS Security Bulletins",
-    "Zero Day Initiative", "Health-ISAC", "MariaDB Blog",
+    "Zero Day Initiative", "Health-ISAC",
 }
 # Surse de consum/hardware: păstrăm doar articolele cu semnal real de securitate.
 NOISY_SOURCES = {
@@ -283,7 +279,12 @@ def parse_pub_date(date_str):
         "%Y-%m-%dT%H:%M:%S.%f%z",
         "%Y-%m-%dT%H:%M:%S%z",
         "%Y-%m-%dT%H:%M:%SZ",
-        "%a, %d %b %Y %H:%M:%S"
+        "%a, %d %b %Y %H:%M:%S",
+        "%b %d, %Y %H:%M:%S%z",      # CrowdStrike: "Oct 08, 2026 00:00:00-0500"
+        "%d %b %Y %H:%M:%S %z",
+        "%d %b %Y %H:%M:%S",         # fără zi a săptămânii/fus: se presupune UTC
+        "%Y-%m-%d %H:%M:%S%z",
+        "%Y-%m-%d %H:%M:%S",
     ]
     for fmt in formats:
         try:
