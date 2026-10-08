@@ -38,7 +38,16 @@ def fake_fetch(url, headers, timeout):
     return v, '"etag1"', None, 200
 
 d._fetch_url_with_retry = fake_fetch
-d.RSS_SOURCES[:] = [s for s in d.RSS_SOURCES if s['url'] in FEEDS]
+NAMES = {
+    "https://www.crowdstrike.com/blog/feed/": "CrowdStrike Blog",
+    "https://www.androidauthority.com/feed/": "Android Authority",
+    "https://www.tomshardware.com/feeds/all": "Tom's Hardware",
+    "https://www.bleepingcomputer.com/feed/": "BleepingComputer",
+    "https://developer.joomla.org/security-centre.feed?type=rss": "Joomla Security Announcements",
+    "https://dnsc.ro/rss/alerte.xml": "Test 403 Source",
+    "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml": "Test 404 Source",
+}
+d.RSS_SOURCES[:] = [{"name": n, "url": u, "priority": 80} for u, n in NAMES.items()]
 print("sources under test:", len(d.RSS_SOURCES))
 d.MAX_THREADS = 4
 
