@@ -153,7 +153,7 @@ SOURCE_PRIORITY_MAP = {src['name']: src['priority'] for src in RSS_SOURCES}
 
 KEYWORDS_TARGETED = [
     "joomla", "php", "cpanel", "apache", ".htaccess", "mysql", "mariadb",
-    "exim", "roundcube", "bind", "named", "mod_security", "whm"
+    "exim", "roundcube", "bind9", "isc bind", "named.conf", "mod_security", "whm"
 ]
 
 KEYWORDS_CRITICAL = [
@@ -170,6 +170,32 @@ KEYWORDS_GENERAL = [
 ]
 
 HOURS_LOOKBACK = 36
+# Surse rare dar importante: fereastra de 36h le golește aproape mereu (ex. Joomla, PHP.net).
+LONG_WINDOW_HOURS = 168
+LONG_WINDOW_SOURCES = {
+    "Joomla Security Announcements", "Joomla Community News", "PHP.net News", "cPanel News",
+    "Wordfence Security Blog", "Project Zero (Google)", "Google Online Security Blog",
+    "PortSwigger Web Security", "NCSC UK - News & Threats", "GitHub Security Advisories",
+    "Kaspersky Securelist", "DNSC - Alerte", "CISA - Cybersecurity Advisories",
+}
+# Surse de consum/hardware: păstrăm doar articolele cu semnal real de securitate.
+NOISY_SOURCES = {
+    "Android Authority", "Android Police - News", "Tom's Hardware", "Phoronix",
+    "Hackaday", "IEEE Spectrum", "9to5Google - Security",
+}
+KEYWORDS_STRICT_SECURITY = [
+    "cve-", "vulnerability", "vulnerabilities", "exploit", "exploited", "malware", "ransomware",
+    "phishing", "zero-day", "0-day", "security update", "security patch", "backdoor", "botnet",
+    "side-channel", "spectre", "meltdown", "microcode",
+]
+
+def lookback_for(source_name):
+    return LONG_WINDOW_HOURS if source_name in LONG_WINDOW_SOURCES else HOURS_LOOKBACK
+
+# Notificări push (ntfy): active doar dacă NTFY_TOPIC este setat.
+NTFY_MIN_SCORE = int(os.getenv("NTFY_MIN_SCORE", "80"))
+NTFY_MAX_PER_RUN = 5
+SOURCES_LABEL = f"{len(RSS_SOURCES)} surse configurate"
 MAX_THREADS = min(32, max(8, len(RSS_SOURCES)))
 REQUEST_TIMEOUT = 10
 
@@ -291,6 +317,8 @@ def _fetch_url_with_retry(url, headers, timeout):
             if e.code == 304:
                 return b"", None, None, 304
             last_error = e
+            if 400 <= e.code < 500 and e.code not in (408, 429):
+                break  # 403/404/410 sunt permanente: retry doar consumă timp
             if attempt < HTTP_RETRY_ATTEMPTS - 1:
                 time.sleep(HTTP_RETRY_BACKOFF_BASE * (attempt + 1))
         except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
@@ -298,6 +326,20 @@ def _fetch_url_with_retry(url, headers, timeout):
             if attempt < HTTP_RETRY_ATTEMPTS - 1:
                 time.sleep(HTTP_RETRY_BACKOFF_BASE * (attempt + 1))
     raise last_error
+
+FEED_HEALTH = {}
+
+def _restore_cached_articles(cache_entry):
+    cached_arts = copy.deepcopy(cache_entry.get('cached_articles', []))
+    for art in cached_arts:
+        date_val = art.get('date')
+        if isinstance(date_val, str):
+            try:
+                art['date'] = datetime.datetime.fromisoformat(date_val)
+            except ValueError:
+                pass
+        art['date_obj'] = art.get('date')
+    return cached_arts
 
 def fetch_single_feed(source, http_cache):
     headers = {
@@ -313,25 +355,19 @@ def fetch_single_feed(source, http_cache):
     try:
         content, new_etag, new_last_modified, status_code = _fetch_url_with_retry(source['url'], headers, REQUEST_TIMEOUT)
         if status_code == 304:
-            cached_arts = copy.deepcopy(cache_entry.get('cached_articles', []))
-            for art in cached_arts:
-                date_val = art.get('date')
-                if isinstance(date_val, str):
-                    try:
-                        art['date'] = datetime.datetime.fromisoformat(date_val)
-                    except ValueError:
-                        pass
-                art['date_obj'] = art.get('date')
-            return cached_arts
+            FEED_HEALTH[source['name']] = {'ok': True, 'status': '304'}
+            return _restore_cached_articles(cache_entry)
     except Exception as e:
         print(f"[!] Eroare la sursa '{source['name']}': {type(e).__name__}: {e}")
-        return []
+        stale = _restore_cached_articles(cache_entry)  # nu pierdem articolele deja cunoscute la o eroare tranzitorie
+        FEED_HEALTH[source['name']] = {'ok': False, 'status': f"{type(e).__name__}: {str(e)[:80]}", 'stale': len(stale)}
+        return stale
 
     articles = []
     try:
         root = ET.fromstring(content)
         now_utc = datetime.datetime.now(datetime.timezone.utc)
-        threshold_time = now_utc - datetime.timedelta(hours=HOURS_LOOKBACK)
+        threshold_time = now_utc - datetime.timedelta(hours=lookback_for(source['name']))
 
         items = root.findall('.//item') or root.findall(f'.//{ATOM_NS}entry')
         for item in items:
@@ -381,8 +417,12 @@ def fetch_single_feed(source, http_cache):
             'last_modified': new_last_modified,
             'cached_articles': serializable_articles
         }
+        FEED_HEALTH[source['name']] = {'ok': True, 'status': '200'}
     except Exception as e:
         print(f"[!] Eroare parsare XML pentru '{source['name']}': {e}")
+        stale = _restore_cached_articles(cache_entry)
+        FEED_HEALTH[source['name']] = {'ok': False, 'status': f"Parse: {str(e)[:80]}", 'stale': len(stale)}
+        return stale
 
     return articles
 
@@ -413,14 +453,23 @@ def save_cache(cache_data):
             os.unlink(tmp_path)
         print(f"[!] Eroare salvare atomică cache: {e}")
 
+LAST_CACHE = {}
+
+def _age_hours(iso, now_utc):
+    try:
+        return (now_utc - datetime.datetime.fromisoformat(iso)).total_seconds() / 3600
+    except (ValueError, TypeError):
+        return 0
+
 def fetch_and_filter():
     cache = load_cache()
 
-    is_manual_run = (os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch" or
-                     os.getenv("FORCE_REFRESH", "").lower() == "true")
+    global LAST_CACHE, SOURCES_LABEL
+    LAST_CACHE = cache
+    force_refresh = os.getenv("FORCE_REFRESH", "").lower() == "true"
 
-    if is_manual_run:
-        print("[*] Rulare manuală detectată (workflow_dispatch): se resetează cache-ul HTTP pentru date proaspete.")
+    if force_refresh:
+        print("[*] FORCE_REFRESH activ: se resetează cache-ul HTTP pentru date proaspete.")
         http_cache = {}
     else:
         http_cache = cache.get('http_cache', {})
@@ -466,16 +515,27 @@ def fetch_and_filter():
             else:
                 try:
                     fs = datetime.datetime.fromisoformat(first_seen_iso)
-                    if (now_utc - fs).total_seconds() / 3600 <= HOURS_LOOKBACK:
+                    if (now_utc - fs).total_seconds() / 3600 <= lookback_for(art['source']):
                         bounded_deduped.append(art)
                 except ValueError:
                     bounded_deduped.append(art)
         else:
-            if isinstance(art.get('date'), datetime.datetime) and (now_utc - art['date']).total_seconds() / 3600 <= HOURS_LOOKBACK:
+            if isinstance(art.get('date'), datetime.datetime) and (now_utc - art['date']).total_seconds() / 3600 <= lookback_for(art['source']):
                 bounded_deduped.append(art)
 
+    # Prune first_seen (crește nelimitat altfel) și înregistrează sănătatea surselor
+    first_seen_cache = {k: v for k, v in first_seen_cache.items()
+                        if _age_hours(v, now_utc) <= LONG_WINDOW_HOURS}
+    ok_count = sum(1 for src in RSS_SOURCES if FEED_HEALTH.get(src['name'], {}).get('ok'))
+    failed = {n: h['status'] for n, h in FEED_HEALTH.items() if not h.get('ok')}
+    SOURCES_LABEL = f"{ok_count}/{len(RSS_SOURCES)} surse active"
+    print(f"[*] Surse active: {ok_count}/{len(RSS_SOURCES)}; eșuate: {len(failed)}")
+    for n, st in sorted(failed.items()):
+        print(f"    - {n}: {st}")
     cache['first_seen'] = first_seen_cache
     cache['http_cache'] = http_cache
+    cache['feed_health'] = {'updated': now_utc.isoformat(), 'ok': ok_count,
+                            'total': len(RSS_SOURCES), 'failed': failed}
     save_cache(cache)
 
     categorized = {'targeted': [], 'critical': [], 'general': []}
@@ -490,6 +550,11 @@ def fetch_and_filter():
         is_targeted_infra = contains_keyword(text_to_scan, KEYWORDS_TARGETED)
         has_critical = contains_keyword(text_to_scan, KEYWORDS_CRITICAL)
         has_general = contains_keyword(text_to_scan, KEYWORDS_GENERAL)
+
+        if art['source'] in NOISY_SOURCES and not (
+                is_targeted_infra or has_critical or art['iocs']['cves']
+                or contains_keyword(text_to_scan, KEYWORDS_STRICT_SECURITY)):
+            continue
 
         score = 0
         if is_targeted_infra:
@@ -655,7 +720,7 @@ def build_web_dashboard(categorized):
     <div class="container">
         <header>
             <div>
-                <h1>Cyber Security Intelligence Hub (61+ Surse Active)</h1>
+                <h1>Cyber Security Intelligence Hub ({SOURCES_LABEL})</h1>
                 <p class="last-update">Sincronizat la: {now_ro_str}</p>
             </div>
         </header>
@@ -694,6 +759,7 @@ def build_web_dashboard(categorized):
     </div>
     <script>
         let currentCategory = 'all';
+setInterval(() => {{ if (!document.getElementById('searchInput').value) location.reload(); }}, 600000);
         function filterCategory(cat, btn) {{
             currentCategory = cat;
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -911,7 +977,7 @@ def build_mobile_email_html(categorized):
                                 </tr>
                                 <tr>
                                     <td style="font-size:13px; color:#94a3b8; padding-top:4px;">
-                                        Sincronizat la: {now_ro_str} &bull; 61+ Surse Active
+                                        Sincronizat la: {now_ro_str} &bull; {SOURCES_LABEL}
                                     </td>
                                 </tr>
                             </table>
@@ -964,7 +1030,7 @@ def build_mobile_email_html(categorized):
     return email_html
 
 def html_to_plain_text(categorized):
-    lines = ["RAPORT ZILNIC CYBER SECURITY INTELLIGENCE (61+ SURSE)", "=" * 55, ""]
+    lines = [f"RAPORT ZILNIC CYBER SECURITY INTELLIGENCE ({SOURCES_LABEL.upper()})", "=" * 55, ""]
     for label, key in [("INFRASTRUCTURĂ VIZATĂ", "targeted"),
                         ("ALERTE CRITICE", "critical"),
                         ("ALERTE GENERALE", "general")]:
@@ -991,11 +1057,11 @@ def send_email(categorized):
 
     if not all([smtp_server, smtp_user, smtp_password, email_to_raw]):
         print("[!] Variabilele de mediu SMTP nu sunt complet configurate. Email-ul nu a fost trimis.")
-        return
+        return False
 
     email_to_list = [addr.strip() for addr in email_to_raw.split(",") if addr.strip()]
     if not email_to_list:
-        return
+        return False
 
     now_ro_str = datetime.datetime.now(TZ_RO).strftime('%d %b %Y')
     msg = MIMEMultipart("alternative")
@@ -1021,8 +1087,68 @@ def send_email(categorized):
                 server.login(smtp_user, smtp_password)
                 server.sendmail(smtp_user, email_to_list, msg.as_string())
         print("[+] Notificarea pe email optimizată pentru mobil a fost trimisă cu succes.")
+        return True
     except Exception as e:
         print(f"[!] Eroare trimitere email: {e}")
+        return False
+
+def _alert_id(art):
+    return art['link'] if art['link'] != '#' else f"{art['source']}::{art['title']}"
+
+def select_push_alerts(categorized, cache, now_utc):
+    """Alerte noi (necunoscute încă) cu scor >= NTFY_MIN_SCORE din categoriile targeted/critical.
+    La prima rulare doar „însămânțează” lista, ca să nu primești zeci de notificări deodată."""
+    notified = cache.setdefault('notified', {})
+    first_run = not notified and not cache.get('notified_seeded')
+    candidates = [a for k in ('targeted', 'critical') for a in categorized[k]
+                  if a.get('risk_score', 0) >= NTFY_MIN_SCORE]
+    fresh = [a for a in candidates if _alert_id(a) not in notified]
+    for a in fresh:
+        notified[_alert_id(a)] = now_utc.isoformat()
+    for k in [k for k, v in notified.items() if _age_hours(v, now_utc) > LONG_WINDOW_HOURS]:
+        del notified[k]
+    cache['notified_seeded'] = True
+    if first_run:
+        print(f"[*] ntfy: prima rulare, {len(fresh)} alerte marcate ca deja cunoscute (fără notificări).")
+        return []
+    return sorted(fresh, key=lambda a: a.get('risk_score', 0), reverse=True)
+
+def send_push(alerts):
+    topic = os.getenv("NTFY_TOPIC")
+    if not topic or not alerts:
+        return False
+    server = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    sent = 0
+    for art in alerts[:NTFY_MAX_PER_RUN]:
+        payload = {
+            "topic": topic,
+            "title": f"[{art.get('risk_score', 0)}] {art['source']}"[:100],
+            "message": art['title'][:300],
+            "priority": 4 if art.get('risk_score', 0) >= 100 else 3,
+            "tags": ["rotating_light"] if art.get('is_targeted_infra') else ["warning"],
+        }
+        if art['link'] != '#':
+            payload["click"] = art['link']
+        try:
+            req = urllib.request.Request(server, data=json.dumps(payload).encode("utf-8"),
+                                         headers={"Content-Type": "application/json"}, method="POST")
+            with urllib.request.urlopen(req, timeout=10):
+                sent += 1
+        except Exception as e:
+            print(f"[!] Eroare ntfy: {type(e).__name__}: {e}")
+    extra = len(alerts) - NTFY_MAX_PER_RUN
+    if extra > 0:
+        print(f"[*] ntfy: încă {extra} alerte noi nu au fost trimise individual (limită {NTFY_MAX_PER_RUN}/rulare).")
+    print(f"[+] ntfy: {sent} notificări trimise.")
+    return sent > 0
+
+def should_send_email(cache, now_ro):
+    """Un singur email pe zi, la prima rulare de după 08:00 (ora RO) — nu depinde de minutul exact al rulării."""
+    if os.getenv("FORCE_EMAIL", "false").lower() == "true":
+        return True
+    if cache.get('last_email_date') == now_ro.strftime('%Y-%m-%d'):
+        return False
+    return now_ro.hour >= 8
 
 if __name__ == "__main__":
     print("[*] Rulare motor Cyber Security Intelligence v4.8 Enterprise Hub...")
@@ -1030,8 +1156,14 @@ if __name__ == "__main__":
     saved_path = build_web_dashboard(categorized_data)
     print(f"[+] Dashboard web generat cu succes la: {saved_path}")
 
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
     now_ro = datetime.datetime.now(TZ_RO)
-    force_email = os.getenv("FORCE_EMAIL", "false").lower() == "true"
-    if now_ro.hour == 8 or force_email or os.getenv("GITHUB_EVENT_NAME") == "workflow_dispatch":
+    run_cache = LAST_CACHE
+
+    send_push(select_push_alerts(categorized_data, run_cache, now_utc))
+
+    if should_send_email(run_cache, now_ro):
         print("[*] Se inițiază trimiterea email-ului de notificare (corp dedicat, independent de index.html)...")
-        send_email(categorized_data)
+        if send_email(categorized_data):
+            run_cache['last_email_date'] = now_ro.strftime('%Y-%m-%d')
+    save_cache(run_cache)
