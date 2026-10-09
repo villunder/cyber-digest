@@ -860,8 +860,31 @@ def build_web_dashboard(categorized):
         @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 8px; font-size: 0.85rem; }} .stat-card {{ padding: 12px 14px; }} .stat-value {{ font-size: 2.4rem; }} .rain:nth-child(even) {{ display: none; }} }}
         @media (prefers-reduced-motion: reduce) {{ .rain, .sweep {{ display: none; }} h1, .cursor, .stat-card, .card {{ animation: none !important; }} }}
         .count {{ opacity: 0.85; margin-left: 4px; }}
-        @media (max-width: 768px) {{ .controls {{ position: sticky; top: 0; z-index: 10; background: #000; padding: 8px 0; margin-bottom: 12px; }} }}
         .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; font-family: 'VT323', ui-monospace, monospace; font-size: 1.6rem; }}
+        .card {{ content-visibility: auto; contain-intrinsic-size: auto 190px; }}
+        @media (max-width: 768px) {{
+            .controls {{ display: contents; position: static; background: none; padding: 0; margin: 0; }}
+            .search-box {{ display: block; width: 100%; margin-bottom: 10px; }}
+            .tabs {{ position: sticky; top: 0; z-index: 10; background: #000; padding: 6px 0; margin-bottom: 14px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; border-bottom: 1px solid rgba(0,255,70,.35); }}
+            .tab-btn {{ padding: 4px 2px; font-size: 0.72rem; letter-spacing: 0; line-height: 1.15; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; }}
+            .tab-btn .count {{ display: block; margin: 2px 0 0; font-size: 0.95rem; opacity: 1; }}
+            .stats-grid {{ grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }}
+            .stat-card {{ padding: 8px 10px; clip-path: none; animation: none; }}
+            .stat-label {{ font-size: 0.62rem; letter-spacing: 1px; line-height: 1.25; min-height: 2.5em; }}
+            .stat-value {{ font-size: 2rem; margin-top: 2px; }}
+            header {{ padding-bottom: 12px; margin-bottom: 14px; gap: 6px; }}
+            .kicker {{ font-size: 0.65rem; letter-spacing: 1px; }}
+            h1 {{ font-size: 2.5rem; }}
+            .last-update {{ font-size: 0.72rem; letter-spacing: 0; }}
+            .card {{ clip-path: none; animation: none; padding: 14px; background: rgba(0, 12, 4, 0.95); }}
+            .stat-card {{ background: rgba(0, 14, 5, 0.92); }}
+            .card-title {{ font-size: 1.4rem; }}
+            .card-desc {{ font-size: 0.82rem; }}
+            .sweep {{ display: none; }}
+            .scanlines {{ opacity: .45; }}
+            .rain span {{ opacity: .35; }}
+            .container {{ padding-bottom: 20px; }}
+        }}
     </style>
 </head>
 <body>
