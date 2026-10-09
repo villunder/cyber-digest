@@ -837,6 +837,8 @@ def build_web_dashboard(categorized):
         .card-desc {{ color: var(--text-muted); font-size: 0.9rem; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
         @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 10px; }} .stat-card {{ padding: 12px 16px; }} .stat-value {{ font-size: 1.5rem; }} }}
         @media (prefers-reduced-motion: reduce) {{ * {{ scroll-behavior: auto !important; }} }}
+        .count {{ font-weight: 400; opacity: 0.85; margin-left: 4px; }}
+        @media (max-width: 768px) {{ .controls {{ position: sticky; top: 0; z-index: 10; background: var(--bg-dark); padding: 8px 0; margin-bottom: 12px; }} }}
         .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; }}
     </style>
 </head>
@@ -869,10 +871,10 @@ def build_web_dashboard(categorized):
         <div class="controls">
             <input type="search" id="searchInput" class="search-box" aria-label="Căutare după termen, CVE sau IP" placeholder="Căutare după termen, CVE sau IP..." oninput="filterCards()">
             <div class="tabs">
-                <button class="tab-btn active" onclick="filterCategory('all', this)">Toate</button>
-                <button class="tab-btn" onclick="filterCategory('targeted-card', this)">Vizate</button>
-                <button class="tab-btn" onclick="filterCategory('critical-card', this)">Critice</button>
-                <button class="tab-btn" onclick="filterCategory('general-card', this)">Generale</button>
+                <button class="tab-btn active" data-cat="all" onclick="filterCategory('all', this)">Toate <span class="count">{total_all}</span></button>
+                <button class="tab-btn" data-cat="targeted-card" onclick="filterCategory('targeted-card', this)">Vizate <span class="count">{total_targeted}</span></button>
+                <button class="tab-btn" data-cat="critical-card" onclick="filterCategory('critical-card', this)">Critice <span class="count">{total_critical}</span></button>
+                <button class="tab-btn" data-cat="general-card" onclick="filterCategory('general-card', this)">Generale <span class="count">{total_general}</span></button>
             </div>
         </div>
         <div class="cards-grid" id="cardsGrid">
@@ -880,26 +882,49 @@ def build_web_dashboard(categorized):
             {generate_cards_html(categorized['critical'], 'critical-card')}
             {generate_cards_html(categorized['general'], 'general-card')}
         </div>
+        <p class="no-data" id="noMatch" hidden>Niciun rezultat pentru filtrul curent.</p>
     </div>
     <script>
         let currentCategory = 'all';
 setInterval(() => {{ if (!document.getElementById('searchInput').value) location.reload(); }}, 600000);
+        function saveState() {{
+            const q = document.getElementById('searchInput').value;
+            const parts = [];
+            if (currentCategory !== 'all') parts.push('cat=' + encodeURIComponent(currentCategory));
+            if (q) parts.push('q=' + encodeURIComponent(q));
+            history.replaceState(null, '', parts.length ? '#' + parts.join('&') : location.pathname + location.search);
+        }}
+        function restoreState() {{
+            const p = new URLSearchParams(location.hash.slice(1));
+            const cat = p.get('cat');
+            const btn = cat && document.querySelector(`.tab-btn[data-cat="${{cat}}"]`);
+            if (btn) filterCategory(cat, btn);
+            if (p.get('q')) document.getElementById('searchInput').value = p.get('q');
+            filterCards();
+        }}
         function filterCategory(cat, btn) {{
             currentCategory = cat;
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {{ b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); }});
             btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
             filterCards();
         }}
         function filterCards() {{
             const query = document.getElementById('searchInput').value.toLowerCase();
             const cards = document.querySelectorAll('.card');
+            let visible = 0;
             cards.forEach(card => {{
                 const text = card.innerText.toLowerCase();
                 const matchesSearch = text.includes(query);
                 const matchesCategory = (currentCategory === 'all') || card.classList.contains(currentCategory);
-                card.style.display = (matchesSearch && matchesCategory) ? 'flex' : 'none';
+                const show = matchesSearch && matchesCategory;
+                card.style.display = show ? 'flex' : 'none';
+                if (show) visible++;
             }});
+            document.getElementById('noMatch').hidden = visible > 0 || cards.length === 0;
+            saveState();
         }}
+        restoreState();
     </script>
 </body>
 </html>"""
