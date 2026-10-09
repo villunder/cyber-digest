@@ -2,9 +2,9 @@ name: Daily Security Digest
 
 on:
   schedule:
-    # La fiecare 15 min, decalat față de :00/:30 (orele de vârf, când GitHub amână/ignoră cron-urile).
-    # Dacă adaugi declanșatorul extern (Cloudflare Worker, vezi AUDIT.md), schimbă în '17 * * * *' (rezervă orară).
-    - cron: '7,22,37,52 * * * *'
+    # Rezervă orară. Declanșarea principală este Cloudflare Worker-ul „cyber-digest-trigger” (la 10 min),
+    # care apelează workflow_dispatch. Minutul 17 evită orele de vârf ale GitHub.
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       force_refresh:
