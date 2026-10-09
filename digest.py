@@ -784,69 +784,108 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Security Intelligence v4.8 Enterprise Hub</title>
+    <title>CYBER DIGEST // Cyber Security Intelligence</title>
+    <meta name="color-scheme" content="dark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-targeted: #f59e0b;
-            --accent-critical: #ef4444;
-            --accent-general: #3b82f6;
-            --border-color: #334155;
+            --bg-dark: #000;
+            --card-bg: rgba(0, 18, 6, 0.86);
+            --text-main: #c8ffd6;
+            --text-muted: #8fd9a2;
+            --neon: #00ff46;
+            --accent-targeted: #ffb000;
+            --accent-critical: #ff4d4d;
+            --accent-general: #00ff46;
+            --border-color: #00b832;
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        html {{ -webkit-text-size-adjust: 100%; }}
-        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-dark); color: var(--text-main); padding: 20px; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); line-height: 1.5; overflow-wrap: anywhere; }}
-        a:focus-visible, button:focus-visible, input:focus-visible {{ outline: 2px solid #93c5fd; outline-offset: 2px; }}
-        .container {{ max-width: 1300px; margin: 0 auto; }}
-        header {{ display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 25px; flex-wrap: wrap; gap: 15px; }}
-        h1 {{ font-size: clamp(1.25rem, 4.5vw, 1.8rem); font-weight: 700; color: #fff; }}
-        .last-update {{ color: var(--text-muted); font-size: 0.9rem; }}
-        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; margin-bottom: 20px; }}
-        .stat-card {{ background: var(--card-bg); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--border-color); }}
-        .stat-card.targeted {{ border-left-color: var(--accent-targeted); }}
-        .stat-card.critical {{ border-left-color: var(--accent-critical); }}
-        .stat-card.general {{ border-left-color: var(--accent-general); }}
-        .stat-value {{ font-size: 1.8rem; font-weight: bold; margin-top: 5px; }}
-        .stat-label {{ font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; }}
-        .controls {{ display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }}
-        .search-box {{ flex: 1 1 250px; min-width: 0; min-height: 44px; padding: 10px 15px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-size: 0.95rem; }}
+        html {{ -webkit-text-size-adjust: 100%; background: #000; }}
+        body {{ font-family: 'Share Tech Mono', ui-monospace, Consolas, monospace; background: radial-gradient(ellipse at 50% 0%, #003a12 0%, #000 65%) fixed, #000; color: var(--text-main); padding: 20px; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); line-height: 1.5; overflow-wrap: anywhere; overflow-x: hidden; min-height: 100vh; }}
+        a:focus-visible, button:focus-visible, input:focus-visible {{ outline: 2px solid #b8ffc9; outline-offset: 2px; }}
+        @keyframes fall {{ 0% {{ transform: translateY(-100%); opacity: 0; }} 10% {{ opacity: .9; }} 90% {{ opacity: .9; }} 100% {{ transform: translateY(110vh); opacity: 0; }} }}
+        @keyframes flicker {{ 0%,19%,21%,23%,25%,54%,56%,100% {{ opacity: 1; }} 20%,24%,55% {{ opacity: .4; }} }}
+        @keyframes glitch {{ 0%,90%,100% {{ transform: translate(0); }} 92% {{ transform: translate(-3px,1px); }} 94% {{ transform: translate(3px,-1px); }} 96% {{ transform: translate(-1px,0); }} }}
+        @keyframes scan {{ 0% {{ transform: translateY(-20vh); }} 100% {{ transform: translateY(120vh); }} }}
+        @keyframes pulse {{ 0%,100% {{ box-shadow: 0 0 6px var(--g, rgba(0,255,70,.45)); }} 50% {{ box-shadow: 0 0 22px var(--g, rgba(0,255,70,.45)); }} }}
+        @keyframes rise {{ from {{ opacity: 0; transform: translateY(12px); }} to {{ opacity: 1; transform: none; }} }}
+        @keyframes blink {{ 0%,49% {{ opacity: 1; }} 50%,100% {{ opacity: 0; }} }}
+        .fx {{ position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }}
+        .rain {{ position: absolute; top: 0; width: 14px; height: 100%; }}
+        .rain span {{ position: absolute; left: 0; top: 0; color: var(--neon); font-size: 14px; line-height: 16px; text-shadow: 0 0 6px var(--neon); white-space: pre; opacity: .55; animation: fall linear infinite; }}
+        .scanlines {{ position: fixed; inset: 0; pointer-events: none; z-index: 2; background: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0,0,0,.28) 3px, transparent 4px); }}
+        .sweep {{ position: fixed; left: 0; right: 0; top: 0; height: 120px; pointer-events: none; z-index: 2; background: linear-gradient(to bottom, rgba(0,255,70,0), rgba(0,255,70,.06), rgba(0,255,70,0)); animation: scan 8s linear infinite; }}
+        .container {{ position: relative; z-index: 1; max-width: 1300px; margin: 0 auto; }}
+        header {{ display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 18px; border-bottom: 1px dashed var(--neon); margin-bottom: 22px; flex-wrap: wrap; gap: 15px; }}
+        .kicker {{ font-size: 0.8rem; letter-spacing: 3px; color: var(--text-muted); }}
+        h1 {{ font-family: 'VT323', ui-monospace, monospace; font-size: clamp(2rem, 6vw, 3.6rem); font-weight: 400; line-height: 1; color: #d9ffe3; text-shadow: 0 0 8px var(--neon), 0 0 24px rgba(0,255,70,.55); letter-spacing: 1px; animation: flicker 5s infinite, glitch 6s infinite; }}
+        .cursor {{ display: inline-block; width: 0.45em; height: 0.85em; margin-left: 6px; background: var(--neon); vertical-align: -0.05em; animation: blink 1s steps(1) infinite; }}
+        .last-update {{ color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px; }}
+        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; margin-bottom: 20px; }}
+        .stat-card {{ background: rgba(0, 20, 6, 0.8); padding: 14px 18px; border: 1px solid var(--neon); clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); animation: pulse 3.5s infinite; }}
+        .stat-card.targeted {{ border-color: var(--accent-targeted); --g: rgba(255,176,0,.45); }}
+        .stat-card.critical {{ border-color: var(--accent-critical); --g: rgba(255,77,77,.45); }}
+        .stat-card.general {{ border-color: var(--accent-general); }}
+        .stat-value {{ font-family: 'VT323', ui-monospace, monospace; font-size: 3rem; line-height: 1; margin-top: 4px; color: #eaffef; text-shadow: 0 0 10px currentColor; }}
+        .stat-label {{ font-size: 0.78rem; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; }}
+        .controls {{ display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }}
+        .search-box {{ flex: 1 1 250px; min-width: 0; min-height: 44px; padding: 10px 14px; background: rgba(0, 15, 5, 0.92); border: 1px solid var(--neon); color: #d9ffe3; font-family: inherit; font-size: 1rem; border-radius: 0; }}
+        .search-box::placeholder {{ color: rgba(143, 217, 162, 0.7); }}
         .tabs {{ display: flex; gap: 8px; flex-wrap: wrap; }}
-        .tab-btn {{ background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 16px; min-height: 44px; border-radius: 6px; cursor: pointer; font-weight: 500; font-size: 0.95rem; }}
-        .tab-btn.active {{ background: #1d4ed8; border-color: #1d4ed8; color: #fff; }}
+        .tab-btn {{ background: transparent; border: 1px solid var(--neon); color: #9fffb7; padding: 8px 14px; min-height: 44px; cursor: pointer; font-family: inherit; font-size: 0.95rem; letter-spacing: 1px; text-transform: uppercase; border-radius: 0; }}
+        .tab-btn:hover {{ background: rgba(0, 255, 70, 0.12); }}
+        .tab-btn.active {{ background: var(--neon); border-color: var(--neon); color: #000; box-shadow: 0 0 14px rgba(0,255,70,.6); }}
         .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }}
-        .card {{ min-width: 0; background: var(--card-bg); border-radius: 8px; padding: 16px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; }}
-        .card.targeted-card {{ border-top: 3px solid var(--accent-targeted); }}
-        .card.critical-card {{ border-top: 3px solid var(--accent-critical); }}
-        .card.general-card {{ border-top: 3px solid var(--accent-general); }}
-        .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; margin-bottom: 12px; gap: 5px; flex-wrap: wrap; }}
-        .source-tag {{ color: var(--text-muted); font-weight: 600; }}
+        .card {{ min-width: 0; background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px)); animation: rise .5s ease both; transition: background .2s, border-color .2s; }}
+        .card:hover {{ background: rgba(0, 38, 12, 0.92); border-color: var(--neon); }}
+        .card.targeted-card {{ border-color: var(--accent-targeted); border-top-width: 3px; }}
+        .card.critical-card {{ border-color: var(--accent-critical); border-top-width: 3px; }}
+        .card.general-card {{ border-top-width: 3px; }}
+        .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; margin-bottom: 10px; gap: 6px; flex-wrap: wrap; letter-spacing: .5px; }}
+        .source-tag {{ color: #b8ffc9; font-weight: 400; text-transform: uppercase; }}
         .date-tag {{ color: var(--text-muted); }}
-        .badge {{ padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 0.75rem; }}
-        .badge-new {{ background: #047857; color: #fff; }}
-        .badge-infra {{ background: #7e22ce; color: #fff; }}
-        .badge-score {{ background: #0f172a; color: #7dd3fc; border: 1px solid #475569; }}
-        .cve-badge {{ background: #334155; color: #38bdf8; padding: 2px 6px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-family: monospace; }}
+        .badge {{ padding: 1px 6px; font-weight: 400; font-size: 0.75rem; letter-spacing: 1px; border-radius: 0; }}
+        .badge-new {{ background: var(--neon); color: #000; }}
+        .badge-infra {{ background: #d4a5ff; color: #000; }}
+        .badge-score {{ background: transparent; color: #9fffb7; border: 1px solid #00b832; }}
+        .cve-badge {{ background: rgba(0, 255, 70, 0.12); color: #9fffb7; padding: 0 5px; text-decoration: none; font-size: 0.85em; border: 1px solid rgba(0,255,70,.4); }}
         .ioc-container {{ display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }}
-        .ioc-pill {{ background: #0f172a; color: #f43f5e; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-family: monospace; border: 1px solid #334155; }}
-        .card-title {{ font-size: 1.05rem; margin-bottom: 10px; line-height: 1.35; overflow-wrap: anywhere; }}
-        .card-title a {{ color: #fff; text-decoration: none; }}
-        .card-title a:hover {{ color: var(--accent-general); }}
-        .card-desc {{ color: var(--text-muted); font-size: 0.9rem; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
-        @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 10px; }} .stat-card {{ padding: 12px 16px; }} .stat-value {{ font-size: 1.5rem; }} }}
-        @media (prefers-reduced-motion: reduce) {{ * {{ scroll-behavior: auto !important; }} }}
-        .count {{ font-weight: 400; opacity: 0.85; margin-left: 4px; }}
-        @media (max-width: 768px) {{ .controls {{ position: sticky; top: 0; z-index: 10; background: var(--bg-dark); padding: 8px 0; margin-bottom: 12px; }} }}
-        .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; }}
+        .ioc-pill {{ background: transparent; color: #ff8080; padding: 1px 6px; font-size: 0.75rem; border: 1px solid rgba(255, 77, 77, 0.6); }}
+        .card-title {{ font-family: 'VT323', ui-monospace, monospace; font-weight: 400; font-size: 1.55rem; margin-bottom: 8px; line-height: 1.1; overflow-wrap: anywhere; }}
+        .card-title a {{ color: #eaffef; text-decoration: none; }}
+        .card-title a:hover {{ color: var(--neon); text-shadow: 0 0 8px rgba(0,255,70,.6); }}
+        .card-desc {{ color: var(--text-muted); font-size: 0.88rem; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
+        footer.sig {{ margin-top: 28px; padding-top: 12px; border-top: 1px dashed var(--neon); color: #6fcf88; font-size: 0.78rem; letter-spacing: 1px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }}
+        @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 8px; font-size: 0.85rem; }} .stat-card {{ padding: 12px 14px; }} .stat-value {{ font-size: 2.4rem; }} .rain:nth-child(even) {{ display: none; }} }}
+        @media (prefers-reduced-motion: reduce) {{ .rain, .sweep {{ display: none; }} h1, .cursor, .stat-card, .card {{ animation: none !important; }} }}
+        .count {{ opacity: 0.85; margin-left: 4px; }}
+        @media (max-width: 768px) {{ .controls {{ position: sticky; top: 0; z-index: 10; background: #000; padding: 8px 0; margin-bottom: 12px; }} }}
+        .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; font-family: 'VT323', ui-monospace, monospace; font-size: 1.6rem; }}
     </style>
 </head>
 <body>
+    <div class="fx" aria-hidden="true">
+        <div class="rain" style="left:2%"><span style="animation-duration:6s;animation-delay:-1s">0&#10;1&#10;A&#10;7&#10;F&#10;3&#10;K&#10;9&#10;X</span></div>
+        <div class="rain" style="left:9%"><span style="animation-duration:8s;animation-delay:-4s">X&#10;4&#10;B&#10;0&#10;Z&#10;8&#10;Q&#10;2&#10;M</span></div>
+        <div class="rain" style="left:16%"><span style="animation-duration:5s;animation-delay:-2s">R&#10;9&#10;2&#10;E&#10;C&#10;6&#10;Y&#10;1&#10;T</span></div>
+        <div class="rain" style="left:24%"><span style="animation-duration:9s;animation-delay:-6s">M&#10;3&#10;0&#10;V&#10;8&#10;J&#10;4&#10;P&#10;7</span></div>
+        <div class="rain" style="left:32%"><span style="animation-duration:7s;animation-delay:-3s">K&#10;5&#10;W&#10;1&#10;N&#10;0&#10;D&#10;9&#10;L</span></div>
+        <div class="rain" style="left:41%"><span style="animation-duration:6.5s;animation-delay:-5s">2&#10;Q&#10;8&#10;H&#10;3&#10;S&#10;0&#10;G&#10;6</span></div>
+        <div class="rain" style="left:49%"><span style="animation-duration:8.5s;animation-delay:-1.5s">F&#10;7&#10;1&#10;U&#10;A&#10;4&#10;Z&#10;2&#10;E</span></div>
+        <div class="rain" style="left:57%"><span style="animation-duration:5.5s;animation-delay:-4.5s">9&#10;C&#10;3&#10;R&#10;6&#10;B&#10;0&#10;T&#10;5</span></div>
+        <div class="rain" style="left:66%"><span style="animation-duration:7.5s;animation-delay:-2.5s">L&#10;0&#10;8&#10;Y&#10;2&#10;K&#10;7&#10;N&#10;1</span></div>
+        <div class="rain" style="left:74%"><span style="animation-duration:6s;animation-delay:-3.5s">4&#10;M&#10;9&#10;A&#10;0&#10;X&#10;6&#10;D&#10;3</span></div>
+        <div class="rain" style="left:83%"><span style="animation-duration:9s;animation-delay:-7s">Z&#10;2&#10;5&#10;F&#10;8&#10;H&#10;1&#10;P&#10;0</span></div>
+        <div class="rain" style="left:91%"><span style="animation-duration:7s;animation-delay:-0.5s">8&#10;J&#10;1&#10;S&#10;4&#10;G&#10;9&#10;V&#10;6</span></div>
+    </div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="sweep" aria-hidden="true"></div>
     <div class="container">
         <header>
             <div>
-                <h1>Cyber Security Intelligence Hub ({SOURCES_LABEL})</h1>
+                <div class="kicker">[ TRANSMISIE ACTIVĂ // {SOURCES_LABEL} ]</div>
+                <h1>CYBER DIGEST<span class="cursor" aria-hidden="true"></span></h1>
                 <p class="last-update">Sincronizat la: {now_ro_str}</p>
             </div>
         </header>
@@ -882,7 +921,8 @@ def build_web_dashboard(categorized):
             {generate_cards_html(categorized['critical'], 'critical-card')}
             {generate_cards_html(categorized['general'], 'general-card')}
         </div>
-        <p class="no-data" id="noMatch" hidden>Niciun rezultat pentru filtrul curent.</p>
+        <p class="no-data" id="noMatch" hidden>// NICIO TRANSMISIE PENTRU ACEST FILTRU //</p>
+        <footer class="sig"><span>NU EXISTĂ ÎNTÂRZIERE ÎN CĂDERE. DOAR SEMNAL.</span><span>REÎMPROSPĂTARE AUTOMATĂ · 10 MIN</span></footer>
     </div>
     <script>
         let currentCategory = 'all';
