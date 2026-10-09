@@ -784,133 +784,168 @@ def build_web_dashboard(categorized):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBER DIGEST // Cyber Security Intelligence</title>
-    <meta name="color-scheme" content="dark">
+    <title>Cyber Digest</title>
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#07080d" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg-dark: #000;
-            --card-bg: rgba(0, 18, 6, 0.86);
-            --text-main: #c8ffd6;
-            --text-muted: #8fd9a2;
-            --neon: #00ff46;
-            --accent-targeted: #ffb000;
-            --accent-critical: #ff4d4d;
-            --accent-general: #00ff46;
-            --border-color: #00b832;
+            color-scheme: dark light;
+            --bg: #07080d;
+            --bg-glow-1: rgba(99, 102, 241, 0.28);
+            --bg-glow-2: rgba(34, 211, 238, 0.18);
+            --surface: rgba(255, 255, 255, 0.05);
+            --surface-hover: rgba(255, 255, 255, 0.085);
+            --border: rgba(255, 255, 255, 0.10);
+            --text: #f5f7ff;
+            --muted: #aab1cc;
+            --targeted: #ffb454;
+            --critical: #ff7a8a;
+            --general: #5ad1ff;
+            --ok: #3ddc97;
+            --accent: #818cf8;
+            --accent-solid: #4f46e5;
+            --on-accent: #ffffff;
+            --pill-new-bg: #3ddc97; --pill-new-fg: #04281a;
+            --pill-infra-bg: #c4b5fd; --pill-infra-fg: #1e1b4b;
+            --ioc: #ff9aa6;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+        }}
+        @media (prefers-color-scheme: light) {{
+            :root {{
+                --bg: #f5f6fb;
+                --bg-glow-1: rgba(99, 102, 241, 0.16);
+                --bg-glow-2: rgba(34, 211, 238, 0.14);
+                --surface: #ffffff;
+                --surface-hover: #ffffff;
+                --border: rgba(15, 23, 42, 0.10);
+                --text: #0b1020;
+                --muted: #4a5270;
+                --targeted: #b45309;
+                --critical: #c81e3a;
+                --general: #0369a1;
+                --ok: #047857;
+                --accent: #4338ca;
+                --accent-solid: #4338ca;
+                --pill-new-bg: #c7f5df; --pill-new-fg: #054d33;
+                --pill-infra-bg: #e0d9ff; --pill-infra-fg: #3b1d8f;
+                --ioc: #b4233a;
+                --shadow: 0 10px 30px rgba(30, 41, 90, 0.10);
+            }}
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        html {{ -webkit-text-size-adjust: 100%; background: #000; }}
-        body {{ font-family: 'Share Tech Mono', ui-monospace, Consolas, monospace; background: radial-gradient(ellipse at 50% 0%, #003a12 0%, #000 65%) fixed, #000; color: var(--text-main); padding: 20px; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); line-height: 1.5; overflow-wrap: anywhere; overflow-x: hidden; min-height: 100vh; }}
-        a:focus-visible, button:focus-visible, input:focus-visible {{ outline: 2px solid #b8ffc9; outline-offset: 2px; }}
-        @keyframes fall {{ 0% {{ transform: translateY(-100%); opacity: 0; }} 10% {{ opacity: .9; }} 90% {{ opacity: .9; }} 100% {{ transform: translateY(110vh); opacity: 0; }} }}
-        @keyframes flicker {{ 0%,19%,21%,23%,25%,54%,56%,100% {{ opacity: 1; }} 20%,24%,55% {{ opacity: .4; }} }}
-        @keyframes glitch {{ 0%,90%,100% {{ transform: translate(0); }} 92% {{ transform: translate(-3px,1px); }} 94% {{ transform: translate(3px,-1px); }} 96% {{ transform: translate(-1px,0); }} }}
-        @keyframes scan {{ 0% {{ transform: translateY(-20vh); }} 100% {{ transform: translateY(120vh); }} }}
-        @keyframes pulse {{ 0%,100% {{ box-shadow: 0 0 6px var(--g, rgba(0,255,70,.45)); }} 50% {{ box-shadow: 0 0 22px var(--g, rgba(0,255,70,.45)); }} }}
-        @keyframes rise {{ from {{ opacity: 0; transform: translateY(12px); }} to {{ opacity: 1; transform: none; }} }}
-        @keyframes blink {{ 0%,49% {{ opacity: 1; }} 50%,100% {{ opacity: 0; }} }}
-        .fx {{ position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }}
-        .rain {{ position: absolute; top: 0; width: 14px; height: 100%; }}
-        .rain span {{ position: absolute; left: 0; top: 0; color: var(--neon); font-size: 14px; line-height: 16px; text-shadow: 0 0 6px var(--neon); white-space: pre; opacity: .55; animation: fall linear infinite; }}
-        .scanlines {{ position: fixed; inset: 0; pointer-events: none; z-index: 2; background: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0,0,0,.28) 3px, transparent 4px); }}
-        .sweep {{ position: fixed; left: 0; right: 0; top: 0; height: 120px; pointer-events: none; z-index: 2; background: linear-gradient(to bottom, rgba(0,255,70,0), rgba(0,255,70,.06), rgba(0,255,70,0)); animation: scan 8s linear infinite; }}
-        .container {{ position: relative; z-index: 1; max-width: 1300px; margin: 0 auto; }}
-        header {{ display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 18px; border-bottom: 1px dashed var(--neon); margin-bottom: 22px; flex-wrap: wrap; gap: 15px; }}
-        .kicker {{ font-size: 0.8rem; letter-spacing: 3px; color: var(--text-muted); }}
-        h1 {{ font-family: 'VT323', ui-monospace, monospace; font-size: clamp(2rem, 6vw, 3.6rem); font-weight: 400; line-height: 1; color: #d9ffe3; text-shadow: 0 0 8px var(--neon), 0 0 24px rgba(0,255,70,.55); letter-spacing: 1px; animation: flicker 5s infinite, glitch 6s infinite; }}
-        .cursor {{ display: inline-block; width: 0.45em; height: 0.85em; margin-left: 6px; background: var(--neon); vertical-align: -0.05em; animation: blink 1s steps(1) infinite; }}
-        .last-update {{ color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px; }}
-        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; margin-bottom: 20px; }}
-        .stat-card {{ background: rgba(0, 20, 6, 0.8); padding: 14px 18px; border: 1px solid var(--neon); clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); animation: pulse 3.5s infinite; }}
-        .stat-card.targeted {{ border-color: var(--accent-targeted); --g: rgba(255,176,0,.45); }}
-        .stat-card.critical {{ border-color: var(--accent-critical); --g: rgba(255,77,77,.45); }}
-        .stat-card.general {{ border-color: var(--accent-general); }}
-        .stat-value {{ font-family: 'VT323', ui-monospace, monospace; font-size: 3rem; line-height: 1; margin-top: 4px; color: #eaffef; text-shadow: 0 0 10px currentColor; }}
-        .stat-label {{ font-size: 0.78rem; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; }}
-        .controls {{ display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }}
-        .search-box {{ flex: 1 1 250px; min-width: 0; min-height: 44px; padding: 10px 14px; background: rgba(0, 15, 5, 0.92); border: 1px solid var(--neon); color: #d9ffe3; font-family: inherit; font-size: 1rem; border-radius: 0; }}
-        .search-box::placeholder {{ color: rgba(143, 217, 162, 0.7); }}
-        .tabs {{ display: flex; gap: 8px; flex-wrap: wrap; }}
-        .tab-btn {{ background: transparent; border: 1px solid var(--neon); color: #9fffb7; padding: 8px 14px; min-height: 44px; cursor: pointer; font-family: inherit; font-size: 0.95rem; letter-spacing: 1px; text-transform: uppercase; border-radius: 0; }}
-        .tab-btn:hover {{ background: rgba(0, 255, 70, 0.12); }}
-        .tab-btn.active {{ background: var(--neon); border-color: var(--neon); color: #000; box-shadow: 0 0 14px rgba(0,255,70,.6); }}
-        .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }}
-        .card {{ min-width: 0; background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px)); animation: rise .5s ease both; transition: background .2s, border-color .2s; }}
-        .card:hover {{ background: rgba(0, 38, 12, 0.92); border-color: var(--neon); }}
-        .card.targeted-card {{ border-color: var(--accent-targeted); border-top-width: 3px; }}
-        .card.critical-card {{ border-color: var(--accent-critical); border-top-width: 3px; }}
-        .card.general-card {{ border-top-width: 3px; }}
-        .card-header {{ display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; margin-bottom: 10px; gap: 6px; flex-wrap: wrap; letter-spacing: .5px; }}
-        .source-tag {{ color: #b8ffc9; font-weight: 400; text-transform: uppercase; }}
-        .date-tag {{ color: var(--text-muted); }}
-        .badge {{ padding: 1px 6px; font-weight: 400; font-size: 0.75rem; letter-spacing: 1px; border-radius: 0; }}
-        .badge-new {{ background: var(--neon); color: #000; }}
-        .badge-infra {{ background: #d4a5ff; color: #000; }}
-        .badge-score {{ background: transparent; color: #9fffb7; border: 1px solid #00b832; }}
-        .cve-badge {{ background: rgba(0, 255, 70, 0.12); color: #9fffb7; padding: 0 5px; text-decoration: none; font-size: 0.85em; border: 1px solid rgba(0,255,70,.4); }}
-        .ioc-container {{ display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }}
-        .ioc-pill {{ background: transparent; color: #ff8080; padding: 1px 6px; font-size: 0.75rem; border: 1px solid rgba(255, 77, 77, 0.6); }}
-        .card-title {{ font-family: 'VT323', ui-monospace, monospace; font-weight: 400; font-size: 1.55rem; margin-bottom: 8px; line-height: 1.1; overflow-wrap: anywhere; }}
-        .card-title a {{ color: #eaffef; text-decoration: none; }}
-        .card-title a:hover {{ color: var(--neon); text-shadow: 0 0 8px rgba(0,255,70,.6); }}
-        .card-desc {{ color: var(--text-muted); font-size: 0.88rem; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }}
-        footer.sig {{ margin-top: 28px; padding-top: 12px; border-top: 1px dashed var(--neon); color: #6fcf88; font-size: 0.78rem; letter-spacing: 1px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }}
-        @media (max-width: 480px) {{ body {{ padding: 12px; padding-left: max(12px, env(safe-area-inset-left)); padding-right: max(12px, env(safe-area-inset-right)); }} header {{ margin-bottom: 16px; }} .tabs {{ width: 100%; }} .tab-btn {{ flex: 1 1 auto; padding: 8px 8px; font-size: 0.85rem; }} .stat-card {{ padding: 12px 14px; }} .stat-value {{ font-size: 2.4rem; }} .rain:nth-child(even) {{ display: none; }} }}
-        @media (prefers-reduced-motion: reduce) {{ .rain, .sweep {{ display: none; }} h1, .cursor, .stat-card, .card {{ animation: none !important; }} }}
-        .count {{ opacity: 0.85; margin-left: 4px; }}
-        .no-data {{ color: var(--text-muted); grid-column: 1 / -1; padding: 40px; text-align: center; font-family: 'VT323', ui-monospace, monospace; font-size: 1.6rem; }}
-        .card {{ content-visibility: auto; contain-intrinsic-size: auto 190px; }}
+        html {{ -webkit-text-size-adjust: 100%; font-size: clamp(17px, 0.35vw + 15.5px, 20px); background: var(--bg); scroll-behavior: smooth; }}
+        body {{
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg); color: var(--text); line-height: 1.6;
+            min-height: 100vh; overflow-x: hidden; overflow-wrap: anywhere;
+            padding: clamp(16px, 4vw, 48px);
+            padding-left: max(clamp(16px, 4vw, 48px), env(safe-area-inset-left));
+            padding-right: max(clamp(16px, 4vw, 48px), env(safe-area-inset-right));
+            -webkit-font-smoothing: antialiased; font-feature-settings: "cv11", "ss01";
+        }}
+        body::before {{
+            content: ""; position: fixed; inset: -20vmax; z-index: 0; pointer-events: none;
+            background:
+                radial-gradient(40vmax 40vmax at 15% 8%, var(--bg-glow-1), transparent 60%),
+                radial-gradient(36vmax 36vmax at 88% 18%, var(--bg-glow-2), transparent 60%);
+            animation: drift 28s ease-in-out infinite alternate;
+        }}
+        @keyframes drift {{ from {{ transform: translate3d(0,0,0) scale(1); }} to {{ transform: translate3d(2vmax, 3vmax, 0) scale(1.08); }} }}
+        @keyframes rise {{ from {{ opacity: 0; transform: translateY(16px); }} to {{ opacity: 1; transform: none; }} }}
+        @keyframes pulse-dot {{ 0%,100% {{ box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 60%, transparent); }} 70% {{ box-shadow: 0 0 0 10px transparent; }} }}
+        a:focus-visible, button:focus-visible, input:focus-visible {{ outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 12px; }}
+
+        .container {{ position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; }}
+
+        header {{ margin-bottom: clamp(24px, 4vw, 44px); }}
+        .status {{ display: inline-flex; align-items: center; gap: 10px; font-size: 0.85rem; font-weight: 600; color: var(--muted); padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }}
+        .status i {{ width: 10px; height: 10px; border-radius: 50%; background: var(--ok); animation: pulse-dot 2.4s infinite; flex: none; }}
+        h1 {{ font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 1; font-weight: 800; letter-spacing: -0.04em; margin: 18px 0 12px;
+              background: linear-gradient(100deg, var(--text) 0%, var(--accent) 55%, var(--general) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.08em; }}
+        .last-update {{ font-size: clamp(1rem, 1.6vw, 1.2rem); color: var(--muted); font-weight: 500; }}
+
+        .stats-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(10px, 1.6vw, 20px); margin-bottom: clamp(20px, 3vw, 32px); }}
+        .stat-card {{ position: relative; padding: clamp(16px, 2.4vw, 26px); border-radius: 24px; background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: var(--shadow); overflow: hidden; transition: transform .25s ease, background .25s ease; }}
+        .stat-card::after {{ content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--border); }}
+        .stat-card.targeted::after {{ background: var(--targeted); }}
+        .stat-card.critical::after {{ background: var(--critical); }}
+        .stat-card.general::after {{ background: var(--general); }}
+        .stat-label {{ font-size: clamp(0.78rem, 1.2vw, 0.92rem); font-weight: 600; color: var(--muted); letter-spacing: 0.02em; line-height: 1.3; }}
+        .stat-value {{ font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; margin-top: 6px; font-variant-numeric: tabular-nums; }}
+        .stat-card.targeted .stat-value {{ color: var(--targeted); }}
+        .stat-card.critical .stat-value {{ color: var(--critical); }}
+        .stat-card.general .stat-value {{ color: var(--general); }}
+
+        .controls {{ display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: clamp(20px, 3vw, 32px); align-items: center; }}
+        .search-box {{ flex: 1 1 280px; min-width: 0; min-height: 56px; padding: 14px 22px; font: inherit; font-size: 1.05rem; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; transition: border-color .2s, background .2s; -webkit-appearance: none; appearance: none; }}
+        .search-box::placeholder {{ color: var(--muted); opacity: .9; }}
+        .search-box:hover {{ border-color: color-mix(in srgb, var(--accent) 50%, var(--border)); }}
+        .tabs {{ display: flex; flex-wrap: wrap; gap: 8px; padding: 6px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); }}
+        .tab-btn {{ font: inherit; font-size: 1rem; font-weight: 600; min-height: 48px; padding: 8px 20px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; transition: background .2s, color .2s, transform .15s; }}
+        .tab-btn:hover {{ color: var(--text); background: var(--surface-hover); }}
+        .tab-btn:active {{ transform: scale(0.97); }}
+        .tab-btn.active {{ background: var(--accent-solid); color: var(--on-accent); box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-solid) 45%, transparent); }}
+        .count {{ margin-left: 6px; font-weight: 700; font-variant-numeric: tabular-nums; opacity: .9; }}
+
+        .cards-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: clamp(14px, 2vw, 24px); }}
+        .card {{ position: relative; min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; gap: 12px; padding: clamp(18px, 2.6vw, 28px); border-radius: 26px; background: var(--surface); border: 1px solid var(--border); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: var(--shadow); content-visibility: auto; contain-intrinsic-size: auto 260px; transition: transform .3s cubic-bezier(.2,.8,.2,1), background .3s, border-color .3s; }}
+        .card::before {{ content: ""; position: absolute; left: 26px; right: 26px; top: 0; height: 3px; border-radius: 0 0 6px 6px; background: var(--general); }}
+        .card.targeted-card::before {{ background: var(--targeted); }}
+        .card.critical-card::before {{ background: var(--critical); }}
+        .card:hover {{ transform: translateY(-4px); background: var(--surface-hover); border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }}
+        .card:nth-child(-n+9) {{ animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }}
+        .card:nth-child(2) {{ animation-delay: .05s; }} .card:nth-child(3) {{ animation-delay: .1s; }} .card:nth-child(4) {{ animation-delay: .15s; }}
+        .card:nth-child(5) {{ animation-delay: .2s; }} .card:nth-child(6) {{ animation-delay: .25s; }} .card:nth-child(7) {{ animation-delay: .3s; }}
+        .card:nth-child(8) {{ animation-delay: .35s; }} .card:nth-child(9) {{ animation-delay: .4s; }}
+
+        .card-header {{ display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; font-size: 0.88rem; margin: 0; }}
+        .source-tag {{ font-weight: 700; color: var(--text); }}
+        .date-tag {{ color: var(--muted); font-weight: 500; }}
+        .badge {{ padding: 3px 10px; border-radius: 999px; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.02em; }}
+        .badge-new {{ background: var(--pill-new-bg); color: var(--pill-new-fg); }}
+        .badge-infra {{ background: var(--pill-infra-bg); color: var(--pill-infra-fg); }}
+        .badge-score {{ background: transparent; color: var(--muted); border: 1px solid var(--border); margin-left: auto; font-variant-numeric: tabular-nums; }}
+        .card-title {{ font-size: clamp(1.3rem, 2.2vw, 1.55rem); font-weight: 700; line-height: 1.28; letter-spacing: -0.015em; margin: 0; overflow-wrap: anywhere; }}
+        .card-title a {{ color: var(--text); text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease; }}
+        .card-title a:hover {{ background-size: 100% 2px; }}
+        .cve-badge {{ display: inline-block; font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.8em; font-weight: 600; padding: 1px 8px; border-radius: 8px; text-decoration: none; color: var(--general); background: color-mix(in srgb, var(--general) 14%, transparent); }}
+        .card-desc {{ color: var(--muted); font-size: 1.02rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }}
+        .ioc-container {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 4px; }}
+        .ioc-pill {{ font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.8rem; font-weight: 600; color: var(--ioc); padding: 4px 10px; border-radius: 10px; background: color-mix(in srgb, var(--ioc) 12%, transparent); }}
+        .no-data {{ grid-column: 1 / -1; text-align: center; padding: 64px 16px; font-size: 1.25rem; font-weight: 600; color: var(--muted); }}
+
+        footer.sig {{ margin-top: clamp(32px, 5vw, 60px); padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; font-weight: 500; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }}
+
         @media (max-width: 768px) {{
-            .controls {{ display: contents; position: static; background: none; padding: 0; margin: 0; }}
-            .search-box {{ display: block; width: 100%; margin-bottom: 10px; }}
-            .tabs {{ position: sticky; top: 0; z-index: 10; background: #000; padding: 6px 0; margin-bottom: 14px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; border-bottom: 1px solid rgba(0,255,70,.35); }}
-            .tab-btn {{ padding: 4px 2px; font-size: 0.72rem; letter-spacing: 0; line-height: 1.15; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; }}
-            .tab-btn .count {{ display: block; margin: 2px 0 0; font-size: 0.95rem; opacity: 1; }}
-            .stats-grid {{ grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 14px; }}
-            .stat-card {{ padding: 8px 10px; clip-path: none; animation: none; }}
-            .stat-label {{ font-size: 0.62rem; letter-spacing: 1px; line-height: 1.25; min-height: 2.5em; }}
-            .stat-value {{ font-size: 2rem; margin-top: 2px; }}
-            header {{ padding-bottom: 12px; margin-bottom: 14px; gap: 6px; }}
-            .kicker {{ font-size: 0.65rem; letter-spacing: 1px; }}
-            h1 {{ font-size: 2.5rem; }}
-            .last-update {{ font-size: 0.72rem; letter-spacing: 0; }}
-            .card {{ clip-path: none; animation: none; padding: 14px; background: rgba(0, 12, 4, 0.95); }}
-            .stat-card {{ background: rgba(0, 14, 5, 0.92); }}
-            .card-title {{ font-size: 1.4rem; }}
-            .card-desc {{ font-size: 0.82rem; }}
-            .sweep {{ display: none; }}
-            .scanlines {{ opacity: .45; }}
-            .rain span {{ opacity: .35; }}
-            .container {{ padding-bottom: 20px; }}
+            .controls {{ display: contents; }}
+            .search-box {{ display: block; width: 100%; margin-bottom: 12px; }}
+            .tabs {{ position: sticky; top: 8px; z-index: 20; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; width: 100%; margin-bottom: 18px; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: color-mix(in srgb, var(--bg) 82%, transparent); box-shadow: var(--shadow); }}
+            .tab-btn {{ display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 2px; font-size: 0.8rem; line-height: 1.15; min-height: 54px; }}
+            .tab-btn .count {{ display: block; margin: 2px 0 0; font-size: 1.05rem; }}
+            .stats-grid {{ grid-template-columns: repeat(2, 1fr); }}
+            .stat-card {{ border-radius: 20px; }}
+            .card {{ border-radius: 22px; }}
+            .badge-score {{ margin-left: 0; }}
+            body::before {{ animation: none; }}
+        }}
+        @media (hover: none) {{ .card:hover {{ transform: none; }} }}
+        @media (prefers-reduced-motion: reduce) {{
+            html {{ scroll-behavior: auto; }}
+            body::before, .card, .status i {{ animation: none !important; }}
+            .card, .tab-btn, .stat-card, .card-title a {{ transition: none !important; }}
         }}
     </style>
 </head>
 <body>
-    <div class="fx" aria-hidden="true">
-        <div class="rain" style="left:2%"><span style="animation-duration:6s;animation-delay:-1s">0&#10;1&#10;A&#10;7&#10;F&#10;3&#10;K&#10;9&#10;X</span></div>
-        <div class="rain" style="left:9%"><span style="animation-duration:8s;animation-delay:-4s">X&#10;4&#10;B&#10;0&#10;Z&#10;8&#10;Q&#10;2&#10;M</span></div>
-        <div class="rain" style="left:16%"><span style="animation-duration:5s;animation-delay:-2s">R&#10;9&#10;2&#10;E&#10;C&#10;6&#10;Y&#10;1&#10;T</span></div>
-        <div class="rain" style="left:24%"><span style="animation-duration:9s;animation-delay:-6s">M&#10;3&#10;0&#10;V&#10;8&#10;J&#10;4&#10;P&#10;7</span></div>
-        <div class="rain" style="left:32%"><span style="animation-duration:7s;animation-delay:-3s">K&#10;5&#10;W&#10;1&#10;N&#10;0&#10;D&#10;9&#10;L</span></div>
-        <div class="rain" style="left:41%"><span style="animation-duration:6.5s;animation-delay:-5s">2&#10;Q&#10;8&#10;H&#10;3&#10;S&#10;0&#10;G&#10;6</span></div>
-        <div class="rain" style="left:49%"><span style="animation-duration:8.5s;animation-delay:-1.5s">F&#10;7&#10;1&#10;U&#10;A&#10;4&#10;Z&#10;2&#10;E</span></div>
-        <div class="rain" style="left:57%"><span style="animation-duration:5.5s;animation-delay:-4.5s">9&#10;C&#10;3&#10;R&#10;6&#10;B&#10;0&#10;T&#10;5</span></div>
-        <div class="rain" style="left:66%"><span style="animation-duration:7.5s;animation-delay:-2.5s">L&#10;0&#10;8&#10;Y&#10;2&#10;K&#10;7&#10;N&#10;1</span></div>
-        <div class="rain" style="left:74%"><span style="animation-duration:6s;animation-delay:-3.5s">4&#10;M&#10;9&#10;A&#10;0&#10;X&#10;6&#10;D&#10;3</span></div>
-        <div class="rain" style="left:83%"><span style="animation-duration:9s;animation-delay:-7s">Z&#10;2&#10;5&#10;F&#10;8&#10;H&#10;1&#10;P&#10;0</span></div>
-        <div class="rain" style="left:91%"><span style="animation-duration:7s;animation-delay:-0.5s">8&#10;J&#10;1&#10;S&#10;4&#10;G&#10;9&#10;V&#10;6</span></div>
-    </div>
-    <div class="scanlines" aria-hidden="true"></div>
-    <div class="sweep" aria-hidden="true"></div>
     <div class="container">
         <header>
-            <div>
-                <div class="kicker">[ TRANSMISIE ACTIVĂ // {SOURCES_LABEL} ]</div>
-                <h1>CYBER DIGEST<span class="cursor" aria-hidden="true"></span></h1>
-                <p class="last-update">Sincronizat la: {now_ro_str}</p>
-            </div>
+            <span class="status"><i aria-hidden="true"></i>{SOURCES_LABEL}</span>
+            <h1>Cyber Digest</h1>
+            <p class="last-update">Sincronizat la {now_ro_str}</p>
         </header>
         <div class="stats-grid">
             <div class="stat-card">
@@ -944,8 +979,8 @@ def build_web_dashboard(categorized):
             {generate_cards_html(categorized['critical'], 'critical-card')}
             {generate_cards_html(categorized['general'], 'general-card')}
         </div>
-        <p class="no-data" id="noMatch" hidden>// NICIO TRANSMISIE PENTRU ACEST FILTRU //</p>
-        <footer class="sig"><span>NU EXISTĂ ÎNTÂRZIERE ÎN CĂDERE. DOAR SEMNAL.</span><span>REÎMPROSPĂTARE AUTOMATĂ · 10 MIN</span></footer>
+        <p class="no-data" id="noMatch" hidden>Niciun rezultat pentru filtrul curent.</p>
+        <footer class="sig"><span>Date din surse publice de securitate, agregate și ierarhizate automat.</span><span>Reîmprospătare automată la 10 minute</span></footer>
     </div>
     <script>
         let currentCategory = 'all';
