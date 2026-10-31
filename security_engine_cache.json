@@ -5,13 +5,75 @@
   "http_cache": {
     "http://feeds.feedburner.com/krebsonsecurity": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 20:06:54 GMT",
+      "last_modified": "Sat, 31 Oct 2026 16:16:40 GMT",
       "cached_articles": []
     },
     "https://www.bleepingcomputer.com/feed/": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:39:28 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:42:26 GMT",
       "cached_articles": [
+        {
+          "source": "BleepingComputer",
+          "title": "Northflank security breach leads to abuse of customers' AI API keys",
+          "link": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+          "description": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys. [...]...",
+          "date": "2026-10-31T14:01:12-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+          "link": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+          "description": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message. [...]...",
+          "date": "2026-10-31T11:35:11-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-58882"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Reddit to lock content behind logins to fight scrapers",
+          "link": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
+          "description": "Reddit announced in a post by co-founder Steve Huffman that the site will gradually become a \"logged-in service,\" offering limited access to visitors without accounts. [...]...",
+          "date": "2026-10-31T10:05:15-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
+          "link": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
+          "description": "AI-generated vulnerability reports are overwhelming some bug bounty programs, making it harder for aspiring security researchers to know where to start. TryHackMe explains how beginners can build practical cybersecurity skills, use AI responsibly, and produce reproducible findings that stand up to s...",
+          "date": "2026-10-31T09:10:19-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "BleepingComputer",
+          "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+          "link": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+          "description": "Blockchain analytics firm Chainalysis disclosed a data breach after attackers used \"offensive agentic techniques\" to access internal systems and tools, exposing customer names, email addresses, user IDs, and organizational roles. [...]...",
+          "date": "2026-10-31T08:50:09-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "BleepingComputer",
           "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
@@ -107,98 +169,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "OpenAI doubles ChatGPT Pro usage limits after backlash over planned 50% cut",
-          "link": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/",
-          "description": "OpenAI says it won't reduce usage limits for the $100, $200, and $500 ChatGPT Pro plans, as well as Business Premium, and it also promised to keep Dots usage independent. [...]...",
-          "date": "2026-10-29T19:35:52-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Binance probes potential $5.8 billion crypto-theft hack",
-          "link": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
-          "description": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]...",
-          "date": "2026-10-29T18:45:23-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
-          "link": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
-          "description": "A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana starter kit on GitHub is positioned to trick AI coding agents into installing a NetSupport RAT. [......",
-          "date": "2026-10-29T18:09:24-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Japan Airlines suffers third-party data breach exposing passenger info",
-          "link": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
-          "description": "Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers. [...]...",
-          "date": "2026-10-29T18:08:04-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
-          "link": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
-          "description": "Prediction market platform Polymarket temporarily suspended trading on Thursday after hackers compromised a third-party service to distribute cryptocurrency-draining JavaScript, with approximately $2.5 million in assets traced to a suspected attacker wallet. [...]...",
-          "date": "2026-10-29T17:47:25-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
-          "link": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
-          "description": "A fake cryptocurrency trading app called Padre Terminal, previously available on the Apple App Store for iOS devices, has been linked to the theft of approximately $23,000 from 27 Solana wallets. [...]...",
-          "date": "2026-10-29T15:23:41-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "BleepingComputer",
-          "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
-          "link": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
-          "description": "A newly identified advanced persistent threat (APT) group tracked as UAT-11473 was observed exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers, to deploy a custom malware framework called KeyDrift. [...]...",
-          "date": "2026-10-29T14:38:26-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-20127"
-            ],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.helpnetsecurity.com/feed/": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 15:40:00 GMT",
+      "last_modified": "Sat, 31 Oct 2026 05:50:46 GMT",
       "cached_articles": [
         {
           "source": "Help Net Security",
@@ -403,25 +379,63 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Malwarebytes Labs",
-          "title": "Malicious Firefox extensions impersonate popular crypto wallets",
-          "link": "https://www.malwarebytes.com/blog/news/2026/10/malicious-firefox-extensions-impersonate-popular-crypto-wallets",
-          "description": "Fake Firefox extensions posing as Phantom, Jupiter, and Bitget targeted users to steal crypto wallet recovery phrases and private keys....",
-          "date": "2026-10-29T14:06:54+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://feeds.feedburner.com/TheHackersNews": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 22:30:15 GMT",
+      "last_modified": "Sat, 31 Oct 2026 18:08:34 GMT",
       "cached_articles": [
+        {
+          "source": "The Hacker News",
+          "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+          "link": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+          "description": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive customer data.\n\nHowever, the company noted that the breach did not result in unauthorized access to its investigation content, authentication credentials...",
+          "date": "2026-10-31T17:31:56+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+          "link": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+          "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, following active exploitation in the wild.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-111357 (CVSS...",
+          "date": "2026-10-31T13:57:43+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-111357"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+          "link": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+          "description": "A malicious ChatGPT share link could run an attacker's code in the logged-in session of anyone who opened it, allowing them to read their private conversations, researchers at the security firm Parameter showed.\n\nThe researchers reported the flaw through OpenAI's bug bounty program on October 18, an...",
+          "date": "2026-10-31T11:03:41+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "The Hacker News",
+          "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+          "link": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
+          "description": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday.\n\nThe web infrastructure and security company said it autonomously mitigated 18.2 million network-layer (L3) DDoS attacks and 14.4 trillion HTTP DDoS requests in ...",
+          "date": "2026-10-31T10:26:12+05:30",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "The Hacker News",
           "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
@@ -505,96 +519,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
-          "link": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
-          "description": "Drupal has warned that threat actors are exploiting a \"highly critical\" security flaw in its Commerce Core component.\n\nThe vulnerability, tracked as CVE-2026-118539 (CVSS score: N/A), is a case of missing authorization affecting Commerce Core versions from 0.0.0 to 2.41 and from 3.0.0 to 3.3.13.\n\n\"T...",
-          "date": "2026-10-30T13:15:30+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-118539"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
-          "link": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
-          "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Cisco and GitLab software to its Known Exploited Vulnerabilities (KEV), citing evidence of active exploitation.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-97229 (CVSS score: 10.0...",
-          "date": "2026-10-30T12:57:05+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-97229"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
-          "link": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
-          "description": "Cryptocurrency giant Binance said on Thursday that a \"security incident\" on its platform has impacted about $6.3 billion worth of assets.\n\nThe world's biggest cryptocurrency exchange said nearly $3 billion of those assets have been frozen on-chain so far. \n\nTether and Circle said they have frozen mo...",
-          "date": "2026-10-30T09:44:59+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "ThreatsDay: Critical Firewall Flaws, Banking Trojans Rented, Weaponized PDF, Token Theft + 26 More Stories",
-          "link": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
-          "description": "Some attacks take real skill. Others just need someone to leave a door open. This week has both. Exposed passwords, old bugs still getting exploited, and trusted software doing things it shouldn't.\n\nThere's a strange mix of clever tricks and careless mistakes. Hackers are borrowing trust from famili...",
-          "date": "2026-10-30T00:41:58+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-          "link": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
-          "description": "A flaw in the Linux kernel's TCP code, tracked as CVE-2026-98432, affects Ubuntu, Red Hat Enterprise Linux (RHEL), and other Linux distributions. The kernel's own CVE team rates it 9.8 out of 10 on the CVSS scale.\n\nAnthropic said on October 27 that its AI model wrote an exploit that uses the flaw to...",
-          "date": "2026-10-29T21:27:05+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-98432"
-            ],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
-          "link": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
-          "description": "Threat actors are delivering malicious loaders and cryptocurrency miners under the guise of artificial intelligence (AI) desktop applications for Anthropic Claude and OpenAI ChatGPT as part of a campaign dubbed Yoba.\n\nThe activity involves creating fake GitHub projects that claim to be desktop appli...",
-          "date": "2026-10-29T20:50:29+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Hacker News",
-          "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
-          "link": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
-          "description": "Google on Wednesday took the wraps off Gemini 4 Carbon, its latest frontier model with state-of-the-art cybersecurity and long-horizon capabilities.\n\n\"It shows significant gains across coding and agentic tasks as well as across key capabilities critical for cybersecurity defense, landing a firm lead...",
-          "date": "2026-10-29T19:12:40+05:30",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -604,9 +528,21 @@
       "cached_articles": []
     },
     "https://www.csoonline.com/feed/": {
-      "etag": "\"3e6283610770597b94e72808e863a540\"",
-      "last_modified": "Fri, 30 Oct 2026 21:50:12 GMT",
+      "etag": "\"0e476b209be04663a5ad0a4a6c9935a8\"",
+      "last_modified": "Sat, 31 Oct 2026 00:31:07 GMT",
       "cached_articles": [
+        {
+          "source": "CSO Online",
+          "title": "Choosing a WAAP in 2026: 3 questions that separate the shortlist",
+          "link": "https://www.csoonline.com/article/4242913/choosing-a-waap-in-2026-3-questions-that-separate-the-shortlist.html",
+          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nOne platform or four\n\n\n\nYour WAF renewal is coming up. The API team has its own tooling in mind, the fraud team wants a bot product, and someone in networking owns DDoS. Four controls, four consoles, four sets of policies in front of the same applications. That is the situatio...",
+          "date": "2026-10-31T00:31:07+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "CSO Online",
           "title": "Why identity governance demands executive attention",
@@ -728,48 +664,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Anthropic and OpenAI diverge on who should pull the plug on risky AI",
-          "link": "https://www.csoonline.com/article/4242128/anthropic-and-openai-diverge-on-who-should-pull-the-plug-on-risky-ai-2.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nOpenAI and Anthropic agree that frontier AI systems need stronger oversight, but they are proposing sharply different approaches to stopping models that pose serious risks: Anthropic wants courts empowered to suspend dangerous systems, while OpenAI argues developers should be ...",
-          "date": "2026-10-29T12:18:19+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Imposter abused trust in OpenAI, Anthropic, and 30 others to hunt for secrets",
-          "link": "https://www.csoonline.com/article/4242088/imposter-abused-trust-in-openai-anthropic-and-30-others-to-hunt-for-secrets.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nAttackers are impersonating AI agents from companies including OpenAI, Anthropic, and Meta in a bid to trick organizations into exposing sensitive credentials, according to researchers who observed a single threat actor cycling through dozens of fake bot identities while probi...",
-          "date": "2026-10-29T11:52:51+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CSO Online",
-          "title": "Vulnerability exploitation rising as the root cause of many breaches",
-          "link": "https://www.csoonline.com/article/4241912/vulnerability-exploitation-rising-as-the-root-cause-of-many-breaches.html",
-          "description": "\n\t\t\n\t\t\t\t\t  \n\t\t\t\t\t\t\n\n\n\n\nMore evidence has emerged that attackers are turning to vulnerabilities rather than phishing as a means for breaking into corporate systems.\n\n\n\nIncident response firm LevelBlue’s Q3 findings show that vulnerability exploitation accounted for 14% of initial access cases, up fro...",
-          "date": "2026-10-29T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://arstechnica.com/security/feed/": {
-      "etag": "\"177ef9241e628dee7881b9612a9dd374\"",
-      "last_modified": "Fri, 30 Oct 2026 23:09:36 GMT",
+      "etag": "\"3c049ccdb36dd4c616c213e388d7d7e2\"",
+      "last_modified": "Sat, 31 Oct 2026 19:24:04 GMT",
       "cached_articles": [
         {
           "source": "Ars Technica - Security",
@@ -789,18 +689,6 @@
           "link": "https://arstechnica.com/security/2026/10/hackers-steal-6-3-billion-from-binance-in-record-crypto-heist/",
           "description": "\n                        Binance scrambles to freeze billions after record-breaking hack linked to North Korea.\n                    ...",
           "date": "2026-10-30T13:46:39+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Ars Technica - Security",
-          "title": "Massive leak exposes 41,000 DHS workers and undercover ICE agents",
-          "link": "https://arstechnica.com/security/2026/10/massive-leak-exposes-41000-dhs-workers-and-undercover-ice-agents/",
-          "description": "\n                        The leak reveals undercover agents, surveillance groups, and sensitive DHS access.\n                    ...",
-          "date": "2026-10-29T12:58:34+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -848,10 +736,10 @@
       "cached_articles": [
         {
           "source": "Android Police - News",
-          "title": "Bose QuietComfort Headphones for $199 is a price we didn't see coming",
-          "link": "https://www.androidpolice.com/bose-quietcomfort-headphones-for-199-is-a-price-we-didnt-see-coming/",
-          "description": "\n                                            Hard to pass up\n                                        ...",
-          "date": "2026-10-30T23:23:37+00:00",
+          "title": "I tested all of Samsung's AI capabilities to learn which tools save time and which ones are gimmicks",
+          "link": "https://www.androidpolice.com/tested-samsungs-ai-capabilities-to-learn-which-save-time-which-are-gimmicks/",
+          "description": "\n                                            More keepers than you'd think\n                                        ...",
+          "date": "2026-10-31T19:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -860,10 +748,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "I replaced Google Photos with an offline AI gallery; finding old photos is finally easy",
-          "link": "https://www.androidpolice.com/memoria-gallery-local-offline-ai-search/",
-          "description": "\n                                            Finding images using AI and without an internet connection\n                                        ...",
-          "date": "2026-10-30T23:00:10+00:00",
+          "title": "How I fine-tuned my Android Chrome settings for smoother web navigation",
+          "link": "https://www.androidpolice.com/chrome-flags-faster-browsing/",
+          "description": "\n                                            Hidden Chrome flags make browsing breezy\n                                        ...",
+          "date": "2026-10-31T17:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -872,10 +760,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "You can get Samsung's Galaxy A37 5G for free with a new line from Metro",
-          "link": "https://www.androidpolice.com/galaxy-a37-5g-for-free-with-a-line-from-metro/",
-          "description": "\n                                            Not a bad way to go\n                                        ...",
-          "date": "2026-10-30T21:27:39+00:00",
+          "title": "I turned off one Galaxy Watch feature and gained 6 hours of battery life",
+          "link": "https://www.androidpolice.com/turned-off-one-galaxy-watch-feature-gained-hours-of-battery-life/",
+          "description": "\n                                            Less battery anxiety, more wrist time\n                                        ...",
+          "date": "2026-10-31T16:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -884,10 +772,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "Google's cheapest Gemini plan is losing a major perk; now I can't recommend it to anyone",
-          "link": "https://www.androidpolice.com/google-is-making-its-cheapest-gemini-plan-harder-to-recommend/",
-          "description": "\n                                            Pay more or lose Pro access\n                                        ...",
-          "date": "2026-10-30T21:00:10+00:00",
+          "title": "This Android browser replaced my VPN, VLC, and 1DM; now my phone runs better",
+          "link": "https://www.androidpolice.com/aloha-delete-apps-vpn-vlc-download-manager/",
+          "description": "\n                                            One browser to rule them all\n                                        ...",
+          "date": "2026-10-31T15:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -896,10 +784,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "Mac.apk runs my favorite Android apps on my Mac; most just worked",
-          "link": "https://www.androidpolice.com/macapk-runs-my-favorite-android-apps-on-my-mac-and-most-just-worked/",
-          "description": "\n                                            Forget emulators: this free Mac app runs Android apps like native software\n                                        ...",
-          "date": "2026-10-30T19:00:10+00:00",
+          "title": "I am finally giving up on Google Keep, here's why",
+          "link": "https://www.androidpolice.com/finally-giving-up-on-google-keep-here-is-why/",
+          "description": "\n                                            It was great until it wasn't \n                                        ...",
+          "date": "2026-10-31T13:30:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -908,10 +796,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "YouTube's new cleanup option could save your channel from getting terminated",
-          "link": "https://www.androidpolice.com/youtube-is-giving-channels-with-violative-content-a-second-chance/",
-          "description": "\n                                            A 30-day chance\n                                        ...",
-          "date": "2026-10-30T18:51:53+00:00",
+          "title": "The newest Fitbits are great, so why is the charger so terrible?",
+          "link": "https://www.androidpolice.com/the-newest-fitbits-are-great-so-why-is-the-charger-so-terrible/",
+          "description": "\n                                            The Fitbit Edge deserves a far better charging experience\n                                        ...",
+          "date": "2026-10-31T12:45:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -920,10 +808,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "Samsung Galaxy S27 is reportedly sticking with 25W charging speed yet again",
-          "link": "https://www.androidpolice.com/samsung-galaxy-s27-reportedly-sticking-with-25w-charging-speed-again/",
-          "description": "\n                                            Is 25W still fast in 2027?\n                                        ...",
-          "date": "2026-10-30T17:07:18+00:00",
+          "title": "Google's DNS gets a hidden backup path that my ad blocker never gets on Android",
+          "link": "https://www.androidpolice.com/googles-dns-gets-hidden-backup-path-that-my-ad-blocker-never-gets-on-android/",
+          "description": "\n                                            Android saves its best encrypted DNS for Google and Cloudflare\n                                        ...",
+          "date": "2026-10-31T12:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -932,10 +820,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "Google's 'best smartwatch yet' just scored a historic discount, weeks before Black Friday",
-          "link": "https://www.androidpolice.com/amazon-google-pixel-watch-5-deal-early-black-friday/",
-          "description": "\n                                            The Pixel Watch 5 just got the Black Friday treatment at Amazon.\n                                        ...",
-          "date": "2026-10-30T17:05:42+00:00",
+          "title": "Both T-Mobile and Verizon want to give you a free Galaxy S26 FE — but which deal is best?",
+          "link": "https://www.androidpolice.com/samsung-galaxy-s26-fe-deal-verizon-or-t-mobile-which-offer-is-best/",
+          "description": "\n                                            The Big Three carriers battle it out.\n                                        ...",
+          "date": "2026-10-31T11:35:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -944,10 +832,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "YouTube keeps forcing Shorts on me at launch; this hidden setting stops it",
-          "link": "https://www.androidpolice.com/youtube-shorts-app-startup-automatic-play-glitch-fix-solution/",
-          "description": "\n                                            This is the YouTube app's most annoying glitch\n                                        ...",
-          "date": "2026-10-30T17:00:10+00:00",
+          "title": "I used Google Calendar to automate my home maintenance; I haven't missed a task since",
+          "link": "https://www.androidpolice.com/google-calendar-automate-home-maintenance-havent-missed-a-task/",
+          "description": "\n                                            Here's the setup I use\n                                        ...",
+          "date": "2026-10-31T11:00:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -956,10 +844,10 @@
         },
         {
           "source": "Android Police - News",
-          "title": "Gemini now lets you create, preview, and edit PDFs and files directly in your chat",
-          "link": "https://www.androidpolice.com/gemini-create-preview-edit-pdf-files-docs-directly-inside-your-chat/",
-          "description": "\n                                            Ask follow-up queries right in the file editor\n                                        ...",
-          "date": "2026-10-30T15:59:09+00:00",
+          "title": "The reason I keep coming back to Google Photos after trying every major alternative",
+          "link": "https://www.androidpolice.com/the-reason-i-keep-coming-back-to-google-photos-after-trying-every-major-alternative/",
+          "description": "\n                                            No photo app can replace Google Photos for me\n                                        ...",
+          "date": "2026-10-31T10:30:10+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -969,9 +857,21 @@
       ]
     },
     "https://www.securityweek.com/feed/": {
-      "etag": "W/\"b6358eade68ad9dd886bab518064bcd0\"",
-      "last_modified": "Fri, 30 Oct 2026 15:09:32 GMT",
+      "etag": "W/\"3993d57f514bef4a6b22628465caf853\"",
+      "last_modified": "Sat, 31 Oct 2026 17:27:01 GMT",
       "cached_articles": [
+        {
+          "source": "SecurityWeek",
+          "title": "Syrian Hacker Gets Prison Time in US After Over a Decade on the Run",
+          "link": "https://www.securityweek.com/syrian-hacker-gets-prison-time-in-us-after-over-a-decade-on-the-run/",
+          "description": "A US court sentenced Syrian hacker Ahmad Umar Agha to 42 months for pro-Assad attacks on media, businesses, and government entities.\nThe post Syrian Hacker Gets Prison Time in US After Over a Decade on the Run appeared first on SecurityWeek.\n...",
+          "date": "2026-10-31T11:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "SecurityWeek",
           "title": "PHP2Shell Attacks Root Palo Alto Firewalls but Fail Against WordPress",
@@ -1083,103 +983,91 @@
             ],
             "ips": []
           }
-        },
+        }
+      ]
+    },
+    "https://hackaday.com/feed/": {
+      "etag": "\"40becbec350f5bf9a8df742c51de70af\"",
+      "last_modified": "Sat, 31 Oct 2026 07:34:19 GMT",
+      "cached_articles": [
         {
-          "source": "SecurityWeek",
-          "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor",
-          "link": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
-          "description": "Blockchain analysts link the record crypto theft to North Korean hackers, as Binance probes a possibly compromised engineer laptop.\nThe post $6 Billion Binance Hack Bears Hallmarks of North Korea’s TraderTraitor appeared first on SecurityWeek.\n...",
-          "date": "2026-10-30T08:16:26+00:00",
+          "source": "Hackaday",
+          "title": "DIY WiFi Analyzer Sniffs Out Congestion and Coverage Issues, Suggests Fixes",
+          "link": "https://hackaday.com/2026/10/31/diy-wifi-analyzer-sniffs-out-congestion-and-coverage-issues-suggests-fixes/",
+          "description": "[Roni Bandini]’s JEV WiFi Analyzer is an interesting experiment that glues together a single-board Linux computer, a USB WiFi adapter, and a specialized AI model to create a new kind …read more...",
+          "date": "2026-10-31T17:00:53+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
             "ips": []
           }
-        }
-      ]
-    },
-    "https://hackaday.com/feed/": {
-      "etag": "\"933b32682a7948bf183f732979aff3df\"",
-      "last_modified": "Fri, 30 Oct 2026 19:38:20 GMT",
-      "cached_articles": [
+        },
+        {
+          "source": "Hackaday",
+          "title": "Bring On Supercon!",
+          "link": "https://hackaday.com/2026/10/31/bring-on-supercon/",
+          "description": "In just under a week from today, almost 700 hackers will be getting together in Pasadena, CA for three days of scheming, soldering, and socializing. If you’re able to join …read more...",
+          "date": "2026-10-31T14:00:32+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "Learn to Edit STL Files in Just a Few Minutes",
+          "link": "https://hackaday.com/2026/10/31/learn-to-edit-stl-files-in-just-a-few-minutes/",
+          "description": "Sometimes an STL file needs a bit of editing, but if one doesn’t already know how to use a mesh editor it’s unlikely that one has the time to sit …read more...",
+          "date": "2026-10-31T11:00:45+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "3D Printed Einstein-Szilard Refrigerator Cools with Fire",
+          "link": "https://hackaday.com/2026/10/31/3d-printed-einstein-szilard-refrigerator-cools-with-fire/",
+          "description": "They may not deliver the highest efficiency, but absorption refrigerators have earned a persistent place in camper vans and industrial plants thanks to a few distinct advantages: they can operate …read more...",
+          "date": "2026-10-31T08:00:42+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "Novelty Camera To USB Camera",
+          "link": "https://hackaday.com/2026/10/30/novelty-camera-to-usb-camera/",
+          "description": "The Godox C100 is a cheap camera that’s best described as a toy, its party trick being a large clear viewfinder with a head-up-display light meter. It’s by no means …read more...",
+          "date": "2026-10-31T05:00:23+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Hackaday",
+          "title": "VR Headset Ditches the Base Stations with DIY Tracking",
+          "link": "https://hackaday.com/2026/10/30/vr-headset-ditches-the-base-stations-with-diy-tracking/",
+          "description": "Those in the virtual reality scene might be interested in [Prohurtz]’s add-on for the Bigscreen Beyond VR headset. BSB-SLAM adds SLAM (Simultaneous Localization and Mapping) tracking to the headset by attaching …read more...",
+          "date": "2026-10-31T02:00:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Hackaday",
           "title": "A 1982 Modem for $100",
           "link": "https://hackaday.com/2026/10/30/a-1982-modem-for-100/",
           "description": "[Dave Farquhar] takes a walk down memory lane about the Commodore 1600 VICModem, perhaps the first phone modem to sell for less than $100. Commodore, of course, was famous for …read more...",
           "date": "2026-10-30T23:00:57+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Making Internal Combustion Engines Better With More Valves",
-          "link": "https://hackaday.com/2026/10/30/making-internal-combustion-engines-better-with-more-valves/",
-          "description": "When it comes to internal combustion engines (ICEs), it’s generally accepted that each cylinder doesn’t have more valves to let in a fresh fuel mixture and to exhaust the aftermath …read more...",
-          "date": "2026-10-30T20:00:11+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "A Modern Smalltalk",
-          "link": "https://hackaday.com/2026/10/30/a-modern-smalltalk/",
-          "description": "In the history of object-oriented (OO) computer languages, Smalltalk has a special place. It wasn’t the first OO language, and it hasn’t spread as well as some others. But it …read more...",
-          "date": "2026-10-30T18:30:54+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "Hackaday Podcast Episode 393: Epaper, Tamagotchi Hacks, and Supercon Talks Galore",
-          "link": "https://hackaday.com/2026/10/30/hackaday-podcast-episode-393-epaper-tamagotchi-hacks-and-supercon-talks-galore/",
-          "description": "This week’s podcast comes from Europe, as Elliot Williams is joined by Jenny List, who wishes to apologies for the poor sound quality from her headset microphone. The news this …read more...",
-          "date": "2026-10-30T17:45:17+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "How Britain Narrowly Escaped a Grid Blackout in June 2026",
-          "link": "https://hackaday.com/2026/10/30/how-britain-narrowly-escaped-a-grid-blackout-in-june-2026/",
-          "description": "Amidst one of the worst heatwaves in European history, Britain’s national grid saw itself faced with a quiet crisis this summer. On June 23rd, the grid frequency dropped to 49.657 …read more...",
-          "date": "2026-10-30T15:30:14+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "This Week in Security: Broken Embargoes, UEFI Overflow, Wormable Tailscale, Starlink Ad Snooping, and a DHS Directory Dump",
-          "link": "https://hackaday.com/2026/10/30/this-week-in-security-broken-embargoes-uefi-overflow-wormable-tailscale-starlink-ad-snooping-and-a-dhs-directory-dump/",
-          "description": "Last week brought us at least two broken embargoes: php2shell leaked onto Hacker News a day early, and a batch of Linux kernel bugs landed on the public kernel mailing …read more...",
-          "date": "2026-10-30T14:00:29+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Hackaday",
-          "title": "The Sounds of the World, One Random Album at a Time",
-          "link": "https://hackaday.com/2026/10/30/the-sounds-of-the-world-one-random-album-at-a-time/",
-          "description": "In the streaming era it’s easy to forget that there’s still a lot of stuff being broadcast over the radio for anyone who cares enough to dial in their receiver. …read more...",
-          "date": "2026-10-30T11:00:55+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -1227,9 +1115,81 @@
       "cached_articles": []
     },
     "https://www.androidauthority.com/feed/": {
-      "etag": "W/\"8a56fdc9b7b1da56ec7dddbe289b0825\"",
-      "last_modified": "Fri, 30 Oct 2026 21:36:53 GMT",
+      "etag": "W/\"f1226825853d304e5683058fc4bc0af0\"",
+      "last_modified": "Sat, 31 Oct 2026 11:30:29 GMT",
       "cached_articles": [
+        {
+          "source": "Android Authority",
+          "title": "The Anker MagGo Power Bank 2 Pro is brilliant, but not for Android",
+          "link": "https://www.androidauthority.com/anker-maggo-power-bank-2-pro-review-3725445/",
+          "description": "A great charger that isn't at its best with Android....",
+          "date": "2026-10-31T11:30:29+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "This Niagara-inspired launcher could (eventually) be better than the original",
+          "link": "https://www.androidauthority.com/niagara-launcher-vs-victoria-launcher-3728983/",
+          "description": "It's free, open-source, and just a little chaotic....",
+          "date": "2026-10-31T11:00:58+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "The 10 best custom chat themes I made in Google Messages",
+          "link": "https://www.androidauthority.com/best-google-messages-custom-chat-themes-3728559/",
+          "description": "So many ways to spruce up your conversations....",
+          "date": "2026-10-31T10:30:04+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "Skipped upgrading this year? 5 upcoming Android phones worth saving for",
+          "link": "https://www.androidauthority.com/upcoming-android-phones-worth-saving-for-2027-3725669/",
+          "description": "The future is looking bright....",
+          "date": "2026-10-31T10:00:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I’d choose these earbuds over the Pixel Buds Pro 2 every time, for one simple reason",
+          "link": "https://www.androidauthority.com/oppo-enco-x4-over-google-pixel-buds-pro-2-every-time-3727969/",
+          "description": "If earbuds don't quite fit right, they quickly get annoying. OPPO has taken on Google, and for me, beaten it. ...",
+          "date": "2026-10-31T09:30:49+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Android Authority",
+          "title": "I hate Samsung’s default camera app — here’s what I use instead",
+          "link": "https://www.androidauthority.com/samsung-default-app-open-camera-comparison-3726024/",
+          "description": "I want more control over my shots....",
+          "date": "2026-10-31T09:00:52+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Android Authority",
           "title": "Apple Watch Ultra 4 falls to $699.99 in first major price cut",
@@ -1793,343 +1753,43 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google is cleaning up Home’s messiest bugs, with fixes for cameras, Matter devices, and more",
-          "link": "https://www.androidauthority.com/google-home-fixes-2-3729774/",
-          "description": "Let's hope this goes a long way towards sorting out some of Google Home's performance issues. ...",
-          "date": "2026-10-29T21:33:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Android 17 QPR3 Beta 3 brings back app lock and fixes dozens of bugs",
-          "link": "https://www.androidauthority.com/android-17-qpr3-beta-3-3729781/",
-          "description": "Plus new options for app bubbles, Quick Settings, and more....",
-          "date": "2026-10-29T20:51:36+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google’s got some big updates landing for pretty much everything in your smart home",
-          "link": "https://www.androidauthority.com/google-smart-home-hardware-updates-3729736/",
-          "description": "From Chromecast to Nest Cams, Google is updating smart home hardware left and right....",
-          "date": "2026-10-29T20:07:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Moto Buds 2 Plus deal brings Bose-tuned buds under $100",
-          "link": "https://www.androidauthority.com/moto-buds-2-plus-deal-3729769/",
-          "description": "Save $50 on the Moto Buds 2 Plus and get Motorola’s premium 2026 earbuds with hybrid drivers, Audio Share, and ANC....",
-          "date": "2026-10-29T19:51:30+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Save $102 on Lenovo’s big-screen Idea Tab Pro Gen 2 tablet",
-          "link": "https://www.androidauthority.com/lenovo-idea-tab-pro-gen-2-deal-3729766/",
-          "description": "Lenovo Idea Tab Pro Gen 2 drops to $447.36 on Amazon, with a 13-inch 3.5K 144Hz display, pen, and folio case included....",
-          "date": "2026-10-29T19:43:52+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Time may be up for Samsung Galaxy Watch extended software support",
-          "link": "https://www.androidauthority.com/samsung-galaxy-watch-os-updates-3729748/",
-          "description": "Samsung is reportedly considering ending OS upgrades on older Galaxy Watches. ...",
-          "date": "2026-10-29T19:33:50+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Google brings richer document editing to Gemini on mobile and the web",
-          "link": "https://www.androidauthority.com/gemini-document-editing-3729712/",
-          "description": "Gemini is ready for your revision notes as its document powers expand....",
-          "date": "2026-10-29T17:59:47+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Amazon Ember 50-inch 4K TV hits its lowest price in months",
-          "link": "https://www.androidauthority.com/amazon-ember-tv-deal-3729729/",
-          "description": "Save 23% off the RRP on Amazon’s new 50-inch Ember 4-Series 4K Fire TV with HDR10+ and Alexa voice control....",
-          "date": "2026-10-29T17:56:37+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "EarFun Air Pro 4 falls 33% on Amazon to $53",
-          "link": "https://www.androidauthority.com/deal-earfun-air-pro-4-3729704/",
-          "description": "Save $26 on the EarFun Air Pro 4 and get feature-packed wireless earbuds with ANC, Fast Pair, and long battery life....",
-          "date": "2026-10-29T17:50:14+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Amazon cuts latest Ring Battery Doorbell 2K by $55",
-          "link": "https://www.androidauthority.com/ring-battery-doorbell-2k-deal-amazon-3729722/",
-          "description": "Ring’s new Battery Doorbell 2K drops to $44.99 on Amazon, with 2K video, 6x zoom, and a 140-degrees head-to-toe view....",
-          "date": "2026-10-29T17:41:20+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Samsung Odyssey G7 drops to $499.99, saving you $400",
-          "link": "https://www.androidauthority.com/samsung-odyssey-g7-deal-3729708/",
-          "description": "Samsung's 37-inch Odyssey G7 gaming monitor is 44% off on Amazon with 4K, 165Hz, and FreeSync Premium Pro....",
-          "date": "2026-10-29T16:59:13+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "OnePlus just unveiled a monster 16R preview, and we’re suitably jealous",
-          "link": "https://www.androidauthority.com/oneplus-ace-7-pro-launch-16r-preview-3729618/",
-          "description": "A 9,000mAh battery makes the missed opportunity sting....",
-          "date": "2026-10-29T16:33:50+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Deal slashes the Nothing Headphone (a) by $70",
-          "link": "https://www.androidauthority.com/nothing-headphone-a-deal-amazon-3729699/",
-          "description": "New Nothing Headphone (a) drops to $129 on Amazon with ANC, LDAC, and up to 135 hours of battery life....",
-          "date": "2026-10-29T16:32:43+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Rokid takes on Meta Ray-Ban Displays with its own rival",
-          "link": "https://www.androidauthority.com/rokid-unveils-two-new-smart-glasses-3729627/",
-          "description": "Get ready for Rokid to show off two new pairs of smart glasses at CES....",
-          "date": "2026-10-29T16:19:14+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "This 4-port UGREEN 160W GaN charger is back to its lowest price",
-          "link": "https://www.androidauthority.com/ugreen-nexode-pro-160w-gan-charger-deal-3729679/",
-          "description": "Save $55 on the UGREEN Nexode Pro 160W charger and get 4-device charging, a retractable USB-C cable, and live power info....",
-          "date": "2026-10-29T16:07:01+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Soundcore Boom 2 Plus falls to one of its best prices",
-          "link": "https://www.androidauthority.com/soundcore-boom-2-plus-deal-amazon-3729645/",
-          "description": "Save $80 on the Soundcore Boom 2 Plus, a floating IPX7 speaker with up to 20 hours of battery life and BassUp sound....",
-          "date": "2026-10-29T16:03:26+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Skullcandy Crusher Evo deal cuts $88 off these bass-heavy headphones",
-          "link": "https://www.androidauthority.com/skullcandy-crusher-evo-deal-amazon-3729667/",
-          "description": "Save 40% on Skullcandy Crusher Evo headphones and get adjustable Sensory Bass, Bluetooth 5.0, and wired listening....",
-          "date": "2026-10-29T15:51:55+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Alexa can now manage your Amazon billing complaints, subscription changes, and more",
-          "link": "https://www.androidauthority.com/amazon-alexa-for-shopping-update-3729650/",
-          "description": "Alexa is ready to take those annoying shopping chores off your hands. ...",
-          "date": "2026-10-29T15:51:50+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Is your Pixel 9 Pro Fold acting up? Google support may offer a big upgrade to replace it",
-          "link": "https://www.androidauthority.com/google-pixel-11-pro-fold-replacement-512-gb-3729602/",
-          "description": "Some lucky users are reportedly receiving the Pixel 11 Pro Fold as a replacement....",
-          "date": "2026-10-29T15:49:36+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Pixel 10 Pro XL owners can grab Google’s PixelSnap case for 58% off",
-          "link": "https://www.androidauthority.com/google-pixelsnap-phone-case-pixel-10-pro-xl-deal-3729653/",
-          "description": "Google’s official Pixel 10 Pro XL PixelSnap case drops to $21 on Amazon, the lowest price we’ve seen in at least six months....",
-          "date": "2026-10-29T15:27:29+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Samsung Galaxy S26 Ultra 512GB plunges by $472 in one of its best deals ever",
-          "link": "https://www.androidauthority.com/deal-samsung-galaxy-s26-ultra-512gb-3729642/",
-          "description": "Samsung Galaxy S26 Ultra drops to $1,127 on Amazon, the lowest price we've seen this year for the 512GB model....",
-          "date": "2026-10-29T14:48:22+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "Garmin Messenger is placing too much trust in SMS verification, and this might not end well",
-          "link": "https://www.androidauthority.com/garmin-messenger-recycled-phone-number-privacy-risk-3729560/",
-          "description": "Your old chats might not be gone when your phone number is reassigned....",
-          "date": "2026-10-29T11:52:06+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "7 Android settings I always turn off on my Google Pixel phone",
-          "link": "https://www.androidauthority.com/always-disable-these-google-pixel-settings-3727587/",
-          "description": "My Pixel is so much better this way....",
-          "date": "2026-10-29T11:30:26+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "This beefy Android handheld quietly got a gigantic, 10,000mAh battery",
-          "link": "https://www.androidauthority.com/mangmi-pocket-max-10000mah-battery-3729563/",
-          "description": "The MANGMI Pocket Max might be the new battery king in the handheld space....",
-          "date": "2026-10-29T11:23:41+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "I hope the Motorola Signature 27 is great, but I have 2 big concerns I can’t shake",
-          "link": "https://www.androidauthority.com/motorola-signature-27-software-updates-price-concerns-3728019/",
-          "description": "I love the hardware, but I need real update commitments and a sane price before buying in....",
-          "date": "2026-10-29T11:00:48+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "The iPhone 18 Pro is the antithesis to Android’s AI era",
-          "link": "https://www.androidauthority.com/iphone-18-pro-google-gemini-android-3724781/",
-          "description": "Apple might be behind Google in AI, but its approach to the iPhone 18 Pro is the one I actually want....",
-          "date": "2026-10-29T10:30:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Android Authority",
-          "title": "I’ve tested plenty of chargers, but this is the one staying on my desk",
-          "link": "https://www.androidauthority.com/baseus-picogo-pro-100w-gan-charger-3722018/",
-          "description": "Love at first watt? Apparently, yes....",
-          "date": "2026-10-29T10:00:25+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "etag": "\"18ef-65f174ccc0b1a\"",
-      "last_modified": "Fri, 30 Oct 2026 23:38:57 GMT",
+      "etag": "\"19a6-65f2834145865\"",
+      "last_modified": "Sat, 31 Oct 2026 19:48:57 GMT",
       "cached_articles": [
         {
           "source": "SANS ISC StormCast",
-          "title": "ISC Stormcast For Friday, October 30th, 2026 https://isc.sans.edu/podcastdetail/10158, (Fri, Oct 30th)",
-          "link": "https://isc.sans.edu/diary/rss/33472",
-          "description": "",
-          "date": "2026-10-30T03:30:17+00:00",
+          "title": "Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)",
+          "link": "https://isc.sans.edu/diary/rss/33476",
+          "description": " Wireshark Release Candidate 5.0.0 was published: soon we can expect a new major version of Wireshark.\r...",
+          "date": "2026-10-31T10:52:53+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SANS ISC StormCast",
+          "title": "YARA-X 1.22.1 Release, (Sat, Oct 31st)",
+          "link": "https://isc.sans.edu/diary/rss/33474",
+          "description": " YARA-X&#;x26;#;39;s 1.22.1 is a bugfix version, it brings 2 bugfixes.\r...",
+          "date": "2026-10-31T10:48:17+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "SANS ISC StormCast",
+          "title": "YARA-X 1.22.0 Release, (Sun, Oct 25th)",
+          "link": "https://isc.sans.edu/diary/rss/33454",
+          "description": " YARA-X&#;x26;#;39;s 1.22.0 release brings 11 improvements and 9 bugfixes.\r...",
+          "date": "2026-10-31T10:45:40+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2139,65 +1799,39 @@
       ]
     },
     "https://blog.talosintelligence.com/rss/": {
-      "etag": "W/\"f1729-VLkDYSgGZ90tDGmeQZNpazwzuL4\"",
+      "etag": "W/\"fa6a6-KoikAYBOVTL86sNCTjXfw/pf/Rs\"",
       "last_modified": null,
       "cached_articles": [
         {
           "source": "Cisco Talos Intelligence",
-          "title": "A quiet week in infosec <.<",
-          "link": "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
-          "description": "In this edition of the Threat Source newsletter, William explores how PHP has taken over the conversation, Node.js has joined in, but underneath it all, there are still good people doing good work. ...",
-          "date": "2026-10-29T18:00:00+00:00",
+          "title": "Appraisal by AI: Model-driven victim prioritization in the VOLTA infostealer",
+          "link": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+          "description": "The self-deleting VOLTA infostealer steals credentials, sessions, and cryptocurrency wallets. Then, it uses LLMs to profile victims and rank their most valuable assets....",
+          "date": "2026-10-31T12:00:00+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Cisco Talos Intelligence",
-          "title": "IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases",
-          "link": "https://blog.talosintelligence.com/ir-trends-q3-2026/",
-          "description": "Phishing remained the leading initial access technique, while percentage of ransomware and pre-ransomware cases increased. Finance and public administration tied as the top-targeted industries....",
-          "date": "2026-10-29T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Cisco Talos Intelligence",
-          "title": "NIK C2: The new AI-enabled command-and-control framework",
-          "link": "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
-          "description": "Cisco Talos observed a new AI-integrated command-and-control (C2) framework in the wild called “NIK C2.” ...",
-          "date": "2026-10-29T10:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Cisco Talos Intelligence",
-          "title": "Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN",
-          "link": "https://blog.talosintelligence.com/uat-11473-keydrift/",
-          "description": "Talos has identified UAT-11473, a highly sophisticated APT, who exploited CVE-2026-20127, an authentication bypass vulnerability in Cisco SD-WAN Catalyst Controller instances to bypass authentication and gain unauthorized access to affected systems to deploy KeyDrift....",
-          "date": "2026-10-28T21:32:02+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-20127"
-            ],
             "ips": []
           }
         }
       ]
     },
     "https://www.microsoft.com/en-us/security/blog/feed/": {
-      "etag": "\"04fee21ea50974bcf424d764392ca584-gzip\"",
-      "last_modified": "Fri, 30 Oct 2026 17:09:42 GMT",
+      "etag": "\"9eef78664a8dafdfc8ae81dc7034c775-gzip\"",
+      "last_modified": "Sat, 31 Oct 2026 01:03:01 GMT",
       "cached_articles": [
+        {
+          "source": "Microsoft Security Blog",
+          "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
+          "link": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
+          "description": "Microsoft analyzes a malicious Claude Code–branded extension, its persistent SSH backdoor, and guidance to detect and remediate it.\nThe post Inside a malicious Claude Code-branded extension and its persistent SSH backdoor appeared first on Microsoft Security Blog.\n...",
+          "date": "2026-10-31T01:02:57+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Microsoft Security Blog",
           "title": "From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths",
@@ -2238,8 +1872,128 @@
     },
     "https://www.phoronix.com/rss.php": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:38:31 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:48:52 GMT",
       "cached_articles": [
+        {
+          "source": "Phoronix",
+          "title": "Enlightenment 0.28 Released With Many Improvements",
+          "link": "https://www.phoronix.com/news/Enlightenment-0.28",
+          "description": "Enlightenment 0.27 released at the beginning of 2025 and since then there's been no major feature update, falling off their roughly 12 month release cadence. But out this Halloween is Enlightenment 0.28 now with the better part of two years worth of changes......",
+          "date": "2026-10-31T10:46:26-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Linux Mint Developing New Apps For Terminal & System Monitoring",
+          "link": "https://www.phoronix.com/news/Linux-Mint-October-2026",
+          "description": "Linux Mint is out with their October 2026 status report to outline various initiatives they have underway in their lead-up to the Linux Mint 27 stable release happening on/around Christmas......",
+          "date": "2026-10-31T10:36:11-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "New Linux 7.4 Feature For Reducing AI Noise Already Reverted Due To A \"Crazy Beast\"",
+          "link": "https://www.phoronix.com/news/Linux-7.4-Drops-Taint-Bind",
+          "description": "A new feature merged last week for Linux 7.4 to help reduce AI/LLM generated noise from invalid/irrelevant testing configurations is now reverted due to a \"crazy beast\" in the VFIO subsystem......",
+          "date": "2026-10-31T08:15:22-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "KDE Plasma 6.9 Lands Some New Performance Optimizations",
+          "link": "https://www.phoronix.com/news/KDE-Plasma-6.9-More-Performance",
+          "description": "I love a good performance optimization and there are several this week in the KDE space with Plasma 6.9 development heating up......",
+          "date": "2026-10-31T06:51:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Ceph In Linux 7.4 Adds Global Mount Option For Lazy I/O",
+          "link": "https://www.phoronix.com/news/Linux-7.4-Ceph",
+          "description": "The Ceph kernel client changes have been submitted for Linux 7.4 ahead of its merge window expected to wrap up on Sunday......",
+          "date": "2026-10-31T06:30:00-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "GNOME Now Has An Established RFC Process, GNOME OS Continues Improving",
+          "link": "https://www.phoronix.com/news/GNOME-Establishes-RFC",
+          "description": "In recent weeks GNOME developers have been discussing a formal Request For Comments \"RFC\" process for solving major technical questions and changes to GNOME. This formalized process for succeeding their ad-hoc processes up to now has reached consensus......",
+          "date": "2026-10-31T06:10:19-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "DXVK-NVAPI 0.9.3 Brings Nice Improvements For Linux Gamers On Latest NVIDIA Drivers",
+          "link": "https://www.phoronix.com/news/DXVK-NVAPI-0.9.3",
+          "description": "DXVK-NVAPI 0.9.3 is out this weekend as a new feature update to this NVIDIA NVAPI implementation used by Valve as part of Steam Play with Proton for nicely integrating NVIDIA technologies into various Windows games running on Linux......",
+          "date": "2026-10-31T06:00:00-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "CUDA Oxide 0.3 Vastly Improves Rust Support For NVIDIA CUDA Programming",
+          "link": "https://www.phoronix.com/news/CUDA-Oxide-0.3",
+          "description": "NVIDIA software engineers released CUDA Oxide 0.3 for closing out October. CUDA Oxide as a reminder is their experimental Rust to CUDA compiler that has been seeing a lot of activity in recent months......",
+          "date": "2026-10-31T05:50:00-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Sculpt OS 26.10 Released - Now Powered By Genode's Custom Microkernel",
+          "link": "https://www.phoronix.com/news/Sculpt-OS-26.10",
+          "description": "Sculpt OS as the general purpose operating system project born out of the Genode initiative is now using the project's own microkernel rather than a third-party microkernel......",
+          "date": "2026-10-31T05:37:22-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Phoronix",
+          "title": "Wine 11.21 Released With Better WoW64 OpenGL Performance",
+          "link": "https://www.phoronix.com/news/Wine-11.21-Released",
+          "description": "Wine 11.21 is out as the newest bi-weekly development release of Wine and as we near Wine 12.0 stable release happenings getting underway in about one month with the official v12.0 release expected early in the new year......",
+          "date": "2026-10-30T20:29:01-04:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Phoronix",
           "title": "PostgreSQL 19 Running Behind Schedule Due To AI/LLM Burden",
@@ -2335,66 +2089,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Phoronix",
-          "title": "RISC-V Has A Nice Portable Performance Optimization With Linux 7.4",
-          "link": "https://www.phoronix.com/news/Linux-7.4-RISC-V",
-          "description": "The RISC-V architecture changes were merged today for the Linux 7.4 kernel with one nice optimization standing out......",
-          "date": "2026-10-29T20:36:39-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Fedora Linux 45 Shipping Next Week On 3 November",
-          "link": "https://www.phoronix.com/news/Fedora-45-Ships-Next-Week",
-          "description": "Fedora 45 is ready to ship! It will be formally released on Tuesday, 3 November......",
-          "date": "2026-10-29T18:00:54-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "F2FS Adds Opt-In Multi-Grain Timestamps With Linux 7.4, Other Improvements",
-          "link": "https://www.phoronix.com/news/F2FS-Linux-7.4",
-          "description": "The F2FS (Flash Friendly File-System) improvements have been merged for Linux 7.4 to further enhance this flash-optimized solution......",
-          "date": "2026-10-29T12:52:52-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "NVIDIA Vera Single vs. Dual Socket CPU Performance",
-          "link": "https://www.phoronix.com/review/nvidia-vera-1p-2p",
-          "description": "For those curious how NVIDIA Vera is scaling between single and dual socket deployments, here are some benchmarks I carried out a while back exploring the power and performance from one to two Vera CPUs....",
-          "date": "2026-10-29T09:36:24-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Phoronix",
-          "title": "Linux 7.4 Networking Brings Hardware Pacing Offload, New Drivers & More Performance",
-          "link": "https://www.phoronix.com/news/Linux-7.4-Networking",
-          "description": "The many Linux wired and wireless networking driver improvements were merged this week for the ongoing Linux 7.4 merge window.......",
-          "date": "2026-10-29T08:55:00-04:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -2417,19 +2111,32 @@
       ]
     },
     "https://www.php.net/news.rss": {
-      "etag": "\"413d8-65eee632015f1\"",
-      "last_modified": "Wed, 28 Oct 2026 22:50:18 GMT",
+      "etag": "\"413d8-65f09c4c5eb3f\"",
+      "last_modified": "Fri, 30 Oct 2026 07:30:20 GMT",
       "cached_articles": []
     },
     "https://developer.joomla.org/security-centre.feed?type=rss": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:40:18 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:50:16 GMT",
       "cached_articles": []
     },
     "https://www.welivesecurity.com/feed/": {
       "etag": null,
       "last_modified": null,
-      "cached_articles": []
+      "cached_articles": [
+        {
+          "source": "ESET WeLiveSecurity",
+          "title": "This month in security with Tony Anscombe – October 2026 edition",
+          "link": "https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-october-2026/",
+          "description": "The PHP2Shell disclosure and other major cybersecurity news this month brought into relief the need for well-thought-out cyber-readiness plans...",
+          "date": "2026-10-30T15:03:14+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        }
+      ]
     },
     "https://www.theregister.com/security/headlines.atom": {
       "etag": null,
@@ -2482,91 +2189,19 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "In the year AI re-wrote the infosec rulebook, it’s comforting to know crypto exchanges still have bad security",
-          "link": "https://www.theregister.com/security/2026/10/30/in-the-year-ai-re-wrote-the-infosec-rulebook-its-comforting-to-know-crypto-exchanges-still-have-bad-security/5306539",
-          "description": " Binance freezes funny money after compromise of engineer’s laptop linked to $6.3 billion of unauthorized trades ...",
-          "date": "2026-10-30T05:22:12+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Researchers find bugs in 5 AI developer tools, with OpenAI and Microsoft flaws still unpatched",
-          "link": "https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508",
-          "description": " Embedded browsers are at the heart of the problem ...",
-          "date": "2026-10-30T00:12:26+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Suspected Chinese attackers built a custom PHP2Shell exploit and rooted 25 servers",
-          "link": "https://www.theregister.com/security/2026/10/29/suspected-chinese-attackers-built-a-custom-php2shell-exploit-and-rooted-25-servers/5306456",
-          "description": " Snoops 'likely still' have access to US government-affiliated network ...",
-          "date": "2026-10-29T20:05:17+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Belgium's tax agency confirms cyberattack, pulls services offline",
-          "link": "https://www.theregister.com/security/2026/10/29/belgiums-tax-agency-confirms-cyberattack-pulls-services-offline/5306409",
-          "description": " Officials confirm this week’s tax deadlines extended to November as a result ...",
-          "date": "2026-10-29T15:47:40+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Shortlist of age checks for the UK's under-16 social media ban is out, 'some' adults will need verifying",
-          "link": "https://www.theregister.com/security/2026/10/29/shortlist-of-age-checks-for-the-uks-under-16-social-media-ban-is-out-some-adults-will-need-verifying/5306282",
-          "description": " Some adults may not need to prove it, but many will  ...",
-          "date": "2026-10-29T13:33:00+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "The Register - Security",
-          "title": "Attackers turn GitHub issues into supply chain campaign against 61 public repos in less than an hour",
-          "link": "https://www.theregister.com/security/2026/10/29/attackers-turn-github-issues-into-supply-chain-campaign-against-61-public-repos-in-less-than-an-hour/5306153",
-          "description": " 'The workflow automatically is triggered within a second, and if the workflow is indeed vulnerable, then the attack is executed successfully' ...",
-          "date": "2026-10-29T13:00:00+01:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://spectrum.ieee.org/rss/fulltext": {
-      "etag": "\"9afba6b5e8ee35350d51232e68eafab8\"",
-      "last_modified": "Fri, 30 Oct 2026 13:49:49 GMT",
+      "etag": "\"da3c40ea160a9a2c7a0afdeb1d8e739c\"",
+      "last_modified": "Sat, 31 Oct 2026 13:02:01 GMT",
       "cached_articles": [
         {
           "source": "IEEE Spectrum",
-          "title": "Consumer Appetite for Personal AI Goes Mainstream",
-          "link": "https://spectrum.ieee.org/ai-personal-assistant-intelligent-wearables",
-          "description": "\nThis article is brought to you by Qualcomm Technologies.For many consumers, much of the promise and appeal of AI is personal. Consumers are looking past generic tools and want to know how these technologies will help them in their daily lives. These trends coincide with the advent of new classes of...",
-          "date": "2026-10-29T19:18:20+00:00",
+          "title": "When Electric Cars Were for Women",
+          "link": "https://spectrum.ieee.org/early-electric-vehicles",
+          "description": "\nAt the turn of the last century, the automobile industry was still new and evolving rapidly. In 1898, there were about 50 carmakers in the United States. A decade later, that number had increased fivefold. In 1901, the companies produced 7,000 vehicles. By 1910, production had reached 181,000.For s...",
+          "date": "2026-10-31T13:00:02+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -2594,46 +2229,9 @@
       ]
     },
     "https://www.crowdstrike.com/blog/feed/": {
-      "etag": "\"1494-65f1686aa9440-gzip\"",
-      "last_modified": "Fri, 30 Oct 2026 22:43:33 GMT",
-      "cached_articles": [
-        {
-          "source": "CrowdStrike Blog",
-          "title": "CrowdStrike Expands Falcon Adversary OverWatch Threat Hunting Across AI and Google Cloud",
-          "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-expands-threat-hunting-across-ai-and-google-cloud/",
-          "description": "",
-          "date": "2026-10-30T00:00:00-05:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CrowdStrike Blog",
-          "title": "Build an Intelligence Advantage with Falcon Next-Gen SIEM",
-          "link": "https://www.crowdstrike.com/en-us/blog/build-intelligence-advantage-with-falcon-next-gen-siem/",
-          "description": "",
-          "date": "2026-10-30T00:00:00-05:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "CrowdStrike Blog",
-          "title": "CrowdStrike Agent Graph Shows How Agents Act on the Endpoint",
-          "link": "https://www.crowdstrike.com/en-us/blog/crowdstrike-agent-graph-shows-how-agents-act-on-endpoint/",
-          "description": "",
-          "date": "2026-10-30T00:00:00-05:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        }
-      ]
+      "etag": "\"1494-65f265d545115-gzip\"",
+      "last_modified": "Sat, 31 Oct 2026 17:37:19 GMT",
+      "cached_articles": []
     },
     "https://blog.rapid7.com/rss/": {
       "etag": null,
@@ -2685,6 +2283,186 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
+        {
+          "source": "Tom's Hardware",
+          "title": "Grab the award-winning Bambu Lab P1S 3D printer with AMS for $70 off",
+          "link": "https://www.tomshardware.com/pc-components/grab-the-award-winning-bambu-lab-p1s-3d-printer-with-ams-for-usd70-off-save-usd70-on-one-of-the-best-3d-printers-for-beginners",
+          "description": "\n                             The Bambu Lab P1S earned our Editor's Choice recognition in testing, and this discounted bundle gives you access to its high-speed printing capabilities alongside the convenience of the AMS color printing system. \n                                                        ...",
+          "date": "2026-10-31T19:19:50+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "French lawmakers approve $11.2 billion internet tax based on traffic usage, costs $0.06 per gigabyte of content accessed",
+          "link": "https://www.tomshardware.com/software/social-media/french-lawmakers-approve-usd11-2-billion-internet-tax-based-on-traffic-usage-costs-usd0-65-per-gigabyte-of-content-accessed-us-tech-giants-like-google-and-meta-face-new-levies-on-content-delivered-to-french-subscribers",
+          "description": "\n                             French lawmakers have approved an amendment proposing a €0.055-per-gigabyte tax on digital content delivered to internet subscribers in France. The measure could generate an estimated €10 billion annually, with companies including Google, Meta, Netflix and potentially T...",
+          "date": "2026-10-31T16:11:40+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "'Ghost Students' using AI to apply for student loans with stolen identities, DOJ's Operation Ghostbusters busts $200 million ring",
+          "link": "https://www.tomshardware.com/tech-industry/cyber-security/ghost-students-using-ai-to-apply-for-student-loans-with-stolen-identities-dojs-operation-ghostbusters-busts-usd200-million-ring-faking-online-college-attendance-unsuspecting-victims-saddled-with-student-debt-they-didnt-sign-up-for",
+          "description": "\n                             Fraudsters are using the identities of high school graduates who skipped college to apply for student loans and steal the excess proceeds that do not go to schools. They use AI to keep the charade going and make it seem like the fake student is actually going to class. ...",
+          "date": "2026-10-31T15:37:41+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Grab a new 3D printer this Halloween weekend, with prices as low as $199",
+          "link": "https://www.tomshardware.com/3d-printing/grab-a-new-3d-printer-this-halloween-weekend-with-prices-as-low-as-usd199-big-discounts-from-elegoo-creality-prusa-and-more-with-filament-and-resin-printers-and-consumables-on-sale",
+          "description": "\n                             Pick up a bargain 3D printer, thanks to these big discounts on resin and filament 3DP models from big names like Creality, Elegoo, Prusa and more. \n                                                                                                            ...",
+          "date": "2026-10-31T14:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "ASRock B860 Challenger Wifi Motherboard Review: Entry-level ATX at a great price, with drawbacks",
+          "link": "https://www.tomshardware.com/pc-components/motherboards/asrock-b860-challenger-wifi-motherboard-review",
+          "description": "\n                             ASRock’s B860 Challenger Wifi covers the basics and performs well, but slower USB ports, weaker VRMs, and a dated BIOS keep it from standing out, even at the lower price. \n                                                                                                  ...",
+          "date": "2026-10-31T14:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Firm that lets you rent out your idle Mac for AI inference workloads warns of plummeting token costs",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/firm-that-lets-you-rent-out-your-idle-mac-for-ai-inference-workloads-warns-of-plummeting-token-costs-darkbloom-network-sees-earnings-drop-to-usd1-23-a-day-as-anthropic-tokens-fall-77-percent",
+          "description": "\n                             Mac users sharing their compute for AI inference are seeing declining revenues as token prices continue to drop, with Anthropic token falling 77% in under five months. \n                                                                                                     ...",
+          "date": "2026-10-31T13:49:09+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "This week in Tom's Hardware Premium: October 31, 2026",
+          "link": "https://www.tomshardware.com/tech-industry/this-week-in-toms-hardware-premium-october-31-2026-vera-cpus-available-on-oracle-clusters-building-an-agentic-cpu-benchmark-and-a-primer-to-llms",
+          "description": "\n                             In case you're not yet subscribed to our Tom's Hardware Premium subscription service, here's what you've been missing out on this week \n                                                                                                            ...",
+          "date": "2026-10-31T13:30:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Intel shifts production capacity from consumer to server CPUs in face of 'unprecedented' AI demand",
+          "link": "https://www.tomshardware.com/pc-components/cpus/intel-shifts-production-capacity-from-consumer-to-server-cpus-in-face-of-unprecedented-ai-demand-company-navigating-one-of-the-most-significant-supply-shortages-in-history",
+          "description": "\n                             Intel is expanding chipmaking and advanced packaging capacity across the U.S., Ireland, and Malaysia to meet surging AI-driven demand for data center CPUs amid shrinking PC market and persistent supply constraints. \n                                                      ...",
+          "date": "2026-10-31T13:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Developer builds a complete Intel 486 PC emulator in a browser",
+          "link": "https://www.tomshardware.com/video-games/retro-gaming/developer-builds-a-complete-intel-486-pc-emulator-in-a-browser-100-percent-pure-javascript-retro486-includes-modular-tabs-for-screen-motherboard-storage-expansion-cards-and-more",
+          "description": "\n                             A developer has created a full Intel 486 PC system, using 100% pure-JavaScript, in a browser. \n                                                                                                            ...",
+          "date": "2026-10-31T12:40:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+          "description": "\n                             Anthropic's Opus 5.5 model blocking attempts at videogame recreation — users also claim their non-malicious generic reverse-engineering tasks are block \n                                                                                                            ...",
+          "date": "2026-10-31T12:20:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "AI agent used to perform controversial brain surgery on a mouse, Anthropic Sonnet controlled motorized surgery rig",
+          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/startup-uses-ai-agent-to-perform-controversial-brain-surgery-on-a-mouse-anthropic-sonnet-controlled-motorized-surgery-rig-ai-given-free-reign-to-treat-epilepsy-with-a-range-of-gene-therapy-vectors-after-opus-5-5-refused-to-conduct-biological-experiment",
+          "description": "\n                             The team had to use Sonnet after Opus 5.5 outright refused to run the experiment, while Opus 5 warned that it could stop working in the midst of the operation. \n                                                                                                            ...",
+          "date": "2026-10-31T12:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Veteran Microsoft engineer makes his own RAM from scratch using AI",
+          "link": "https://www.tomshardware.com/pc-components/ram/veteran-microsoft-engineer-makes-his-own-ram-from-scratch-using-ai-attempts-to-build-4mb-of-1970s-pdp-11-ram-from-scratch",
+          "description": "\n                             Expensive memory forces former Microsoft engineer to make his own — Dave Plummer makes PDP-11 RAM from scratch \n                                                                                                            ...",
+          "date": "2026-10-31T11:40:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Modder uses a trash 4-kW air conditioner radiator for his test bench to see how well it can cool a PC",
+          "link": "https://www.tomshardware.com/pc-components/liquid-cooling/trashbench-repurposes-a-trash-4-kw-air-conditioner-radiator-for-his-test-bench-to-see-how-well-it-can-cool-a-pc-achieves-a-shocking-28c-on-an-nvidia-rtx-3080",
+          "description": "\n                             TrashBench repurposes a trash AC radiator for his test bench to see how well it can cool a PC — RTX 3080 didn't run much above ambient temperature \n                                                                                                            ...",
+          "date": "2026-10-31T11:20:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "3D-printed ghost guns may now have a way to be traced to their source",
+          "link": "https://www.tomshardware.com/3d-printing/3d-printed-guns-may-now-have-a-way-to-be-traced-to-their-source-australian-researchers-correctly-identify-26-out-of-28-printed-pla-samples-to-their-filament-product",
+          "description": "\n                             Researchers from Curtin University in Australia have come up with a way to potentially track down seized 3D-printed guns to their source by identifying differences in material properties in various PLA products. \n                                                         ...",
+          "date": "2026-10-31T11:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
+        {
+          "source": "Tom's Hardware",
+          "title": "Tech sleuth claims to have found the oldest GUI application that still works with Windows 11",
+          "link": "https://www.tomshardware.com/software/windows/tech-sleuth-claims-to-have-found-the-oldest-gui-application-that-still-works-with-windows-11-cdplayer-exe-from-windows-nt-in-november-1992-wins-the-prize",
+          "description": "\n                             A technology enthusiast claims that the oldest GUI application that still runs on Windows 11 is CDPLAYER.EXE from November 1992. \n                                                                                                            ...",
+          "date": "2026-10-31T10:00:00+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "Tom's Hardware",
           "title": "Nvidia store quietly pulls the RTX 5080 following RTX 5090 removal",
@@ -2912,144 +2690,12 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Intel confirms Nova Lake CPUs will use advanced 18A-P node, more details at CES",
-          "link": "https://www.tomshardware.com/pc-components/cpus/intel-confirms-nova-lake-will-use-advanced-18a-p-node-more-details-at-ces-company-says-its-taking-panther-lake-capacity-offline-to-build-more-granite-rapids-data-center-cpus",
-          "description": "\n                             Intel's next-gen Nova Lake desktop processors will be the first client product to use Intel's enhanced 18A-P node, CEO Lip-Bu Tan confirmed in the company's Q3 2026 earnings call. \n                                                                                         ...",
-          "date": "2026-10-29T21:55:48+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Elon Musk's SpaceX buying out 418 homes near flagship AI data center, but only if they drop participation in lawsuit",
-          "link": "https://www.tomshardware.com/tech-industry/data-centers/elon-musks-spacex-buying-out-418-homes-near-flagship-ai-data-center-but-only-if-they-drop-participation-in-lawsuit-report-claims-the-company-is-targeting-an-entire-neighborhood-but-will-only-buy-from-people-who-dont-pursue-noise-pollution-complaints",
-          "description": "\n                             The properties will supposedly house SpaceXSI staff while also giving a chance to those who don't want to live near the data center to sell their homes. \n                                                                                                            ...",
-          "date": "2026-10-29T15:40:20+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "AI demand triggers massive PCB shortage for PC makers as order books full until 2030",
-          "link": "https://www.tomshardware.com/pc-components/ai-demand-triggers-massive-pcb-shortage-for-pc-makers-as-order-books-full-until-2030-lead-times-stretch-to-30-months-as-material-costs-surge-12x",
-          "description": "\n                             The AI industry continues to gobble up manufacturing resources that were once dedicated to serving PC, smart device, and gadget makers. Inevitably, the PCB industry has started to feel its effects. \n                                                                       ...",
-          "date": "2026-10-29T15:25:25+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "US data centers could wipe out 15 years' worth of progress in greenhouse gas emissions, report claims",
-          "link": "https://www.tomshardware.com/tech-industry/data-centers/us-data-centers-could-wipe-out-15-years-worth-of-progress-in-greenhouse-gas-emissions-report-claims-buildouts-could-emit-as-much-carbon-dioxide-as-all-of-mexico",
-          "description": "\n                             The Sierra Club, one of the oldest environmental preservation organizations in the U.S., has now put forth an estimate that by 2030, U.S. data center buildouts will be outputting as much carbon dioxide as the entirety of Mexico. \n                                        ...",
-          "date": "2026-10-29T14:34:54+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Nvidia GeForce RTX 5080 prices hit $2,000, costing more than the RTX 5090 did at launch and with limited stock available",
-          "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5080-prices-hit-usd2-000-costing-more-than-the-rtx-5090-did-at-launch-and-with-limited-stock-available-original-usd999-msrp-long-forgotten-with-prices-now-2-3x-higher",
-          "description": "\n                             It costs just as much to buy an Nvidia GeForce RTX 5080 right now as the launch price for the RTX 5090, with prices now at least two times higher for this high spec GPU. \n                                                                                                   ...",
-          "date": "2026-10-29T14:21:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "HyperX Omen 35L review: A polished gaming PC for deep pockets",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/hyperx-omen-35l-review",
-          "description": "\n                             Premium styling, quiet operation, and impressive performance elevates the HyperX Omen 35L into competition with the best the market has to offer. But whether it's worth the money depends on which configuration you choose. \n                                               ...",
-          "date": "2026-10-29T14:00:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Nvidia CEO Jensen Huang may have been the target of a spy plot through 'Chinese intelligence asset,' report claims",
-          "link": "https://www.tomshardware.com/tech-industry/policy/nvidia-ceo-jensen-huang-may-have-been-the-target-of-a-spy-plot-through-chinese-intelligence-asset-report-claims-exec-from-firm-under-investigation-for-smuggling-banned-ai-chips-to-china-accused-of-being-a-spy-was-also-feeding-information-to-beijing",
-          "description": "\n                             Sources say that Alice Huang, a senior executive at an Nvidia cloud partner who has close ties with Jensen Huang, is suspected of passing information to Beijing. \n                                                                                                           ...",
-          "date": "2026-10-29T13:04:23+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Dept of Justice reportedly probes Nvidia over $13 billion Hugging Face AI platform acquisition",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/dept-of-justice-reportedly-probes-nvidia-over-usd13-billion-hugging-face-ai-platform-acquisition-concerns-raised-over-competition-in-ai-and-pressure-on-customers",
-          "description": "\n                             Nvidia's near $13 billion buyout of Hugging Face has come under scrutiny over concerns that it will impact competition in the AI space. \n                                                                                                            ...",
-          "date": "2026-10-29T12:49:19+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Tech whiz's internet-accessible Synology NAS gets bit by ransomware attack from 18-month-old remote code execution flaw",
-          "link": "https://www.tomshardware.com/tech-industry/cyber-security/tech-whizzs-internet-accessible-synology-nas-gets-bit-by-ransomware-attack-from-18-month-old-remote-code-execution-flaw-security-updates-neglected-in-a-series-of-catastrophic-errors",
-          "description": "\n                             Tech whizz' internet-accessible Synology NAS gets bit by transomware attack — security updates 18 months out of date in a series of catastrophic errors \n                                                                                                            ...",
-          "date": "2026-10-29T12:41:14+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Our first step at defining a CPU benchmark for agentic AI",
-          "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/our-first-step-at-defining-a-cpu-benchmark-for-agentic-ai-how-we-can-measure-throughput-of-agentic-ai-workloads-without-any-gpu-involved",
-          "description": "\n                             Over the past six months, CPUs have taken center stage as agentic AI workloads evolve. Here’s our first attempt at trying to measure CPU performance when running agentic workloads. \n                                                                                        ...",
-          "date": "2026-10-29T12:20:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Tom's Hardware",
-          "title": "Score a huge $1,250 saving on this Alienware gaming PC with an RTX 5070 Ti and 32GB DDR5 right now",
-          "link": "https://www.tomshardware.com/desktops/gaming-pcs/score-a-huge-usd1-250-saving-on-this-alienware-gaming-pc-with-an-rtx-5070-ti-and-32gb-ddr5-right-now-big-newegg-price-drop-means-you-can-grab-this-4k-ready-rig-with-a-24-core-intel-cpu-and-1tb-ssd-for-usd2-599-99",
-          "description": "\n                             You can save $1,250 on this Alienware Aurora gaming PC with an RTX 5070 Ti and 32GB of DDR5 RAM, now priced at just $2,599.99. \n                                                                                                            ...",
-          "date": "2026-10-29T11:55:45+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
     "https://www.darkreading.com/rss.xml": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:40:18 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:50:16 GMT",
       "cached_articles": [
         {
           "source": "Dark Reading",
@@ -3110,66 +2756,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Anthropic-Themed Phishing Emails Bypass Top Security Tools",
-          "link": "https://www.darkreading.com/cyberattacks-data-breaches/anthropic-phishing-emails-bypass-security-tools",
-          "description": "Obvious phishing emails with numerous red flags are somehow getting past some of the industry-leading secure email gateway (SEG) products....",
-          "date": "2026-10-29T21:21:56+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Rethinking Cybersecurity Awareness in the AI Era",
-          "link": "https://www.darkreading.com/cyber-risk/rethinking-cybersecurity-awareness-ai-era",
-          "description": "This installment of the Reporters' Notebook video series discusses some of the trends and topics from Cybersecurity Awareness Month, from using AI for better training to educating next-generation workforces on modern risks and emerging threats....",
-          "date": "2026-10-29T20:15:37+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Why CTF Competitions May Be More Important Than Ever",
-          "link": "https://www.darkreading.com/cybersecurity-operations/why-ctf-more-important-than-ever",
-          "description": "As artificial intelligence squeezes early-career learning opportunities, capture-the-flag contests could be one way to help pick up the slack....",
-          "date": "2026-10-29T19:56:44+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Claude Model Builds Exploits Across Major Browsers &amp; OSes",
-          "link": "https://www.darkreading.com/application-security/claude-model-exploits-major-browsers-oses",
-          "description": "An unreleased version of the AI model has found and chained multiple vulnerabilities in Chrome, Safari, Android, Windows, and Linux, Anthropic says....",
-          "date": "2026-10-29T18:15:59+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Dark Reading",
-          "title": "Threat Modeling With 4 Simple Questions on a White Board",
-          "link": "https://www.darkreading.com/cyber-risk/threat-modeling-4-simple-questions",
-          "description": "A four-question exercise that CISOs can use to create a threat model that promises results, without a big spend....",
-          "date": "2026-10-29T15:44:04+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -3217,12 +2803,12 @@
     },
     "https://security.googleblog.com/feeds/posts/default": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 05:30:19 GMT",
+      "last_modified": "Sat, 31 Oct 2026 07:42:26 GMT",
       "cached_articles": []
     },
     "https://aws.amazon.com/security/security-bulletins/feed/": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:25:04 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:25:04 GMT",
       "cached_articles": [
         {
           "source": "AWS Security Bulletins",
@@ -3350,6 +2936,20 @@
             ],
             "ips": []
           }
+        },
+        {
+          "source": "AWS Security Bulletins",
+          "title": "CVE-2026-98432 - Linux kernel IPv4 TCP use-after-free Issue",
+          "link": "https://aws.amazon.com/security/security-bulletins/rss/2026-160-aws/",
+          "description": "Bulletin ID: 2026-160-AWS Publication Date: 10/30/2026 22:15 PM PDT \nDescription: \nAWS is aware of CVE-2026-98432, a memory issue in the Linux kernel IPv4 TCP handshake path affecting kernel versions 4.4 and later that could result in remote code execution. Updated kernel packages are available for ...",
+          "date": "2026-10-31T05:21:05+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-98432"
+            ],
+            "ips": []
+          }
         }
       ]
     },
@@ -3439,18 +3039,6 @@
             "cves": [],
             "ips": []
           }
-        },
-        {
-          "source": "Cloudflare Blog - Security",
-          "title": "Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants",
-          "link": "https://blog.cloudflare.com/ddos-threat-report-2026-q3/",
-          "description": "Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes. Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns....",
-          "date": "2026-10-29T12:55:00+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
         }
       ]
     },
@@ -3461,13 +3049,25 @@
     },
     "https://community.joomla.org/blogs.feed?type=rss": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 23:40:18 GMT",
+      "last_modified": "Sat, 31 Oct 2026 19:50:16 GMT",
       "cached_articles": []
     },
     "https://www.hackread.com/feed/": {
-      "etag": "W/\"cc2d10e5f7a10de1513395d152e31719\"",
-      "last_modified": "Fri, 30 Oct 2026 20:10:45 GMT",
+      "etag": "W/\"c1dcaff0d52da2e26d9adcbf4cc22c85\"",
+      "last_modified": "Sat, 31 Oct 2026 14:14:01 GMT",
       "cached_articles": [
+        {
+          "source": "HackRead",
+          "title": "Polymarket Users Lose $2.7 Million in Third-Party Script Hack",
+          "link": "https://hackread.com/polymarket-users-lose-2-7m-third-party-script-hack/",
+          "description": "Polymarket confirms $2.7 million stolen through the compromised third-party script and pledges $3.9 million in refunds, including compensation for pause losses....",
+          "date": "2026-10-31T14:05:27+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [],
+            "ips": []
+          }
+        },
         {
           "source": "HackRead",
           "title": "TeamViewer Vulnerability Lets Attackers Run Code on IT Support Staff’s PCs",
@@ -3498,66 +3098,6 @@
           "link": "https://hackread.com/binance-devops-engineer-hacked-laptop-billion-theft/",
           "description": "Binance probes a DevOps engineer’s hacked laptop after a $6.3 billion theft linked by researchers to North Korean hackers, and promises to cover all customer losses....",
           "date": "2026-10-30T11:54:34+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "Binance Probes Suspected $5.8 Billion Crypto Hack, $3 Billion Frozen",
-          "link": "https://hackread.com/binance-probes-5-billion-crypto-hack-3-billion-frozen/",
-          "description": "Binance investigates a $5.8 billion crypto theft, with $3 billion in assets frozen. The exchange says user funds are safe as investigators trace funds....",
-          "date": "2026-10-30T02:02:38+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "EMBRACE Flaws in 5 AI Coding Tools Enable Code Execution and File Theft",
-          "link": "https://hackread.com/embrace-flaws-ai-coding-tools-code-execution-theft/",
-          "description": "EMBRACE affects AI coding tools Cursor, GitHub Copilot, Codex, VS Code and Claude Desktop, enabling code execution, file theft and browser address-bar spoofing....",
-          "date": "2026-10-29T15:20:58+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "ADEX: AI Involved in 52% of Detected Ad Fraud Schemes – Shopping Agents Could be Next",
-          "link": "https://hackread.com/adex-ai-detected-ad-fraud-schemes-shopping-agents/",
-          "description": "New ADEX research shows how AI is making familiar scams cheaper and harder to detect, while fraudsters prepare to target AI shopping assistants....",
-          "date": "2026-10-29T13:02:49+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "AppViewX Expands Quantum Trust Hub with Cryptographic Discovery, Posture Management, and Remediation",
-          "link": "https://hackread.com/appviewx-expands-quantum-trust-hub-with-cryptographic-discovery-posture-management-and-remediation/",
-          "description": "New York, New York, 29th October 2026, CyberNewswire...",
-          "date": "2026-10-29T13:00:04+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "HackRead",
-          "title": "Ukrainian Nefilim and Hive Affiliate Artem Stryzhak Jailed for 70 Months",
-          "link": "https://hackread.com/ukrainian-nefilim-hive-affiliate-artem-stryzhak-jailed/",
-          "description": "Artem Stryzhak gets 70 months for Nefilim and Hive ransomware attacks targeting hospitals, government agencies and businesses in the US and overseas....",
-          "date": "2026-10-29T11:46:14+00:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -3637,7 +3177,7 @@
     },
     "https://chromereleases.googleblog.com/feeds/posts/default": {
       "etag": null,
-      "last_modified": "Fri, 30 Oct 2026 20:09:32 GMT",
+      "last_modified": "Sat, 31 Oct 2026 08:37:18 GMT",
       "cached_articles": [
         {
           "source": "Chrome Releases",
@@ -3669,42 +3209,6 @@
           "link": "http://chromereleases.googleblog.com/feeds/571114130667822043/comments/default",
           "description": "Hi everyone! We've just released Chrome Dev 159 (159.0.8130.0) for Android. It's now available on Google Play.You can see a partial list of the changes in the Git log. For details on new features, check out the Chromium blog, and for details on web platform updates, check here.If you find a new issu...",
           "date": "2026-10-30T05:13:32.558000-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Chrome Releases",
-          "title": "Chrome for Android Update",
-          "link": "http://chromereleases.googleblog.com/feeds/5137637767829726255/comments/default",
-          "description": "      Hi, everyone! We've just released Chrome 156 (156.0.8078.79) for Android. It'll become available on Google Play over the next few days. This release includes stability and performance improvements. You can see a full list of the changes in the Git log. If you find a new issue, please let us kn...",
-          "date": "2026-10-29T14:38:02.025000-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Chrome Releases",
-          "title": "Stable Channel Update for Desktop",
-          "link": "http://chromereleases.googleblog.com/feeds/3752175829326324167/comments/default",
-          "description": "The Stable and Extended Stable channel has been updated to 156.0.8078.79/.80 for Windows and Mac and 156.0.8078.79 to Linux which will roll out over the coming days/weeks. A full list of changes in this build is available in the Log.Security Fixes and RewardsNote: Access to bug details and links may...",
-          "date": "2026-10-29T14:26:20.252000-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [],
-            "ips": []
-          }
-        },
-        {
-          "source": "Chrome Releases",
-          "title": "Chrome Beta for iOS Update",
-          "link": "http://chromereleases.googleblog.com/feeds/8800138074081937746/comments/default",
-          "description": "Hi everyone! We've just released Chrome Beta 158 (158.0.8127.4) for iOS; it'll become available on App Store in the next few days.You can see a partial list of the changes in the Git log. If you find a new issue, please let us know by filing a bug.Chrome Release TeamGoogle Chrome...",
-          "date": "2026-10-29T08:28:32.899000-07:00",
           "date_unknown": false,
           "iocs": {
             "cves": [],
@@ -4041,9 +3545,723 @@
       ]
     },
     "https://api.msrc.microsoft.com/update-guide/rss": {
-      "etag": "\"0x8DF36CF92CFE5CF\"",
-      "last_modified": "Fri, 30 Oct 2026 21:48:45 GMT",
+      "etag": "\"0x8DF3778CF696FFA\"",
+      "last_modified": "Sat, 31 Oct 2026 18:00:12 GMT",
       "cached_articles": [
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "CVE-2026-111497 Google: CVE-2026-111497 Buffer overflow vulnerability in the Brotli decoder",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-111497",
+          "description": "Information published....",
+          "date": "2026-10-31T01:13:53-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-111497"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118304 Improper input validation in SVG",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118304",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118304"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118313 Use after free in Video",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118313",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118313"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118311 Memory corruption in Media",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118311",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118311"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118317 Memory corruption in HTML",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118317",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118317"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118315 Improper input validation in SVG",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118315",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118315"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118312 Memory corruption in Paint",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118312",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118312"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118316 Improper input validation in V8",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118316",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118316"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118318 Improper access control in V8",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118318",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118318"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118308 Use after free in SVG",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118308",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118308"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118310 Improper input validation in Views",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118310",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118310"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118305 Memory corruption in Turbolev",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118305",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118305"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118307 Use after free in Paint",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118307",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118307"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118306 Memory corruption in FileSystem",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118306",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118306"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118319 Memory corruption in Skia",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118319",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118319"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118322 Memory corruption in ANGLE",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118322",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118322"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118328 Improper input validation in WebRTC",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118328",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118328"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118327 Memory corruption in Media",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118327",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118327"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118332 Improper input validation in Compositing",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118332",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118332"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118320 Memory corruption in V8",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118320",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118320"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118334 Use after free in ImageCapture",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118334",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118334"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118331 Improper input validation in FileAPI",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118331",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118331"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118330 Use after free in Browser",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118330",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118330"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118333 Missing authorization in Video",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118333",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118333"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118335 Improper input validation in Metrics",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118335",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118335"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118329 Improper input validation in ANGLE",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118329",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118329"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118336 Improper input validation in Headless",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118336",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118336"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118337 Improper access control in Forms",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118337",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118337"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118338 Use after free in Animation",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118338",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118338"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118339 Use after free in Animation",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118339",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118339"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118340 Memory corruption in Skia",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118340",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118340"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118341 Use after free in Modularization",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118341",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118341"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118342 Out of bounds write in Editing",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118342",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118342"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118343 Improper input validation in ReadingList",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118343",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118343"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118344 Use after free in Layout",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118344",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118344"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118345 Use after free in PDFium",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118345",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118345"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118346 Use after free in Compositing",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118346",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118346"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118347 Use after free in FileSystem",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118347",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118347"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118348 Improper input validation in Skia",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118348",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118348"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118349 Memory corruption in Payments",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118349",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118349"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118350 Use after free in Turbolev",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118350",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118350"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118351 Memory corruption in Skia",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118351",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118351"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118352 Memory corruption in Cache",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118352",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118352"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118353 Use after free in Paint",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118353",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118353"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118354 Improper input validation in Skia",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118354",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118354"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118355 Improper input validation in Command",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118355",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118355"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118356 Use after free in WTF",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118356",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118356"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118357 Use after free in FileSystem",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118357",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118357"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118358 Memory corruption in WebAudio",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118358",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118358"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium: CVE-2026-118359 Memory corruption in V8",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-118359",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118359"
+            ],
+            "ips": []
+          }
+        },
+        {
+          "source": "Microsoft Security Response (MSRC)",
+          "title": "Chromium CVE-2026-91732: Missing authorization",
+          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-91732",
+          "description": "This CVE was assigned by Chrome. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. Please see [Google Chrome Releases](https://chromereleases.googleblog.com/2026) for more information....",
+          "date": "2026-10-31T07:00:00-07:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-91732"
+            ],
+            "ips": []
+          }
+        },
         {
           "source": "Microsoft Security Response (MSRC)",
           "title": "CVE-2026-70125 Microsoft Office Outlook Remote Code Execution Vulnerability",
@@ -4085,20 +4303,6 @@
             ],
             "ips": []
           }
-        },
-        {
-          "source": "Microsoft Security Response (MSRC)",
-          "title": "CVE-2026-88078 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
-          "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-88078",
-          "description": "CWE added. Informational change only....",
-          "date": "2026-10-29T07:00:00-07:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-88078"
-            ],
-            "ips": []
-          }
         }
       ]
     },
@@ -4111,36 +4315,6 @@
       "etag": null,
       "last_modified": null,
       "cached_articles": [
-        {
-          "source": "NVD NIST - Critical CVEs",
-          "title": "NVD critical vulnerability: CVE-2026-104317 (CVSS 8.1) IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to exec",
-          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
-          "description": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data....",
-          "date": "2026-10-29T16:17:43.907000+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-104317"
-            ],
-            "ips": []
-          },
-          "no_push": true
-        },
-        {
-          "source": "NVD NIST - Critical CVEs",
-          "title": "NVD critical vulnerability: CVE-2026-18894 (CVSS 6.5) IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python comp",
-          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-18894",
-          "description": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python component code in a public workflow, executing it under the flow owner's runtime context within the server process. This bypasses the intended trust boundary where public execution paths are res...",
-          "date": "2026-10-29T16:18:08.427000+00:00",
-          "date_unknown": false,
-          "iocs": {
-            "cves": [
-              "CVE-2026-18894"
-            ],
-            "ips": []
-          },
-          "no_push": true
-        },
         {
           "source": "NVD NIST - Critical CVEs",
           "title": "NVD critical vulnerability: CVE-2026-119597 (CVSS 9.8) OpenDeepWiki through 2.0.6 contains a hard-coded JWT signing key vulnerability that allows unauthenticated att",
@@ -4185,12 +4359,149 @@
             "ips": []
           },
           "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-109220 (CVSS 9.8) The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Obj",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109220",
+          "description": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.1.1 via the 'customer_note' parameter parameter. This is due to insufficient sanitization of the customer_note checkout field, which is ...",
+          "date": "2026-10-31T07:16:34.367000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-109220"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-116557 (CVSS 9.1) The WP Booking System - Booking Calendar plugin for WordPress is vulnerable to unauthorized modification of da",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116557",
+          "description": "The WP Booking System - Booking Calendar plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpbs_action_ajax_calendar_remove_note() function in versions up to, and including, 2.1.0.5 This makes it possible for authenticated attackers, wit...",
+          "date": "2026-10-31T07:16:35.857000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-116557"
+            ],
+            "ips": [
+              "2.1.0.5"
+            ]
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-89270 (CVSS 9.1) The Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulner",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-89270",
+          "description": "The Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.4.5 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possib...",
+          "date": "2026-10-31T07:16:37.707000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-89270"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-116512 (CVSS 9.8) The Project Manager – AI Powered Project Management, Task Management, Kanban Board & Time Tracker plugin for W",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116512",
+          "description": "The Project Manager – AI Powered Project Management, Task Management, Kanban Board & Time Tracker plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.1.1 via the 'id' parameter parameter. This is due to unsanitized 'id' parameter value concatenated dir...",
+          "date": "2026-10-31T08:16:48.603000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-116512"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-119096 (CVSS 9.8) The Uncanny Toolkit for LearnDash plugin for WordPress is vulnerable to Authentication Bypass in versions up t",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119096",
+          "description": "The Uncanny Toolkit for LearnDash plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 3.8.2 via the `email` parameter of the `uo_login_action()` function. This is due to a parser-differential flaw in which the plugin's account-verification gate resolves the ...",
+          "date": "2026-10-31T08:16:49.043000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-119096"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-103882 (CVSS 9.1) The Acadlix LMS – AI Quiz Maker, Online Exam & Course Plugin for WordPress plugin for WordPress is vulnerable",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-103882",
+          "description": "The Acadlix LMS – AI Quiz Maker, Online Exam & Course Plugin for WordPress plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the post_delete_assessment_file_by_id function in all versions up to, and including, 1.1.9. This makes it possible for ...",
+          "date": "2026-10-31T09:16:32.510000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-103882"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-118235 (CVSS 9.8) The SimpleForm – Form Maker to Chat Apps with Quiz, Poll and Multi Lead Notifications plugin for WordPress is",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118235",
+          "description": "The SimpleForm – Form Maker to Chat Apps with Quiz, Poll and Multi Lead Notifications plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.10.2 via the handle_upload function. This is due to missing server-side file key allowlist and pre-sanitization ex...",
+          "date": "2026-10-31T09:16:33.620000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-118235"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-120201 (CVSS 9.8) Jpom 2.10.0 through 2.11.12 contains an authentication bypass vulnerability that allows unauthenticated attack",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120201",
+          "description": "Jpom 2.10.0 through 2.11.12 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain super-administrator access by injecting query conditions into the JPOM-USER-TOKEN header. Attackers can send a value like 'is not null', which Hutool's Condition parser treats as...",
+          "date": "2026-10-31T18:17:07.890000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-120201"
+            ],
+            "ips": []
+          },
+          "no_push": true
+        },
+        {
+          "source": "NVD NIST - Critical CVEs",
+          "title": "NVD critical vulnerability: CVE-2026-120209 (CVSS 9.8) AJ-Report through 1.7.1 signs share tokens with a hard-coded JWT secret, allowing attackers to forge valid Sha",
+          "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120209",
+          "description": "AJ-Report through 1.7.1 signs share tokens with a hard-coded JWT secret, allowing attackers to forge valid Share-Tokens offline. Attackers can mint a token with reportCode 'dataSet' to access the testTransform endpoint, which passes scripts to GroovyClassLoader for unauthenticated remote code execut...",
+          "date": "2026-10-31T18:17:09.263000+00:00",
+          "date_unknown": false,
+          "iocs": {
+            "cves": [
+              "CVE-2026-120209"
+            ],
+            "ips": []
+          },
+          "no_push": true
         }
       ]
     },
     "https://9to5google.com/category/security/feed/": {
-      "etag": "\"e88ee4d12f5612bd86acc77e17d2492f\"",
-      "last_modified": "Fri, 30 Oct 2026 17:58:04 GMT",
+      "etag": "\"47f3626fdbe0ad020afb7c887a6261ee\"",
+      "last_modified": "Sat, 31 Oct 2026 00:15:19 GMT",
       "cached_articles": []
     },
     "https://securelist.com/feed/": {
@@ -4988,18 +5299,15 @@
     }
   },
   "feed_health": {
-    "updated": "2026-10-30T23:40:24.137120+00:00",
+    "updated": "2026-10-31T19:50:17.953213+00:00",
     "ok": 58,
     "total": 60,
     "failed": {
-      "Huntress Blog": "HTTPError: HTTP Error 403: Forbidden",
-      "Rapid7 Blog": "Parse: not well-formed (invalid token): line 384, column 37"
+      "Rapid7 Blog": "Parse: not well-formed (invalid token): line 384, column 37",
+      "Huntress Blog": "HTTPError: HTTP Error 403: Forbidden"
     }
   },
   "notified": {
-    "https://nvd.nist.gov/vuln/detail/CVE-2026-115806": "2026-10-24T05:20:53.184467+00:00",
-    "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html": "2026-10-24T07:40:51.422080+00:00",
-    "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html": "2026-10-24T10:20:55.943336+00:00",
     "https://www.helpnetsecurity.com/2026/10/25/week-in-review-php-vulnerabilities-patched-exploited-palo-alto-globalprotect-vpn-flaw/": "2026-10-25T09:10:54.976683+00:00",
     "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102870": "2026-10-25T17:10:55.314757+00:00",
     "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/": "2026-10-26T09:20:58.062256+00:00",
@@ -5123,8 +5431,11 @@
     "https://nvd.nist.gov/vuln/detail/CVE-2026-111357": "2026-10-30T17:10:51.318501+00:00",
     "https://www.bleepingcomputer.com/news/security/linux-kernel-exploit-enables-remote-root-attacks-on-mptcp-servers/": "2026-10-30T21:10:19.460389+00:00",
     "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/": "2026-10-30T21:20:21.927484+00:00",
-    "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70125": "2026-10-30T21:50:26.189396+00:00"
+    "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70125": "2026-10-30T21:50:26.189396+00:00",
+    "https://aws.amazon.com/security/security-bulletins/rss/2026-160-aws/": "2026-10-31T05:30:24.904586+00:00",
+    "https://nvd.nist.gov/vuln/detail/CVE-2026-109220": "2026-10-31T07:20:26.653417+00:00",
+    "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html": "2026-10-31T09:20:26.650901+00:00"
   },
   "notified_seeded": true,
-  "last_email_date": "2026-10-30"
+  "last_email_date": "2026-10-31"
 }
